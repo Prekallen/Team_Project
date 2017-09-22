@@ -12,7 +12,6 @@
 <script src="<c:url value="/resources/js/jquery-ui-1.9.2.custom.js?version=${pVar}"/>"></script>
 <script src="<c:url value="/resources/js/jquery.fileupload.js?version=${pVar}"/>"></script>
 <script src="<c:url value="/resources/js/jquery.iframe-transport.js?version=${pVar}"/>"></script>
-<script src="<c:url value="/resources/ui/common.js?version=${pVar}"/>"></script>
 <script src="<c:url value="/resources/ui/btsp3.7.7/js/bootstrap.min.js?version=${pVar}"/>"></script>
 <script src="<c:url value="/resources/ui/btsp3.7.7/js/bootstrap-table.js?version=${pVar}"/>"></script>
 <script src="<c:url value="/resources/ui/btsp3.7.7/js/bootstrap-table.js?version=${pVar}"/>"></script>
@@ -24,6 +23,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-음
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="${rootPath}/main.jsp">맛.zip소개</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/board/board_select.jsp">공지사항</a></li>
+            <li><a href="/user/user_info.jsp">지역별</a></li>
+            <li><a>종류별</a></li>
+            <li><a href="/user/logout">로그인</a></li>
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+	</nav>
 </body>
 </html>
