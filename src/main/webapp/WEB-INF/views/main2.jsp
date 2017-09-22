@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="<c:url value="/resources/ui/btsp3.7.7/css/bootstrap-table.css?version=${pVar}"/>"/>
 <link rel="stylesheet" href="<c:url value="/resources/ui/common.css?version=${pVar}"/>"/>
 <link rel="stylesheet" href="<c:url value="/resources/ui/signin.css?version=${pVar}" />"/>
-<title>Insert title here</title>
+<title>빅데이터 맛집 추천 맛.zip</title>
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -51,14 +51,29 @@
   <div class="overlay" onload="JavaScript:timedRefresh(5000);">
     <h1>A blurred overlay</h1>
     <p>... mask or whatever<br>that is responsive and could be cross-browser compatible back to IE9</p>
+    <img src=resources/images/logo.jpg>
   </div>
 </div>
+<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <script type="text/JavaScript">
     
     	function timedRefresh(timeoutPeriod) {
     	    setTimeout("location.reload(true);",timeoutPeriod);
     	}
     </script> 
+    
+    <%// footer %>
+    <link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/footer.css?2017082501" />
+		<div id="footer_div" style="background-color:#f6f6f6;"> 
+		<div id="footer_text"> © 2017 MatZip · 
+		<a href="intro.php">맛.zip 소개</a> · 
+		<a href="policy.service.php">이용약관</a> · 
+		<a href="policy.privacy.php">개인정보취급방침</a> · 
+		<a href="mailto:contact@diningcode.com">문의</a> 
+		</div>
+		</div> 
+	
+
 
 </body>
 </html>
@@ -69,49 +84,17 @@
 	{font-family: 'Jeju Gothic', serif;
 	background-image:url('resources/images/food2.jpeg');
 	background-repeat: no-repeat;
-	background-size: cover;}
+	background-size: cover;
+	}
+	
 	
 	html, body, .container {
-  width: 100%;
-  height: 100%;
-}
-
-.container,
-.overlay:before {
-  background: url(https://unsplash.it/1920/1080/?random) no-repeat fixed 0 0 / cover;
-}
-
-
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.overlay {
-  max-height: 200px;
-  margin: 0 auto;
-  max-width: 768px;
-  overflow: hidden;
-  padding: 50px;
-  position: relative;
-  color: white;
-  font-family: 'Lato';
-  position: relative;
-  text-align: center;
-  z-index: 0;
-  &:before {
-    content: '';
-    filter: blur(20px);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-}
-
+	  width: 100%;
+	  height: 100%;
+	}
+	.container.overlay.h1{
+	align : center;
+	}
 
 
 	</style>
