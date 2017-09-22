@@ -46,9 +46,9 @@ public class HomeController {
 		return "main2";
 	}
 	
-	@RequestMapping(value="/main_plate_main", method= RequestMethod.GET)
+	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
 	public String main3(Model model){
-		return "main_plate_main";
+		return "mango_plate_main";
 	}
 	
 }
