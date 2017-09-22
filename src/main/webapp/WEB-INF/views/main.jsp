@@ -30,6 +30,7 @@
 	
 	#navbar ul li a{
 		font-size:15px;
+		cursor:pointer;
 	}
 	#navbar ul li a:hover{
 		transition:0.3s;
@@ -38,9 +39,6 @@
 	#navbar ul li:last-child{
 		position:absolute;
 		right:0;
-	}
-	.navbar-brand:hover{
-		background-color : #ff8080;		
 	}
 	#searchBar{
 	text-align : center;
@@ -71,17 +69,10 @@
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">소개</a>
-        </div>
+       
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+          	<li><a>소개</a></li>
             <li><a>공지사항</a></li>
             <li><a>지역별</a></li>
             <li><a>종류별</a></li>
@@ -94,8 +85,8 @@
 	<div style="padding-top:100px"></div>
 	<div class="container">
 		<div class="searchBar" id="searchBar">
-			<img src="${rootPath}/resources/image/mat.png">
-			<p></p>
+			<img src="${rootPath}/resources/image/logo1.png">
+			<p><br><br></p>
 			<input type="text" id="searchColumn" />
 			<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
 		</div>
