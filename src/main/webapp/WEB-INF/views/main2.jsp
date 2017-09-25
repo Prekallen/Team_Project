@@ -14,6 +14,19 @@
 
 
 
+<div class="cycle-slideshow"
+	cycle-slideshow data-cycle-loader="wait";
+	data-cycle-timeout="2000";>
+	
+	<img src="resources/images/food7.jpg">
+	<img src="resources/images/food6.jpg">
+	<img src="resources/images/food5.jpg">
+	<img src="resources/images/food4.jpg">
+	<img src="resources/images/food3.jpg">
+	</div>
+	
+
+
   
 	<div id="div_new" style="position:absolute; top:100px; left:50%; width:552px; margin-left:-276px; z-index:1;">
 		<img src="${rootPath}/resources/image/mainlogo.png" align="center" >
@@ -182,6 +195,7 @@
 	}
 	
 	body:after{
+	
 	content:"";
 	position: absolute;
 	top:0;
@@ -193,6 +207,7 @@
     filter: alpha(opacity=40);
     z-index: -1;
 	}
+	
 	
 	#searchBar{
 	text-align : center;
