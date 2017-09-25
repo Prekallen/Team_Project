@@ -194,13 +194,12 @@
 	z-index : 1;
 	}
 	
-	body:after{
+	body .cycle-slideshow{
 	
 	content:"";
 	position: absolute;
 	top:0;
-	background-image:url('resources/images/food7.jpg');
-	background-size: cover;
+	background-size: 100%;
 	width: 100%;
     height: 100%;
 	opacity: 0.6!important;
