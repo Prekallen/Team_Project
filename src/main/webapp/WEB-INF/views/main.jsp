@@ -21,14 +21,7 @@
 		</div>
 
 	</div>
-		<div id="footer_div" style="background-color:#f6f6f6;"> 
-			<div id="footer_text"> © 2017 Feedback · 
-			<a>Feedback 소개</a> · 
-			<a>이용약관</a> · 
-			<a>개인정보취급방침</a> · 
-			<a>문의</a> 
-			</div>
-		</div>
+		
 
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);

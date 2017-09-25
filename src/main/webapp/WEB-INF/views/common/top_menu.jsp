@@ -5,7 +5,7 @@
        
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-          	<li><a>소개</a></li>
+          	<li><a id="intro">소개</a></li>
             <li><a>공지사항</a></li>
             <li><a>지역별</a></li>
             <li><a>종류별</a></li>
@@ -14,7 +14,25 @@
           
         </div><!--/.nav-collapse -->
       </div>
+      
+      
 </nav> 
+<div id="footer_div" style="background-color:#f6f6f6;"> 
+			<div id="footer_text"> © 2017 Feedback · 
+			<a>Feedback 소개</a> · 
+			<a>이용약관</a> · 
+			<a>개인정보취급방침</a> · 
+			<a>문의</a> 
+			</div>
+</div>
+<script>
+
+$("#intro").click(function(){
+		pageMove("menutab/intro")
+});
+
+
+</script>
 <style>
 
 	#navbar ul li a{

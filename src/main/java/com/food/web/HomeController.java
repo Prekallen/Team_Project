@@ -40,6 +40,10 @@ public class HomeController {
 	public String main(Model model){
 		return "main";
 	}
+	@RequestMapping(value="/menutab/intro", method= RequestMethod.GET)
+	public String intro(Model model){
+		return "menutab/intro";
+	}
 	
 	@RequestMapping(value="/main2", method= RequestMethod.GET)
 	public String main2(Model model){

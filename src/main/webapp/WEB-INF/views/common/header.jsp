@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<c:set var="pVar" value="1.3.6"/>
+<c:set var="pVar" value="1.3.7"/>
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>
 <c:set var="nowUrl" value="${pageContext.request.requestURI}"/>
 <script src="<c:url value="/resources/js/jquery-3.2.1.js?version=${pVar}"/>"></script>
@@ -21,4 +21,12 @@
 <link rel="stylesheet" href="<c:url value="/resources/ui/common.css?version=${pVar}"/>"/>
 <link rel="stylesheet" href="<c:url value="/resources/ui/signin.css?version=${pVar}" />"/>
 
-<link type="text/css" rel="stylesheet" href="<c:url value="/resources/footercss/footer.css?version=${pVar}" />"/>
+<link rel="stylesheet" href="<c:url value="/resources/footercss/footer.css?version=${pVar}" />"/>
+
+<script>
+
+var pageMove = function(page){
+	location.href = "${rootPath}/" + page;
+}
+
+</script>
