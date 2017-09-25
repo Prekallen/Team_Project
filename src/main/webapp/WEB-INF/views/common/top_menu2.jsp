@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="header">
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -36,10 +36,11 @@ $("#intro").click(function(){
 <style>
 
 	
-	#navbar ul {
+	#navbar ul li a{
 		font-size:25px;
 		cursor:pointer;
-		background: #FFFFFF;
+		color : #FFFFFF;
+	
 	}
 	#navbar ul li a:hover{
 		transition:0.3s;

@@ -7,7 +7,7 @@
 <title>Feedback 소개</title>
 </head>
 <body>
-<c:import url="${topmenuUrl}"/>
+<c:import url="${topmenu2Url}"/>
 
 
 <h3>응소개</h3>
@@ -15,3 +15,8 @@
 
 </body>
 </html>
+<style>
+body{
+background-color : " #FAF4C0";}
+
+</style>

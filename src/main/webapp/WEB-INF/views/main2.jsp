@@ -5,11 +5,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
-<title>빅데이터 맛집 추천 맛.zip</title>
+ 	<title>빅데이터 맛집추천 맛.zip</title>
 </head>
 <body>
+
 <c:import url="${topmenu2Url}"/>
+    
+
+  
+  
 	<div id="div_new" style="position:absolute; top:100px; left:50%; width:552px; margin-left:-276px; z-index:1;">
 		<img src="${rootPath}/resources/image/mainlogo.png" align="center" >
 		<link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
@@ -167,6 +171,7 @@
 </html>
 <style>	
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
 	html, body{
 	font-family: 'Hanna', serif;
 	width: 100%;
@@ -174,6 +179,7 @@
     position : relative;
 	z-index : 1;
 	}
+	
 	body:after{
 	content:"";
 	position: absolute;
@@ -182,7 +188,7 @@
 	background-size: cover;
 	width: 100%;
     height: 100%;
-	opacity: 0.4!important;
+	opacity: 0.5!important;
     filter: alpha(opacity=40);
     z-index: -1;
 	}
