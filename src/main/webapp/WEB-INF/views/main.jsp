@@ -24,9 +24,26 @@
 </head>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
-	body{
+	html, body{
 	font-family: 'Jeju Gothic', serif;
+	width: 100%;
+    height: 100%;
+    position : relative;
+	z-index : 1;
 	}
+	body:after{
+	content:"";
+	position: absolute;
+	top:0;
+	background-image:url('resources/images/food2.jpeg');
+	background-size: cover;
+	width: 100%;
+    height: 100%;
+	opacity: 0.4!important;
+    filter: alpha(opacity=40);
+    z-index: -1;
+	}
+	
 	
 	#navbar ul li a{
 		font-size:15px;
@@ -63,10 +80,13 @@
 	width : 50px;
 	height : 50px;
 	}
+}
 	
 	
 </style>
 <body>
+<div class="wrapper">
+
 	<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
        
@@ -85,12 +105,13 @@
 	<div style="padding-top:100px"></div>
 	<div class="container">
 		<div class="searchBar" id="searchBar">
-			<img src="${rootPath}/resources/image/logo1.png">
+			<img src="${rootPath}/resources/image/mainlogo.png" >
 			<p><br><br></p>
 			<input type="text" id="searchColumn" />
 			<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
 		</div>
 
 	</div>
+</div>
 </body>
 </html>
