@@ -5,14 +5,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+ 
  	<title>빅데이터 맛집추천 맛.zip</title>
+
 </head>
-<body>
 
 <c:import url="${topmenu2Url}"/>
-    
 
-  
+
+
   
 	<div id="div_new" style="position:absolute; top:100px; left:50%; width:552px; margin-left:-276px; z-index:1;">
 		<img src="${rootPath}/resources/image/mainlogo.png" align="center" >
@@ -184,11 +185,11 @@
 	content:"";
 	position: absolute;
 	top:0;
-	background-image:url('resources/images/food2.jpeg');
+	background-image:url('resources/images/food7.jpg');
 	background-size: cover;
 	width: 100%;
     height: 100%;
-	opacity: 0.5!important;
+	opacity: 0.6!important;
     filter: alpha(opacity=40);
     z-index: -1;
 	}
