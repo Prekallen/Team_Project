@@ -35,9 +35,11 @@ $("#intro").click(function(){
 </script>
 <style>
 
+	
 	#navbar ul li a{
 		font-size:15px;
 		cursor:pointer;
+		
 	}
 	#navbar ul li a:hover{
 		transition:0.3s;
