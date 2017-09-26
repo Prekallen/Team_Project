@@ -30,7 +30,7 @@
 	
 
 
-  
+  <div clas="searchBar" id="searchBar">
 	<div id="div_new" style="position:absolute; top:100px; left:50%; width:552px; margin-left:-276px; z-index:1;">
 		<img src="${rootPath}/resources/image/mainlogo.png" align="center" >
 		<link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
@@ -185,6 +185,7 @@
 		</script>
 		</div>
 		</div>
+		</div>
 </body>
 </html>
 <style>	
@@ -235,6 +236,7 @@
 	width : 50px;
 	height : 50px;
 	}
+	
 }
 
 	</style>
