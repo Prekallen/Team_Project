@@ -8,9 +8,10 @@
 </head>
 <body>
 <c:import url="${topmenu2Url}"/>
-
-
-<h3>응소개</h3>
+<h3 align="center">안녕하세요! 피드백이에요!!</h3>
+<div class="container">
+<img src="${rootPath}/resources/images/4dallar.jpg" align="middle">
+</div>
 
 
 </body>
@@ -21,8 +22,6 @@
 	body{
 	font-family: 'Hanna', serif;
 	background-color : #BDBDBD;
-	
-	
 	}
 	
 	

@@ -10,7 +10,7 @@
 <c:import url="${topmenu2Url}"/>
 
 
-<h3>응로그인</h3>
+<h3 align="center">응로그인</h3>
 
 
 </body>

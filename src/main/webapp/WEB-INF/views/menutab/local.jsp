@@ -10,7 +10,7 @@
 <c:import url="${topmenu2Url}"/>
 
 
-<h3>응지역별</h3>
+<h3 align="center">응지역별</h3>
 
 
 </body>

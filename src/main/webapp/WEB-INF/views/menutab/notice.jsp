@@ -9,8 +9,10 @@
 <body>
 <c:import url="${topmenu2Url}"/>
 
+<br/>
+<br/>
 
-<h3>응공지</h3>
+<h3 align="center">응공지</h3>
 
 
 </body>
