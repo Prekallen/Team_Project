@@ -5,7 +5,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAogwylcDGMa8b1hb_u5Fqn8lIuZBrp74w"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA6F5A79UmPzOyZeQcNBFsBiplc1xGxbfk"></script>
+
 <script>
 function initialize() {
   var mapProp = {
