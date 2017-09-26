@@ -21,7 +21,7 @@
 	<img src="resources/images/food7.jpg" width="1920px" height="940px">
 	<img src="resources/images/food6.jpg" width="1920px" height="940px">
 	<img src="resources/images/food5.jpg" width="1920px" height="940px">
-	<img src="resources/images/food4.jpg" width="1920px" height="940px">
+	<img src="resources/images/food2.jepg" width="1920px" height="940px">
 	<img src="resources/images/food3.jpg" width="1920px" height="940px">
 	<img src="resources/images/food8.jpg" width="1920px" height="940px">
 	<img src="resources/images/food9.jpg" width="1920px" height="940px">
