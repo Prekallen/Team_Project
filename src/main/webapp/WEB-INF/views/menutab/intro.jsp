@@ -21,15 +21,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <body>
 <c:import url="${topmenu2Url}"/>
 
-<h3>응소개</h3>
+
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
 
-<h3 align="center">안녕하세요! 피드백이에요!!</h3>
-<div class="container">
-<img src="${rootPath}/resources/images/4dallar.jpg" align="middle">
-</div>
-<!--  branch 'master' of https://github.com/Prekallen/Team_Project.git -->
+
+
 
 
 </body>
