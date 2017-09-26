@@ -24,9 +24,10 @@
 		
 
 <style>
-@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
 	html, body{
-	font-family: 'Jeju Gothic', serif;
+	font-family: 'Hanna', serif;
 	width: 100%;
     height: 100%;
     position : relative;

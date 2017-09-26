@@ -1,22 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+    <nav class="header">
+      <div class="hcontainer">
        
-        <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
           	<li><a id="intro">소개</a></li>
             <li><a>공지사항</a></li>
             <li><a>지역별</a></li>
             <li><a>종류별</a></li>
-            <li><a>로그인</a></li>
+            <li><a id="login">로그인</a></li>
           </ul>
           
-        </div><!--/.nav-collapse -->
       </div>
+      </nav>
       
-      
-</nav> 
 <div id="footer_div" style="background-color:#f6f6f6;"> 
 			<div id="footer_text"> © 2017 Feedback · 
 			<a>Feedback 소개</a> · 
@@ -30,23 +27,30 @@
 $("#intro").click(function(){
 		pageMove("menutab/intro")
 });
+$("#login").click(function(){
+	pageMove("menutab/login")
+});
 
 
 </script>
 <style>
 
 	
-	#navbar ul li a{
-		font-size:15px;
+	.hcontainer ul li a{
+		font-size:25px;
 		cursor:pointer;
+		color : #FFFFFF;
+		
 		
 	}
-	#navbar ul li a:hover{
+	.hcontainer ul li a:hover{
 		transition:0.3s;
 		color:#ff8080;		
 	}
-	#navbar ul li:last-child{
+	.hcontainer ul li:last-child{
 		position:absolute;
 		right:0;
 	}
+	
+	
 </style>
