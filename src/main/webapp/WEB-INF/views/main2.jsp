@@ -18,14 +18,14 @@
 	cycle-slideshow data-cycle-loader="wait";
 	data-cycle-timeout="2000";>
 	
-	<img src="resources/images/food7.jpg" width="1870px" height="940px">
-	<img src="resources/images/food6.jpg" width="1870px" height="940px">
-	<img src="resources/images/food5.jpg" width="1870px" height="940px">
-	<img src="resources/images/food4.jpg" width="1870px" height="940px">
-	<img src="resources/images/food3.jpg" width="1870px" height="940px">
-	<img src="resources/images/food8.jpg" width="1870px" height="940px">
-	<img src="resources/images/food9.jpg" width="1870px" height="940px">
-	<img src="resources/images/food10.png" width="1870px" height="940px">
+	<img src="resources/images/food7.jpg" width="1920px" height="940px">
+	<img src="resources/images/food6.jpg" width="1920px" height="940px">
+	<img src="resources/images/food5.jpg" width="1920px" height="940px">
+	<img src="resources/images/food4.jpg" width="1920px" height="940px">
+	<img src="resources/images/food3.jpg" width="1920px" height="940px">
+	<img src="resources/images/food8.jpg" width="1920px" height="940px">
+	<img src="resources/images/food9.jpg" width="1920px" height="940px">
+	<img src="resources/images/food10.png" width="1920px" height="940px">
 	</div>
 	
 
@@ -49,6 +49,7 @@
 		<div class="container-fluid" id="search_input_wrapper">
 		<input type="text" id="s_input" name="query" autocomplete="off" value="" placeholder="예: 신분당선 강남역" style="width:500px; height:50px;" />
 		<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
+		</div>
 		</div>
 		</div>
 

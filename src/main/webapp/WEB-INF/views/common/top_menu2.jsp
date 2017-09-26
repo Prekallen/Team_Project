@@ -4,11 +4,12 @@
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <li><a id="home">HOME</a></li>
           	<li><a id="intro">소개</a></li>
-            <li><a>공지사항</a></li>
-            <li><a>지역별</a></li>
-            <li><a>종류별</a></li>
-            <li><a>로그인</a></li>
+            <li><a id="notice">공지사항</a></li>
+            <li><a id="local">지역별</a></li>
+            <li><a id="group">종류별</a></li>
+            <li><a id="login">로그인</a></li>
           </ul>
           
         </div><!--/.nav-collapse -->
@@ -27,10 +28,29 @@
 </div>
 <script>
 
+$("#home").click(function(){
+	pageMove("main2")
+});
+
 $("#intro").click(function(){
 		pageMove("menutab/intro")
 });
 
+$("#local").click(function(){
+		pageMove("menutab/local")
+});
+
+$("#group").click(function(){
+	pageMove("menutab/group")
+});
+
+$("#notice").click(function(){
+	pageMove("menutab/notice")
+});
+
+$("#login").click(function(){
+	pageMove("menutab/login")
+});
 
 </script>
 <style>

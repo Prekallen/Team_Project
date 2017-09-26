@@ -4,13 +4,13 @@
 <%@include file="/WEB-INF/views/common/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title>Feedback 소개</title>
+<title>공지사항</title>
 </head>
 <body>
 <c:import url="${topmenu2Url}"/>
 
 
-<h3>응소개</h3>
+<h3>응종류별</h3>
 
 
 </body>
