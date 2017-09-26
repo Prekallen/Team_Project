@@ -37,7 +37,6 @@
 
 	body{
 	font-family: 'Hanna', serif;
-	background-color : #BDBDBD;
 	
 	
 	}
