@@ -6,11 +6,28 @@
 
 <title>공지사항</title>
 </head>
+
+<link rel="stylesheet" href="${rootPath}/resources/ui/signin.css" />
 <body>
 <c:import url="${topmenu2Url}"/>
+<div class="i-container" style="height:200px; align:middle">
+		<form class="form-signin">
+			<h2 class="form-signin-heading">Please login</h2>
+			<label for="inputEmail" class="sr-only">ID</label> <input type="text"
+				id="userId" name="id" class="form-control" placeholder="ID" required value="${userId}"
+				autofocus> <label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" name="pwd" id="userPwd" class="form-control"
+				placeholder="Password" required> 
+			<div class="checkbox">
+				<label> <input type="checkbox" value="1" id="saveId">
+					Remember me
+				</label>
+			</div>
+			<button id="btn2" class="btn btn-lg btn-primary btn-block"
+				type="button" style="background-color: #ff8080;">Login</button>
+		</form>
 
-
-<h3 align="center">응로그인</h3>
+	</div>
 
 
 </body>
