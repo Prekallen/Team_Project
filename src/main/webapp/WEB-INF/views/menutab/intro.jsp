@@ -6,11 +6,10 @@
 
 <title>Feedback 소개</title>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA6F5A79UmPzOyZeQcNBFsBiplc1xGxbfk"></script>
-
 <script>
 function initialize() {
   var mapProp = {
-    center:new google.maps.LatLng(37.250943, 127.028344),
+    center:new google.maps.LatLng(37.497187, 127.026859),
     zoom:15,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
@@ -21,18 +20,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 <body>
 <c:import url="${topmenu2Url}"/>
-<<<<<<< HEAD
-
 
 <h3>응소개</h3>
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
-=======
+
 <h3 align="center">안녕하세요! 피드백이에요!!</h3>
 <div class="container">
 <img src="${rootPath}/resources/images/4dallar.jpg" align="middle">
 </div>
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
+<!--  branch 'master' of https://github.com/Prekallen/Team_Project.git -->
 
 
 </body>
