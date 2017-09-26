@@ -11,7 +11,7 @@
 function initialize() {
   var mapProp = {
     center:new google.maps.LatLng(37.250943, 127.028344),
-    zoom:5,
+    zoom:15,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
@@ -25,7 +25,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 <h3>응소개</h3>
-<div id="googleMap" style="width:500px;height:380px;"></div>
+<div id="googleMap" style="width:100%;height:400px;"></div>
 
 =======
 <h3 align="center">안녕하세요! 피드백이에요!!</h3>
