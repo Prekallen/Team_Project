@@ -54,7 +54,7 @@ $("#login").click(function(){
 
 </script>
 <style>
-	#narvbar ul {
+	#navbar ul li{
    
     margin: 0;
     padding: 50;
@@ -64,9 +64,6 @@ $("#login").click(function(){
 		font-size:25px;
 		cursor:pointer;
 		color : #FFFFFF;
-		
-		
-	
 	}
 	#navbar ul li a:hover{
 		transition:0.3s;

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%@include file="/WEB-INF/views/common/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,34 +32,50 @@
 
   <div class="searchBar" id="searchBar">
 	<div id="div_new" style="position:absolute; top:100px; left:50%; width:552px; margin-left:-276px; z-index:1;">
-		<img src="${rootPath}/resources/image/mainlogo.png" align="center" >
-		<link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
-		<script src='https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.js'></script>
-		<link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/search_main.css?2017082501" />
+		<a href=main2><img src="${rootPath}/resources/image/mainlogo.png" align="center" ></a>
+		
+		
+		
 		<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/search.js?2017082501"></script>
 		<div id="search_area">
-		<form id="search_form" action="isearch.php"> <div class="hide" id="hidden_wrapper"> 
+		<form id="search_form" action="isearch.php"> 
+		<div class="hide" id="hidden_wrapper"> 
 		<input type="hidden" id="title_onoff" name="rn" value="0"> 
 		<input type="hidden" id="page" name="page"> 
 		<input type="hidden" id="chunk" name="chunk"> 
 		<input type="hidden" id="lat" name="lat"> 
 		<input type="hidden" id="lng" name="lng"> 
 		</div> 
+		
 		<div class="container-fluid" id="search_wrapper"> 
 		<div class="container-fluid" id="search_input_wrapper">
 		<input type="text" id="s_input" name="query" autocomplete="off" value="" placeholder="예: 신분당선 강남역" style="width:500px; height:50px;" />
 		<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
+		
+		<script>
+		$("#searchBtn").click(function(){
+			location.href = "http://www.naver.com";
+		})
+		
+		</script>
+	
+		<div id="ms_ext_area" class="clear board" style="width:549px; margin-top:19px;"> 
+		<div id="list_area" class="list_area" style="width:549px;">
+		</div> 
+		</div> 
 		</div>
 		</div>
+		</form>
 		</div>
+		
+		<br/>
+		<br/>
+		
 
 
-		<div id="pop_sub_area">
-		﻿<link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/pop_sub.css?2017082501" />
-		<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/pop_sub.js?2017082501"></script>
-		<script src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angular-app/realtime-keyword/realtime-keyword.modal.js?2017082501"></script>
+		<div id="pop_sub_area" >
 		<div id="pop_sub_div"> 
-		<div class="realtime_keyword"> 
+		<div class="realtime_keyword" align="center"> 
 		<div class="realtime_header" dc-realtime-keyword-modal keyword-list = "[{"ranking":1,"keyword":"\ub86f\ub370\uc6d4\ub4dc \uc810\uc2ec"},
 			{"ranking":2,"keyword":"\uc810\uc2ec"},
 			{"ranking":3,"keyword":"\uac15\ub989 \ud55c\uc815\uc2dd"},
@@ -93,6 +109,7 @@
 			
 			
 		<a>실시간 인기 검색어<i class="fa fa-chevron-right"></i></a> 
+		
 		</div> 
 		<div class="realtime_content"> 
 		<span id="klist_up" onclick="k_list_up();">
@@ -232,6 +249,8 @@
 	background-color:#ff8080;
 	cursor : pointer;
 	}
+	
+	
 
 }
 

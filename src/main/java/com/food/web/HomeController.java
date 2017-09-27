@@ -78,4 +78,7 @@ public class HomeController {
 	public String test(Model model){
 		return "test/test";
 	}
+	
+	
+	
 }
