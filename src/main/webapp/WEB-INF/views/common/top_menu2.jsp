@@ -54,13 +54,16 @@ $("#login").click(function(){
 
 </script>
 <style>
-
+	#navbar ul li{
+   
+    margin: 0;
+    padding: 50;
+}
 	
 	#navbar ul li a{
 		font-size:25px;
 		cursor:pointer;
 		color : #FFFFFF;
-	
 	}
 	#navbar ul li a:hover{
 		transition:0.3s;
@@ -68,6 +71,6 @@ $("#login").click(function(){
 	}
 	#navbar ul li:last-child{
 		position:absolute;
-		right:0;
+		right : 0;
 	}
 </style>

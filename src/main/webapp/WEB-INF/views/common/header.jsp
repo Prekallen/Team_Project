@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+=======
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 <c:set var="topmenuUrl" value="/WEB-INF/views/common/top_menu.jsp" />
 <c:set var="topmenu2Url" value="/WEB-INF/views/common/top_menu2.jsp" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,6 +33,14 @@
 
 <link rel="stylesheet" href="<c:url value="/resources/footercss/footer.css?version=${pVar}" />"/>
 
+<%-- 실시간 검색어 --%> 
+<link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
+<script src='https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.js'></script>
+<link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/search_main.css?2017082501" />
+<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/pop_sub.js?2017082501"></script>
+<script src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angular-app/realtime-keyword/realtime-keyword.modal.js?2017082501"></script>
+﻿<link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/pop_sub.css?2017082501" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
 <script>
 
 var pageMove = function(page){
