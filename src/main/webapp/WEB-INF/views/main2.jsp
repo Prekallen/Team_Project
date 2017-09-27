@@ -73,7 +73,7 @@
 		
 
 
-		<div id="pop_sub_area" >
+		<div id="pop_sub_area" align="center">
 		<div id="pop_sub_div"> 
 		<div class="realtime_keyword" align="center"> 
 		<div class="realtime_header" dc-realtime-keyword-modal keyword-list = "[{"ranking":1,"keyword":"\ub86f\ub370\uc6d4\ub4dc \uc810\uc2ec"},

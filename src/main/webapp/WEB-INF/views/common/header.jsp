@@ -29,6 +29,10 @@
 
 <link rel="stylesheet" href="<c:url value="/resources/footercss/footer.css?version=${pVar}" />"/>
 
+
+<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angularjs/1.4.3/angular.min.js?2017082501"></script>
+<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angularjs/1.4.3/angular-animate.min.js?2017082501"></script>
+<script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/bootstrap/ui-bootstrap-tpls-0.13.0.min.js?2017082501"></script>
 <%-- 실시간 검색어 --%> 
 <link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
 <script src='https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.js'></script>
