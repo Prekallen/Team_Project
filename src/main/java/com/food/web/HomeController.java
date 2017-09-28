@@ -74,5 +74,11 @@ public class HomeController {
 	public String main3(Model model){
 		return "mango_plate_main";
 	}
+	@RequestMapping(value="/test/test", method= RequestMethod.GET)
+	public String test(Model model){
+		return "test/test";
+	}
+	
+	
 	
 }
