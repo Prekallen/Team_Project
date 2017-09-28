@@ -10,7 +10,7 @@
 <c:import url="${topmenu2Url}"/>
 
 
-<h3>응종류별</h3>
+<h3 align="center">응종류별</h3>
 
 
 </body>
@@ -20,9 +20,8 @@
 
 	body{
 	font-family: 'Hanna', serif;
-	background-color : #BDBDBD;
-	
-	
+	background : url('../resources/images/background2.jpg') no-repeat;
+	background-size : 100%;
 	}
 	
 	

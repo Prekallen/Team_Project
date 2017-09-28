@@ -37,8 +37,8 @@
 
 	body{
 	font-family: 'Hanna', serif;
-	
-	
+	background : url('../resources/images/background2.jpg') no-repeat;
+	background-size : 100%;
 	}
 	
 	

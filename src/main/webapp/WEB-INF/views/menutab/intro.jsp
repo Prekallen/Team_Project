@@ -31,7 +31,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 	body{
 	font-family: 'Hanna', serif;
-	background-color : #BDBDBD;
+	background : url('../resources/images/background2.jpg') no-repeat;
+	background-size : 100%;
 	}
 	
 	
