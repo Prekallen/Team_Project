@@ -26,13 +26,13 @@
 						<area shape="rect" coords="260,92,294,108" target="_blank" title="새창으로 열립니다." alt="강북구" />
 						<area shape="rect" coords="325,80,362,95"  target="_blank" title="새창으로 열립니다." alt="노원구" />
 						<area shape="rect" coords="170,110,206,127" target="_blank" title="새창으로 열립니다." alt="은평구" />
-						<area shape="rect" coords="260,138,298,154" href="http://www.seongbuk.go.kr/sb_new/seongbukgu/organization/organization.jsp" target="_blank" title="새창으로 열립니다." alt="성북구" />
-						<area shape="rect" coords="344,145,382,162" href="http://www.jungnang.seoul.kr/portal/main/contents.do?menuNo=200460" target="_blank" title="새창으로 열립니다." alt="중랑구" />
-						<area shape="rect" coords="171,170,220,187" href="http://www.sdm.go.kr/wesdm/info/organization.do" target="_blank" title="새창으로 열립니다." alt="서대문구" />
-						<area shape="rect" coords="226,162,262,178" href="http://www.jongno.go.kr/Main.do?menuId=1917&amp;menuNo=1917" target="_blank" title="새창으로 열립니다." alt="종로구" />
-						<area shape="rect" coords="298,163,342,179" href="http://www.ddm.go.kr/ddm/organization.jsp" target="_blank" title="새창으로 열립니다." alt="동대문구" />
-						<area shape="rect" coords="58,185,92,204" 	href="http://www.gangseo.seoul.kr/new_portal/introduc/main3.jsp?show=3" target="_blank" title="새창으로 열립니다." alt="강서구" />
-						<area shape="rect" coords="150,190,190,207" href="http://www.mapo.go.kr/CmsWeb/viewPage.req?idx=PG0000002296" target="_blank" title="새창으로 열립니다." alt="마포구" />
+						<area shape="rect" coords="260,138,298,154" target="_blank" title="새창으로 열립니다." alt="성북구" />
+						<area shape="rect" coords="344,145,382,162"  target="_blank" title="새창으로 열립니다." alt="중랑구" />
+						<area shape="rect" coords="171,170,220,187" target="_blank" title="새창으로 열립니다." alt="서대문구" />
+						<area shape="rect" coords="226,162,262,178"  target="_blank" title="새창으로 열립니다." alt="종로구" />
+						<area shape="rect" coords="298,163,342,179"  target="_blank" title="새창으로 열립니다." alt="동대문구" />
+						<area shape="rect" coords="58,185,92,204" 	 target="_blank" title="새창으로 열립니다." alt="강서구" />
+						<area shape="rect" coords="150,190,190,207"  target="_blank" title="새창으로 열립니다." alt="마포구" />
 						<area shape="rect" coords="245,191,272,207" href="http://www.junggu.seoul.kr/content.do?cmsid=377" target="_blank" title="새창으로 열립니다." alt="중구" />
 						<area shape="rect" coords="289,199,324,215" href="http://www.sd.go.kr/sd/main.do?op=mainSub&mCode=13G030020000" target="_blank" title="새창으로 열립니다." alt="성동구" />
 						<area shape="rect" coords="226,226,261,242" href="http://www.yongsan.go.kr/site/kr/organization/list_prev.do?sitecdv=S0000100&amp;decorator=pmsweb&amp;menucdv=04060300&amp;sitecdv=S0000100&amp;menucdv=04060300&amp;decorator=pmsweb" target="_blank" title="새창으로 열립니다." alt="용산구" />
