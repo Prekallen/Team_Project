@@ -5,46 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
-<script
-	src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA6F5A79UmPzOyZeQcNBFsBiplc1xGxbfk"></script>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<link type="image/x-icon" rel="shortcut icon"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/favicon.ico" />
-
-<!-- jQuery -->
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/jquery/1.11.2/jquery.min.js?2017082501"></script>
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/jqueryui/1.11.4/jquery-ui.min.js?2017082501"></script>
-<link type="text/css" rel="stylesheet"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/jqueryui/1.11.4/jquery-ui.min.css?2017082501" />
-
-<!-- Angular -->
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angularjs/1.3.15/angular.min.js?2017082501"></script>
-
-<!-- Facebook -->
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/FB_script.js?2017082501"></script>
-<link type="text/css" rel="stylesheet"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/css/style.css?2017082501" />
-
-<!-- Bootstrap -->
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/bootstrap/bootstrap.min.js?2017082501"></script>
-<link type="text/css" rel="stylesheet"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/bootstrap/bootstrap.min.css?2017082501" />
-
-<!-- Custom -->
-<link type="text/css" rel="stylesheet"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/bucket/css/loader.css?2017082501" />
-<link type="text/css" rel="stylesheet"
-	href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/menu/css/intro.css?2017082501" />
-
-<script type="text/javascript"
-	src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/menu/js/intro.js?2017082501"></script>
 
 <%-- google Map
 
@@ -68,25 +29,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
-
-
-
-
-
-	<input type="hidden" id="sessionCheck" value="false">
-
-	<link type="text/css" rel="stylesheet"
-		href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/menu/css/menu_top_navi.css?2017082501" />
-
-	<script
-		src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/login_module.js?2017082501"></script>
-	<link
-		href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/login_module.css?2017082501"
-		rel="stylesheet">
-	<link
-		href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/css/loader.css?2017082501"
-		rel="stylesheet">
-
 	<c:import url="${topmenu2Url}" />
 
 
@@ -97,10 +39,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<div class="dc-wrapper">
 			<div class="row1">
 				<div class="intro-col1">
-					빅데이터 맛집검색,<br>다이닝코드
+					빅데이터 맛집검색,<br>맛.zip
 				</div>
 				<div class="intro-col2">
-					낯선 곳에서도 실패 없이 맛집을 찾아주는 다이닝코드 <br /> <br /> <strong>빅데이터로
+					낯선 곳에서도 실패 없이 맛집을 찾아주는 맛.zip <br /> <br /> <strong>빅데이터로
 						더욱 공정하게</strong><br /> 몇 개의 단편적 의견을 모으기보다는 방대한 양의 데이터 분석으로 믿을 수 있는 맛집 랭킹을
 					제공합니다. 이제 어디에 있든 우리 동네인 듯 맛있는 식당을 찾아보세요.<br /> <br /> <strong>광고
 						없이 깔끔하게</strong><br /> 다이닝코드만의 필터링 기술이 오염된 블로그 리뷰를 걸러드립니다. 광고청정지역 다이닝코드에서
@@ -112,7 +54,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				</div>
 			</div>
 			<div class="row1">
-				<div class="intro-col1">다이닝코드 맛집 랭킹 기준</div>
+				<div class="intro-col1">맛.zip 맛집 랭킹 기준</div>
 				<div class="intro-col2">
 					다이닝코드는 다양한 척도를 기준으로 맛집을 공정하게 랭킹하려고 노력하고 있습니다.<br /> <br /> <b>사용자
 						평가</b> <br /> 다이닝코드 사용자가 직접 맛집에 대하여 별점을 매긴 데이터가 랭킹에 영향을 미칩니다.<br />
@@ -128,7 +70,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				</div>
 			</div>
 			<div class="row1">
-				<div class="intro-col1">다이닝코드 회사소개</div>
+				<div class="intro-col1">맛.zip 회사소개</div>
 				<div class="intro-col2">
 					다이닝코드는 수년간 자체 개발한 빅데이터 분석 시스템을 통해서<br /> 사람의 의도나 편집이 전혀 개입하지 않은
 					공정한 맛집 정보를 제공하고자 합니다.<br /> <br /> 다이닝코드는 기술기반 회사입니다.<br />
@@ -176,9 +118,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<div class="dc-wrapper">
 			<div class="intro-col1"></div>
 			<div class="intro-col2">
-				다이닝코드와 함께 성장할 실력과 열정을 갖춘 엔지니어, 마케터, 디자이너 분들과의<br> 인연을 기대하고
+				맛.zip과 함께 성장할 실력과 열정을 갖춘 엔지니어, 마케터, 디자이너 분들과의<br> 인연을 기대하고
 				있습니다. 연락 기다리겠습니다.<br>
-				<br> - 회사 설립: 2014년 7월<br> - 회사 소재: 서울시 강남구 도산대로101길 9 4층<br>
+				<br> - 회사 설립: 2017년 9월<br> - 회사 소재: 서울특별시 강남구 강남대로 374 (역삼동, 형제빌딩)3~6층<br>
 				- 이메일: contact@diningcode.com
 			</div>
 		</div>
@@ -188,10 +130,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<div class="dc-wrapper">
 			<div class="intro-col1"></div>
 			<div class="intro-col2">
-				DiningCode applies state-of-the-art big data<br> technologies
+			MAT.zip applies state-of-the-art big data<br> technologies
 				and provides<br> unbiased and distinguished restaurant ranking.<br>
 				<div id="slogun_box">Want to visit a stunning place? Ask
-					DiningCode.com !</div>
+					MATzip.com !</div>
 			</div>
 		</div>
 	</div>
