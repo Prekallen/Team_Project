@@ -115,7 +115,20 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
+		<dependency>
+	    <!-- Google.api -->
+	    <groupId>com.google.gdata</groupId>
+		    <artifactId>core</artifactId>
+		    <version>1.47.1</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>com.google.apis</groupId>
+		    <artifactId>google-api-services-oauth2</artifactId>
+		    <version>v1-rev88-1.19.1</version>
+		</dependency>
+    
 	</dependencies>
     <build>
         <plugins>
