@@ -18,9 +18,8 @@
 	cycle-slideshow data-cycle-loader="wait";
 	data-cycle-timeout="2000";>
 	
-	<img src="resources/images/food2.jpeg" width="100%" height="100%">
+	
 	<img src="resources/images/food3.jpg" width="100%" height="100%">
-	<img src="resources/images/food5.jpg" width="100%" height="100%">
 	<img src="resources/images/food6.jpg" width="100%" height="100%">
 	<img src="resources/images/food7.jpg" width="100%" height="100%">
 	<img src="resources/images/food8.jpg" width="100%" height="100%">

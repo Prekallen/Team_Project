@@ -4,7 +4,7 @@
 <%@include file="/WEB-INF/views/common/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title>공지사항</title>
+<title>로그인</title>
 </head>
 
 <link rel="stylesheet" href="${rootPath}/resources/ui/signin.css" />
