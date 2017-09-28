@@ -12,7 +12,7 @@
 <c:import url="${topmenu2Url}"/>
 <div class="i-container" style="height:200px; align:middle">
 		<form class="form-signin">
-			<h2 class="form-signin-heading">Please login</h2>
+			<h2 class="form-signin-heading">로그인이 필요합니다</h2>
 			<label for="inputEmail" class="sr-only">ID</label> <input type="text"
 				id="userId" name="id" class="form-control" placeholder="ID" required value="${userId}"
 				autofocus> <label for="inputPassword" class="sr-only">Password</label>

@@ -24,6 +24,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <div id="googleMap" style="width:100%;height:400px;"></div>
 
+
+<%--소개글 --%>
+
+
 </body>
 </html>
 <style>	
