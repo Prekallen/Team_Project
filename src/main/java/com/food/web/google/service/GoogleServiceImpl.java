@@ -27,7 +27,7 @@ public class GoogleServiceImpl implements GoogleService{
 	
 	public static void main(String[] args) throws GeneralSecurityException, IOException, ServiceException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        URL url = classloader.getResource("다운받은_키_파일.p12");
+        URL url = classloader.getResource("My Project-6f86dcbbd9a3.json");
         final File file = new File(url.getFile());
  
         HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
