@@ -27,7 +27,7 @@ public class GoogleServiceImpl implements GoogleService{
 	
 	public static void main(String[] args) throws GeneralSecurityException, IOException, ServiceException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        URL url = classloader.getResource("My Project-6f86dcbbd9a3.json");
+        URL url = classloader.getResource("My_Project-d000ebae777c.p12");
         final File file = new File(url.getFile());
  
         HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
@@ -35,7 +35,7 @@ public class GoogleServiceImpl implements GoogleService{
  
         Credential credential = new GoogleCredential.Builder().setTransport(HTTP_TRANSPORT)
                 .setJsonFactory(JSON_FACTORY)
-                .setServiceAccountId("서비스계정생성 후에 발급된 이메일 주소") // 서비스 계정 생성 당시의 정보
+                .setServiceAccountId("prekallen") // 서비스 계정 생성 당시의 정보
                 .setTokenServerEncodedUrl("https://accounts.google.com/o/oauth2/token")
                 .setServiceAccountScopes(Arrays.asList("https://www.googleapis.com/auth/drive", "https://spreadsheets.google.com/feeds", "https://docs.google.com/feeds"))
                 .setServiceAccountPrivateKeyFromP12File(file).build();
