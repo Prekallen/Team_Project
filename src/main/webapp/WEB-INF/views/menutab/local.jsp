@@ -7,7 +7,7 @@
 <title>지역별 맛집</title>
 </head>
 <body>
-<c:import url="${topmenu2Url}"/>
+<c:import url="${topmenu3Url}"/>
 
 
 <h3 align="center">지역별 맛집</h3>
@@ -56,6 +56,12 @@
 	font-family: 'Hanna', serif;
 	background : url('../resources/images/background2.jpg') no-repeat;
 	background-size : 100%;
+	}
+	#searchBtn{
+	width:50px; 
+	height:50px; 
+	background-color:#ff8080;
+	cursor : pointer;
 	}
 	
 	

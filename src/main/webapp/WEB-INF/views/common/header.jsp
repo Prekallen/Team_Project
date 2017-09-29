@@ -5,6 +5,7 @@
 
 <c:set var="topmenuUrl" value="/WEB-INF/views/common/top_menu.jsp" />
 <c:set var="topmenu2Url" value="/WEB-INF/views/common/top_menu2.jsp" />
+<c:set var="topmenu3Url" value="/WEB-INF/views/common/top_menu3.jsp" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

@@ -7,7 +7,7 @@
 <title>종류별 맛집</title>
 </head>
 <body>
-	<c:import url="${topmenu2Url}" />
+	<c:import url="${topmenu3Url}" />
 	
 	<div class="gContainer">
 		<div class="gTop">
@@ -137,6 +137,12 @@ body {
 	float : left;
 }
 
+#searchBtn{
+	width:50px; 
+	height:50px; 
+	background-color:#ff8080;
+	cursor : pointer;
+	}
 
 
 
