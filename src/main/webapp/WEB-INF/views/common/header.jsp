@@ -37,7 +37,7 @@
 <script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/bootstrap/ui-bootstrap-tpls-0.13.0.min.js?2017082501"></script>
 <%-- 실시간 검색어 --%> 
 <link rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.css?2017082501" type="text/css" />
-<script src='https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/autocomplete.js'></script>
+
 <link type="text/css" rel="stylesheet" href="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/search_main.css?2017082501" />
 <script type="text/javascript" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/pop_sub.js?2017082501"></script>
 <script src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/angular-app/realtime-keyword/realtime-keyword.modal.js?2017082501"></script>
