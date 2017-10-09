@@ -1,47 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/header.jsp" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@include file="/WEB-INF/views/common/kheader.jsp" %>
 
 
-<title>맛집 검색웹 Feedback</title>
+<title>맛.zip</title>
 </head>
 
 <body>
+<div class="kwrap">
+
+	<div class="cycle-slideshow" cycle-slideshow data-cycle-loader="wait"; data-cycle-timeout="2000";>
+		<img src="resources/images/food3.jpg" width="100%" height="100%"> 
+		<img src="resources/images/food6.jpg" width="100%" height="100%">
+		<img src="resources/images/food7.jpg" width="100%" height="100%">
+		<img src="resources/images/food8.jpg" width="100%" height="100%">
+		<img src="resources/images/food9.jpg" width="100%" height="100%">
+		<img src="resources/images/food10.png" width="100%" height="100%">
+	</div>
+	
 <c:import url="${topmenuUrl}"/>
 	
-	<div style="padding-top:100px"></div>
-	<div class="container">
+	<div class="container" style="padding-top:100px">
 		<div class="searchBar" id="searchBar">
 			<img src="${rootPath}/resources/image/mainlogo.png" >
 			<p><br><br></p>
-			<input type="text" id="searchColumn" />
+			<input type="text" id="searchColumn"  />
 			<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
 		</div>
 
 	</div>
+
+
+
+
+</div>
+<c:import url="${footerUrl}"/>
+</body>
 		
 
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
-	html, body{
+	body{
 	font-family: 'Hanna', serif;
+	margin:0;
 	width: 100%;
     height: 100%;
     position : relative;
-	z-index : 1;
 	}
-	body:after{
+	html{
+	height:100%;
+	}
+	
+	body .cycle-slideshow{
+	
 	content:"";
 	position: absolute;
 	top:0;
-	background-image:url('resources/images/food2.jpeg');
-	background-size: cover;
+	background-size: 100%;
 	width: 100%;
     height: 100%;
-	opacity: 0.4!important;
+	opacity: 0.6!important;
     filter: alpha(opacity=40);
     z-index: -1;
 	}
@@ -71,5 +91,4 @@
 	}
 }
 </style>
-</body>
 </html>

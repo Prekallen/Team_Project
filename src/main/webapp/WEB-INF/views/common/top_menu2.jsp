@@ -9,6 +9,7 @@
             <li><a id="notice">공지사항</a></li>
             <li><a id="local">지역별</a></li>
             <li><a id="group">종류별</a></li>
+            <li><a id="sample">샘플</a></li>
             <li><a id="login">로그인</a></li>
           </ul>
           
