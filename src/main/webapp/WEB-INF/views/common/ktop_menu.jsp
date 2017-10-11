@@ -7,12 +7,11 @@
           	<li><a id="khome">HOME</a></li> 
           	<li><a id="kintro">소개</a></li>
             <li><a>공지사항</a></li>
-            <li><a>지역별</a></li>
-            <li><a>종류별</a></li>
-            <li>                      </li>
-            <li ><input type="text" id="s_input" name="query" autocomplete="off" value="" placeholder="예: 신분당선 강남역" style=" width:250px; height:50px; " /></li>
-			<li><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 50px; height:50px"></li>
-			
+            <li><a id="klocal">지역별</a></li>
+            <li><a id="kgroup">종류별</a></li>
+            <li style="padding-left:300px; padding-top:10px;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:30px; "/>
+            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 30px; height:30px; "></li> 
+			 
             <li><a id="klogin">로그인</a></li>
           </ul>
           
@@ -28,6 +27,12 @@ $("#klogin").click(function(){
 });
 $("#kintro").click(function(){
 	pageMove("menutab/kintro")
+});
+$("#kgroup").click(function(){
+	pageMove("menutab/kgroup")
+});
+$("#klocal").click(function(){
+	pageMove("menutab/klocal")
 });
 
 

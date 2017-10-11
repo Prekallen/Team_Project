@@ -92,5 +92,13 @@ public class HomeController {
 	public String kintro(Model model){
 		return "menutab/kintro";
 	}
+	@RequestMapping(value="/menutab/kgroup", method= RequestMethod.GET)
+	public String kgroup(Model model){
+		return "menutab/kgroup";
+	}
+	@RequestMapping(value="/menutab/klocal", method= RequestMethod.GET)
+	public String klocal(Model model){
+		return "menutab/klocal";
+	}
 	
 }
