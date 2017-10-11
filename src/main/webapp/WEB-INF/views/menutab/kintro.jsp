@@ -33,7 +33,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 <div class="kwrap">
-<c:import url="${topmenuUrl}"/>
+<c:import url="${ktopmenuUrl}"/>
 	<%--소개글 --%>
 	<div class="dc-area" id="introArea1" style="padding-top:100px;">
 		<div class="dc-wrapper">

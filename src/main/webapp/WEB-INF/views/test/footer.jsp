@@ -18,6 +18,7 @@
     width:100%;
     height:30px;
     background-color: #e1e0db;
+    margin-bottom : -1px;
 }
 
 div#footer_text {

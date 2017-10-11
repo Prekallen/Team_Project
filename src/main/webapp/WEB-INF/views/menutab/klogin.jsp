@@ -29,9 +29,9 @@
 
 	</div>
 
-
-</div>
 <c:import url="${footerUrl}"/>
+</div>
+
 </body>
 </html>
 <style>	
@@ -45,7 +45,11 @@
 	html {
 	height: 100%;
 	}
-
+	.kwrap {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 30px; /* footer height */
+	}
 		
 
 </style>
