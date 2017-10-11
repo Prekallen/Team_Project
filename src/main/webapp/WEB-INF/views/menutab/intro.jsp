@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/header.jsp"%>
+<%@include file="/WEB-INF/views/common/kheader.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
@@ -29,11 +29,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
-	<c:import url="${topmenu2Url}" />
+	
 
 
 
-
+<c:import url="${ktopmenuUrl}"/>
 	<%--소개글 --%>
 	<div class="dc-area" id="introArea1">
 		<div class="dc-wrapper">
