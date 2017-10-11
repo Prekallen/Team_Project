@@ -7,6 +7,7 @@
 <title>종류별 맛집</title>
 </head>
 <body>
+<div class="kwrap">
 	<c:import url="${ktopmenuUrl}" />
 	
 	<div class="gContainer">
@@ -21,16 +22,16 @@
 			</div>
 		</div>
 		
-		<div class="gMidBot">
 			<div class="gMiddle" id="gMiddle"></div>
 		
 		
-			<div class="gBottom"></div>
-		</div>
+			<div class="gBottom" id="gBottom"></div>
+
 		
 	</div>
 
-
+<c:import url="${footerUrl}"/>
+</div>
 </body>
 
 <script>
@@ -48,7 +49,7 @@ $(document).ready(function(){
 					gMiddle += "<area shape='rect' coords='171,170,220,187' target='_blank'   alt='서대문구' />";
 					gMiddle += "<area shape='rect' coords='226,162,262,178'  target='_blank'   alt='종로구' />";
 					gMiddle += "<area shape='rect' coords='298,163,342,179'  target='_blank'   alt='동대문구' />";
-					gMiddle += "<area shape='rect' coords='58,185,92,204' 	 target='_blank'   alt='강서구' />";
+					gMiddle += "<area shape='rect' coords='58,185,92,204' 	 target='_blank'   alt='강서구' class='gangSeo' />";
 					gMiddle += "<area shape='rect' coords='150,190,190,207'  target='_blank'   alt='마포구' />";
 					gMiddle += "<area shape='rect' coords='245,191,272,207' target='_blank'   alt='중구' />";
 					gMiddle += "<area shape='rect' coords='289,199,324,215'  target='_blank'   alt='성동구' />";
@@ -67,46 +68,52 @@ $(document).ready(function(){
 					gMiddle += "</map>";
 	
 		$("#gMiddle").html(gMiddle); 
-	});
+	});	
 }); 
+
+
 </script>
 </html>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
-body {
+	body {	
 	font-family: 'Hanna', serif;
 	height : 100%;
 	width : 100%;
+	}
+	html{
+	height:100%;
+	}
 	
-}
-
-.gtlBtn {
+	.gtlBtn {
 	font-size: 30px;
 	width: 100px;
 	height: 50px;
 	cursor: pointer;
 	background-color: #ffffff;
-}
-
-.gTop_List button {
+	}
+	
+	.gTop_List button {
 	margin-right: 50px; 
-}
-
-.gContainer{
+	}
+	
+	.gContainer{
 	height : 100%;
 	width : 100%;
 	display: inline;
-}
-.gTop {
+	}
+	.gTop {
 	padding-top: 150px;
 	padding-bottom: 150px;
 	text-align : center; 
-}
-.gMidTop{
-	height : 100%;
-	width : 100%;
-}
+	}
+	.kwrap {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 30px; /* footer height */
+	}
+		
 
 
 
