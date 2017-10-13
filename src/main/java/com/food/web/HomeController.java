@@ -79,6 +79,11 @@ public class HomeController {
 		return "test/test";
 	}
 	
+	@RequestMapping(value="/mememi", method= RequestMethod.GET)
+	public String mememi(Model model){
+		return "mememi";
+	}
+	
 	
 	
 	
