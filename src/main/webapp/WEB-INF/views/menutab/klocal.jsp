@@ -12,6 +12,7 @@
 	
 	<div class="loContainer">
 		<div class="loTop">
+		<div style='text-align:center;'><img src='${rootPath}/resources/image/seoulmap.png' usemap='#map' alt='서울시 자치구 지도' /></div>
 			<map name="map" id="map">
                   <area shape="rect" coords="283,62,317,77"    target="_blank" title="새창으로 열립니다." alt="도봉구" />
                   <area shape="rect" coords="260,92,294,108" target="_blank" title="새창으로 열립니다." alt="강북구" />

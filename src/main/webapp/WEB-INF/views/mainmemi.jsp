@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/views/common/kheader.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="google-translate-customization" content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta> <!-- 세계 언어 선택 메타 태그 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -122,14 +124,14 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="#">Feedback</a>
+				<li class="fir"><a href="/web/menutab/kintro">Feedback</a>
 					<ul class="sub1">
-						<li><a href="#">소개</a></li>
+						<li><a href="/web/menutab/kintro">소개</a></li>
 						<li><a href="#">공지사항</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
-				<li><a href="#">종류별</a>
+				<li><a href="/web/menutab/kgroup">종류별</a>
 					<ul class="sub2">
 						<li><a href="#">한식</a></li>
 						<li><a href="#">양식</a></li>
@@ -139,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="#">지역별</a>
+				<li><a href="/web/menutab/klocal">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
