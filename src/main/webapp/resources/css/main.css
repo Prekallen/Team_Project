@@ -34,12 +34,12 @@
 #mySwipe{width: 100%; margin: 0 auto;}
 /* #mySwipe img{ width: 1600px; width: 100%; max-width:100%; height:500px;} */
 /* #mySwipe02 img{width:100%; max-width:100%; height:370px;} */
-#mySwipe .mi01{background: url(../img/main_sw02_bg.png) no-repeat center; background-size: cover; height: 500px; width: 100%;}
-#mySwipe .mi02{background: url(../img/m_img_1.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
-#mySwipe .mi03{background: url(../img/m_img_2.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
+#mySwipe .mi01{background: url(../images/food3.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
+#mySwipe .mi02{background: url(../images/food8.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
+#mySwipe .mi03{background: url(../images/food.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
 
 #fix_bn{width: 50%; margin-left: 50%; }
-#fix_bn .fix_img{background: url(../img/main_newbn_bg2.png) no-repeat center; background-size: cover; height: 500px; width: 100%; }
+#fix_bn .fix_img{background: url(../images/4dallar.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%; }
 
 
 /* 인기상품 */

@@ -23,7 +23,35 @@
 		</div>
 		
 			<div class="gMiddle" id="gMiddle"></div>
-		
+
+				<div id="section" class="cf">
+			<div class="culture">
+				<h3>양식</h3>
+				<span>현대카드이기에 가능한 독보적 문화행사</span>
+				<ul>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
+							<strong>슈퍼콘서트 ></strong>
+							<span>세계 레전드급 아티스트의 놀라운 무대</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
+							<strong>컬처프로젝트 ></strong>
+							<span>이 시대의 컬처아이콘을 탐색&middot;선별&middot;소개하다</span>
+						</a>
+					</li>
+					<li class="list mn">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
+							<strong>슈퍼매치 ></strong>
+							<span>세계 최고 선수들의 놀라운 플레이</span>
+						</a>
+					</li>
+				</ul>
+			</div>	
 		
 			<div class="gBottom" id="gBottom"></div>
 
@@ -35,43 +63,6 @@
 </body>
 
 <script>
-$(document).ready(function(){
-	$(".gtlBtn").click(function(){
-		var gMiddle = 	"<div style='text-align:center;'><img src='${rootPath}/resources/image/seoulmap.png' usemap='#map' alt='서울시 자치구 지도' />";
-					gMiddle += "</div>";
-					gMiddle += "<map name='map' id='map'>";
-					gMiddle += "<area shape='rect' coords='283,62,317,77' 	target='_blank' alt='도봉구' />";
-					gMiddle += "<area shape='rect' coords='260,92,294,108' target='_blank'  alt='강북구' />";
-					gMiddle += "<area shape='rect' coords='325,80,362,95'  target='_blank'  alt='노원구' />";
-					gMiddle += "<area shape='rect' coords='170,110,206,127' target='_blank' alt='은평구' />";
-					gMiddle += "<area shape='rect' coords='260,138,298,154' target='_blank' alt='성북구' />";
-					gMiddle += "<area shape='rect' coords='344,145,382,162'  target='_blank'   alt='중랑구' />";
-					gMiddle += "<area shape='rect' coords='171,170,220,187' target='_blank'   alt='서대문구' />";
-					gMiddle += "<area shape='rect' coords='226,162,262,178'  target='_blank'   alt='종로구' />";
-					gMiddle += "<area shape='rect' coords='298,163,342,179'  target='_blank'   alt='동대문구' />";
-					gMiddle += "<area shape='rect' coords='58,185,92,204' 	 target='_blank'   alt='강서구' class='gangSeo' />";
-					gMiddle += "<area shape='rect' coords='150,190,190,207'  target='_blank'   alt='마포구' />";
-					gMiddle += "<area shape='rect' coords='245,191,272,207' target='_blank'   alt='중구' />";
-					gMiddle += "<area shape='rect' coords='289,199,324,215'  target='_blank'   alt='성동구' />";
-					gMiddle += "<area shape='rect' coords='226,226,261,242'  target='_blank'   alt='용산구' />";
-					gMiddle += "<area shape='rect' coords='334,211,372,227' target='_blank'   alt='광진구' />";
-					gMiddle += "<area shape='rect' coords='393,201,430,217'target='_blank'   alt='강동구' />";
-					gMiddle += "<area shape='rect' coords='93,239,133,258' target='_blank'   alt='양천구' />";
-					gMiddle += "<area shape='rect' coords='146,237,189,253' target='_blank'   alt='영등포구' />";
-					gMiddle += "<area shape='rect' coords='188,260,226,277'  target='_blank'   alt='동작구' />";
-					gMiddle += "<area shape='rect' coords='250,281,290,298' target='_blank'   alt='서초구' />";
-					gMiddle += "<area shape='rect' coords='299,264,336,281'  target='_blank'   alt='강남구' />";
-					gMiddle += "<area shape='rect' coords='356,251,393,269' target='_blank'   alt='송파구' />";
-					gMiddle += "<area shape='rect' coords='85,272,122,290'   target='_blank'   alt='구로구' />";
-					gMiddle += "<area shape='rect' coords='137,298,175,315'  target='_blank'   alt='금천구' />";
-					gMiddle += "<area shape='rect' coords='190,306,226,323' target='_blank'   alt='관악구' />";
-					gMiddle += "</map>";
-	
-		$("#gMiddle").html(gMiddle); 
-	});	
-}); 
-
-
 </script>
 </html>
 <style>
@@ -113,8 +104,19 @@ $(document).ready(function(){
 	position: relative;
 	padding-bottom: 30px; /* footer height */
 	}
-		
+	
+ 
 
+/* Culture */
+#section{padding-top: 75px;}
+.culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
+.culture span{display: block; font-size: 21px; text-align: center;}
+.culture ul{width: 1044px; margin: 0 auto; margin-top: 40px;}
+.culture .list{float: left; margin: 0 24px 39px 0;}
+.culture strong{display: block; margin:16px 0 10px; font-size: 15px; font-weight: normal; color: #000000;}
+.culture li:hover strong{color: #1F75D6;}
+.culture ul span{font-size: 13px; text-align: left; color: #666666;}
+.culture li.mn{margin: 0;}
 
 
 </style>

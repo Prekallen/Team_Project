@@ -23,7 +23,7 @@
 	
 	<div class="container" style="padding-top:100px">
 		<div class="searchBar" id="searchBar">
-			<img src="${rootPath}/resources/image/mainlogo.png" >
+			<img src="${rootPath}/resources/image/fdLogo.png"  style="color:#ff8080;">
 			<p><br><br></p>
 			<input type="text" id="searchColumn"  />
 			<a><img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn"></a>
