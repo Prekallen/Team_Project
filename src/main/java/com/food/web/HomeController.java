@@ -83,6 +83,10 @@ public class HomeController {
 	public String mememi(Model model){
 		return "mememi";
 	}
+	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
+	public String mainmemi(Model model){
+		return "mainmemi";
+	}
 	
 	
 	
