@@ -23,7 +23,35 @@
 		</div>
 		
 			<div class="gMiddle" id="gMiddle"></div>
-		
+
+				<div id="section" class="cf">
+			<div class="culture">
+				<h3>양식</h3>
+				<span>현대카드이기에 가능한 독보적 문화행사</span>
+				<ul>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
+							<strong>슈퍼콘서트 ></strong>
+							<span>세계 레전드급 아티스트의 놀라운 무대</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
+							<strong>컬처프로젝트 ></strong>
+							<span>이 시대의 컬처아이콘을 탐색&middot;선별&middot;소개하다</span>
+						</a>
+					</li>
+					<li class="list mn">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
+							<strong>슈퍼매치 ></strong>
+							<span>세계 최고 선수들의 놀라운 플레이</span>
+						</a>
+					</li>
+				</ul>
+			</div>	
 		
 			<div class="gBottom" id="gBottom"></div>
 
@@ -76,8 +104,19 @@
 	position: relative;
 	padding-bottom: 30px; /* footer height */
 	}
-		
+	
+ 
 
+/* Culture */
+#section{padding-top: 75px;}
+.culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
+.culture span{display: block; font-size: 21px; text-align: center;}
+.culture ul{width: 1044px; margin: 0 auto; margin-top: 40px;}
+.culture .list{float: left; margin: 0 24px 39px 0;}
+.culture strong{display: block; margin:16px 0 10px; font-size: 15px; font-weight: normal; color: #000000;}
+.culture li:hover strong{color: #1F75D6;}
+.culture ul span{font-size: 13px; text-align: left; color: #666666;}
+.culture li.mn{margin: 0;}
 
 
 </style>
