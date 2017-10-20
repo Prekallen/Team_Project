@@ -317,7 +317,7 @@ function googleTranslateElementInit() {
 		<address>
 			<div class="ellipsis">(주)Feedback 바지사장 : 김홍근&nbsp;&nbsp; / &nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-119</div> <!-- <br /> -->
 			<div class="ellipsis">E-mail : 동의? ㅇ보감~&nbsp; / &nbsp;사업자등록번호 : 112&nbsp; </div><!-- <br /> -->
-			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 김영하, 송우재</div> <!-- <br /> -->
+			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 신영하, 송우재</div> <!-- <br /> -->
 		</address>
 	</div><!-- id="inner_footer" -->
 </div><!-- id="footer_wrap" -->
