@@ -4,7 +4,7 @@
       <div class="hcontainer" >
        
           <ul class="nav navbar-nav" style="background-color: #ff8080; width:100%;">
-          	<li><a id="khome">HOME</a></li> 
+          	<li><a id="mainmemi">HOME</a></li> 
           	<li><a id="kintro">소개</a></li>
             <li><a>공지사항</a></li>
             <li><a id="klocal">지역별</a></li>
@@ -19,8 +19,8 @@
       </div>
 <script>
 
-$("#khome").click(function(){
-		pageMove("main")
+$("#mainmemi").click(function(){
+		pageMove("mainmemi")
 });
 $("#klogin").click(function(){
 	pageMove("menutab/klogin")
