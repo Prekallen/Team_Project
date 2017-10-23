@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <div class="kheader" >
+    <div class="header" >
       <div class="hcontainer" >
        
           <ul class="nav navbar-nav" style="background-color: #ff8080; width:100%;">

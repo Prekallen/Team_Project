@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="${rootPath}/resources/ui/signin.css" />
 <body>
-<c:import url="${topmenu2Url}"/>
+<c:import url="${topmenu3Url}"/>
 <div class="i-container" style="height:200px; align:middle">
 		<form class="form-signin">
 			<h2 class="form-signin-heading">로그인이 필요합니다</h2>
@@ -25,14 +25,20 @@
 			</div>
 			<button id="btn2" class="btn btn-lg btn-primary btn-block"
 				type="button" style="background-color: #ff8080;">Login</button>
+					<button id="btn3" class="btn btn-lg btn-primary btn-block"
+					type="button" style="background-color: #ff8080;" >회원가입</button>
 		</form>
 
 	</div>
 <script>
 	$("#btn2").click(function(){
 		var paramIds = "userId,userPwd";
-		var au = new AjaxUtil("/user/login",paramIds); 
+		var au = new AjaxUtil("/menutab/login",paramIds); 
 		au.send();
+	});
+	
+	$("#btn3").click(function(){
+		pageMove("menutab/kjoin")
 	});
 </script>
 

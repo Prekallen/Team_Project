@@ -24,12 +24,12 @@ public class UserController {
 	@Autowired
 	private UserService us;
 	
-	@RequestMapping(value="/menutab/login", method=RequestMethod.GET)
-	public String login(){
-		return "menutab/login";
+	@RequestMapping(value="/menutab/klogin", method=RequestMethod.GET)
+	public String klogin(){
+		return "menutab/klogin";
 	}
 	
-	@RequestMapping(value="/menutab/login", method=RequestMethod.POST)
+	@RequestMapping(value="/menutab/klogin", method=RequestMethod.POST)
 	public @ResponseBody ModelMap login(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
 		UserInfo rUser = us.login(user);
 		if(rUser!=null){
@@ -38,10 +38,11 @@ public class UserController {
 			hm.put("url", "/mainmemi");
 		}else{
 			hm.put("msg", "아이디와 비밀번호를 확인해주세요.");
-			hm.put("url", "/menutab/login");
-			}
+			hm.put("url", "/menutab/klogin");
+		}
 		return hm;
 	}
+	
 	@RequestMapping(value="/user/list", method=RequestMethod.POST)
 	public @ResponseBody List<UserInfo> getUserList(HttpSession hs, UserInfo user, ModelMap hm){
 		return us.selectUserList(user);
@@ -51,10 +52,7 @@ public class UserController {
 	public @ResponseBody int insert(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
 		return us.insertUser(user);
 	}
-//	@RequestMapping(value="/user/mainmemi", method= RequestMethod.GET)
-//	public String mainmemi(Model model){
-//		return "mainmemi";
-//	}
+
 
 	
 }

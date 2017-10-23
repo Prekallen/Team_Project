@@ -41,6 +41,13 @@
 
 </body>
 <script>
+
+$("#btn2").click(function(){
+	var paramIds = "userId,userPwd";
+	var au = new AjaxUtil("/menutab/klogin",paramIds); 
+	au.send();
+});
+
 $("#btn3").click(function(){
 	pageMove("menutab/kjoin")
 });

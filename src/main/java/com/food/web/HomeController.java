@@ -79,20 +79,25 @@ public class HomeController {
 	public String mememi(Model model){
 		return "mememi";
 	}
+
+	
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
 	public String mainmemi(Model model){
 		return "mainmemi";
 	}
-	
-	
-	
+
+	@RequestMapping(value="/mainmemi2", method= RequestMethod.GET)
+	public String mainmemi2(Model model){
+		return "mainmemi2";
+	}
+
 	
 	
 	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
-	public String klogin(Model model){
-		return "menutab/klogin";
-	}
+//	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
+//	public String klogin(Model model){
+//		return "menutab/klogin";
+//	}
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
 	public String kintro(Model model){
 		return "menutab/kintro";
