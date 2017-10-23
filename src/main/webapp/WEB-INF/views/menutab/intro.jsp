@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
@@ -29,13 +29,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
-	
 
 
 
-<c:import url="${ktopmenuUrl}"/>
+<div class="kwrap">
+<c:import url="${topmenu3Url}"/>
 	<%--소개글 --%>
-	<div class="dc-area" id="introArea1">
+	<div class="dc-area" id="introArea1" style="padding-top:100px;">
 		<div class="dc-wrapper">
 			<div class="row1">
 				<div class="intro-col1">
@@ -138,6 +138,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		</div>
 	</div>
 
+<c:import url="${footerUrl}"/>
+</div>
 </body>
 </html>
 <style>
@@ -145,7 +147,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 body {
 	font-family: 'Hanna', serif;
-	background: url('../resources/images/background2.jpg') no-repeat;
-	background-size: 100%;
+	margin: 0;
+	height: 100%;
+}
+html {
+height: 100%;
+}
+/* footer고정을 위한 */
+.kwrap {
+min-height: 100%;
+position: relative;
+padding-bottom: 30px; /* footer height */
 }
 </style>

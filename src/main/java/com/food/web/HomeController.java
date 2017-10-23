@@ -83,6 +83,8 @@ public class HomeController {
 	public String mememi(Model model){
 		return "mememi";
 	}
+
+	
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
 	public String mainmemi(Model model){
 		return "mainmemi";
@@ -94,13 +96,20 @@ public class HomeController {
 	
 	
 	
-	
+
+
+	@RequestMapping(value="/mainmemi2", method= RequestMethod.GET)
+	public String mainmemi2(Model model){
+		return "mainmemi2";
+	}
+
+
 	
 	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
-	public String klogin(Model model){
-		return "menutab/klogin";
-	}
+//	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
+//	public String klogin(Model model){
+//		return "menutab/klogin";
+//	}
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
 	public String kintro(Model model){
 		return "menutab/kintro";
@@ -112,6 +121,14 @@ public class HomeController {
 	@RequestMapping(value="/menutab/klocal", method= RequestMethod.GET)
 	public String klocal(Model model){
 		return "menutab/klocal";
+	}
+	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
+	public String kjoin(Model model){
+		return "menutab/kjoin";
+	}
+	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
+	public String knotice(Model model){
+		return "menutab/knotice";
 	}
 	
 }
