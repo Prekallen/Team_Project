@@ -69,10 +69,7 @@ public class HomeController {
 		return "menutab/group";
 	}
 	
-	@RequestMapping(value="/menutab/login", method= RequestMethod.GET)
-	public String login(Model model){
-		return "menutab/login";
-	}
+	
 	
 	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
 	public String main3(Model model){
@@ -89,10 +86,9 @@ public class HomeController {
 	}
 
 	
-	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
+	@RequestMapping(value="/mainmemi", method=RequestMethod.GET)
 	public String mainmemi(Model model, UserInfo user, HttpSession hs){
 		user = (UserInfo) hs.getAttribute("user");
-		 
 		return "mainmemi";
 	}
 	@RequestMapping(value="/signup", method= RequestMethod.GET)
@@ -112,10 +108,7 @@ public class HomeController {
 
 	
 	//main 테스트용 k버전
-//	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
-//	public String klogin(Model model){
-//		return "menutab/klogin";
-//	}
+
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
 	public String kintro(Model model){
 		return "menutab/kintro";

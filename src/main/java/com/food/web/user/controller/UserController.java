@@ -23,15 +23,10 @@ public class UserController {
 	@Autowired
 	private UserService us;
 	
-	@RequestMapping(value="/menutab/klogin", method=RequestMethod.GET)
-	public String klogin(){
-		return "menutab/klogin";
-	}
-	
 	@RequestMapping(value="/menutab/klogin", method=RequestMethod.POST)
-	public @ResponseBody ModelMap login(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
+	public String klogin(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
 		UserInfo rUser = us.login(user);
-		if(rUser!=null){
+		if(user!=null&&!user.getUserId().equals("")){
 			hs.setAttribute("user", rUser);
 			hm.put("msg", "로그인 성공하셨습니다.");
 			hm.put("url", "/mainmemi");
@@ -39,8 +34,26 @@ public class UserController {
 			hm.put("msg", "아이디와 비밀번호를 확인해주세요.");
 			hm.put("url", "/menutab/klogin");
 		}
-		return hm;
+		return "menutab/klogin";
 	}
+	@RequestMapping(value="/menutab/klogin", method=RequestMethod.GET)
+	public String goLogin(){
+		return "menutab/klogin";
+	}
+	
+//	@RequestMapping(value="/menutab/klogin", method=RequestMethod.POST)
+//	public @ResponseBody ModelMap login(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
+//		UserInfo rUser = us.login(user);
+//		if(user!=null&&!user.getUserId().equals("")){
+//			hs.setAttribute("user", rUser);
+//			hm.put("msg", "로그인 성공하셨습니다.");
+//			hm.put("url", "/mainmemi");
+//		}else{
+//			hm.put("msg", "아이디와 비밀번호를 확인해주세요.");
+//			hm.put("url", "/menutab/klogin");
+//		}
+//		return hm;
+//	}
 	
 	@RequestMapping(value="/user/list", method=RequestMethod.POST)
 	public @ResponseBody List<UserInfo> getUserList(HttpSession hs, UserInfo user, ModelMap hm){

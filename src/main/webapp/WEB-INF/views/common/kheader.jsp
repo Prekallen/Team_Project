@@ -61,9 +61,9 @@ var AjaxUtil = function (url, params, type, dataType){
 		return  JSON.stringify(data);
 	}
 	this.type = type?type:"POST";
-	this.dataType = dataType?dataType:"json";
+	this.dataType = dataType?dataType:"JSON";
 	this.param = generateJSON(params);
-	this.callbackSuccess = function(json){
+	this.callbackSuccess = function(text){
     	var url = json.url;
     	var msg = json.msg;
     	if(msg){
@@ -83,8 +83,8 @@ var AjaxUtil = function (url, params, type, dataType){
 	    ,   url      : this.url
 	    ,   dataType : this.dataType 
 	    ,   beforeSend: function(xhr) {
-	        xhr.setRequestHeader("Accept", "application/json");
-	        xhr.setRequestHeader("Content-Type", "application/json");
+	        xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+	        xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 	    }
 	    ,   data     : this.param
 	    ,   success : this.callbackSuccess

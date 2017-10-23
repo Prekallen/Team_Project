@@ -25,6 +25,7 @@
 				</div>
 				<button id="btn2" class="btn btn-lg btn-primary btn-block"
 					type="button" style="background-color: #ff8080;">Login</button>
+					
 					<button id="btn3" class="btn btn-lg btn-primary btn-block"
 					type="button" style="background-color: #ff8080;">회원가입</button>
 					<p></p>
@@ -93,7 +94,7 @@
 
 $("#btn2").click(function(){
 	var paramIds = "userId,userPwd";
-	var au = new AjaxUtil("/menutab/klogin",paramIds); 
+	var au = new AjaxUtil("menutab/klogin",paramIds); 
 	au.send();
 });
 
