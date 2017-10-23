@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +53,7 @@
 		<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> --> 
 		<dl id="util_menu">
 			<dt class="hide">유틸메뉴</dt>
-			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click3.png"/></dd>
+			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click.png"/></dd>
 			<dd class="util_first">
 				<ul>
 					<li class="login_wrap logtxt"><a href="#">LOGIN</a>
@@ -84,7 +84,7 @@
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
-									<a href="#"><img src="resources/img/login_close_btn2.png" alt="닫기버튼" /></a>
+									<a href="#"><img src="resources/img/login_close_btn3.png" alt="닫기버튼" /></a>
 								</p>
 							</fieldset>
 						</form>
@@ -124,14 +124,14 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="/web/menutab/kintro">Feedback</a>
+				<li class="fir"><a href="/web/menutab/intro">Feedback</a>
 					<ul class="sub1">
-						<li><a href="/web/menutab/kintro">소개</a></li>
-						<li><a href="/web/menutab/knotice">공지사항</a></li>
+						<li><a href="/web/menutab/intro">소개</a></li>
+						<li><a href="/web/menutab/notice">공지사항</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/kgroup">종류별</a>
+				<li><a href="/web/menutab/group">종류별</a>
 					<ul class="sub2">
 						<li><a href="#">한식</a></li>
 						<li><a href="#">양식</a></li>
@@ -141,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/klocal">지역별</a>
+				<li><a href="/web/menutab/local">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
@@ -270,10 +270,6 @@ function googleTranslateElementInit() {
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
 	})
-$(".mainjoin").click(function(){
-	pageMove("menutab/kjoin")
-});
-
 </script>
 
 

@@ -50,7 +50,7 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 /* 로그인 영역 */
 .login_wrap{/* position: relative; */ position: relative; overflow: visible;}
 .login_wrap>a{color: #ff3baf; text-decoration: underline;}
-#login_f{width: 305px; height: 161px; background: url(../img/login_bg2.png); position: absolute; left: -110px; top: -1500px; /* left: 810px; top: 0px; */ z-index: 15; padding: 40px 0 0 30px;}
+#login_f{width: 330px; height: 200px; background: url(../img/login_bg2.png); position: absolute; left: -110px; top: -1500px; /* left: 810px; top: 0px; */ z-index: 15; padding: 40px 0 0 30px;}
 	.logtxt{margin-top: 4px; color: #ffffff;}
 	.user_id, .user_pw{position: relative;}
 	.user_id label, .user_pw label{position: absolute; top: 3px; left: 1px;}
