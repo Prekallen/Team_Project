@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="${rootPath}-INF/views/common/kheader.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +80,7 @@
 									<input type="image" src="resources/img/login_btn2.png" alt="로그인버튼" />
 								</p>
 								<p class="join_btn_wrap">
-									<a href="/web/menutab/kjoin" >회원가입</a>
+									<a href="${rootPath}/menutab/kjoin" >회원가입</a>
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
@@ -89,7 +89,7 @@
 							</fieldset>
 						</form>
 					</li>
-					<li class="logtxt"><a href="/web/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
+					<li class="logtxt"><a href="${rootPath}/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
 					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
 				</ul>
 			</dd>
@@ -124,14 +124,14 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="/web/menutab/kintro">Feedback</a>
+				<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
-						<li><a href="/web/menutab/kintro">소개</a></li>
-						<li><a href="/web/menutab/knotice">공지사항</a></li>
+						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
+						<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/kgroup">종류별</a>
+				<li><a href="${rootPath}/menutab/kgroup">종류별</a>
 					<ul class="sub2">
 						<li><a href="#">한식</a></li>
 						<li><a href="#">양식</a></li>
@@ -141,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/klocal">지역별</a>
+				<li><a href="${rootPath}/menutab/klocal">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
