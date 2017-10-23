@@ -87,6 +87,10 @@ public class HomeController {
 	public String mainmemi(Model model){
 		return "mainmemi";
 	}
+	@RequestMapping(value="/signup", method= RequestMethod.GET)
+	public String signup(Model model){
+		return "signup";
+	}
 	
 	
 	
