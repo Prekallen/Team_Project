@@ -56,7 +56,7 @@
 			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click3.png"/></dd>
 			<dd class="util_first">
 				<ul>
-					<li class="login_wrap logtxt"><a href="#">LOGIN</a>
+					<li class="login_wrap logtxt" ><a href="#" id="status">LOGIN</a>
 						<form action="#" method="post" name="log_f" id="login_f">
 							<fieldset>
 								<legend>로그인</legend>
@@ -263,6 +263,11 @@ function googleTranslateElementInit() {
 </div><!-- id="wrap" -->
 	
 <script> 
+	if(${userId}==""||${userId}==null){
+		$("#status").val("LOGIN");
+	}else{
+		$("#status").val(${userId});
+	}
 	$('.DB_etc10_1').DB_springMove({
 		key:'e24102',                //라이센스키
 		dir:'x',               //방향축('x','y')
