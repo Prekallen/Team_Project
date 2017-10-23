@@ -9,9 +9,9 @@
 <meta name="google-translate-customization" content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta> <!-- 세계 언어 선택 메타 태그 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="Generator" content="Notepad++"/>
-<meta name="Author" content="박애정"/>
-<meta name="keywords" content="Cafe MeMeMi" />
-<meta name="Description" content="Cafe MeMeMi 메인 페이지에 오신 것을 환영합니다"/>
+<meta name="Author" content="(TEAM)Feedback"/>
+<meta name="keywords" content="Feedback" />
+<meta name="Description" content="Feedback 메인 페이지에 오신 것을 환영합니다"/>
 <link rel="shortcut icon" href="resources/favicon/mememi_favi.png"> <!-- 파비콘 -->
 <link rel="apple-touch-icon-precomposed" href="apple-icon.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114.png">
@@ -256,7 +256,7 @@ function googleTranslateElementInit() {
 		<address>
 			<div class="ellipsis">(주)Feedback 바지사장 : 김홍근&nbsp;&nbsp; / &nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-119</div> <!-- <br /> -->
 			<div class="ellipsis">E-mail : 동의? ㅇ보감~&nbsp; / &nbsp;사업자등록번호 : 112&nbsp; </div><!-- <br /> -->
-			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 신영하, 송우재</div> <!-- <br /> -->
+			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 신영하, 송우재 [탈주자 : 김상철]</div> <!-- <br /> -->
 		</address>
 	</div><!-- id="inner_footer" -->
 </div><!-- id="footer_wrap" -->
