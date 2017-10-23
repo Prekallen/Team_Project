@@ -109,5 +109,13 @@ public class HomeController {
 	public String klocal(Model model){
 		return "menutab/klocal";
 	}
+	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
+	public String kjoin(Model model){
+		return "menutab/kjoin";
+	}
+	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
+	public String knotice(Model model){
+		return "menutab/knotice";
+	}
 	
 }

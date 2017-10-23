@@ -80,7 +80,7 @@
 									<input type="image" src="resources/img/login_btn2.png" alt="로그인버튼" />
 								</p>
 								<p class="join_btn_wrap">
-									<a href="#">회원가입</a>
+									<a href="/web/menutab/kjoin" >회원가입</a>
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
@@ -89,7 +89,7 @@
 							</fieldset>
 						</form>
 					</li>
-					<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
+					<li class="logtxt"><a href="/web/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
 					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
 				</ul>
 			</dd>
@@ -127,7 +127,7 @@ function googleTranslateElementInit() {
 				<li class="fir"><a href="/web/menutab/kintro">Feedback</a>
 					<ul class="sub1">
 						<li><a href="/web/menutab/kintro">소개</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="/web/menutab/knotice">공지사항</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
@@ -173,68 +173,7 @@ function googleTranslateElementInit() {
 				
 			</ul><!-- id="gnb" -->
 		</div> <!-- id="gnb_wrap"> -->
-		<p id="total_btn">
-			<a href="#"><img src="resources/img/btn_all_menu.png" alt="전체 메뉴" /></a>
-		</p>
-		<div id="total_menu">
-			<dl>
-				<dt>MeMeMi</dt>
-				<dd>
-					<ul>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Location</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Season Menu</a></li>
-						<li><a href="#">Espresso</a></li>
-						<li><a href="#">Tea</a></li>
-						<li><a href="#">Others</a></li>
-						<li><a href="#">Fresh Juice</a></li>
-						<li><a href="#">Dessert</a></li>
-						<li><a href="#">Food</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Polspotten</a></li>
-						<li><a href="#">Qeeboo</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Food</a></li>
-						<li><a href="#">Life Style</a></li>
-						<li><a href="#">Culture</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">All</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-				</dd>
-			</dl>
-			<p id="total_close"><a href="#"><img src="resources/img/allmenu_close_btn.png" alt="전체메뉴 닫기" /></a></p>
-		</div><!-- id="total_menu" -->
-		<!-- <p id="date_wrap">
-			<span class="year">0000</span> 년
-			<span class="month">00</span> 월
-			<span class="date">00</span> 일
-		</p> -->
+		
 	</div><!-- id="header" -->
 	<hr />
 	
@@ -317,7 +256,7 @@ function googleTranslateElementInit() {
 		<address>
 			<div class="ellipsis">(주)Feedback 바지사장 : 김홍근&nbsp;&nbsp; / &nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-119</div> <!-- <br /> -->
 			<div class="ellipsis">E-mail : 동의? ㅇ보감~&nbsp; / &nbsp;사업자등록번호 : 112&nbsp; </div><!-- <br /> -->
-			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 김영하, 송우재</div> <!-- <br /> -->
+			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 신영하, 송우재</div> <!-- <br /> -->
 		</address>
 	</div><!-- id="inner_footer" -->
 </div><!-- id="footer_wrap" -->
@@ -331,6 +270,9 @@ function googleTranslateElementInit() {
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
 	})
+$(".mainjoin").click(function(){
+	pageMove("menutab/kjoin")
+});
 
 </script>
 
