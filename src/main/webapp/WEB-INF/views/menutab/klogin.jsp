@@ -48,7 +48,7 @@ $("#btn2").click(function(){
 	au.send();
 });
 
-$("#btn3").click(function(){
+$("#btn3").click(function(){ 
 	pageMove("menutab/kjoin")
 });
 
