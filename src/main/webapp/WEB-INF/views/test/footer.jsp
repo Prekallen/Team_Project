@@ -11,7 +11,7 @@
 </div>
 <style>
 #footer_div {
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:0;
     right:0;
