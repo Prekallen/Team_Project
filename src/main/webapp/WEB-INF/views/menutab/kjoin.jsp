@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="/WEB-INF/views/common/kheader.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -9,6 +10,7 @@
 <title>회원가입</title>
 </head>
 <body>
+<c:import url="${ktopmenuUrl}"/>
 	<div class="container">
 		<form method="post" action="./userRegister">
 			<table class="table table-bordered table-hover" style="text-align: center; border : 1px solid#dddddd">
