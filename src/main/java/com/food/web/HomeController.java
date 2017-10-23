@@ -4,12 +4,16 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.food.web.user.dto.UserInfo;
 
 /**
  * Handles requests for the application home page.
@@ -86,7 +90,9 @@ public class HomeController {
 
 	
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
-	public String mainmemi(Model model){
+	public String mainmemi(Model model, UserInfo user, HttpSession hs){
+		user = (UserInfo) hs.getAttribute("user");
+		
 		return "mainmemi";
 	}
 	@RequestMapping(value="/signup", method= RequestMethod.GET)
