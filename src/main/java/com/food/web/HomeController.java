@@ -92,7 +92,7 @@ public class HomeController {
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
 	public String mainmemi(Model model, UserInfo user, HttpSession hs){
 		user = (UserInfo) hs.getAttribute("user");
-		
+		 
 		return "mainmemi";
 	}
 	@RequestMapping(value="/signup", method= RequestMethod.GET)
