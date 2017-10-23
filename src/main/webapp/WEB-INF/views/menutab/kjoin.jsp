@@ -10,13 +10,9 @@
 <body>
 <div class="kwrap">
 <c:import url="${ktopmenuUrl}"/>
-	<div class="j-container" style="align:middle; padding 100px;">
-		<div class="joinus">
-			<h2> 회원가입 페이지</h2>
-			
-				<
-		
-		</div>
+
+fuck
+
 
 <c:import url="${footerUrl}"/>
 </div>

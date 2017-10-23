@@ -26,7 +26,7 @@
 				<button id="btn2" class="btn btn-lg btn-primary btn-block"
 					type="button" style="background-color: #ff8080;">Login</button>
 					<button id="btn3" class="btn btn-lg btn-primary btn-block"
-					type="button" style="background-color: #ff8080;" >회원가입</button>
+					type="button" style="background-color: #ff8080;">회원가입</button>
 			</form>
 			<p></p><br/><p></p>
 			<div class="divide_login" style="width:100%; background-color:#ff8080;">

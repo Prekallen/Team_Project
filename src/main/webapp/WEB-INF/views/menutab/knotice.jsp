@@ -11,7 +11,7 @@
 <div class="kwrap">
 <c:import url="${ktopmenuUrl}"/>
 
-응공지
+fasfasfa
 
 
 <c:import url="${footerUrl}"/>

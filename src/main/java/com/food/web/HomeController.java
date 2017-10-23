@@ -65,6 +65,10 @@ public class HomeController {
 		return "menutab/group";
 	}
 	
+	@RequestMapping(value="/menutab/login", method= RequestMethod.GET)
+	public String login(Model model){
+		return "menutab/login";
+	}
 	
 	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
 	public String main3(Model model){

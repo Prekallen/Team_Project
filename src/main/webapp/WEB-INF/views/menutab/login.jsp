@@ -30,6 +30,7 @@
 		</form>
 
 	</div>
+<<<<<<< HEAD
 <script>
 	$("#btn2").click(function(){
 		var paramIds = "userId,userPwd";
@@ -41,6 +42,9 @@
 		pageMove("menutab/kjoin")
 	});
 </script>
+=======
+
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 
 </body>
 </html>

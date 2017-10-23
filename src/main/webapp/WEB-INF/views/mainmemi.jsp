@@ -270,6 +270,10 @@ function googleTranslateElementInit() {
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
 	})
+$(".mainjoin").click(function(){
+	pageMove("menutab/kjoin")
+});
+
 </script>
 
 
