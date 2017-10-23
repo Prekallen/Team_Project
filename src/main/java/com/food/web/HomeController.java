@@ -89,13 +89,21 @@ public class HomeController {
 	public String mainmemi(Model model){
 		return "mainmemi";
 	}
+	@RequestMapping(value="/signup", method= RequestMethod.GET)
+	public String signup(Model model){
+		return "signup";
+	}
+	
+	
+	
+
 
 	@RequestMapping(value="/mainmemi2", method= RequestMethod.GET)
 	public String mainmemi2(Model model){
 		return "mainmemi2";
 	}
 
-	
+
 	
 	//main 테스트용 k버전
 //	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
