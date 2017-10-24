@@ -263,20 +263,23 @@ function googleTranslateElementInit() {
 </div><!-- id="wrap" -->
 	
 <script> 
+/*
 	if(${userId}==""||${userId}==null){
 		$("#status").val("LOGIN");
 	}else{
 		$("#status").val(${userId});
 	}
+	*/
 	$('.DB_etc10_1').DB_springMove({
 		key:'e24102',                //라이센스키
 		dir:'x',               //방향축('x','y')
 		mirror:1,              //반대방향이동(1,-1)
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
-	})
+	});
 $(".mainjoin").click(function(){
 	pageMove("menutab/kjoin")
+
 });
 
 </script>
