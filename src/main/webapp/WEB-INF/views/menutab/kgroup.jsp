@@ -68,6 +68,8 @@
 
 		
 	</div>
+	<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
+	
 
 <c:import url="${footerUrl}"/>
 </div>

@@ -225,6 +225,7 @@ function googleTranslateElementInit() {
 	</div><!-- id="contents" -->
 <hr />
 
+<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
 
 
 
@@ -286,9 +287,6 @@ $(".mainjoin").click(function(){
 
 });
 
-$("body").scrollTop(0);
-$("body").scrollTop($(document).height());
-
 
 </script>
 
@@ -299,7 +297,13 @@ $("body").scrollTop($(document).height());
 </html>
 
 
+<style>
 
+#btn btn-primary{
+	position: relative;
+    top: 100px
+}
+</style>
 
 
 
