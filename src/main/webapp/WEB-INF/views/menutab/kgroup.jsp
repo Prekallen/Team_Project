@@ -123,7 +123,7 @@
 .culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
 .culture span{display: block; font-size: 21px; text-align: center;}
 .culture ul{width: 1044px; margin: 0 auto; margin-top: 40px;}
-.culture .list{float: left; margin: 0 24px 39px 0;}
+.culture .list{float: left; margin: 0 24px 39px 0;  list-style:none;}
 .culture strong{display: block; margin:16px 0 10px; font-size: 15px; font-weight: normal; color: #000000;}
 .culture li:hover strong{color: #1F75D6;}
 .culture ul span{font-size: 13px; text-align: left; color: #666666;}

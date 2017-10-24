@@ -225,6 +225,10 @@ function googleTranslateElementInit() {
 	</div><!-- id="contents" -->
 <hr />
 
+
+
+
+
 <div id="footer_wrap">
 <div class="footer_cover"></div>
 	<div id="inner_footer">
@@ -282,10 +286,11 @@ $(".mainjoin").click(function(){
 
 });
 
+$("body").scrollTop(0);
+$("body").scrollTop($(document).height());
+
+
 </script>
-
-
-
 
 
 
