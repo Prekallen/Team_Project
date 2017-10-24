@@ -53,7 +53,7 @@
 		<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> --> 
 		<dl id="util_menu">
 			<dt class="hide">유틸메뉴</dt>
-			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click3.png"/></dd>
+			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click.png"/></dd>
 			<dd class="util_first">
 				<ul>
 					<li class="login_wrap logtxt" ><a href="#" id="status">LOGIN</a>
@@ -84,7 +84,7 @@
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
-									<a href="#"><img src="resources/img/login_close_btn2.png" alt="닫기버튼" /></a>
+									<a href="#"><img src="resources/img/login_close_btn3.png" alt="닫기버튼" /></a>
 								</p>
 							</fieldset>
 						</form>

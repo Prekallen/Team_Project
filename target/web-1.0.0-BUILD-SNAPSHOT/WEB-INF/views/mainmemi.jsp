@@ -9,9 +9,9 @@
 <meta name="google-translate-customization" content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta> <!-- 세계 언어 선택 메타 태그 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="Generator" content="Notepad++"/>
-<meta name="Author" content="박애정"/>
-<meta name="keywords" content="Cafe MeMeMi" />
-<meta name="Description" content="Cafe MeMeMi 메인 페이지에 오신 것을 환영합니다"/>
+<meta name="Author" content="(TEAM)Feedback"/>
+<meta name="keywords" content="Feedback" />
+<meta name="Description" content="Feedback 메인 페이지에 오신 것을 환영합니다"/>
 <link rel="shortcut icon" href="resources/favicon/mememi_favi.png"> <!-- 파비콘 -->
 <link rel="apple-touch-icon-precomposed" href="apple-icon.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114.png">
@@ -56,7 +56,7 @@
 			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click3.png"/></dd>
 			<dd class="util_first">
 				<ul>
-					<li class="login_wrap logtxt" id="state"><a href="#">LOGIN</a>
+					<li class="login_wrap logtxt" ><a href="#" id="status">LOGIN</a>
 						<form action="#" method="post" name="log_f" id="login_f">
 							<fieldset>
 								<legend>로그인</legend>
@@ -80,7 +80,7 @@
 									<input type="image" src="resources/img/login_btn2.png" alt="로그인버튼" />
 								</p>
 								<p class="join_btn_wrap">
-									<a href="#">회원가입</a>
+									<a href="${rootPath}/menutab/kjoin" >회원가입</a>
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
@@ -89,7 +89,7 @@
 							</fieldset>
 						</form>
 					</li>
-					<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
+					<li class="logtxt"><a href="${rootPath}/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
 					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
 				</ul>
 			</dd>
@@ -124,14 +124,14 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="/web/menutab/kintro">Feedback</a>
+				<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
-						<li><a href="/web/menutab/kintro">소개</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
+						<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/kgroup">종류별</a>
+				<li><a href="${rootPath}/menutab/kgroup">종류별</a>
 					<ul class="sub2">
 						<li><a href="#">한식</a></li>
 						<li><a href="#">양식</a></li>
@@ -141,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="/web/menutab/klocal">지역별</a>
+				<li><a href="${rootPath}/menutab/klocal">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
@@ -173,68 +173,7 @@ function googleTranslateElementInit() {
 				
 			</ul><!-- id="gnb" -->
 		</div> <!-- id="gnb_wrap"> -->
-		<p id="total_btn">
-			<a href="#"><img src="resources/img/btn_all_menu.png" alt="전체 메뉴" /></a>
-		</p>
-		<div id="total_menu">
-			<dl>
-				<dt>MeMeMi</dt>
-				<dd>
-					<ul>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Location</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Season Menu</a></li>
-						<li><a href="#">Espresso</a></li>
-						<li><a href="#">Tea</a></li>
-						<li><a href="#">Others</a></li>
-						<li><a href="#">Fresh Juice</a></li>
-						<li><a href="#">Dessert</a></li>
-						<li><a href="#">Food</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Polspotten</a></li>
-						<li><a href="#">Qeeboo</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">Food</a></li>
-						<li><a href="#">Life Style</a></li>
-						<li><a href="#">Culture</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-					<ul>
-						<li><a href="#">All</a></li>
-					</ul>
-				</dd>
-			</dl>
-			<dl>
-				<dd>
-				</dd>
-			</dl>
-			<p id="total_close"><a href="#"><img src="resources/img/allmenu_close_btn.png" alt="전체메뉴 닫기" /></a></p>
-		</div><!-- id="total_menu" -->
-		<!-- <p id="date_wrap">
-			<span class="year">0000</span> 년
-			<span class="month">00</span> 월
-			<span class="date">00</span> 일
-		</p> -->
+		
 	</div><!-- id="header" -->
 	<hr />
 	
@@ -317,20 +256,18 @@ function googleTranslateElementInit() {
 		<address>
 			<div class="ellipsis">(주)Feedback 바지사장 : 김홍근&nbsp;&nbsp; / &nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-119</div> <!-- <br /> -->
 			<div class="ellipsis">E-mail : 동의? ㅇ보감~&nbsp; / &nbsp;사업자등록번호 : 112&nbsp; </div><!-- <br /> -->
-			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 김상철, 김영하, 송우재</div> <!-- <br /> -->
+			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 신영하, 송우재 [탈주자 : 김상철]</div> <!-- <br /> -->
 		</address>
 	</div><!-- id="inner_footer" -->
 </div><!-- id="footer_wrap" -->
 </div><!-- id="wrap" -->
 	
 <script> 
-	if$(${userId}!=""||!${userId}==null){
-		${"#state"}.val("LOGIN")};
+	if(${userId}==""||${userId}==null){
+		$("#status").val("LOGIN");
+	}else{
+		$("#status").val(${userId});
 	}
-	else {
-		${"#state"}.val(${userId});
-	}
-	
 	$('.DB_etc10_1').DB_springMove({
 		key:'e24102',                //라이센스키
 		dir:'x',               //방향축('x','y')
@@ -338,6 +275,9 @@ function googleTranslateElementInit() {
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
 	})
+$(".mainjoin").click(function(){
+	pageMove("menutab/kjoin")
+});
 
 </script>
 

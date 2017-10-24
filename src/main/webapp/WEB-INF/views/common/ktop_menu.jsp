@@ -10,7 +10,8 @@
             <li><a id="kgroup">종류별</a></li>
             <li><a id="klocal">지역별</a></li>
             <li style="padding-left:300px; padding-top:10px;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:30px; "/>
-            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 30px; height:30px; "></li> 
+            <button type="submit" onClick="$('#button').click();" style="width: 30px; height:30px; background-color: #ff8080; border:#ff8080;" >
+            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" style="width: 30px; height:30px; background-color: #ff8080; "></button></li> 
 			 
             <li><a id="klogin">로그인</a></li>
           </ul>
