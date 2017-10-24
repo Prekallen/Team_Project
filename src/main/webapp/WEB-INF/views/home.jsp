@@ -22,16 +22,16 @@
   <input name="to" value="Mom">
   <button>Send my greetings</button>
 </form>
-	<input type="text" id = "searchText"required value="${searchText}" autofocus/>
+	<input type="text" id = "searchText" autofocus/>
 	<input type ="button" id = "searchBtn" value="가자 맛집"/>
 <div id= "searchResults"></div>
 <P>  The time on the server is ${serverTime}. </P>
 </body>
 <script>
 	$("#searchBtn").click(function(){
-		var query = "searchText";
+		var query = $("#searchText").val;
 		if(query){
-		location.href = "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDF_3LNTyiq3aKCc8kDx4QdXFuVH7DB3S8"+query
+		location.href = "https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDF_3LNTyiq3aKCc8kDx4QdXFuVH7DB3S8&query="+query
 		}
 	})
 </script>
