@@ -25,7 +25,7 @@ li{white-space: nowrap; /* overflow: hidden; */ text-overflow: ellipsis;}
 dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 /* 상단 로고 부분 */
-.header_content{background: url(../images/background2.jpg); background-position: center center; background-size: cover; height: 600px; position: fixed; top: 0; width: 100%; }
+.header_content{background: url(../images/picnic.jpg); background-position: center center; background-size: cover; height: 600px; position: fixed; top: 0; width: 100%; opacity:0.6 ;}
 .hd_logo{text-align: center; padding: 55px;}
 .hd_logo img{vertical-align: top;}
 
