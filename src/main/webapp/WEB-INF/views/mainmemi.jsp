@@ -124,7 +124,7 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
+				<li class="fir" ><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
 						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
 						<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
@@ -141,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="${rootPath}/menutab/klocal">지역별</a>
+				<li><a href="${rootPath}/menutab/klocal" class="active">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
@@ -168,6 +168,12 @@ function googleTranslateElementInit() {
 						<li><a href="#">구로구</a></li>
 						<li><a href="#">금천구</a></li>
 						<li><a href="#">관악구</a></li>
+					</ul>
+				</li>
+				<li><a href="#">검색</a>
+					<ul class="sub4">
+			<li style="padding-left:0; padding-top:0;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:40px; font-size:1em;"/>
+            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
 					</ul>
 				</li>
 				
