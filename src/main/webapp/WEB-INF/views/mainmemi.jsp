@@ -128,7 +128,7 @@ function googleTranslateElementInit() {
 					<ul class="sub1">
 						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
 						<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
-						<li><a href="#">Contact Us</a></li>
+
 					</ul>
 				</li>
 				<li><a href="${rootPath}/menutab/kgroup">종류별</a>

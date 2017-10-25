@@ -9,7 +9,7 @@
 
 <body>
 <div class="kwrap">
-<c:import url="${ktopmenuUrl}"/>
+<c:import url="${sidemenuUrl}"/>
 
 
 <ul class="nav-navbar-nav navbar-right"></ul>

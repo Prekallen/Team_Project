@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="kwrap">
-	<c:import url="${ktopmenuUrl}" />
-	
+<%-- 	<c:import url="${ktopmenuUrl}" /> --%>
+	<c:import url="${sidemenuUrl}"/>
 	<div class="loContainer">
 		<div class="loTop">
 		<div style='text-align:center;'><img src='${rootPath}/resources/image/seoulmap.png' usemap='#map' alt='서울시 자치구 지도' /></div>

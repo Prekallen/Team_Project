@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="kwrap">
-	<c:import url="${ktopmenuUrl}" />
+	<c:import url="${sidemenuUrl}" />
 	
 	<div class="gContainer">
 		<div class="gTop">

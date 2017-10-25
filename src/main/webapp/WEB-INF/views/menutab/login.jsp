@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="${rootPath}/resources/ui/signin.css" />
 <body>
-<c:import url="${topmenu3Url}"/>
+<c:import url="${sidemenuUrl}"/>
 <div class="i-container" style="height:200px; align:middle">
 		<form class="form-signin">
 			<h2 class="form-signin-heading">로그인이 필요합니다</h2>
@@ -30,7 +30,6 @@
 		</form>
 
 	</div>
-<<<<<<< HEAD
 <script>
 	$("#btn2").click(function(){
 		var paramIds = "userId,userPwd";
@@ -42,10 +41,6 @@
 		pageMove("menutab/kjoin")
 	});
 </script>
-=======
-
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
-
 </body>
 </html>
 <style>	
