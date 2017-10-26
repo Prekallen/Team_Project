@@ -5,7 +5,7 @@ body{overflow-x:hidden;}
 /* 기본 레이아웃 */
 #wrap{width: 100%; margin: 0 auto; margin-top: 600px; background-color: #f9f9f9; position: relative;}
 #header{height: 100px; position: relative; z-index: 10; width: 1600px; background-color: #ffffff; margin: 0 auto;}
-#footer_wrap{width:100%; margin:0 auto; background: url(../img/hd_visual.png) no-repeat center; background-size: cover; position: relative; height: 280px;}
+#footer_wrap{width:100%; margin:0 auto; background: url(../images/picnic.jpg) no-repeat center; background-size: cover; position: relative; height: 280px;}
 #inner_footer{width: 653px; height: 145px; margin: 0 auto; position: relative; top: 80px; padding: 15px 0 0 350px;}
 
 /* 기본 글꼴 및 링크 텍스트 꾸미기 */
@@ -25,8 +25,8 @@ li{white-space: nowrap; /* overflow: hidden; */ text-overflow: ellipsis;}
 dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 /* 상단 로고 부분 */
-.header_content{background: url(../images/background2.jpg); background-position: center center; background-size: cover; height: 600px; position: fixed; top: 0; width: 100%; }
-.hd_logo{text-align: center; padding: 55px;}
+.header_content{background: url(../images/picnic.jpg); background-position: center center; background-size: cover; height: 600px; position: fixed; top: 0; width: 100%; opacity:0.6 ; background-repeat:no-repeat;}
+.hd_logo{text-align: center; padding: 55px;}   
 .hd_logo img{vertical-align: top;}
 
 
@@ -50,7 +50,7 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 /* 로그인 영역 */
 .login_wrap{/* position: relative; */ position: relative; overflow: visible;}
 .login_wrap>a{color: #ff3baf; text-decoration: underline;}
-#login_f{width: 305px; height: 161px; background: url(../img/login_bg2.png); position: absolute; left: -110px; top: -1500px; /* left: 810px; top: 0px; */ z-index: 15; padding: 40px 0 0 30px;}
+#login_f{width: 330px; height: 200px; background: url(../img/login_bg2.png); position: absolute; left: -110px; top: -1500px; /* left: 810px; top: 0px; */ z-index: 15; padding: 40px 0 0 30px;}
 	.logtxt{margin-top: 4px; color: #ffffff;}
 	.user_id, .user_pw{position: relative;}
 	.user_id label, .user_pw label{position: absolute; top: 3px; left: 1px;}

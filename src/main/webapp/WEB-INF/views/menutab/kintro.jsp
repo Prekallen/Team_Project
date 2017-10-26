@@ -29,13 +29,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
-
-
-
 <div class="kwrap">
-<c:import url="${ktopmenuUrl}"/>
+<c:import url="${sidemenuUrl}"/>
 	<%--소개글 --%>
-	<div class="dc-area" id="introArea1" style="padding-top:100px;">
+	<div class="dc-area" id="introArea1" style="padding-top:100px; padding-left:100px;">
 		<div class="dc-wrapper">
 			<div class="row1">
 				<div class="intro-col1">
@@ -114,19 +111,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		</div>
 	</div>
 
-	<div class="dc-area" id="introArea2">
+	<div class="dc-area" id="introArea2" style="padding-top:50px; padding-left:100px;">
 		<div class="dc-wrapper">
 			<div class="intro-col1"></div>
 			<div class="intro-col2">
 				맛.zip과 함께 성장할 실력과 열정을 갖춘 엔지니어, 마케터, 디자이너 분들과의<br> 인연을 기대하고
 				있습니다. 연락 기다리겠습니다.<br>
 				<br> - 회사 설립: 2017년 9월<br> - 회사 소재: 서울특별시 강남구 강남대로 374 (역삼동, 형제빌딩)3~6층<br>
-				- 이메일: contact@diningcode.com
+				- 이메일: Feedback@feedback.com
 			</div>
 		</div>
 	</div>
 
-	<div class="dc-area" id="introArea3">
+	<div class="dc-area" id="introArea3" style="padding-top:20px; padding-left:100px;">
 		<div class="dc-wrapper">
 			<div class="intro-col1"></div>
 			<div class="intro-col2">
@@ -137,6 +134,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			</div>
 		</div>
 	</div>
+
+<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
+
+
+
 
 <c:import url="${footerUrl}"/>
 </div>

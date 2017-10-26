@@ -53,7 +53,7 @@
 		<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> --> 
 		<dl id="util_menu">
 			<dt class="hide">유틸메뉴</dt>
-			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click3.png"/></dd>
+			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click.png"/></dd>
 			<dd class="util_first">
 				<ul>
 					<li class="login_wrap logtxt" ><a href="#" id="status">LOGIN</a>
@@ -84,7 +84,7 @@
 									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
 								</p>
 								<p class="login_close_btn">
-									<a href="#"><img src="resources/img/login_close_btn2.png" alt="닫기버튼" /></a>
+									<a href="#"><img src="resources/img/login_close_btn3.png" alt="닫기버튼" /></a>
 								</p>
 							</fieldset>
 						</form>
@@ -124,11 +124,11 @@ function googleTranslateElementInit() {
 		<h2 class="hide">메인메뉴</h2>
 		<div id="gnb_wrap">
 			<ul id="gnb">
-				<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
+				<li class="fir" ><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
 						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
 						<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
-						<li><a href="#">Contact Us</a></li>
+
 					</ul>
 				</li>
 				<li><a href="${rootPath}/menutab/kgroup">종류별</a>
@@ -141,7 +141,7 @@ function googleTranslateElementInit() {
 						<li><a href="#">기타</a></li>
 					</ul>
 				</li>
-				<li><a href="${rootPath}/menutab/klocal">지역별</a>
+				<li><a href="${rootPath}/menutab/klocal" class="active">지역별</a>
 					<ul class="sub3">
 						<li><a href="#">도봉구</a></li>
 						<li><a href="#">강북구</a></li>
@@ -168,6 +168,12 @@ function googleTranslateElementInit() {
 						<li><a href="#">구로구</a></li>
 						<li><a href="#">금천구</a></li>
 						<li><a href="#">관악구</a></li>
+					</ul>
+				</li>
+				<li><a href="#">검색</a>
+					<ul class="sub4">
+			<li style="padding-left:0; padding-top:0;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:40px; font-size:1em;"/>
+            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
 					</ul>
 				</li>
 				
@@ -225,6 +231,11 @@ function googleTranslateElementInit() {
 	</div><!-- id="contents" -->
 <hr />
 
+<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
+
+
+
+
 <div id="footer_wrap">
 <div class="footer_cover"></div>
 	<div id="inner_footer">
@@ -263,26 +274,27 @@ function googleTranslateElementInit() {
 </div><!-- id="wrap" -->
 	
 <script> 
+/*
 	if(${userId}==""||${userId}==null){
 		$("#status").val("LOGIN");
 	}else{
 		$("#status").val(${userId});
 	}
+	*/
 	$('.DB_etc10_1').DB_springMove({
 		key:'e24102',                //라이센스키
 		dir:'x',               //방향축('x','y')
 		mirror:1,              //반대방향이동(1,-1)
 		radius:10,             //반경
 		motionSpeed:0.1       //속도(0~1)
-	})
+	});
 $(".mainjoin").click(function(){
 	pageMove("menutab/kjoin")
+
 });
 
+
 </script>
-
-
-
 
 
 
@@ -291,7 +303,13 @@ $(".mainjoin").click(function(){
 </html>
 
 
+<style>
 
+#btn btn-primary{
+	position: relative;
+    top: 100px
+}
+</style>
 
 
 

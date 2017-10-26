@@ -10,7 +10,7 @@
 <title>회원가입</title>
 </head>
 <body>
-<c:import url="${ktopmenuUrl}"/>
+<c:import url="${sidemenuUrl}"/>
 	<div class="container">
 		<form method="post" action="./userRegister">
 			<table class="table table-bordered table-hover" style="text-align: center; border : 1px solid#dddddd">

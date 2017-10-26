@@ -44,6 +44,49 @@
                   <area shape="rect" coords="190,306,226,323"  target="_blank" title="새창으로 열립니다." alt="관악구" />
    </map>               
 </div>
+	<div class="gMiddle" id="gMiddle"></div>
+
+				<div id="section" class="cf">
+			<div class="culture">
+				<h3>"키워드명" (으)로 검색한 결과</h3>
+				<span></span>
+				<ul>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
+							<strong>식당이름 ></strong>
+							<span> 
+							주소 : <br>
+							전화번호 : <br>
+							업종 : <br>
+							</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
+							<strong>식당이름 ></strong>
+							<span> 
+							주소 : <br>
+							전화번호 : <br>
+							업종 : <br>
+							</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
+							<strong>식당이름 ></strong>
+							<span> 
+							주소 : <br>
+							전화번호 : <br>
+							업종 : <br>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
 
 </body>
 </html>

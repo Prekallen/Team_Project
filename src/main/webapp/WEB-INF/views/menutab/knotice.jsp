@@ -9,9 +9,91 @@
 
 <body>
 <div class="kwrap">
-<c:import url="${ktopmenuUrl}"/>
+<c:import url="${sidemenuUrl}"/>
 
-fasfasfa
+
+<ul class="nav-navbar-nav navbar-right"></ul>
+<div class="container" style="padding-top:200px;">
+	<div class="row">
+		<table class="table table-striped" style="text-align:center"; border="1px solid #dddddd">
+		
+			<thead>
+			
+				<tr>
+					<th style="background-color:#eeeeee; text-align:center;">번호</th>
+					<th style="background-color:#eeeeee; text-align:center;">제목</th> 
+					<th style="background-color:#eeeeee; text-align:center;">작성자</th> 
+					<th style="background-color:#eeeeee; text-align:center;">작성일</th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				<tr>
+					<td>noticeNum</td>
+					<td>noticeTitle</td>
+					<td>noticeName</td>
+					<td>noticeTime</td>
+				</tr>
+				
+			</tbody>		
+		</table>
+			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+	</div>
+</div>
+<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
 
 
 <c:import url="${footerUrl}"/>

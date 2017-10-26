@@ -6,8 +6,10 @@
 
 <title>공지사항</title>
 </head>
+
 <body>
-<c:import url="${topmenu2Url}"/>
+<div class="wrap">
+<c:import url="${topmenu3Url}"/>
 
 <br/>
 <br/>
@@ -99,16 +101,27 @@ $(document).ready(function(){
 
 </body>
 </html>
+
+<c:import url="${footerUrl}"/>
+</div>
+</body>
+</html>
 <style>	
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
-	body{
+	body {
 	font-family: 'Hanna', serif;
-	background-color : #BDBDBD;
-	background : url('../resources/images/background2.jpg') no-repeat;
-	background-size : 100%;
+	margin: 0;
+	height: 100%;
 	}
-	
-	
+	html {
+	height: 100%;
+	}
+	.wrap {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 30px; /* footer height */
+	}
+		
 
 </style>
