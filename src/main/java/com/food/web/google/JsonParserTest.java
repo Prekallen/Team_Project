@@ -16,8 +16,8 @@ public class JsonParserTest {
  
         try {
  
-        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query=강남구일식");
-
+        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query=강남구+맛집");
+        	
         	InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
         	
         	
