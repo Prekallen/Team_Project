@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/common.css?version=${pVar}"/>"/>
 <style>
 body {
-    font-family: 'Nanum Gothic', serif, gulim, "굴림", sans-serif;
+   font-family: 'Hanna', serif;
 }
 </style>
 </head>
@@ -79,38 +79,12 @@ body {
 			<dt class="hide">유틸메뉴</dt>
 			<dd class="util_first">
 				<ul>
+			<li style="padding-left:0px; padding-top:-20px;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:30px; "/>
+            <button type="submit" id="button" style="width: 30px; height:30px; background-color: #ff8080; border:#ff8080;" >
+            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" style="width: 30px; height:30px; background-color: #ff8080; "></button></li> 
+			 
 					<li class="login_wrap logtxt" ><a href="${rootPath}/menutab/klogin" id="status">로그인하러가기</a>
-						<form action="#" method="post" name="log_f" id="login_f">
-							<fieldset>
-								<legend>로그인</legend>
-								<p class="user_id">
-									<label for="user_id">
-										<img src="../resources/img/login_title_id.gif" alt="아이디" />
-									</label>
-									<input type="text" name="user_id" id="user_id"/>
-								</p>
-								<p class="user_pw">
-									<label for="user_pw">
-										<img src="../resources/img/login_title_pw.gif" alt="패드워드" />
-									</label>
-									<input type="password" name="user_pw" id="user_pw"/>
-								</p>
-								<p>
-									<input type="checkbox" name="save_id" id="save_id"/>
-									<label for="save_id">비밀번호 저장</label>
-								</p>
-								<p class="log_btn">
-									<input type="image" src="../resources/img/login_btn2.png" alt="로그인버튼" />
-								</p>
-								<p class="join_btn_wrap">
-									<a href="${rootPath}/menutab/kjoin" >회원가입</a>
-									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
-								</p>
-								<p class="login_close_btn">
-									<a href="#"><img src="../resources/img/login_btn3.png" alt="닫기버튼" /></a>
-								</p>
-							</fieldset>
-						</form>
+						
 					</li>
 					<li class="logtxt"><a href="${rootPath}/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
 					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
@@ -135,8 +109,18 @@ function googleTranslateElementInit() {
 	</div>
 	<hr />
 
-
+<style>
+	.util_first ul li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+</style>
 <script>
+$('#button').click(function(){
+	alert("힝 속았지~~");
+});
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
