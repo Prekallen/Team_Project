@@ -74,11 +74,11 @@ body {
 
 		
 <div id="main">
-			<div style="padding-left: 800px";>
-			<input type="text" id="s_input" name="query" 
-			autocomplete="off" value=""  style=" width:250px; height:30px; "/>
+			<div id="search" style="padding-left: 800px">
+			<input type="text" id="input" name="query" 
+			autocomplete="off" value=""  style="width:250px; height:30px; "/>
             <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" 
-             border="0" id="button" style="width: 30px; height:30px; " >
+             id="button" style=" width: 30px; height:30px; " >
 			</div>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
   <dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="../resources/img/login_click.png"/></dd>
@@ -115,10 +115,13 @@ function googleTranslateElementInit() {
 	<hr />
 
 <style>
-	.util_first ul li{
-    list-style:none;
-    margin:0;
-    padding:0;
+
+    #search button{
+    	position : absolute;
+    	padding-top : 50px;
+    	vertical-align: middle;
+    	
+    }
 }
 </style>
 <script>

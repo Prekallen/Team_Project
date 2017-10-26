@@ -151,13 +151,13 @@ address{position:absolute; top:54px; left:148px; font-size:11px;  color:#ffffff;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 10px;
 }
 
 .sidenav a {
     padding: 15px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 40px;
     color: #818181;
     display: block;
     transition: 0.3s;
