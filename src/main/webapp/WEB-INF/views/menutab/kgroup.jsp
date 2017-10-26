@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="kwrap">
-	<c:import url="${ktopmenuUrl}" />
+	<c:import url="${sidemenuUrl}" />
 	
 	<div class="gContainer">
 		<div class="gTop">
@@ -18,45 +18,58 @@
 				<button id="gtlBtn3" class="gtlBtn" type="button">중식</button>
 				<button id="gtlBtn4" class="gtlBtn" type="button">일식</button>
 				<button id="gtlBtn5" class="gtlBtn" type="button">분식</button>
- 
 			</div>
 		</div>
 		
 			<div class="gMiddle" id="gMiddle"></div>
 
 				<div id="section" class="cf">
-			<div class="culture">
-				<h3>양식</h3>
-				<span>현대카드이기에 가능한 독보적 문화행사</span>
-				<ul>
-					<li class="list">
-						<a href="#">
-							<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
-							<strong>슈퍼콘서트 ></strong>
-							<span>세계 레전드급 아티스트의 놀라운 무대</span>
-						</a>
-					</li>
-					<li class="list">
-						<a href="#">
-							<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
-							<strong>컬처프로젝트 ></strong>
-							<span>이 시대의 컬처아이콘을 탐색&middot;선별&middot;소개하다</span>
-						</a>
-					</li>
-					<li class="list mn">
-						<a href="#">
-							<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
-							<strong>슈퍼매치 ></strong>
-							<span>세계 최고 선수들의 놀라운 플레이</span>
-						</a>
-					</li>
-				</ul>
-			</div>	
-		
+					<div class="culture">
+						<h3>종류별로 찾는 맛집</h3>
+						<span>"*식" (으)로 검색한 결과</span>
+						<ul>
+							<li class="list">
+								<a href="#">
+									<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+							<li class="list">
+								<a href="#">
+									<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+							<li class="list">
+								<a href="#">  
+									<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
 			<div class="gBottom" id="gBottom"></div>
 
 		
 	</div>
+	<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
+	
 
 <c:import url="${footerUrl}"/>
 </div>
@@ -112,7 +125,7 @@
 .culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
 .culture span{display: block; font-size: 21px; text-align: center;}
 .culture ul{width: 1044px; margin: 0 auto; margin-top: 40px;}
-.culture .list{float: left; margin: 0 24px 39px 0;}
+.culture .list{float: left; margin: 0 24px 39px 0;  list-style:none;}
 .culture strong{display: block; margin:16px 0 10px; font-size: 15px; font-weight: normal; color: #000000;}
 .culture li:hover strong{color: #1F75D6;}
 .culture ul span{font-size: 13px; text-align: left; color: #666666;}

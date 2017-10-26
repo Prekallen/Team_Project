@@ -4,12 +4,16 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.food.web.user.dto.UserInfo;
 
 /**
  * Handles requests for the application home page.
@@ -65,10 +69,7 @@ public class HomeController {
 		return "menutab/group";
 	}
 	
-	@RequestMapping(value="/menutab/login", method= RequestMethod.GET)
-	public String login(Model model){
-		return "menutab/login";
-	}
+	
 	
 	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
 	public String main3(Model model){
@@ -83,20 +84,31 @@ public class HomeController {
 	public String mememi(Model model){
 		return "mememi";
 	}
-	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
-	public String mainmemi(Model model){
+
+	
+	@RequestMapping(value="/mainmemi", method=RequestMethod.GET)
+	public String mainmemi(Model model, UserInfo user, HttpSession hs){
+		user = (UserInfo) hs.getAttribute("user");
 		return "mainmemi";
 	}
+	@RequestMapping(value="/signup", method= RequestMethod.GET)
+	public String signup(Model model){
+		return "signup";
+	}
 	
 	
 	
-	
+
+
+	@RequestMapping(value="/mainmemi2", method= RequestMethod.GET)
+	public String mainmemi2(Model model){
+		return "mainmemi2";
+	}
+
+
 	
 	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
-	public String klogin(Model model){
-		return "menutab/klogin";
-	}
+
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
 	public String kintro(Model model){
 		return "menutab/kintro";
@@ -108,6 +120,14 @@ public class HomeController {
 	@RequestMapping(value="/menutab/klocal", method= RequestMethod.GET)
 	public String klocal(Model model){
 		return "menutab/klocal";
+	}
+	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
+	public String kjoin(Model model){
+		return "menutab/kjoin";
+	}
+	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
+	public String knotice(Model model){
+		return "menutab/knotice";
 	}
 	
 }

@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="kwrap">
-	<c:import url="${ktopmenuUrl}" />
-	
+<%-- 	<c:import url="${ktopmenuUrl}" /> --%>
+	<c:import url="${sidemenuUrl}"/>
 	<div class="loContainer">
 		<div class="loTop">
 		<div style='text-align:center;'><img src='${rootPath}/resources/image/seoulmap.png' usemap='#map' alt='서울시 자치구 지도' /></div>
@@ -44,14 +44,55 @@
 		
 			<div class="loMiddle" id="loMiddle"></div>
 		 
-		
+				<div id="section" class="cf">
+					<div class="culture">
+						<h3>지역구 별 맛집</h3>
+						<span>"지역구 이름" 검색 결과</span>
+						<ul>
+							<li class="list">
+								<a href="#">
+									<img src="${rootPath}/resources/images/food.jpg" alt="concert" style="width:300px; height:200px;" />
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+							<li class="list">
+								<a href="#">
+									<img src="${rootPath}/resources/images/food10.png" alt="cultureproject"  style="width:300px; height:200px;"/>
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+							<li class="list mn">
+								<a href="#">
+									<img src="${rootPath}/resources/images/food3.jpg" alt="supermatch"  style="width:300px; height:200px;"/>
+									<strong>식당이름 ></strong>
+									<span> 
+									주소 : <br>
+									전화번호 : <br>
+									업종 : <br>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
 			<div class="loBottom" id="loBottom"></div>
 
-		
 	</div>
+	
 
 <c:import url="${footerUrl}"/>
 </div>
+	<div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
 </body>
 
 
@@ -83,6 +124,16 @@
 	position: relative;
 	padding-bottom: 30px; /* footer height */
 	}
+	#section{padding-top: 75px;}
+.culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
+.culture span{display: block; font-size: 21px; text-align: center;}
+.culture ul{width: 1044px; margin: 0 auto; margin-top: 40px;}
+.culture .list{float: left; margin: 0 24px 39px 0; list-style:none;}
+.culture strong{display: block; margin:16px 0 10px; font-size: 15px; font-weight: normal; color: #000000;}
+.culture li:hover strong{color: #1F75D6;}
+.culture ul span{font-size: 13px; text-align: left; color: #666666;}
+.culture li.mn{margin: 0;}
+	
 		
 
 
