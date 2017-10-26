@@ -93,10 +93,6 @@ public class HomeController {
 	
 	
 	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/klogin", method= RequestMethod.GET)
-	public String klogin(Model model){
-		return "menutab/klogin";
-	}
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
 	public String kintro(Model model){
 		return "menutab/kintro";

@@ -16,7 +16,7 @@ public class JsonParserTest {
  
         try {
  
-        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query=강남구+맛집");
+        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query=강남구중식");
         	
         	InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
         	
@@ -29,6 +29,7 @@ public class JsonParserTest {
              
             //books의 배열을 추출
             JSONArray bookInfoArray = (JSONArray) jsonObject.get("results");
+            
  
             for(int i=0; i<bookInfoArray.size(); i++){
  
@@ -43,12 +44,14 @@ public class JsonParserTest {
                 System.out.println("레이팅 : "+bookObject.get("rating"));
  
             }
+          
+            System.out.println("다음페이지 : "+jsonObject.get("next_page_token"));
+
  
         } catch (ParseException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
- 
     }
- 
 }
+ 
