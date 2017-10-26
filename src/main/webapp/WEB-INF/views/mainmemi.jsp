@@ -242,13 +242,7 @@ function googleTranslateElementInit() {
 		<h3 class="footer_logo">
 			<a href="#"><img src="resources/image/fdLogo.png" alt="footer logo" style="width=100px; height:100px;"/></a>
 		</h3>
-		<dl id="bottom_menu">
-			<dt class="hide">하단메뉴</dt>
-			<dd><a href="#">Feedback소개</a></dd>
-			<dd><a href="#">개인정보취급방침</a></dd>
-			<dd><a href="#">이용약관</a></dd>
-			<dd><a href="#">고객센터</a></dd>
-		</dl>
+		
 		<div id="relSite_wrap">
 			<h3>도움을 준 사이트들</h3>
 			<form action="#" method="get" name='rel_f'>
@@ -270,6 +264,13 @@ function googleTranslateElementInit() {
 			<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 신영하, 송우재 [탈주자 : 김상철]</div> <!-- <br /> -->
 		</address>
 	</div><!-- id="inner_footer" -->
+	<dl id="bottom_menu">
+			<dt class="hide">하단메뉴</dt>
+			<dd><a href="#">Feedback소개</a></dd>
+			<dd><a href="#">개인정보취급방침</a></dd>
+			<dd><a href="#">이용약관</a></dd>
+			<dd><a href="#">고객센터</a></dd>
+		</dl>
 </div><!-- id="footer_wrap" -->
 </div><!-- id="wrap" -->
 	
