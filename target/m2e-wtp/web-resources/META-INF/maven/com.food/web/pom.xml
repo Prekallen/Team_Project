@@ -66,7 +66,26 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>runtime</scope>
 		</dependency>
 
 		<!-- @Inject -->
@@ -161,21 +180,12 @@
           <version>v1-rev88-1.19.1</version>
       </dependency>
       <!-- json-simple -->
-<<<<<<< HEAD
-	<dependency>
-	    <groupId>com.googlecode.json-simple</groupId>
-	    <artifactId>json-simple</artifactId>
-	    <version>1.1</version>
-	</dependency>
-   </dependencies>
-=======
 		<dependency>
 		    <groupId>com.googlecode.json-simple</groupId>
 		    <artifactId>json-simple</artifactId>
 		    <version>1.1.1</version>
 		</dependency>
     </dependencies>
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
     <build>
         <plugins>
             <plugin>
