@@ -72,15 +72,18 @@ body {
 		</div>
    </div>
 
-		
+
 <div id="main">
-			<div id="search" style="padding-left: 800px">
-			<input type="text" id="input" name="query" 
-			autocomplete="off" value=""  style="width:250px; height:30px; "/>
-            <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" 
-             id="button" style=" width: 30px; height:30px; " >
-			</div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<div id="search" style="padding-left: 800px">
+	<ul>
+  		<li class="logo"><span style= "font-size:40px; cursor:pointer" onclick="openNav()">&#9776; </span></li>
+  		<li><a href="${rootPath}/mainmemi"><input type="image" src="../resources/image/fdLogo.png" style="width: 50px; height:50px;"></a></li>
+			<li><input type="text" id="input" name="query" 
+			autocomplete="on" value=""  style="width:250px; height:40px; "/></li>
+           <li> <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" 
+             id="button" style=" width: 40px; height: 40px;"></li>
+            </ul>
+            </div>
   <dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="../resources/img/login_click.png"/></dd>
   <dl id="util_menu">
 			<dt class="hide">유틸메뉴</dt>
@@ -98,7 +101,8 @@ body {
 				<a href="#" class="print_btn"><img src="../resources/img/util_print.gif" alt="" /></a>
 			</dd>
 			<dd>
-						
+							
+							
 <div id="google_translate_element"></div>
 <script type="text/javascript">
 function googleTranslateElementInit() {
@@ -110,20 +114,12 @@ function googleTranslateElementInit() {
 			</ul>
 			</dl>
 			</div>		
+			</div>
 	</div><!-- id="header" -->
-	</div>
+	
 	<hr />
 
-<style>
 
-    #search button{
-    	position : absolute;
-    	padding-top : 50px;
-    	vertical-align: middle;
-    	
-    }
-}
-</style>
 <script>
 $('#button').click(function(){
 	alert("힝 속았지~~");
@@ -142,3 +138,32 @@ function closeNav() {
      
 </body>
 </html> 
+<style>
+
+	#search ul li:first-child{
+		position: absolute;
+		left:0;
+	}
+	#search ul {
+		 list-style:none;
+   		 margin:0;
+   		 padding:0;
+	}
+	#search ul li{
+		 list-style:none;
+		 margin: 0 0 0 0;
+   		 padding: 0 0 0 0;
+  		  float: left;
+	}
+	.util_first ul ul {
+		 list-style:none;
+   		 margin:0;
+   		 padding:0;
+	}
+	.logo li{
+		padding-left : 50px;
+	}
+
+  
+}
+</style>
