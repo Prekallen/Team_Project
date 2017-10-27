@@ -6,10 +6,18 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.food.web.google.JsonParserTest;
+
+
 
 /**
  * Handles requests for the application home page.
@@ -91,6 +99,8 @@ public class HomeController {
 	
 	
 	
+	@Autowired
+	JsonParserTest JPT;
 	
 	//main 테스트용 k버전
 	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
@@ -112,6 +122,21 @@ public class HomeController {
 	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
 	public String knotice(Model model){
 		return "menutab/knotice";
+	}
+	
+	//test
+	@RequestMapping(value= "/apitest", method=RequestMethod.POST)
+	public @ResponseBody ModelMap getApiResults(@RequestBody String query){
+		ModelMap model = new ModelMap();
+		try{
+			model.put("name", JPT.name);
+			model.put("formatted_address", JPT.formatted_address);
+			model.put("rating", JPT.rating);
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	    return model;
 	}
 	
 }
