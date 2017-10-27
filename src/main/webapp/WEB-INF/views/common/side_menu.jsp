@@ -163,7 +163,7 @@ function closeNav() {
 	.logo li{
 		padding-left : 50px;
 	}
-
+ 
   
 }
 </style>
