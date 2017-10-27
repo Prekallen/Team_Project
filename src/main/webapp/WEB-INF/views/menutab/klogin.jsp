@@ -12,7 +12,7 @@
 <c:import url="${sidemenuUrl}"/>
 	<div class="i-container" style="height:200px; align:middle; padding:100px;"> 
 			<form class="form-signin">
-				<h2 class="form-signin-heading">로그인 </h2>
+				<h2 class="form-signin-heading">로그인이 필요합니다! </h2>
 				<label for="inputEmail" class="sr-only">ID</label> <input type="text"
 					id="userId" name="id" class="form-control" placeholder="ID" required value="${userId}"
 					autofocus> <label for="inputPassword" class="sr-only">Password</label>
@@ -24,10 +24,10 @@
 					</label>
 				</div>
 				<button id="btn2" class="btn btn-lg btn-primary btn-block"
-					type="button" style="background-color: #ff8080;">Login</button>
+					type="button" style="background-color: #26d4d4;">Login</button>
 					
 					<button id="btn3" class="btn btn-lg btn-primary btn-block"
-					type="button" style="background-color: #ff8080;">회원가입</button>
+					type="button" style="background-color: #26d4d4;">회원가입</button>
 					<p></p>
 					<div class="fb-login-button" data-width="1" data-max-rows="1" 
 										data-size="large" data-button-type="continue_with" 
@@ -79,7 +79,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 			<p></p><br/><p></p>
-			<div class="divide_login" id="divide_login" style="width:100%; background-color:#ff8080;">
+			<div class="divide_login" id="divide_login" style="width:100%; background-color:#26d4d4;">
 				<h2 style="text-align:center;">맛zip에서는 굳이 로그인 하지않아도 서비스를 이용하실수 있어요 ! ^^ㅗ</h2>
 	
 			</div>
