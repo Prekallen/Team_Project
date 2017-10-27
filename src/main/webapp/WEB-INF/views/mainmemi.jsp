@@ -174,7 +174,7 @@ function googleTranslateElementInit() {
 				<li><a href="#">검색</a>
 					<ul class="sub4">
 			<li style="padding-left:0; padding-top:0;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:40px; font-size:1em;"/>
-            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
+            <input type="image" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
 					</ul>
 				</li>
 				
