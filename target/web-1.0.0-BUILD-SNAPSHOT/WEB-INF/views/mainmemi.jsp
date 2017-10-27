@@ -18,7 +18,6 @@
 <title>맛집 검색 웹 Feedback</title>
 <link rel="stylesheet" type="text/css" href="resources/css/base.css" media="all" />
 <link rel="stylesheet" type="text/css" href="resources/css/main.css" media="all" />
-<link rel="stylesheet" type="text/css" href="resources/css/common.css" media="all" />
 <script type="text/javascript" src="resources/js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이브러리 연동 -->
 
 <script type="text/javascript" src="resources/js/jquery.easing.1.3.min.js"></script> 

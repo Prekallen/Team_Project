@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -10,16 +11,16 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
-import com.food.web.api.dto.MapInfo;
+import com.food.web.api.ApiDto;
  
 @Service
 public class JsonParserTest {
  
 
 	
-	MapInfo mi;
+	ApiDto ad;
 	
-    public String getApiList(MapInfo mi) throws UnsupportedEncodingException, IOException {
+    public String getApiList(ApiDto ad) throws UnsupportedEncodingException, IOException {
 
     	String query = "";
  
@@ -41,9 +42,9 @@ public class JsonParserTest {
             	
             	JSONObject storeObject = (JSONObject) storeArray.get(i);
             	
-            	mi.setFormatted_address(storeObject.get("formatted_address"));
-            	mi.setName(storeObject.get("name"));
-            	mi.setRating(storeObject.get("rating"));
+            	ad.setFormatted_address(storeObject.get("formatted_address"));
+            	ad.setName(storeObject.get("name"));
+            	ad.setRating(storeObject.get("rating"));
             	
             	
 //                //JSON name으로 추출

@@ -1,6 +1,5 @@
 ﻿@charset 'utf-8';
-
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 body{overflow-x:hidden;}
 
 /* 기본 레이아웃 */
@@ -12,8 +11,8 @@ body{overflow-x:hidden;}
 #inner_footer{width: 653px; height: 145px; margin: 0 auto; position: relative; top: 80px; padding: 15px 0 0 350px;}
 
 /* 기본 글꼴 및 링크 텍스트 꾸미기 */
-body{font-size: 12px; font-family: 'Nanum Gothic', serif; color: #333333; background-color: #ffffff; font-weight: 100%;}
-select, input, textarea, button{font: 12px gulim, "Nanum Gothic", serif; color: #333333;}
+body{font-size: 12px; font-family: 'Hanna', serif; color: #333333; background-color: #ffffff; min-width: 1000px;}
+select, input, textarea, button{font: 12px gulim, "굴림", sans-serif; color: #333333;}
 a{color: #333333; text-decoration: none;}
 .fl{float:left;}
 .fr{float:right;}
@@ -151,13 +150,13 @@ address{position:absolute; top:54px; left:148px; font-size:11px;  color:#ffffff;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 10px;
+    padding-top: 60px;
 }
 
 .sidenav a {
     padding: 15px 8px 8px 32px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
