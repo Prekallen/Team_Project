@@ -1,4 +1,5 @@
-package com.food.web.google;
+package com.food.web.api.service;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -11,15 +12,12 @@ import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
 import com.food.web.api.dto.MapInfo;
- 
-@Service
-public class JsonParserTest {
- 
 
-	
-	MapInfo mi;
-	
-    public String getApiList(MapInfo mi) throws UnsupportedEncodingException, IOException {
+@Service
+public class MapServiceImpl implements MapService{
+
+	@Override
+	public String getMapList(MapInfo mi) throws UnsupportedEncodingException, IOException{
 
     	String query = "";
  
@@ -52,7 +50,6 @@ public class JsonParserTest {
 //                System.out.println("레이팅 : "+storeObject.get("rating"));
             }
 //            System.out.println("다음페이지 : "+jsonObject.get("next_page_token"));
-
  
         } catch (ParseException e) {
             // TODO Auto-generated catch block
@@ -62,4 +59,3 @@ public class JsonParserTest {
     }
     
 }
- 

@@ -1,6 +1,6 @@
-package com.food.web.api;
+package com.food.web.api.dto;
 
-public class ApiDto {
+public class MapInfo {
 
 	private Object name;
 	private Object formatted_address;
