@@ -161,21 +161,13 @@
           <version>v1-rev88-1.19.1</version>
       </dependency>
       <!-- json-simple -->
-<<<<<<< HEAD
-	<dependency>
-	    <groupId>com.googlecode.json-simple</groupId>
-	    <artifactId>json-simple</artifactId>
-	    <version>1.1</version>
-	</dependency>
-   </dependencies>
-=======
 		<dependency>
 		    <groupId>com.googlecode.json-simple</groupId>
 		    <artifactId>json-simple</artifactId>
 		    <version>1.1.1</version>
 		</dependency>
     </dependencies>
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
+
     <build>
         <plugins>
             <plugin>
