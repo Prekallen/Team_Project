@@ -45,16 +45,13 @@ public class JsonParserTest {
             	ad.setFormatted_address(storeObject.get("formatted_address"));
             	ad.setName(storeObject.get("name"));
             	ad.setRating(storeObject.get("rating"));
-            
-                
-                 
+            	
+            	
 //                //JSON name으로 추출
 //                System.out.println("위치 : "+storeObject.get("formatted_address"));
 //                System.out.println("이름 : "+storeObject.get("name"));
 //                System.out.println("레이팅 : "+storeObject.get("rating"));
-// 
             }
-          
 //            System.out.println("다음페이지 : "+jsonObject.get("next_page_token"));
 
  
@@ -64,5 +61,6 @@ public class JsonParserTest {
         }
 		return query;
     }
+    
 }
  
