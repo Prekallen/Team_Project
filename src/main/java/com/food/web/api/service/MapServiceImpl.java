@@ -20,7 +20,7 @@ public class MapServiceImpl implements MapService{
 	public String getMapList(MapInfo mi) throws UnsupportedEncodingException, IOException{
 
     	String query = "";
- 
+    			
         try {
  
         	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query="+ query);
