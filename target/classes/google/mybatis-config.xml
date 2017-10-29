@@ -10,8 +10,10 @@
 	
 	<typeAliases>
 		<typeAlias alias="google" type="com.food.web.google.dto.GoogleInfo"/>
+		<typeAlias alias="map" type="com.food.web.api.dto.MapInfo"/>
     </typeAliases>
 	<mappers>
 		<mapper resource="com/food/web/google/sql/google_sql.xml" />
+		<mapper resource="com/food/web/api/sql/map_sql.xml" />
 	</mappers>
 </configuration>

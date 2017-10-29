@@ -6,5 +6,5 @@ import java.io.UnsupportedEncodingException;
 import com.food.web.api.dto.MapInfo;
 
 public interface MapService {
-	public String getMapList(MapInfo mi) throws UnsupportedEncodingException, IOException;
+	public MapInfo getMapList(String query) throws UnsupportedEncodingException, IOException;
 }

@@ -17,9 +17,8 @@ import com.food.web.api.dto.MapInfo;
 public class MapServiceImpl implements MapService{
 
 	@Override
-	public String getMapList(MapInfo mi) throws UnsupportedEncodingException, IOException{
-
-    	String query = "";
+	public MapInfo getMapList(String query) throws UnsupportedEncodingException, IOException{
+		MapInfo mi = new MapInfo();
     			
         try {
  
@@ -57,7 +56,7 @@ public class MapServiceImpl implements MapService{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-		return query;
+		return mi;
     }
     
 }

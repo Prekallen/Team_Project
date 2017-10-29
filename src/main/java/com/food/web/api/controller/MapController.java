@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.food.web.api.dto.MapInfo;
+import com.food.web.api.service.MapService;
 
 @Controller
 public class MapController {
 
-	@Autowired MapInfo mi;
+	@Autowired MapService ms ;
 	//test
-		@RequestMapping(value= "/apitest", method=RequestMethod.POST)
+		@RequestMapping(value= "/test/apitest", method=RequestMethod.POST)
 		public @ResponseBody ModelMap getApiResults(@RequestBody String query){
 			ModelMap model = new ModelMap();
 			try{
-				model.put("name", mi.getName());
-				model.put("formatted_address", mi.getFormatted_address());
-				model.put("rating", mi.getRating());
+				model.put("name", ms.getMapList(query).getName());
+				model.put("formatted_address", ms.getMapList(query).getFormatted_address());
+				model.put("rating", ms.getMapList(query).getRating());
 				
 			}catch(Exception e){
 				e.printStackTrace();
