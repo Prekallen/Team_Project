@@ -11,8 +11,8 @@
 </head>
 <body>
 <c:import url="${sidemenuUrl}"/>
-	<div class="container">
-		<form method="post" action="./userRegister">
+	<div class="container" id="signup_container">
+		<form method="post" action="./userRegister" style="padding-top:50px;">
 			<table class="table table-bordered table-hover" style="text-align: center; border : 1px solid#dddddd">
 				<thead>
 					<tr>
@@ -69,15 +69,22 @@
 	</div>
 </body>
 <style>
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(https://cdn.rawgit.com/studio392/NanumSquareRound/master/NanumSquareRound.css);
+
 
 	body {
-	font-family: 'Hanna', serif;
+	font-family: 'NanumSquareRound', serif;
+	font-weight: bold;
 	margin: 0;
 	height: 100%;
 	}
 	html {
 	height: 100%;
+	}
+	.signup_container{
+	padding-top:200px;
+	width: 40%
+	
 	}
 	.kwrap {
 	min-height: 100%;

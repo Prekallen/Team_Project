@@ -148,7 +148,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 body {
-	font-family: 'Hanna', serif;
+	font-family: 'NanumSquareRound', serif;
+	font-weight: bold;
 	margin: 0;
 	height: 100%;
 	font-size : 15px;

@@ -103,9 +103,6 @@
 				</ul>
 			</dd>
 			<dd>
-				<a href="#" class="print_btn"><img src="resources/img/util_print.gif" alt="" /></a>
-			</dd>
-			<dd>
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
