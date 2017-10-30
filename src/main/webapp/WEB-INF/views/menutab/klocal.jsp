@@ -98,32 +98,7 @@
 
 </html>
 <style>
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
-	body {	
-	font-family: 'Hanna', serif;
-	height : 100%;
-	width : 100%;
-	}
-	html{
-	height:100%;
-	}
-	
-	.loContainer{
-	height : 100%;
-	width : 100%;
-	display: inline;
-	}
-	.loTop {
-	padding-top: 150px;
-	padding-bottom: 150px;
-	text-align : center; 
-	}
-	.kwrap {
-	min-height: 100%;
-	position: relative;
-	padding-bottom: 30px; /* footer height */
-	}
 	#section{padding-top: 75px;}
 .culture h3{font-size: 16px; text-align: center; padding-bottom: 16px;}
 .culture span{display: block; font-size: 21px; text-align: center;}
