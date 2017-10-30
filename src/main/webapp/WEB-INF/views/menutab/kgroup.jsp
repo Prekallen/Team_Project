@@ -79,46 +79,6 @@
 </script>
 </html>
 <style>
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-
-	body {	
-	font-family: 'Hanna', serif;
-	height : 100%;
-	width : 100%;
-	}
-	html{
-	height:100%;
-	}
-	
-	.gtlBtn {
-	font-size: 30px;
-	width: 100px;
-	height: 50px;
-	cursor: pointer;
-	background-color: #ffffff;
-	}
-	
-	.gTop_List button {
-	margin-right: 50px; 
-	}
-	
-	.gContainer{
-	height : 100%;
-	width : 100%;
-	display: inline;
-	}
-	.gTop {
-	padding-top: 150px;
-	padding-bottom: 150px;
-	text-align : center; 
-	}
-	.kwrap {
-	min-height: 100%;
-	position: relative;
-	padding-bottom: 30px; /* footer height */
-	}
-	
- 
 
 /* Culture */
 #section{padding-top: 75px;}
