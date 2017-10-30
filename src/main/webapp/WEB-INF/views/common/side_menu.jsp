@@ -14,7 +14,7 @@ body {
 </style>
 </head>
 <body>
-<div id="search" style="padding-left: 800px">
+<div id="search">
 	<ul>
   		
   		<li><a href="${rootPath}/mainmemi"><input type="image" src="../resources/image/fdLogo.png" style="width: 50px; height:50px;"></a></li>
@@ -141,6 +141,10 @@ function closeNav() {
 </body>
 </html> 
 <style>
+	#search {
+		position :relative;
+		padding-left : 5%;
+	}
 
 	#search ul li:first-child{
 		position: absolute;
@@ -164,6 +168,11 @@ function closeNav() {
 	}
 	.logo li{
 		padding-left : 50px;
+	}
+	.logo{
+		 list-style:none;
+		 position: absolute;
+	   	 left:0;
 	}
  
   
