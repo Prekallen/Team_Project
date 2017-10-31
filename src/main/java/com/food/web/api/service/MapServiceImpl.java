@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -18,8 +20,8 @@ import com.food.web.api.dto.MapInfo;
 public class MapServiceImpl implements MapService{
 
 	@Override
-	public MapInfo getMapList(HashMap query) throws UnsupportedEncodingException, IOException{
-		MapInfo mi = new MapInfo();
+	public List<MapInfo> getMapList(HashMap query) throws UnsupportedEncodingException, IOException{
+		List<MapInfo> mapInfoList = new ArrayList<MapInfo>();
     			
         try {
  
@@ -36,19 +38,19 @@ public class MapServiceImpl implements MapService{
             JSONArray storeArray = (JSONArray) jsonObject.get("results");
             
             for(int i=0; i<storeArray.size(); i++){
-            	
+        		MapInfo mi = new MapInfo();
             	JSONObject storeObject = (JSONObject) storeArray.get(i);
             	
             	mi.setFormatted_address(storeObject.get("formatted_address"));
             	mi.setName(storeObject.get("name"));
             	mi.setRating(storeObject.get("rating"));
-            	
+            	mapInfoList.add(mi);
             	
                 //JSON name으로 추출
             	
-	                System.out.println("위치 : "+storeObject.get("formatted_address"));
-	                System.out.println("이름 : "+storeObject.get("name"));
-	                System.out.println("레이팅 : "+storeObject.get("rating"));
+//	                System.out.println("위치 : "+storeObject.get("formatted_address"));
+//	                System.out.println("이름 : "+storeObject.get("name"));
+//	                System.out.println("레이팅 : "+storeObject.get("rating"));
             	
             }
 //            System.out.println("다음페이지 : "+jsonObject.get("next_page_token"));
@@ -57,7 +59,7 @@ public class MapServiceImpl implements MapService{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-		return mi;
+		return mapInfoList;
     }
     
 }
