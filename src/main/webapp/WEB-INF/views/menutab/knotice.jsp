@@ -90,7 +90,7 @@
 				
 			</tbody>		
 		</table>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<a href="${rootPath}/menutab/write" class="btn btn-primary pull-right">글쓰기</a>
 	</div>
 </div>
 <div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>

@@ -113,6 +113,10 @@ public class HomeController {
 	public String knotice(Model model){
 		return "menutab/knotice";
 	}
+	@RequestMapping(value="/menutab/write", method= RequestMethod.GET)
+	public String write(Model model){
+		return "menutab/write";
+	}
 	
 	//test
 //	@RequestMapping(value= "/apitest", method=RequestMethod.POST)
