@@ -64,7 +64,7 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 	#login_f img{vertical-align: middle;}
 	.log_btn{position: absolute; top: 39px; right: 40px;}
 	.login_close_btn{position: absolute; bottom: 20px; right: 22px;}
-	.join_btn_wrap{margin: 10px 0;}
+	.join_btn_wrap{margin: 10px 0; font-size: 12px;}
 	.join_btn_wrap a{padding-left: 2px; color: #ffffff;}
 	.sch_id_btn{margin-left: 20px;}
 	

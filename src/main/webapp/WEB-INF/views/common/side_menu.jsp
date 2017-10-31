@@ -111,33 +111,28 @@
 var token = "";
 var html = "";
 $("#btn").click(function(){
-	
-    var query = $("#searchBox").val();
+	var query = $("#searchBox").val();
     query=query.replace(/(\s*)/g,"")
     if(query==null||query==""){
     	alert("입력 좀...");
     }else{
-	var au = new AjaxUtil("/searchPage");
-	var param = {};
-	param["query"] = query;
-	
-	param["token"] = null;
-	
-	au.param = JSON.stringify(param);
-	au.setCallbackSuccess(callbackApi);
-	au.send();
-
-	
-	
+		var au = new AjaxUtil("/searchPage");
+		var param = {};
+		param["query"] = query;
+		
+		param["token"] = null;
+		
+		au.param = JSON.stringify(param);
+		au.setCallbackSuccess(callbackApi);
+		au.send();
 	}        
-	function callbackApi(results){
+	
+    function callbackApi(results){
 		if(!results){
 			alert(OMG);
 			return;
 		}
-		
-       
-        var mapInfoList = results["mapInfoList"];
+	   var mapInfoList = results["mapInfoList"];
 		for(var idx in mapInfoList){
 			var result = mapInfoList[idx];
 			var name = result.name;
@@ -152,8 +147,6 @@ $("#btn").click(function(){
 		}
         $("#spMiddle").append(html);
 	}
-	
-	
 });
 
 $("#nBtn").click(function(){

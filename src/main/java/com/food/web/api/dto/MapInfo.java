@@ -7,8 +7,6 @@ public class MapInfo {
 	private Object rating;
 	private Object next_page_token;
 	
-	
-
 	public Object getNext_page_token() {
 		return next_page_token;
 	}
@@ -39,5 +37,4 @@ public class MapInfo {
 		return "MapInfo [name=" + name + ", formatted_address=" + formatted_address + ", rating=" + rating + "]";
 	}
 
-	
 }
