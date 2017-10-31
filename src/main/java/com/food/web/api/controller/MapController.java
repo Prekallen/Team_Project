@@ -26,10 +26,7 @@ public class MapController {
 		public @ResponseBody ModelMap getApiResults(@RequestBody HashMap query){
 			ModelMap model = new ModelMap();
 			try{
-				model.put("name", ms.getMapList(query).getName());
-				model.put("formatted_address", ms.getMapList(query).getFormatted_address());
-				model.put("rating", ms.getMapList(query).getRating());
-				
+				model.put("mapInfoList", ms.getMapList(query));
 			}catch(Exception e){
 				e.printStackTrace();
 			}

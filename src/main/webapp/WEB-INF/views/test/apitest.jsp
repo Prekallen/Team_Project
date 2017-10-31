@@ -23,6 +23,7 @@
 	</div>
 	<div id="container"></div>
 </div>
+
 </body>
 
 <script>
@@ -39,28 +40,29 @@ $("#btn").click(function(){
 	au.setCallbackSuccess(callbackApi);
 	au.send();
 	}        
-	function callbackApi(result){
-		var name = result.name;
-		var formatted_address = result.formatted_address;
-		var rating = result.rating
-		if(!result){
+	function callbackApi(results){
+		if(!results){
 			alert(OMG);
 			return;
 		}
-        if(result){
-        	$("#ajax").remove();
-            var html = '';
+
+    	$("#ajax").remove();
+        var html = '';
+        var mapInfoList = results["mapInfoList"];
+		for(var idx in mapInfoList){
+			var result = mapInfoList[idx];
+			var name = result.name;
+			var formatted_address = result.formatted_address;
+			var rating = result.rating;
             html += '<form class="form-signin" action="" id="ajax">';
             html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
             html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
             html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
             html += '</form>';
-            $("#container").append(html);
-            return;
-        }
+		}
+        $("#container").append(html);
 	}
 });
-
 
 
 //Ajax//
