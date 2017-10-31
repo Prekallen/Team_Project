@@ -30,6 +30,7 @@
 $("#btn").click(function(){
 	
     var query = $("#searchBox").val();
+    query=query.replace(/(\s*)/g,"")
     if(query==null||query==""){
     	alert("입력 좀...");
     }else{
@@ -45,7 +46,7 @@ $("#btn").click(function(){
 			alert(OMG);
 			return;
 		}
-
+		
     	$("#ajax").remove();
         var html = '';
         var mapInfoList = results["mapInfoList"];
