@@ -5,9 +5,16 @@ public class MapInfo {
 	private Object name;
 	private Object formatted_address;
 	private Object rating;
+	private Object next_page_token;
 	
 	
 
+	public Object getNext_page_token() {
+		return next_page_token;
+	}
+	public void setNext_page_token(Object next_page_token) {
+		this.next_page_token = next_page_token;
+	}
 	public Object getName() {
 		return name;
 	}

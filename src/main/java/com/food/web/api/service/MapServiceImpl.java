@@ -22,10 +22,19 @@ public class MapServiceImpl implements MapService{
 	@Override
 	public List<MapInfo> getMapList(HashMap query) throws UnsupportedEncodingException, IOException{
 		List<MapInfo> mapInfoList = new ArrayList<MapInfo>();
+
+		
     			
         try {
  
-        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query="+ query.get("query"));
+        	String hUrl = "";
+        	if(query.get("token")==null){
+        		hUrl = "query="+ query.get("query");
+        	}else {
+        		hUrl = "pagetoken=" + query.get("token");
+        	}
+        	
+        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&" + hUrl) ;
         	
         	InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
         	
@@ -34,16 +43,21 @@ public class MapServiceImpl implements MapService{
             //JSON데이터를 넣어 JSON Object 로 만들어 준다.
             JSONObject jsonObject = (JSONObject) jsonParser.parse(isr);
              
+            
             //books의 배열을 추출
             JSONArray storeArray = (JSONArray) jsonObject.get("results");
+ 
+            Object page = jsonObject.get("next_page_token");
+            
             
             for(int i=0; i<storeArray.size(); i++){
-        		MapInfo mi = new MapInfo();
+            	MapInfo mi = new MapInfo();
             	JSONObject storeObject = (JSONObject) storeArray.get(i);
             	
             	mi.setFormatted_address(storeObject.get("formatted_address"));
             	mi.setName(storeObject.get("name"));
             	mi.setRating(storeObject.get("rating"));
+            	mi.setNext_page_token(page);
             	mapInfoList.add(mi);
             	
                 //JSON name으로 추출

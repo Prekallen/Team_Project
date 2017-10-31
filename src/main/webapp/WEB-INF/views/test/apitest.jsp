@@ -22,11 +22,14 @@
 		<input type="text" id="searchBox"><button id="btn">나와라</button>
 	</div>
 	<div id="container"></div>
+	<button id="nBtn">다음페이지</button>
 </div>
 
 </body>
 
 <script>
+var token = "";
+
 $("#btn").click(function(){
 	
     var query = $("#searchBox").val();
@@ -37,6 +40,9 @@ $("#btn").click(function(){
 	var au = new AjaxUtil("/test/apitest");
 	var param = {};
 	param["query"] = query;
+	
+	param["token"] = null;
+	
 	au.param = JSON.stringify(param);
 	au.setCallbackSuccess(callbackApi);
 	au.send();
@@ -55,6 +61,7 @@ $("#btn").click(function(){
 			var name = result.name;
 			var formatted_address = result.formatted_address;
 			var rating = result.rating;
+			token = result.next_page_token; 
             html += '<form class="form-signin" action="" id="ajax">';
             html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
             html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
@@ -64,6 +71,38 @@ $("#btn").click(function(){
         $("#container").append(html);
 	}
 });
+
+$("#nBtn").click(function(){
+	
+	
+	var au = new AjaxUtil("/test/apitest");
+	var param = {};
+	param["token"] = token;
+	au.param = JSON.stringify(param);
+	au.setCallbackSuccess(callbackApi);
+	au.send();
+    
+	function callbackApi(results){
+		
+    	
+        var html = '';
+        var mapInfoList = results["mapInfoList"];
+		for(var idx in mapInfoList){
+			var result = mapInfoList[idx];
+			var name = result.name;
+			var formatted_address = result.formatted_address;
+			var rating = result.rating;
+			token = result.next_page_token; 
+            html += '<form class="form-signin" action="" id="ajax">';
+            html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
+            html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
+            html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
+            html += '</form>';
+		}
+        $("#container").append(html);
+	}
+});
+
 
 
 //Ajax//
