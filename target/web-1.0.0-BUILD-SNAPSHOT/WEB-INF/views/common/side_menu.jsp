@@ -16,9 +16,9 @@
 	<div id="header2">
 				<div id="search">
 					<ul>
-				  		<li><a href="${rootPath}/mainmemi"><input type="image" src="../resources/image/fdLogo.png" style="width: 35px; height:35px; padding-right:5px;"></a></li>
-						<li><input type="text" id="input" name="query" autocomplete="on" value=""  style="width:250px; height:30px; "/></li>
-				        <li><input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="button" style=" width: 29px; height: 28px;"></li>
+				  		<li><a href="${rootPath}/mainmemi"><input type="image" src="${rootPath}/resources/image/fdLogo.png" style="width: 35px; height:35px; padding-right:5px;"></a></li>
+						<li><input type="text" id="searchBox" name="query" autocomplete="on" value=""  style="width:250px; height:30px; "/></li>
+				        <li><input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="btn" style=" width: 29px; height: 28px;"></li>
 				     </ul>
 			     </div>
      
@@ -84,7 +84,7 @@
 
 	<li class="logo"><span style= "font-size:30px; cursor:pointer" onclick="openNav()" >&#9776; </span></li>
 
-	<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="../resources/img/login_click.png"/></dd>
+	<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="${rootPath}/resources/img/login_click.png"/></dd>
 	<dl id="util_menu">
 			<dt class="hide">유틸메뉴</dt>
 			<dd class="util_first">
@@ -118,10 +118,148 @@
 
 
 <script>
-$('#button').click(function(){
-	alert("힝 속았지~~");
+var token = "";
+var html = "";
+$("#btn").click(function(){
+	
+    var query = $("#searchBox").val();
+    query=query.replace(/(\s*)/g,"")
+    if(query==null||query==""){
+    	alert("입력 좀...");
+    }else{
+	var au = new AjaxUtil("/searchPage");
+	var param = {};
+	param["query"] = query;
+	
+	param["token"] = null;
+	
+	au.param = JSON.stringify(param);
+	au.setCallbackSuccess(callbackApi);
+	au.send();
+
+	
+	
+	}        
+	function callbackApi(results){
+		if(!results){
+			alert(OMG);
+			return;
+		}
+		
+       
+        var mapInfoList = results["mapInfoList"];
+		for(var idx in mapInfoList){
+			var result = mapInfoList[idx];
+			var name = result.name;
+			var formatted_address = result.formatted_address;
+			var rating = result.rating;
+			token = result.next_page_token; 
+            html += '<form class="form-signin" action="" id="ajax">';
+            html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
+            html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
+            html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
+            html += '</form>';
+		}
+        $("#spMiddle").append(html);
+	}
+	
+	
 });
 
+$("#nBtn").click(function(){
+	
+	
+	var au = new AjaxUtil("/searchPage");
+	var param = {};
+	param["token"] = token;
+	au.param = JSON.stringify(param);
+	au.setCallbackSuccess(callbackApi);
+	au.send();
+	
+	
+    
+	function callbackApi(results){
+		
+    	
+        var html = '';
+        var mapInfoList = results["mapInfoList"];
+		for(var idx in mapInfoList){
+			var result = mapInfoList[idx];
+			var name = result.name;
+			var formatted_address = result.formatted_address;
+			var rating = result.rating;
+			token = result.next_page_token; 
+            html += '<form class="form-signin" action="" id="ajax">';
+            html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
+            html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
+            html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
+            html += '</form>';
+		}
+        $("#spMiddle").append(html);
+	}
+});
+
+
+
+//Ajax//
+var AjaxUtil = function (url, params, type, dataType){
+	if(!url){
+		alert("url정보가 없습니다.");
+		return null;
+	}
+	this.url = "${rootPath}/" + url;
+	
+	var generateJSON = function(params){
+		if(!params) return "";
+		var paramArr = params.split(",");
+		var data = {};
+		for(var i=0,max=paramArr.length;i<max;i++){
+			var key = paramArr[i]
+			if($("#" + key).length>1){
+				throw new JSException("동일 ID값이 존재함.");
+			}else if($("#" + key).length==0){
+				throw new JSException(key+"에 해당하는 ID가 존재하지 않음.");
+			}
+			data[key] = $("#" + key).val();
+		}
+		return  JSON.stringify(data);
+	}
+	this.type = type?type:"POST";
+	this.dataType = dataType?dataType:"json";
+	this.param = generateJSON(params);
+	this.callbackSuccess = function(json){
+    	var url = json.url;
+    	var msg = json.msg;
+    	if(msg){
+    		alert(msg);
+    	}
+    	if(url){
+        	pageMove(url);
+    	}
+	}
+	this.setCallbackSuccess = function(callback){
+		this.callbackSuccess = callback;
+	}
+	
+	this.send = function(){
+		$.ajax({ 
+	        type     : this.type
+	    ,   url      : this.url
+	    ,   dataType : this.dataType 
+	    ,   beforeSend: function(xhr) {
+	        xhr.setRequestHeader("Accept", "application/json");
+	        xhr.setRequestHeader("Content-Type", "application/json");
+	    }
+	    ,   data     : this.param
+	    ,   success : this.callbackSuccess
+	    ,   error : function(xhr, status, e) {
+		    	alert("에러 : "+e);
+		},
+		complete : function(e) {
+		}
+		});
+	}
+}
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
