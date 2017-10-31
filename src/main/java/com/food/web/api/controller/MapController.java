@@ -1,5 +1,7 @@
 package com.food.web.api.controller;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +23,7 @@ public class MapController {
 			return "/test/apitest";
 		}
 		@RequestMapping(value= "/test/apitest", method=RequestMethod.POST)
-		public @ResponseBody ModelMap getApiResults(@RequestBody String query){
+		public @ResponseBody ModelMap getApiResults(@RequestBody HashMap query){
 			ModelMap model = new ModelMap();
 			try{
 				model.put("name", ms.getMapList(query).getName());

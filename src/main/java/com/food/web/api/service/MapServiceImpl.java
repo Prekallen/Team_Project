@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.util.HashMap;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -17,12 +18,12 @@ import com.food.web.api.dto.MapInfo;
 public class MapServiceImpl implements MapService{
 
 	@Override
-	public MapInfo getMapList(String query) throws UnsupportedEncodingException, IOException{
+	public MapInfo getMapList(HashMap query) throws UnsupportedEncodingException, IOException{
 		MapInfo mi = new MapInfo();
     			
         try {
  
-        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query="+ query);
+        	URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&query="+ query.get("query"));
         	
         	InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
         	

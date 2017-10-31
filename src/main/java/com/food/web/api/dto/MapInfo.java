@@ -29,7 +29,8 @@ public class MapInfo {
 	}
 	@Override
 	public String toString() {
-		return "ApiDto [name=" + name + ", formatted_address=" + formatted_address + ", rating=" + rating + "]";
+		return "MapInfo [name=" + name + ", formatted_address=" + formatted_address + ", rating=" + rating + "]";
 	}
+
 	
 }

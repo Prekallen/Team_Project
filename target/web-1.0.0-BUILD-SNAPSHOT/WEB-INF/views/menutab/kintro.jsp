@@ -148,9 +148,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 body {
-	font-family: 'Hanna', serif;
+	font-family: 'NanumSquareRound', serif;
+	font-weight: bold;
 	margin: 0;
 	height: 100%;
+	font-size : 15px;
 }
 html {
 height: 100%;
@@ -160,5 +162,8 @@ height: 100%;
 min-height: 100%;
 position: relative;
 padding-bottom: 30px; /* footer height */
+}
+.btn btn-primary {
+	float : right;
 }
 </style>

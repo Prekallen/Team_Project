@@ -18,6 +18,7 @@
 <title>맛집 검색 웹 Feedback</title>
 <link rel="stylesheet" type="text/css" href="resources/css/base.css" media="all" />
 <link rel="stylesheet" type="text/css" href="resources/css/main.css" media="all" />
+<link rel="stylesheet" type="text/css" href="resources/css/common.css" media="all" />
 <script type="text/javascript" src="resources/js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이브러리 연동 -->
 
 <script type="text/javascript" src="resources/js/jquery.easing.1.3.min.js"></script> 
@@ -102,9 +103,6 @@
 				</ul>
 			</dd>
 			<dd>
-				<a href="#" class="print_btn"><img src="resources/img/util_print.gif" alt="" /></a>
-			</dd>
-			<dd>
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -173,7 +171,7 @@ function googleTranslateElementInit() {
 				<li><a href="#">검색</a>
 					<ul class="sub4">
 			<li style="padding-left:0; padding-top:0;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:40px; font-size:1em;"/>
-            <img src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
+            <input type="image" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
 					</ul>
 				</li>
 				
