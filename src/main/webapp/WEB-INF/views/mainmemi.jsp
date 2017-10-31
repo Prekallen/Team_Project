@@ -54,7 +54,7 @@
 		<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> --> 
 		<dl id="util_menu"style="    padding-left: 15px;">
 			<dt class="hide">유틸메뉴</dt>
-			<dd class="clickme fl DB_etc10_1" style="width: 120px;"><img src="resources/img/login_click.png"/></dd>
+			<dd class="clickme fl DB_etc10_1" style="width: 120px;"><img src="../resources/img/login_click.png"/></dd>
 			<dd class="util_first">
 				<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto; background-color:#ffffff; color:#ff3baf;
 					font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
