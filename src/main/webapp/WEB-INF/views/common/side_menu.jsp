@@ -14,15 +14,16 @@
 
 <div id="wrap2">
 	<div id="header2">
-				<div id="search">
+				<div id="search" style="padding-top:20px; ">
 					<ul>
-				  		<li><a href="${rootPath}/mainmemi"><input type="image" src="${rootPath}/resources/image/fdLogo.png" style="width: 35px; height:35px; padding-right:5px;"></a></li>
-						<li><input type="text" id="searchBox" name="query" autocomplete="on" value=""  style="width:250px; height:30px; "/></li>
-				        <li><input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="btn" style=" width: 29px; height: 28px;"></li>
+
+						<li><input type="text" id="search_input" name="query" autocomplete="on" value=""  style="width:250px; height:30px; padding-left:0px;
+						font-size:1em;font-family: 'NanumSquareRound'; font-weight:bold;"/></li>
+				        <li><input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="button" style=" width: 28px; height: 28px;"></li>
 				     </ul>
 			     </div>
      
-	<div id="mySidenav" class="sidenav"> 
+<div id="mySidenav" class="sidenav"> 
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="${rootPath}/mainmemi">메인</a>
   <a href="${rootPath}/menutab/kintro">Feedback소개</a>
@@ -84,32 +85,84 @@
 
 	<li class="logo"><span style= "font-size:30px; cursor:pointer" onclick="openNav()" >&#9776; </span></li>
 
-	<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="${rootPath}/resources/img/login_click.png"/></dd>
-	<dl id="util_menu">
-			<dt class="hide">유틸메뉴</dt>
-			<dd class="util_first">
-				<ul>
-					<li class="login_wrap logtxt" >
-						<a href="${rootPath}/menutab/klogin" id="status">LOGIN</a>
-						
-					</li>
-					<li class="logtxt">
-					<a href="${rootPath}/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a>
-					</li>
-					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
-				</ul>				
-			</dd>
-		<dd>									
-			<div id="google_translate_element"></div>
-			<script type="text/javascript">
-			function googleTranslateElementInit() {
-			  new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-			}
-			</script>
-			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>		
-		</dd>
+				<dd class="clickme fl DB_etc10_1" style="width: 128px;">
+					<img src="resources/img/login_click.png" />
+				</dd>
+				<dl id="util_menu">
+					<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto;">로그인</button>
+					<div id="id01" class="modal">
+						<form class="modal-content animate" action="/action_page.php" >
+								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
+							<div id="user_util_menu">
+								<div class="container" id="login_form" style="padding-top: 30px;"	>
+									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> 
+									<input type="text"  style="width: 299px;" placeholder="ID" name="ID" required> 
+										</br><input type="checkbox" checked="checked"> 아이디 기억하기
+										</br>
+										<label><b>비밀번호&nbsp;</b></label>
+									<input type="password" placeholder="Password" name="psw" style="width: 300px;"	required>
+										</br></br>
+									<button type="submit" style="width: 370px ;height:40px;">로그인</button></br>								
+								</div>								
+								</br>
+							</div>							
+						</form>											
+					</div><!-- modal id01 -->
+					<script>
+						// Get the modal
+						var modal = document.getElementById('id01');
 
-	</dl><!-- id="util_menu" -->
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						}
+					</script>
+					
+					<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">회원가입</button>
+
+					<div id="id02" class="modal">
+
+					  <form class="modal-content animate" action="/action_page2.php">
+					    <div class="container" style="padding-left: 10px;">
+					      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top:20px;">×</span>
+					      </br>
+					      <label><b>아이디</b></label></br>
+					      <input type="text" placeholder="Enter ID" name="id" required style="width: 300px;">
+					      <button type="submit" onclick="registerCheckFunction();" style="width: 66px;height:40px;margin-top: 0px;padding-left: 6px;padding-right: 6px;">중복체크</button>
+							</br>
+					      <label><b>비밀번호</b></label></br>
+					      <input type="password" placeholder="Enter Password" name="psw" required style="width: 370px;">
+							</br>
+					      <label><b>비밀번호 확인</b></label></br>
+					      <input type="password" placeholder="Repeat Password" name="psw-repeat" required style="width: 370px;">
+					      	</br>
+					      <label><b>Email</b></label></br>
+					      <input type="text" placeholder="Enter Email" name="email" style="width: 370px ;" required>				
+					 		</br>
+					      <div class="clearfix">
+					        <button type="submit" class="signupbtn" style="width: 370px ;height:40px;">가입하기</button>
+					      </div>
+					    </div>
+					  </form>
+					</div>
+					<script>
+						// Get the modal
+						var modal = document.getElementById('id02');
+
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						}
+					</script>
+
+					
+
+				</dl>
+				<!-- id="util_menu" -->
 			</div><!-- id="main" -->
 			</div><!-- id="header2" -->
 	</div><!-- id="wrap2" -->
@@ -269,6 +322,16 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 }
+
+var modal = document.getElementById('mySidenav');
+
+//When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+ if (event.target == sidenav) {
+	 sidenav.style.display = "none";
+ }
+}
+
 </script>
      
 </body>

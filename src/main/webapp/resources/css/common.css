@@ -2,6 +2,7 @@
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/studio392/NanumGothic/master/NanumGothic.css);
+@import url(https://cdn.rawgit.com/studio392/NanumSquareRound/master/NanumSquareRound.css);
 
 body{overflow-x:hidden;}
 
@@ -71,7 +72,8 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 	
 /* 유틸 메뉴 영역 */
 #util_menu dd{float: left; padding: 0 5px; overflow: visible;}
-.util_first li{margin-left: 10px; display: inline; overflow: visible;}
+.util_first li{margin-left: 10px; display: inline; overflow: visible;font-size:16px; }
+.util_first{font-size:16px; z-index:10;}
 #util_menu li{float: left;}
 #util_menu{position: absolute; top: 39px; right: 11px; z-index: 10;}
 #sch_f{position: absolute; top: 79px; left: 1093px;}
@@ -80,18 +82,18 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .clickme{width: 28px; position: absolute; top: 0; left: -75px; font-size: 0px;}
 
 /* GNB 영역 */
-#gnb_wrap{width: 1000px; height: 47px; background: #ffffff; position: absolute; top: 25px; /* left: 0; */ margin: 0 auto;}
-#gnb{width: 751px; height: 47px; margin: 0 auto; padding-right: 100px; padding:10px;}
+#gnb_wrap{width: 1000px; height: 47px; background: #ffffff; position: absolute; top: 25px; /* left: 0; */ margin: 0 auto; font-family: 'NanumSquareRound'; font-weight: bold; }
+#gnb{width: 751px; height: 47px; margin: 0 auto; padding-right: 100px; padding:10px; font-family: 'NanumSquareRound';}
 #gnb>li{float: left; text-align: center; width:92px; padding: -10px; /* border-right: 1px solid #aaaaaa; */}
 /* #gnb li.fir{border-left: 1px solid #eeeeee;} */
 #gnb>li>a{font-size: 16px; color: #222222; font-weight: bold;}
 #gnb ul{position: relative;/*  background-color: rgba(250,250,250,0.95); */ width: 125px; top: 23px; left: -17px; line-height: 35px; height: 180px; display: none; text-align: center;}
 #gnb ul li{background-color: #f7f5f8; /* border-bottom: 1px solid #aaaaaa; */ /* border-left: 1px solid #eeeeee; */}
 #gnb>li>ul>li{padding: 0px; width: 125px; background: rgba(250,250,250,0.95); z-index: 11;}
-#gnb>li:hover >a{color: #ff3baf;}
+#gnb>li:hover >a{color: #26d4d4;}/**/
 #gnb>li:hover ul{display: block;}
-#gnb>li>ul>li:hover{background-color: #e04963;}
-#gnb>li>ul>li:hover a{color: #ffffff;}
+#gnb>li>ul>li:hover{background-color: none;}
+#gnb>li>ul>li:hover a{color: #26d4d4;}
 #gnb ul.sub5{height: 36px;} 
 #gnb ul.sub6{height: 144px;}
 
@@ -150,14 +152,16 @@ address{position:absolute; top:54px; left:148px; font-size:11px;  color:#ffffff;
     cursor: pointer;    font-family: 'NanumSquareRound', serif;}
 .dropdown {    position: relative;    display: inline-block;}
 .dropdown-content {    display: none;    position: absolute;    background-color: #ffffff;    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    z-index: 1;    padding-left : 10px}
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    z-index: 1;    padding-left : 10px;}
 .dropdown-content a {    color: #000000;    padding: 12px 16px;    text-decoration: none;    display: block;}
 .dropdown-content a:hover {	background-color: #ffffff; color:#26d4d4;	}
 .dropdown:hover .dropdown-content {    display: block;}
 .dropdown:hover .dropbtn {    background-color: #ffffff;}
 
 /*kgroup*/
-.gtlBtn {	font-size: 20px;	font-weight:bold;	width: 100px;	height: 50px;	cursor: pointer;	background-color: #ffffff;	}
+.gtlBtn {	font-size: 20px;	font-weight:bold;	width: 100px;	height: 50px;	cursor: pointer;	background-color: #ffffff; 	
+font-family: 'NanumSquareRound'; font-weight: bold; color:#000000 }
+.gtlBtn:hover{ color: #26d4d4;}
 .gTop_List button {	margin-right: 50px; 	}	
 .gContainer{	height : 100%;	width : 100%;	display: inline;	}
 .gTop {	padding-top: 150px;	padding-bottom: 150px;	text-align : center; 	}
@@ -172,14 +176,85 @@ address{position:absolute; top:54px; left:148px; font-size:11px;  color:#ffffff;
 	#search {		position :absolute;		padding-top : 20px;		padding-left : 40%;	}
 	#search ul {		 list-style:none;   		 margin:0;   		 padding:0;	}
 	#search ul li{		 list-style:none;		 margin: 0 0 0 0;   		 padding: 0 0 0 0;  		  float: left;  		  z-index: 2;	}
-	#search ul li li{		 list-style:none;		 margin: 0 0 0 0;   		 padding: 0 0 0 0;  		  float: left;  		  z-index: 2;	}
-	#search ul li li li{		 list-style:none;		 margin: 0 0 0 0;   		 padding: 0 0 0 0;  		  float: left;  		  z-index: 2;	}
+#search_input{width: 100%;    padding: 0px 20px;    margin: 0;    display: inline-block;    border: 1px solid #ccc;    box-sizing: border-box;}
+/*	#search ul li li{		 list-style:none;		 margin: 0 0 0 0;   		 padding: 0 0 0 0;  		  float: left;  		  z-index: 2;	}
+	#search ul li li li{		 list-style:none;		 margin: 0 0 0 0;   		 padding: 0 0 0 0;  		  float: left;  		  z-index: 2;	}*/
 			
 	.util_first ul{		 list-style:none;   		 margin:0;   		 padding:0;	font-weight:bold;}	
 	.util_first ul ul {		 list-style:none;   		 margin:0;   		 padding:0;	font-weight:bold;}	
 	.logo{		 list-style:none;		 position: absolute;	   	 padding-left:5px;  	 	}
 	.logo span{		padding-top : 0px;	}
 
+input[type=text], input[type=password] {    width: 100%;    padding: 12px 20px;    margin: 8px 0;    display: inline-block;    border: 1px solid #ccc;    box-sizing: border-box; }
 
+/* Set a style for all buttons */
+button {    background-color: #26d4d4;    color: white;    padding-right:10px;    margin: 8px 0;    border: none;    cursor: pointer;    width: 100%; }/**/
+button:hover {    opacity: 0.8;}
+
+/* Extra styles for the cancel button */
+.cancelbtn {    width: auto;    padding: 10px 18px;    background-color: #f44336;}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;    margin: 24px 0 12px 0;    position: relative;}
+
+img.avatar {    width: 40%;    border-radius: 50%;}
+
+.container {    padding: 16px; padding-top: 30px;width: 432px;padding-right: 10px;margin-left: 42px;}
+
+span.psw {    float: right;    padding-top: 16px;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: fixed; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+#user_util_menu{
+	width:100% auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {    position: absolute;    right: 25px;    top: 0;    color: #000;    font-size: 35px;    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {    color: red;    cursor: pointer;}
+
+/* Add Zoom Animation */
+.animate {    -webkit-animation: animatezoom 0.6s;    animation: animatezoom 0.6s; width:500px; height:600px;}
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {       display: block;       float: none;    }
+    .cancelbtn {       width: 100%;    }
+}
 
 
