@@ -18,21 +18,18 @@
 		<table class="table table-striped" style="text-align:center"; border="1px solid #dddddd">
 		<thead>
 				<tr>
-					<th style="background-color:#eeeeee; text-align:center;">제목</th>
-					<td><textarea style="resize:none;"cols="150" rows="3"></textarea></td>
-					</tr>
-		
+					<th style="background-color:#eeeeee; text-align:center;" >제목</th>
+					<td><textarea style="resize:none;"cols="150" rows="3" id="title"></textarea></td>
+				</tr>
 		</thead>
 				
 				<tr>
 					<th style="background-color:#eeeeee; text-align:center;" >내용</th>
-					<td ><textarea style="resize:none;" cols="150" rows="30"></textarea></td>
+					<td ><textarea style="resize:none;" cols="150" rows="30" id="contents"></textarea></td>
 				</tr>
 				
-				
-		
 		</table>
-		    <a href="${rootPath}/menutab/knotice" class="btn btn-primary pull-right">완료</a>
+		 <button id="send">완료</button> 
 			<a href="${rootPath}/menutab/knotice" class="btn btn-primary pull-right">뒤로가기</a>
 	</div>
 </div>
@@ -42,6 +39,18 @@
 <c:import url="${footerUrl}"/>
 </div>
 </body>
+<script>
+
+$("send").click(function(){
+	var title = $("title").val();
+	var contents = $("contents").val();
+	var au = new AjaxUtil(url,params);
+	params = title,contents;
+	au.send();
+	location.href="${rootPath}/menutab/knotice";	
+	
+})
+</script>
 </html>
 <style>	
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);

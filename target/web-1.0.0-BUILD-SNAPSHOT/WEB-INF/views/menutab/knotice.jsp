@@ -15,7 +15,7 @@
 <ul class="nav-navbar-nav navbar-right"></ul>
 <div class="container" style="padding-top:200px;">
 	<div class="row">
-		<table class="table table-striped" style="text-align:center"; border="1px solid #dddddd">
+		<table class="table table-striped" style="text-align:center" border="1px solid #dddddd">
 		
 			<thead>
 			
@@ -27,70 +27,18 @@
 				</tr>
 			</thead>
 			<tbody>
+			<c:forEach  items="${getFeedBoardList}" var="list">
 				<tr>
-					<td>noticeNum</td>
+					<td>${getFeedBoardList.fbNum }</td>
 					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
+					<td>관리자</td>
+					<td>${getFeedBoardList.credat}</td>
 				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				<tr>
-					<td>noticeNum</td>
-					<td>noticeTitle</td>
-					<td>noticeName</td>
-					<td>noticeTime</td>
-				</tr>
-				
+		
+			</c:forEach>
 			</tbody>		
 		</table>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<a href="${rootPath}/menutab/write" class="btn btn-primary pull-right">글쓰기</a>
 	</div>
 </div>
 <div class="btn btn-primary" style="cursor:pointer; " onclick="window.scrollTo(0,0);">TOP</div>
