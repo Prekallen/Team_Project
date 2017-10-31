@@ -9,24 +9,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="wrap">
-
-	<div id= "spTop">
-	
+	<div class="wrap">
+		<div id= "spTop">
+		</div>
+		<div id="spMiddle">
+			<button id="nBtn">더보기</button>
+		</div>
+		<div id="spBottom">
+		</div>
+	<c:import url="${footerUrl}"/>
 	</div>
-	
-	
-	<div id="spMiddle">
-	
-	<button id="nBtn">더보기</button>
-	</div>
-	
-	<div id="spBottom">
-	</div>
-
-
-
-<c:import url="${footerUrl}"/>
-</div>
 </body>
 </html>
