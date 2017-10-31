@@ -89,7 +89,8 @@
 					<img src="resources/img/login_click.png" />
 				</dd>
 				<dl id="util_menu">
-					<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto;">로그인</button>
+					<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto; background-color:#26d4d4; color:#ff3baf;
+					font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
 					<div id="id01" class="modal">
 						<form class="modal-content animate" action="/action_page.php" >
 								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
@@ -120,8 +121,8 @@
 						}
 					</script>
 					
-					<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">회원가입</button>
-
+					<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; background-color:#26d4d4; color:#000000;
+						font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
 					<div id="id02" class="modal">
 
 					  <form class="modal-content animate" action="/action_page2.php">
@@ -149,12 +150,12 @@
 					</div>
 					<script>
 						// Get the modal
-						var modal = document.getElementById('id02');
+						var modal2 = document.getElementById('id02');
 
 						// When the user clicks anywhere outside of the modal, close it
 						window.onclick = function(event) {
-							if (event.target == modal) {
-								modal.style.display = "none";
+							if (event.target == modal2) {
+								modal2.style.display = "none";
 							}
 						}
 					</script>

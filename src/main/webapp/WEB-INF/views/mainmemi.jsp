@@ -119,36 +119,29 @@
 					</div>
 					<script>
 						// Get the modal
-						var modal = document.getElementById('id02');
+						var modal2 = document.getElementById('id02');
 
 						// When the user clicks anywhere outside of the modal, close it
 						window.onclick = function(event) {
-							if (event.target == modal) {
-								modal.style.display = "none";
+							if (event.target == modal2) {
+								modal2.style.display = "none";
 							}
 						}
 					</script>
 			</dd>
-			<dd>
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>		
-			</dd>
 		</dl><!-- id="util_menu" -->
-		<!-- <form action="#" method="get" name="sch_f" id="sch_f">
-			<fieldset>
-				<legend>검색폼</legend>
-				<p>
-					<input type="text" name="keyword" id="keyword" title="검색어입력" />
-					<input type="image" src="resources/img/search-button.png" alt="검색" class="sch_btn"/>
-				</p>
-			</fieldset>
-		</form> -->
+		</form>
 		<h2 class="hide">메인메뉴</h2>
+		<div id="search" style="padding-top:27px; ">
+
+						<input type="text" id="search_input" name="query" autocomplete="on" value=""  style="width:250px; height:30px; padding-left:0px;
+						font-size:1em;font-family: 'NanumSquareRound'; font-weight:bold;" placeholder="ex)강남, 맛집, 이태원"/>
+
+				        <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="button" 
+				        style=" width: 30px; height: 30px;background-color:#26d4d4;">
+					</div>
 		<div id="gnb_wrap">
-			<ul id="gnb"	style="    height: 47px;    width: 934px;    margin-right: 55px;    margin-left: 66px;			">
+			<ul id="gnb"	style="    height: 47px;    width: 450px;    margin-right: 55px;    margin-left: 66px;			">
 				<li class="fir" ><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
 						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
@@ -197,14 +190,7 @@ function googleTranslateElementInit() {
 				</li>
 							
 			</ul><!-- id="gnb" -->			
-			<div id="search" style="padding-top:0 auto; ">
-
-						<input type="text" id="search_input" name="query" autocomplete="on" value=""  style="width:250px; height:30px; padding-left:0px;
-						font-size:1em;font-family: 'NanumSquareRound'; font-weight:bold;"/>
-
-				        <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="button" 
-				        style=" width: 30px; height: 30px;background-color:#26d4d4;">
-					</div>
+			
 		</div> <!-- id="gnb_wrap"> -->				
 	</div><!-- id="header" -->
 	<hr />
@@ -266,7 +252,7 @@ function googleTranslateElementInit() {
 <div class="footer_cover"></div>
 	<div id="inner_footer">
 		<h3 class="footer_logo">
-			<a href="#"><img src="resources/image/fdLogo.png" alt="footer logo" style="width=100px; height:100px;"/></a>
+			<a href="#"><img src="resources/image/fdLogo.png" alt="footer logo" style="width:100px; height:100px;"/></a>
 		</h3>
 		
 		<div id="relSite_wrap">
