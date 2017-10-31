@@ -13,6 +13,7 @@
 
 
 <div id="wrap2">
+					
 	<div id="header2">
 				<div id="search" style="padding-top:20px; ">
 					<ul>
@@ -91,77 +92,12 @@
 				<dl id="util_menu">
 					<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto; background-color:#26d4d4; color:#ff3baf;
 					font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
-					<div id="id01" class="modal">
-						<form class="modal-content animate" action="/action_page.php" >
-								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
-							<div id="user_util_menu">
-								<div class="container" id="login_form" style="padding-top: 30px;"	>
-									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> 
-									<input type="text"  style="width: 299px;" placeholder="ID" name="ID" required> 
-										</br><input type="checkbox" checked="checked"> 아이디 기억하기
-										</br>
-										<label><b>비밀번호&nbsp;</b></label>
-									<input type="password" placeholder="Password" name="psw" style="width: 300px;"	required>
-										</br></br>
-									<button type="submit" style="width: 370px ;height:40px;">로그인</button></br>								
-								</div>								
-								</br>
-							</div>							
-						</form>											
-					</div><!-- modal id01 -->
-					<script>
-						// Get the modal
-						var modal = document.getElementById('id01');
-
-						// When the user clicks anywhere outside of the modal, close it
-						window.onclick = function(event) {
-							if (event.target == modal) {
-								modal.style.display = "none";
-							}
-						}
-					</script>
+					<c:import url="${kloginUrl}"/>
+					
 					
 					<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; background-color:#26d4d4; color:#000000;
 						font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
-					<div id="id02" class="modal">
-
-					  <form class="modal-content animate" action="/action_page2.php">
-					    <div class="container" style="padding-left: 10px;">
-					      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top:20px;">×</span>
-					      </br>
-					      <label><b>아이디</b></label></br>
-					      <input type="text" placeholder="Enter ID" name="id" required style="width: 300px;">
-					      <button type="submit" onclick="registerCheckFunction();" style="width: 66px;height:40px;margin-top: 0px;padding-left: 6px;padding-right: 6px;">중복체크</button>
-							</br>
-					      <label><b>비밀번호</b></label></br>
-					      <input type="password" placeholder="Enter Password" name="psw" required style="width: 370px;">
-							</br>
-					      <label><b>비밀번호 확인</b></label></br>
-					      <input type="password" placeholder="Repeat Password" name="psw-repeat" required style="width: 370px;">
-					      	</br>
-					      <label><b>Email</b></label></br>
-					      <input type="text" placeholder="Enter Email" name="email" style="width: 370px ;" required>				
-					 		</br>
-					      <div class="clearfix">
-					        <button type="submit" class="signupbtn" style="width: 370px ;height:40px;">가입하기</button>
-					      </div>
-					    </div>
-					  </form>
-					</div>
-					<script>
-						// Get the modal
-						var modal2 = document.getElementById('id02');
-
-						// When the user clicks anywhere outside of the modal, close it
-						window.onclick = function(event) {
-							if (event.target == modal2) {
-								modal2.style.display = "none";
-							}
-						}
-					</script>
-
-					
-
+					<c:import url="${ksignupUrl}"/>				
 				</dl>
 				<!-- id="util_menu" -->
 			</div><!-- id="main" -->

@@ -7,8 +7,8 @@
 body{overflow-x:hidden;}
 
 /* 기본 레이아웃 */
-#wrap{width: 100%; margin: 0 auto; margin-top: 600px; background-color: #ffffff; position: relative;}
-#wrap2{width: 100%; margin: 0 auto; margin-top: 0 auto; background-color: #26d4d4 ; position: relative;}
+#wrap{width: 100%; margin: 0; margin-top: 600px; background-color: #ffffff; position: relative;}
+#wrap2{width: 100%; margin: 0 auto; margin-top: 0 auto; background-color: #26d4d4 ; position: fixed; } /*탑메뉴*/
 #header{height: 80px; position: relative; z-index: 10; width: 100%; background-color: #ffffff; margin: 0 auto;}
 #header2{height: 70px; position: relative; z-index: 10; width: 100%; background-color: #26d4d4; margin: 0 auto;}
 #footer_wrap{width:100%; margin:0 auto; background: url(../images/picnic.jpg) no-repeat center; background-size: cover; position: relative; height: 280px;}
@@ -31,7 +31,8 @@ li{white-space: nowrap; /* overflow: hidden; */ text-overflow: ellipsis;}
 dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 /* 상단 로고 부분 */
-.header_content{background: url(../images/picnic.jpg); background-position: center center; background-size: cover; height: 600px; position: fixed; top: 0; width: 100%; opacity:0.6 ; background-repeat:no-repeat;}
+.header_content{background: url(../images/picnic.jpg); background-position: center center; background-size: cover; 
+							height: 600px; position: fixed; top: 0; width: 100%; opacity:0.6 ; background-repeat:no-repeat;}
 .hd_logo{text-align: center; padding: 55px;}   
 .hd_logo img{vertical-align: top;}
 
@@ -219,7 +220,12 @@ span.psw {    float: right;    padding-top: 16px;}
     padding-top: 60px;
 }
 
-#user_util_menu{
+/*유저 폼*/
+#login_form{width:400px;font-family: 'NanumSquareRound'; font-weight: bold;}
+#sign_form{width:400px;font-family: 'NanumSquareRound';}
+#btn_facebook{background-color:#4267b2; color:#ffffff;}
+#fblogin{    padding-left: 130px;}
+#user_popup{
 	width:100% auto;
 }
 
