@@ -13,6 +13,7 @@ div#footer_text {
     text-align: center;
     font-size: 14px;
     line-height: 30px;
+    font-weight: bold;
 }
 
 div#footer_text a {

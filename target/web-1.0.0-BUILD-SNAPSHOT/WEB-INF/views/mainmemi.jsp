@@ -50,78 +50,98 @@
 	</div>
 </div>
 <div id="wrap">
-	<div id="header">
+	<div id="header">	     
 		<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> --> 
-		<dl id="util_menu">
+		<dl id="util_menu"style="    padding-left: 15px;">
 			<dt class="hide">유틸메뉴</dt>
-			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="resources/img/login_click.png"/></dd>
+			<dd class="clickme fl DB_etc10_1" style="width: 120px;"><img src="../resources/img/login_click.png"/></dd>
 			<dd class="util_first">
-				<ul>
-					<li class="login_wrap logtxt" ><a href="#" id="status">LOGIN</a>
-						<form action="#" method="post" name="log_f" id="login_f">
-							<fieldset>
-								<legend>로그인</legend>
-								<p class="user_id">
-									<label for="user_id">
-										<img src="resources/img/login_title_id.gif" alt="아이디" />
-									</label>
-									<input type="text" name="user_id" id="user_id"/>
-								</p>
-								<p class="user_pw">
-									<label for="user_pw">
-										<img src="resources/img/login_title_pw.gif" alt="패드워드" />
-									</label>
-									<input type="password" name="user_pw" id="user_pw"/>
-								</p>
-								<p>
-									<input type="checkbox" name="save_id" id="save_id"/>
-									<label for="save_id">비밀번호 저장</label>
-								</p>
-								<p class="log_btn">
-									<input type="image" src="resources/img/login_btn2.png" alt="로그인버튼" />
-								</p>
-								<p class="join_btn_wrap">
-									<a href="${rootPath}/menutab/kjoin" >회원가입</a>
-									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
-								</p>
-								<p class="login_close_btn">
-									<a href="#"><img src="resources/img/login_close_btn3.png" alt="닫기버튼" /></a>
-								</p>
-							</fieldset>
-						</form>
-					</li>
-					<li class="logtxt"><a href="${rootPath}/menutab/kjoin">|&nbsp;&nbsp;&nbsp;JOIN</a></li>
-					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
-				</ul>
-			</dd>
-			<dd>
-				<ul id="zoom">
-					<li><img src="resources/img/util_zoom_1.gif" alt="" /></li>
-					<li><a href="#" class="zoom_in"><img src="resources/img/util_zoom_2.gif" alt="" /></a></li>
-					<li><a href="#" class="zoom_return"><img src="resources/img/util_zoom_3.gif" alt="" /></a></li>
-					<li><a href="#" class="zoom_out"><img src="resources/img/util_zoom_4.gif" alt="" /></a></li>
-				</ul>
-			</dd>
-			<dd>
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>		
+				<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto; background-color:#ffffff; color:#ff3baf;
+					font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
+					<div id="id01" class="modal">
+						<form class="modal-content animate" action="/action_page.php" >
+								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
+							<div id="user_util_menu" style="    padding-top: 25px;">
+								<div class="container" id="login_form" style="padding-top: 30px;"	>
+									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> 
+									<input type="text"  style="width: 299px;" placeholder="ID" name="ID" required> 
+										</br><input type="checkbox" checked="checked"> 아이디 기억하기
+										</br>
+										<label><b>비밀번호&nbsp;</b></label>
+									<input type="password" placeholder="Password" name="psw" style="width: 300px;"	required>
+										</br></br>
+									<button type="submit" style="width: 370px ;height:40px;">로그인</button></br>								
+								</div>								
+								</br>
+							</div>							
+						</form>											
+					</div><!-- modal id01 -->
+					<script>
+						// Get the modal
+						var modal = document.getElementById('id01');
+
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						}
+					</script>
+					
+					
+					<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; background-color:#ffffff; color:#000000;
+						font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
+
+					<div id="id02" class="modal">
+
+					  <form class="modal-content animate" action="/action_page2.php">
+					    <div class="container" style="padding-left: 10px;">
+					      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top:20px;">×</span>
+					      </br>
+					      <label><b>아이디</b></label></br>
+					      <input type="text" placeholder="Enter ID" name="id" required style="width: 300px;">
+					      <button type="submit" onclick="registerCheckFunction();" style="width: 66px;height:40px;margin-top: 8px;padding-left: 6px;padding-right: 6px;">중복체크</button>
+							</br>
+					      <label><b>비밀번호</b></label></br>
+					      <input type="password" placeholder="Enter Password" name="psw" required style="width: 370px;">
+							</br>
+					      <label><b>비밀번호 확인</b></label></br>
+					      <input type="password" placeholder="Repeat Password" name="psw-repeat" required style="width: 370px;">
+					      	</br>
+					      <label><b>Email</b></label></br>
+					      <input type="text" placeholder="Enter Email" name="email" style="width: 370px ;" required>				
+					 		</br>
+					      <div class="clearfix">
+					        <button type="submit" class="signupbtn" style="width: 370px ;height:40px;">가입하기</button>
+					      </div>
+					    </div>
+					  </form>
+					</div>
+					<script>
+						// Get the modal
+						var modal2 = document.getElementById('id02');
+
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal2) {
+								modal2.style.display = "none";
+							}
+						}
+					</script>
 			</dd>
 		</dl><!-- id="util_menu" -->
-		<!-- <form action="#" method="get" name="sch_f" id="sch_f">
-			<fieldset>
-				<legend>검색폼</legend>
-				<p>
-					<input type="text" name="keyword" id="keyword" title="검색어입력" />
-					<input type="image" src="resources/img/search-button.png" alt="검색" class="sch_btn"/>
-				</p>
-			</fieldset>
-		</form> -->
+		</form>
 		<h2 class="hide">메인메뉴</h2>
+		<div id="search" style="padding-top:27px; ">
+
+						<input type="text" id="search_input" name="query" autocomplete="on" value=""  style="width:250px; height:30px; padding-left:0px;
+						font-size:1em;font-family: 'NanumSquareRound'; font-weight:bold;" placeholder="ex)강남, 맛집, 이태원"/>
+
+				        <input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="button" 
+				        style=" width: 30px; height: 30px;background-color:#26d4d4;">
+					</div>
 		<div id="gnb_wrap">
-			<ul id="gnb">
+			<ul id="gnb"	style="    height: 47px;    width: 450px;    margin-right: 55px;    margin-left: 66px;			">
 				<li class="fir" ><a href="${rootPath}/menutab/kintro">Feedback</a>
 					<ul class="sub1">
 						<li><a href="${rootPath}/menutab/kintro">소개</a></li>
@@ -168,16 +188,10 @@ function googleTranslateElementInit() {
 						<li><a href="#">관악구</a></li>
 					</ul>
 				</li>
-				<li><a href="#">검색</a>
-					<ul class="sub4">
-			<li style="padding-left:0; padding-top:0;"><input type="text" id="s_input" name="query" autocomplete="off" value=""  style=" width:250px; height:40px; font-size:1em;"/>
-            <input type="image" src="https://dfzrjox9sv97l.cloudfront.net/dicons_20160930/img/ic-search-input.png" id="searchBtn" style="width: 40px; height:40px; background-color:#999999;"></li> 
-					</ul>
-				</li>
-				
-			</ul><!-- id="gnb" -->
-		</div> <!-- id="gnb_wrap"> -->
-		
+							
+			</ul><!-- id="gnb" -->			
+			
+		</div> <!-- id="gnb_wrap"> -->				
 	</div><!-- id="header" -->
 	<hr />
 	
@@ -238,7 +252,7 @@ function googleTranslateElementInit() {
 <div class="footer_cover"></div>
 	<div id="inner_footer">
 		<h3 class="footer_logo">
-			<a href="#"><img src="resources/image/fdLogo.png" alt="footer logo" style="width=100px; height:100px;"/></a>
+			<a href="#"><img src="resources/image/fdLogo.png" alt="footer logo" style="width:100px; height:100px;"/></a>
 		</h3>
 		
 		<div id="relSite_wrap">

@@ -19,6 +19,7 @@
     height:30px;
     background-color: #e1e0db;
     margin-bottom : -1px;
+    
 }
 
 div#footer_text {
@@ -26,6 +27,8 @@ div#footer_text {
     text-align: center;
     font-size: 14px;
     line-height: 30px;
+    font-family: 'NanumSquareRound';
+    font-weight: bold;
 }
 
 div#footer_text a {

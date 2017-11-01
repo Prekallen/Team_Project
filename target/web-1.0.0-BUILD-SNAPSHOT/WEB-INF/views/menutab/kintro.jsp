@@ -5,27 +5,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
-
-
-<%-- google Map
-
-
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(37.497187, 127.026859),
-    zoom:15,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
- --%>
-
-
 </head>
 <body>
+
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
