@@ -16,10 +16,18 @@
 
 		<div id="header2">
 			<div id="search" style="padding-top: 20px;">
+			
 				<form action ="${rootPath}/searchPage" >
-			 		<input type="text" name="query"/><br/>
- 					<input type="submit" value=" 계산"/>
+				<ul>
+			 		<li>
+			 			<input type="text" name="query" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"/><br/>
+			 		</li>
+ 					<li>
+ 						<input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="btn" name="submit" value="submit" style="width: 28px; height: 28px;"/>
+					</li>
+				</ul>
  				</form>
+ 			
 
 			</div>
 
@@ -100,6 +108,24 @@
 
 %>
 
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.marginLeft = "0";
+}
+
+var modal = document.getElementById('mySidenav');
+
+// //When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+// 	if (event.target == sidenav) {
+// 		sidenav.style.display = "none";
+// 	}
+// }
 
 </script>
 </body>
