@@ -18,11 +18,11 @@ public class MapController {
 
 	@Autowired MapService ms ;
 	//test
-		@RequestMapping(value= "/searchPage", method=RequestMethod.GET)
+		@RequestMapping(value= "/common/searchPage", method=RequestMethod.GET)
 		public String getApi(Model model) {
-			return "/searchPage";
+			return "/common/searchPage";
 		}
-		@RequestMapping(value= "/searchPage", method=RequestMethod.POST)
+		@RequestMapping(value= "/searchPageApi", method=RequestMethod.POST)
 		public @ResponseBody ModelMap getApiResults(@RequestBody HashMap query){
 			ModelMap model = new ModelMap();
 			try{
@@ -32,4 +32,5 @@ public class MapController {
 			}
 		    return model;
 		}
+		
 }

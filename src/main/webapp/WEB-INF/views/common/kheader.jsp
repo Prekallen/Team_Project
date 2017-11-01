@@ -5,11 +5,10 @@
 
 <c:set var="topmenuUrl" value="/WEB-INF/views/common/top_menu.jsp" />
 <c:set var="ktopmenuUrl" value="/WEB-INF/views/common/ktop_menu.jsp" />
-<c:set var="sidemenuUrl" value="/WEB-INF/views/common/side_menu.jsp" />
+<c:set var="sidemenuUrl" value="/WEB-INF/views/common/side_menu2.jsp" />
 <c:set var="footerUrl" value="/WEB-INF/views/test/footer.jsp" />
 <c:set var="kloginUrl" value="/WEB-INF/views/common/klogin.jsp" />
 <c:set var="ksignupUrl" value="/WEB-INF/views/common/ksignup.jsp" />
-<c:set var="fbloginUrl" value="/WEB-INF/views/common/fblogin.jsp" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
