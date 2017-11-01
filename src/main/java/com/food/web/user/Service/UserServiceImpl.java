@@ -2,19 +2,27 @@ package com.food.web.user.Service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.food.web.user.dao.UserDao;
 import com.food.web.user.dto.UserInfo;
 
 @Service
 public class UserServiceImpl implements UserService{
 
+	@Autowired
+	private UserDao ud;
+	
 	@Override
 	public UserInfo login(UserInfo user) {
-		// TODO Auto-generated method stub
+		UserInfo rUser = ud.selectUser(user);
+		if(rUser!=null && rUser.getUserPwd().equals(user.getUserPwd())){
+			return rUser;
+		}
 		return null;
 	}
-
+	
 	@Override
 	public UserInfo selectUser(UserInfo user) {
 		// TODO Auto-generated method stub
@@ -24,25 +32,33 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public List<UserInfo> selectUserList(UserInfo user) {
 		// TODO Auto-generated method stub
-		return null;
+		return ud.selectUserList(user);
 	}
 
 	@Override
 	public int insertUser(UserInfo user) {
-		// TODO Auto-generated method stub
-		return 0;
+		return ud.insertUser(user);
 	}
 
 	@Override
 	public int updatetUser(UserInfo user) {
 		// TODO Auto-generated method stub
-		return 0;
+		return ud.updateUser(user);
 	}
 
 	@Override
 	public int deleteUser(UserInfo user) {
 		// TODO Auto-generated method stub
-		return 0;
+		return ud.deletetUser(user);
+	}
+
+	@Override
+	public int insertUserList(UserInfo[] userList) {
+		int rCnt = 0;
+		for(UserInfo user : userList){
+			rCnt += ud.insertUser(user);
+		}
+		return rCnt;
 	}
 
 	
