@@ -67,7 +67,7 @@ $(document).ready(function(){
 							html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
 							html += '</form>';
 						}
-						$("#spMiddle").append(html);
+						$("spMiddle").append(html);
 					}
 });
 

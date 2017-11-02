@@ -9,11 +9,13 @@
 	</settings>
 	
 	<typeAliases>
-    	<typeAlias alias="user" type="com.food.web.user.UserInfo"/>
+    	<typeAlias alias="user" type="com.food.web.user.dto.UserInfo"/>
+    	<typeAlias alias="board" type="com.food.web.board.dto.BoardInfo"/>
    
 	</typeAliases>
 	<mappers>
-		<mapper resource="com/food/web/user/user_sql.xml" />
+		<mapper resource="com/food/web/user/sql/user_sql.xml" />
+		<mapper resource="com/food/web/board/sql/board_sql.xml" />
 	
 	</mappers>
 </configuration>

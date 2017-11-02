@@ -15,7 +15,7 @@
 		<ul class="nav-navbar-nav navbar-right"></ul>
 		<div class="container" style="padding-top: 200px;">
 			<div class="row">
-				<table class="table table-striped" style="text-align: center"
+				<table id="list" class="table table-striped" style="text-align: center"
 					border="1px solid #dddddd">
 
 					<thead>
@@ -27,18 +27,7 @@
 							<th style="background-color: #eeeeee; text-align: center;">작성일</th>
 						</tr>
 					</thead>
-					<tbody>
-						<c:forEach var="row" items="${list}">
-							<tr>
-								<td>${row.bnum}</td>
-								<td><a href="${path}/board/view.do?bno=${row.bno}">${row.title}</a></td>
-								<td>${row.writer}</td>
-								<td><fmt:formatDate value="${row.regdate}"
-										pattern="yyyy-MM-dd HH:mm:ss" /></td>
-								<td>${row.viewcnt}</td>
-							</tr>
-						</c:forEach>
-					</tbody>
+					
 				</table>
 				<a href="${rootPath}/menutab/write"
 					class="btn btn-primary pull-right">글쓰기</a>
@@ -47,6 +36,41 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 		<script>
+		var html = "";
+			$(document).ready(function(){
+				var au = new AjaxUtil("/menutab/knotice");
+				var param = {};
+				au.param = JSON.stringify(param);
+				au.setCallbackSuccess(callbackBoard);
+				au.send();
+				
+				function callbackBoard(results) {
+					if (!results) {
+						alert(OMG);
+						return;
+					}
+					
+					console.log(results);
+					
+					var getboardinfolist = results["getBoardInfoList"];
+					for ( var idx in getBoardInfoList) {
+						var result = getBoardInfoList[idx];
+						var bnum = result.bNum;
+						var btitle = result.bTitle;
+						var bname = result.bName;
+						var credat = result.credat;
+						html += '<tbody>';
+						html += '<tr>'
+						html += '<td><input type ="text" value="'bnum'"></td>';
+						html += '<td><input type ="text" value="'btitle'"></td>';
+						html += '<td><input type ="text" value="'bname'"></td>';
+						html += '<td><input type ="text" value="'credat'"></td>';
+						html += '</tr>';
+						html += '</tbody>';
+					}
+					$("list").append(html);
+				}
+			});
 			
 		</script>
 
