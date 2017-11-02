@@ -2,22 +2,26 @@ package com.food.web.board.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.food.web.board.dto.BoardInfo;
 
 @Repository
 public class BoardDaoImpl implements BoardDao{
+	
 
 	@Override
 	public BoardInfo selectBoardInfo(BoardInfo board) {
-		return this.selectBoardInfo(board);
+		return SqlSession.selectOne("BOARD.SELECT_BOARDINFO");
 	}
 
 	@Override
 	public List<BoardInfo> selectBoardInfoList(BoardInfo board) {
-		return this.selectBoardInfoList(board);
+		return getSqlSession().selectList("board.SELECT_BOARDINFO_LIST");
 	}
+
+
 
 	@Override
 	public int insertBoardInfo(BoardInfo board) {

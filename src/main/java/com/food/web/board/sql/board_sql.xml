@@ -3,7 +3,7 @@
 
 <mapper namespace="board">
 
-	<select id="SELECT_FEEDBOARD" parameterType="board" resultType="board">
+	<select id="SELECT_BOARDINFO" parameterType="board" resultType="board">
 	  select 
 	  
 	 		bnum,
@@ -13,9 +13,10 @@
 	
 	  from board;
 	  where 1=1
+	
 	  
 	</select>	
-	<select id="SELECT_FEEDBOARD" parameterType="board" resultType="board">
+	<select id="SELECT_BOARDINFO_LIST" parameterType="board" resultType="board">
 	  select 
 	 		 bnum,
 			btitle,
@@ -24,21 +25,21 @@
 	
 	  from board;
 	  where 1=1
-	 
+	
 	</select>	
 	
-	<insert id="INSERT_BOARD" parameterType="board">
+	<insert id="INSERT_BOARDINFO" parameterType="board">
 		insert board(bnum, btitle, bname, credat)
 	  	values(#{bnum},#{btitle},#{bname},#{credat})
 	</insert>
 	
-	<update id="UPDATE_BOARD" parameterType="board">
+	<update id="UPDATE_BOARDINFO" parameterType="board">
 		update board
 		set bname = #{bname}
 	  
 	  where bnum=#{bnum}
 	</update>
-	<delete id="DELETE_BOARD" parameterType="board">
+	<delete id="DELETE_BOARDINFO" parameterType="board">
 		delete from board
 	    where bnum=#{bnum}
 	</delete>
