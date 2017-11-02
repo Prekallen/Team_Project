@@ -99,14 +99,11 @@
 
 	<hr />
 <script>
-<%
-	String result = (String) request.getParameter("query");
-	session.setAttribute("result",result );
-	
-	response.sendRedirect("searchPage");
-
-
-%>
+	<%
+		String result = (String) request.getParameter("query");
+		session.setAttribute("result",result );
+		response.sendRedirect("searchPage");
+	%>
 
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";

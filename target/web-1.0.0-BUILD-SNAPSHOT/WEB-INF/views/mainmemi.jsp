@@ -59,23 +59,25 @@
 				<button	onclick="document.getElementById('id01').style.display='block'"	style="width: auto; background-color:#ffffff; color:#ff3baf;
 					font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
 					<div id="id01" class="modal">
-						<form class="modal-content animate" action="/action_page.php" >
+						<form class="modal-content animate" action="${roodPath }/common/kheader" >
 								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
 							<div id="user_util_menu" style="    padding-top: 25px;">
 								<div class="container" id="login_form" style="padding-top: 30px;"	>
 									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> 
-									<input type="text"  style="width: 299px;" placeholder="ID" name="ID" required> 
+									<input type="text" id="userId" style="width: 299px;" placeholder="ID" name="ID" required> 
+								
 										</br><input type="checkbox" checked="checked"> 아이디 기억하기
 										</br>
 										<label><b>비밀번호&nbsp;</b></label>
-									<input type="password" placeholder="Password" name="psw" style="width: 300px;"	required>
+									<input type="password" placeholder="Password" name="psw" id="userPwd" style="width: 300px;"	required>
 										</br></br>
-									<button type="submit" style="width: 370px ;height:40px;">로그인</button></br>								
+									<button type="submit" style="width: 370px ;height:40px;" id="login">로그인</button></br>								
 								</div>								
 								</br>
 							</div>							
 						</form>											
 					</div><!-- modal id01 -->
+			
 					<script>
 						// Get the modal
 						var modal = document.getElementById('id01');
