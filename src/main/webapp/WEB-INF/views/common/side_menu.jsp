@@ -21,7 +21,7 @@
 
 					<li><input type="text" id="searchBox" name="query"
 						autocomplete="on" value=""
-						style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;" /></li>
+						style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold; margin-top: 0px;" /></li>
 					<li><input type="image"
 						src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png"
 						id="btn" style="width: 28px; height: 28px;"></li>
