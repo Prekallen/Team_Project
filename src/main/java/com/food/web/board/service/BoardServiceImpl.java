@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.food.web.board.dao.BoardDao;
 import com.food.web.board.dto.BoardInfo;
 
-@Service
+@Service 
 public class BoardServiceImpl implements BoardService{
 	@Autowired
 	BoardDao bdao;

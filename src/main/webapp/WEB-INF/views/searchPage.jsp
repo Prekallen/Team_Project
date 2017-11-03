@@ -19,6 +19,7 @@ String result = (String)session.getAttribute("result");
 		<div id= "spTop">
 		</div>
 		<div id="spMiddle" >
+		<%=result %>
 		
 		
 			<button id="nBtn">더보기</button>
@@ -61,13 +62,13 @@ $(document).ready(function(){
 							var formatted_address = result.formatted_address;
 							var rating = result.rating;
 							token = result.next_page_token;
-							html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
+							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
 							html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
 							html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
 							html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-							html += '</form>';
+							html += '</form>'; */
 						}
-						$("spMiddle").append(html);
+						$("spMiddle").html("<div id=spMiddle></div>");
 					}
 });
 
