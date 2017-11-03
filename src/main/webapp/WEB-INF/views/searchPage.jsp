@@ -16,12 +16,14 @@ String result = (String)session.getAttribute("result");
 %>
 	<div class="wrap">
 		<div id= "spTop">
+
 		</div>
 
 		<div id="spMiddle" style="padding-top: 80px;">
 			<h9 style="font-size:20px; font-weight:bold; padding-left:40%; margin:0 auto;">
 			"<%=result %>"로 검색한 결과</h9><br>
 
+		<h9 style="font-size:20px; font-weight:bold; padding-left:42%; margin:0 auto;">"<%=result %>"로 검색한 결과</h9>
 		</div>
 <!-- 		<div id="aa" style="padding-top:150px;"> -->
 		<div id="seceondMiddle" style="padding-top:100px;padding-left:100px;">
@@ -33,7 +35,10 @@ String result = (String)session.getAttribute("result");
 						</div>
 		</div>
  	
-		<div id="spBottom">
+		<div id="spMiddle" style="padding-top:50px;">
+		</div>
+
+		<div id="spBottom"><button id="nBtn" style="padding-bottom:200px;">더보기</button>
 		</div>
 	<c:import url="${footerUrl}"/>
 	</div>
@@ -81,6 +86,34 @@ $(document).ready(function(){
 						$("#aa").html(name,formatted_address,rating);
 					}
 });
+$("#nBtn").click(function() {
+
+			var au = new AjaxUtil("/searchPage");
+			var param = {};
+			param["token"] = token;
+			au.param = JSON.stringify(param);
+			au.setCallbackSuccess(callbackApi);
+			au.send();
+
+			function callbackApi(results) {
+
+				var html = '';
+				var mapInfoList = results["mapInfoList"];
+				for ( var idx in mapInfoList) {
+					var result = mapInfoList[idx];
+					var name = result.name;
+					var formatted_address = result.formatted_address;
+					var rating = result.rating;
+					token = result.next_page_token;
+					html += '<form class="form-signin" action="" id="ajax">';
+					html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
+					html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
+					html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
+					html += '</form>';
+				}
+				$("#spMiddle").append(html);
+			}
+		});
 
 
 //Ajax//
