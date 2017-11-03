@@ -109,10 +109,7 @@ public class HomeController {
 	public String kjoin(Model model){
 		return "menutab/kjoin";
 	}
-	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
-	public String knotice(Model model){
-		return "menutab/knotice";
-	}
+	
 	@RequestMapping(value="/menutab/write", method= RequestMethod.GET)
 	public String write(Model model){
 		return "menutab/write";

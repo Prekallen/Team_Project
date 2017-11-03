@@ -15,7 +15,7 @@
 		<ul class="nav-navbar-nav navbar-right"></ul>
 		<div class="container" style="padding-top: 200px;">
 			<div class="row">
-				<table id="list" class="table table-striped" style="text-align: center"
+				<table  class="table table-striped" style="text-align: center"
 					border="1px solid #dddddd">
 
 					<thead>
@@ -27,6 +27,9 @@
 							<th style="background-color: #eeeeee; text-align: center;">작성일</th>
 						</tr>
 					</thead>
+					<tbody id="boardList">
+					
+					</tbody>
 					
 				</table>
 				<a href="${rootPath}/menutab/write"
@@ -36,8 +39,9 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 		<script>
-		var html = "";
 			$(document).ready(function(){
+				var a=0;
+				var html = "";
 				var au = new AjaxUtil("/menutab/knotice");
 				var param = {};
 				au.param = JSON.stringify(param);
@@ -50,28 +54,26 @@
 						return;
 					}
 					
-					console.log(results);
 					
-					var getboardinfolist = results["getBoardInfoList"];
+					var getBoardInfoList = results["getBoardInfoList"];
 					for ( var idx in getBoardInfoList) {
 						var result = getBoardInfoList[idx];
 						var bnum = result.bNum;
 						var btitle = result.bTitle;
 						var bname = result.bName;
 						var credat = result.credat;
-						html += '<tbody>';
-						html += '<tr>'
-						html += '<td><input type ="text" value="'bnum'"></td>';
-						html += '<td><input type ="text" value="'btitle'"></td>';
-						html += '<td><input type ="text" value="'bname'"></td>';
-						html += '<td><input type ="text" value="'credat'"></td>';
+						
+						html += '<tr>';
+						html += '<td>'+bnum+'</td>';
+						html += '<td>'+btitle+'</td>';
+						html += '<td>'+bname+'</td>';
+						html += '<td>'+credat+'</td>';
 						html += '</tr>';
-						html += '</tbody>';
+						
 					}
-					$("list").append(html);
+					$("#boardList").append(html);
 				}
 			});
-			
 		</script>
 
 		<c:import url="${footerUrl}" />
@@ -98,3 +100,5 @@ html {
 	padding-bottom: 30px; /* footer height */
 }
 </style>
+
+

@@ -263,4 +263,7 @@ span.psw {    float: right;    padding-top: 16px;}
     .cancelbtn {       width: 100%;    }
 }
 
+/* 검색결과창 */
+#infomation_btn{text-decoration: none; }
+
 
