@@ -18,13 +18,19 @@ String result = (String)session.getAttribute("result");
 	<div class="wrap">
 		<div id= "spTop">
 		</div>
+<<<<<<< HEAD
 		<div id="spMiddle" style="padding-top:300px;">
 		<h9 style="font-size:20px; font-weight:bold; padding-left:42%; margin:0 auto;">"<%=result %>"로 검색한 결과</h9>
+=======
+		<div id="spMiddle" >
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 		
 		
-			<button id="nBtn">더보기</button>
+		
+			
 		</div>
 		<div id="spBottom">
+		<button id="nBtn">더보기</button>
 		</div>
 	<c:import url="${footerUrl}"/>
 	</div>
@@ -62,13 +68,13 @@ $(document).ready(function(){
 							var formatted_address = result.formatted_address;
 							var rating = result.rating;
 							token = result.next_page_token;
-							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
+							html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
 							html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
 							html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
 							html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-							html += '</form>'; */
+							html += '</form>'; 
 						}
-						$("spMiddle").html("<div id=spMiddle></div>");
+						$("#spMiddle").append(html);
 					}
 });
 
@@ -136,7 +142,7 @@ var AjaxUtil = function(url, params, type, dataType) {
 }
 
 
-</script>
+
 
 </script>
 </html>
