@@ -9,6 +9,7 @@
 <c:set var="footerUrl" value="/WEB-INF/views/test/footer.jsp" />
 <c:set var="kloginUrl" value="/WEB-INF/views/common/klogin.jsp" />
 <c:set var="ksignupUrl" value="/WEB-INF/views/common/ksignup.jsp" />
+<c:set var="infomationUrl" value="/WEB-INF/views/common/infomation.jsp"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
