@@ -83,7 +83,7 @@
 						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
 					<div id="id01" class="modal">
 						<form class="modal-content animate"
-							action="${roodPath }/common/kheader">
+							action="${roodPath}/test/test2">
 							<span
 								onclick="document.getElementById('id01').style.display='none'"
 								class="close" title="Close Modal" style="padding-top: 20px;">&times;</span>
@@ -92,13 +92,13 @@
 									style="padding-top: 30px;">
 									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> <input
 										type="text" id="userId" style="width: 299px;" placeholder="ID"
-										name="ID" required> </br>
+										name="id" required value="${userId}"> </br>
 									<input type="checkbox" checked="checked"> 아이디 기억하기 </br> <label><b>비밀번호&nbsp;</b></label>
-									<input type="password" placeholder="Password" name="psw"
+									<input type="password" placeholder="Password" name="pwd"
 										id="userPwd" style="width: 300px;" required> </br>
 									</br>
-									<button type="submit" style="width: 370px; height: 40px;"
-										id="login">로그인</button>
+									<button  id="logBtn" type="button" style="width: 370px; height: 40px;"
+										>로그인</button>
 									</br>
 								</div>
 								</br>
@@ -368,6 +368,11 @@
 		$(".mainjoin").click(function() {
 			pageMove("menutab/kjoin")
 
+		});
+		$("#logBtn").click(function(){
+			var paramIds = "userId,userPwd";
+			var au = new AjaxUtil("/menutab/klogin",paramIds); 
+			au.send();
 		});
 	</script>
 
