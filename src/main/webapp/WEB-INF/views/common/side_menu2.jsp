@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div id="wrap2">
+	<div id="wra	p2">
 
 		<div id="header2">
 			<div id="search" style="padding-top: 20px;">
