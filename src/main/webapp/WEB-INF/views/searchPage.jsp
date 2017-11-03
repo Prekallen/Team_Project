@@ -18,8 +18,8 @@ String result = (String)session.getAttribute("result");
 	<div class="wrap">
 		<div id= "spTop">
 		</div>
-		<div id="spMiddle" >
-		<%=result %>
+		<div id="spMiddle" style="padding-top:300px;">
+		<h9 style="font-size:20px; font-weight:bold; padding-left:42%; margin:0 auto;">"<%=result %>"로 검색한 결과</h9>
 		
 		
 			<button id="nBtn">더보기</button>

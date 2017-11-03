@@ -15,7 +15,7 @@
 		<ul class="nav-navbar-nav navbar-right"></ul>
 		<div class="container" style="padding-top: 200px;">
 			<div class="row">
-				<table class="table table-striped" style="text-align: center"
+				<table id="list" class="table table-striped" style="text-align: center"
 					border="1px solid #dddddd">
 
 					<thead>
@@ -27,9 +27,7 @@
 							<th style="background-color: #eeeeee; text-align: center;">작성일</th>
 						</tr>
 					</thead>
-					<tbody>
 					
-					</tbody>
 				</table>
 				<a href="${rootPath}/menutab/write"
 					class="btn btn-primary pull-right">글쓰기</a>
@@ -38,6 +36,7 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 		<script>
+		var html = "";
 			$(document).ready(function(){
 				var au = new AjaxUtil("/menutab/knotice");
 				var param = {};
@@ -53,21 +52,24 @@
 					
 					console.log(results);
 					
-// 					var getBoardInfoList = results["mapInfoList"];
-// 					for ( var idx in mapInfoList) {
-// 						var result = mapInfoList[idx];
-// 						var name = result.name;
-// 						var formatted_address = result.formatted_address;
-// 						var rating = result.rating;
-// 						token = result.next_page_token;
-// 						html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
-// 						html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
-// 						html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
-// 						html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-// 						html += '</form>';
-// 					}
-// 					$("spMiddle").append(html);
-// 				}
+					var getboardinfolist = results["getBoardInfoList"];
+					for ( var idx in getBoardInfoList) {
+						var result = getBoardInfoList[idx];
+						var bnum = result.bNum;
+						var btitle = result.bTitle;
+						var bname = result.bName;
+						var credat = result.credat;
+						html += '<tbody>';
+						html += '<tr>'
+						html += '<td><input type ="text" value="'bnum'"></td>';
+						html += '<td><input type ="text" value="'btitle'"></td>';
+						html += '<td><input type ="text" value="'bname'"></td>';
+						html += '<td><input type ="text" value="'credat'"></td>';
+						html += '</tr>';
+						html += '</tbody>';
+					}
+					$("list").append(html);
+				}
 			});
 			
 		</script>
