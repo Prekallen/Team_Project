@@ -14,23 +14,26 @@
 <%
 String result = (String)session.getAttribute("result");
 %>
-
 	<div class="wrap">
 		<div id= "spTop">
 		</div>
-<<<<<<< HEAD
-		<div id="spMiddle" style="padding-top:300px;">
-		<h9 style="font-size:20px; font-weight:bold; padding-left:42%; margin:0 auto;">"<%=result %>"로 검색한 결과</h9>
-=======
-		<div id="spMiddle" >
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
-		
-		
-		
-			
+
+		<div id="spMiddle" style="padding-top: 80px;">
+			<h9 style="font-size:20px; font-weight:bold; padding-left:40%; margin:0 auto;">
+			"<%=result %>"로 검색한 결과</h9><br>
+
 		</div>
+<!-- 		<div id="aa" style="padding-top:150px;"> -->
+		<div id="seceondMiddle" style="padding-top:100px;padding-left:100px;">
+		<button	id="aa"onclick="document.getElementById('id03').style.display='block'"
+						style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold;
+						padding-top: 30px;">
+						</button>
+						<c:import url="${infomationUrl}" />
+						</div>
+		</div>
+ 	
 		<div id="spBottom">
-		<button id="nBtn">더보기</button>
 		</div>
 	<c:import url="${footerUrl}"/>
 	</div>
@@ -62,19 +65,20 @@ $(document).ready(function(){
 							return;
 						}
 						var mapInfoList = results["mapInfoList"];
-						for ( var idx in mapInfoList) {
+						for (var idx in mapInfoList) {
 							var result = mapInfoList[idx];
 							var name = result.name;
 							var formatted_address = result.formatted_address;
 							var rating = result.rating;
 							token = result.next_page_token;
-							html += '<form class="form-signin" action="" id="ajax" style="padding-top:80px;">';
-							html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
-							html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
-							html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-							html += '</form>'; 
+							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
+							html += '<a href="#">이름 '+name+'<br>';
+							html += '주소 '+formatted_address+'<br>';
+							html += '별점 '+rating+'</br></a>';
+							html += '</form>'; */
+							
 						}
-						$("#spMiddle").append(html);
+						$("#aa").html(name,formatted_address,rating);
 					}
 });
 
