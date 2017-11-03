@@ -21,14 +21,20 @@ String result = (String)session.getAttribute("result");
 
 		<div id="spMiddle" style="padding-top: 80px;">
 			<h9 style="font-size:20px; font-weight:bold; padding-left:40%; margin:0 auto;">
-			"<%=result %>"로 검색한 결과</h9><br>
+			"<%=result %>"(으)로 검색한 결과</h9><br>
 		</div>
 <!-- 		<div id="aa" style="padding-top:150px;"> -->
 		<div id="seceondMiddle" style="padding-top:100px;padding-left:100px;">
-		<button	id="aa"onclick="document.getElementById('id03').style.display='block'"
-						style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold;
-						padding-top: 30px;">
-						</button>
+		<p align="left">
+			<button	id="infomation_btn" onclick="document.getElementById('id03').style.display='block'"
+							style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold;"></br>
+							<li align="left">
+							&nbsp;<a id="aa" ></a></br></br>
+							주소 : <a id="ab"></a></br></br>
+							별점 : <a id="ac"></a>
+							</li>
+			</button><br>
+		</p>
 						<c:import url="${infomationUrl}" />
 						</div>
 	</div>
@@ -72,14 +78,16 @@ $(document).ready(function(){
 							var formatted_address = result.formatted_address;
 							var rating = result.rating;
 							token = result.next_page_token;
-							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
-							html += '<a href="#">이름 '+name+'<br>';
+ 							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
+							html += '<td>이름 '+name+'<br>';
 							html += '주소 '+formatted_address+'<br>';
-							html += '별점 '+rating+'</br></a>';
+							html += '별점 '+rating+'</td></br>';
 							html += '</form>'; */
-							
+						
 						}
-						$("#aa").html(name,formatted_address,rating);
+						$("#aa").html(name);
+						$("#ab").html(formatted_address);
+						$("#ac").html(rating);
 					}
 });
 $("#nBtn").click(function() {
