@@ -67,7 +67,7 @@ var AjaxUtil = function (url, params, type, dataType){
 	this.type = type?type:"POST";
 	this.dataType = dataType?dataType:"JSON";
 	this.param = generateJSON(params);
-	this.callbackSuccess = function(text){
+	this.callbackSuccess = function(json){
     	var url = json.url;
     	var msg = json.msg;
     	if(msg){

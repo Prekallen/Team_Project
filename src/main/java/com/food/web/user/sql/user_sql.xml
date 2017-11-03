@@ -4,28 +4,17 @@
 <mapper namespace="user">
 
 	<select id="SELECT_USER" parameterType="user" resultType="user">
-	  select 
-	    userId,
-	  	userpwd,
-	  	usernum,
-	  	username,
-	  	age,
+	  select
 	    userid,
 	  	userpwd,
-	  	address,
-	  	hp1,
-	  	hp2,
-	  	hp3,
-	  	departnum,
-	  	userrolelevel,
-	  	gender
-	  from user_info
+	  	email
+	  from feedback_user
 	  where 1=1
 	  <if test="userId!=null and userId!=''">
 	  	and	userid = #{userId}
 	  </if>
-	  <if test="userNum!=0">
-	  	and	usernum = #{userNum}
+	  <if test="userPwd!=null and userPwd!=''">
+	  	and	userpwd = #{userPwd}
 	  </if>
 	</select>	
 	<select id="SELECT_USER_LIST" parameterType="user" resultType="user">

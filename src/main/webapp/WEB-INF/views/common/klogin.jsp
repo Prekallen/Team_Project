@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/WEB-INF/views/common/kheader.jsp"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -17,39 +18,39 @@
 <body>
 <!-- 로그인 -->
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '1908237802828633',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-   FB.getLoginStatus(function(response) {
-	  if (response.status === 'connected') {
-	    console.log('Logged in.');
-	  }
-	  else {
-	    FB.login();
-	  }
-	}); 
+//   window.fbAsyncInit = function() {
+//     FB.init({
+//       appId            : '1908237802828633',
+//       autoLogAppEvents : true,
+//       xfbml            : true,
+//       version          : 'v2.10'
+//     });
+//     FB.AppEvents.logPageView();
+//   };
+//    FB.getLoginStatus(function(response) {
+// 	  if (response.status === 'connected') {
+// 	    console.log('Logged in.');
+// 	  }
+// 	  else {
+// 	    FB.login();
+// 	  }
+// 	}); 
 </script>
 
 <div id="id01" class="modal">
-						<form class="modal-content animate" action="/action_page.php" >
+						<form class="modal-content animate" >
 								<span onclick="document.getElementById('id01').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 
 												
 								<div class="container" id="login_form">
 								<h7 style="font-family: 'NanumSquareRound'; font-weight: bold; padding-top:10px;">로그인</h7></br></br></br>
 									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> </br>
-									<input type="text"  style="width: 369px;" placeholder="ID" name="ID" required> 
+									<input type="text"  style="width: 369px;" id="userId" placeholder="ID" name="id" required value="${userId}"> 
 										</br>
 										<label><b>비밀번호&nbsp;</b></label>
-									<input type="password" placeholder="Password" name="psw" style="width: 370px;"	required>
+									<input type="password" placeholder="Password" name="pwd" id="userPwd" style="width: 370px;"	required>
 										</br></br>
-										<input type="checkbox" checked="checked"> 아이디기억하기
-									<button type="submit" style="width: 370px ;height:40px;">로그인</button></br>																	
+										<input type="checkbox" checked="checked" id="saveId"> 아이디기억하기
+									<button id="logBtn" type="button" style="width: 370px ;height:40px;">로그인</button></br>																	
 								</div>
 								<!-- 페이스북로그인-->
 								<!-- <fb:login-button   scope="public_profile,email"  onlogin="checkLoginState();"></fb:login-button> -->
@@ -101,5 +102,11 @@
 								modal.style.display = "none";
 							}
 						}
+						
+						$("#logBtn").click(function(){
+							var paramIds = "userId,userPwd";
+							var au = new AjaxUtil("/menutab/klogin",paramIds); 
+							au.send();
+						});
 					</script>
 </body>
