@@ -21,6 +21,7 @@
 						<h7 style="font-family: 'NanumSquareRound'; font-weight: bold; padding-top:30px;">맛집 정보</h7>		
 						<span onclick="document.getElementById('id03').style.display='none'"	class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 							
 								<div class="container">
+									<div id="aa"></div>
 								</div>
 						</form>											
 </div><!-- modal id03 -->
@@ -35,5 +36,6 @@
 							}
 						}
 					</script>
+					
 
 </body>
