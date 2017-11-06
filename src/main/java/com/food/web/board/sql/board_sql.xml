@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+
+<mapper namespace="board">
+
+	<select id="SELECT_BOARDINFO" parameterType="board" resultType="board">
+	  select 
+	  
+	 		bnum,
+			btitle,
+			bname,
+			credat
+	
+	  from board
+	  where 1=1
+	
+	  
+	</select>	
+	<select id="SELECT_BOARDINFO_LIST" parameterType="board" resultType="board">
+	  select 
+	 		 bnum,
+			btitle,
+			bname,
+			credat
+	
+	  from board
+	  where 1=1
+	
+	</select>	
+	
+	<insert id="INSERT_BOARDINFO" parameterType="board">
+		insert board(bnum, btitle, bname, credat)
+	  	values(#{bnum},#{btitle},#{bname},#{credat})
+	</insert>
+	
+	<update id="UPDATE_BOARDINFO" parameterType="board">
+		update board
+		set bname = #{bname}
+	  
+	  where bnum=#{bnum}
+	</update>
+	<delete id="DELETE_BOARDINFO" parameterType="board">
+		delete from board
+	    where bnum=#{bnum}
+	</delete>
+</mapper>
+
+
+
+
+
+

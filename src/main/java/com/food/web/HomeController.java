@@ -11,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
+
 /**
  * Handles requests for the application home page.
  */
@@ -79,6 +81,59 @@ public class HomeController {
 		return "test/test";
 	}
 	
+	@RequestMapping(value="/mememi", method= RequestMethod.GET)
+	public String mememi(Model model){
+		return "mememi";
+	}
+	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
+	public String mainmemi(Model model){
+		return "mainmemi";
+	}
 	
+	
+	
+	//main 테스트용 k버전
+	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
+	public String kintro(Model model){
+		return "menutab/kintro";
+	}
+	@RequestMapping(value="/menutab/kgroup", method= RequestMethod.GET)
+	public String kgroup(Model model){
+		return "menutab/kgroup";
+	}
+	@RequestMapping(value="/menutab/klocal", method= RequestMethod.GET)
+	public String klocal(Model model){
+		return "menutab/klocal";
+	}
+	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
+	public String kjoin(Model model){
+		return "menutab/kjoin";
+	}
+	
+	@RequestMapping(value="/menutab/write", method= RequestMethod.GET)
+	public String write(Model model){
+		return "menutab/write";
+	}
+	@RequestMapping(value="/test/test2", method= RequestMethod.GET)
+	public String test2(Model model){
+		return "test/test2";
+	}
+	
+	
+	
+	//test
+//	@RequestMapping(value= "/apitest", method=RequestMethod.POST)
+//	public @ResponseBody ModelMap getApiResults(@RequestBody String query){
+//		ModelMap model = new ModelMap();
+//		try{
+//			model.put("name", ad.getName());
+//			model.put("formatted_address", ad.getFormatted_address());
+//			model.put("rating", ad.getRating());
+//			
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+//	    return model;
+//	}
 	
 }

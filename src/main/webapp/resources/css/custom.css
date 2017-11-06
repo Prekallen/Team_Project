@@ -1,0 +1,12 @@
+@import url(https://fonts.googleais.com/earlyaccess/namugothic.css)
+@import url(https://fonts.googleais.com/earlyaccess/hanna.css)
+@import url(https://fonts.googleais.com/earlyaccess/notosanskr.css)
+*{
+	font-family: 'Hanna';
+	
+	}
+	thead th{
+		background-color : #ff8080 ;
+		color : white;
+		text-align : center;
+	}
