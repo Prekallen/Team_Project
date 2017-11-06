@@ -40,6 +40,7 @@
 			onclick="window.scrollTo(0,0);">TOP</div>
 		<script>
 			$(document).ready(function(){
+				var a=0;
 				var html = "";
 				var au = new AjaxUtil("/menutab/knotice");
 				var param = {};

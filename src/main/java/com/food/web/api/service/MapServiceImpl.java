@@ -45,6 +45,18 @@ public class MapServiceImpl implements MapService{
 				mi.setFormatted_address(storeObject.get("formatted_address"));
 				mi.setName(storeObject.get("name"));
 				mi.setRating(storeObject.get("rating"));
+				if(storeObject.get("photos")!=null){
+					mi.setPhotos(storeObject.get("photos"));
+					
+					JSONArray photoArray = (JSONArray) storeObject.get("photos");
+					JSONObject photoObject = (JSONObject) photoArray.get(0);
+					
+				mi.setPhoto_reference(photoObject.get("photo_reference"));
+				}else{
+					mi.setPhotos("없음");
+					mi.setPhoto_reference("없음");
+				}
+				mi.setPlace_id(storeObject.get("place_id"));
 				mi.setNext_page_token(page);
 				mapInfoList.add(mi);
 				//JSON name으로 추출

@@ -77,17 +77,19 @@ $(document).ready(function(){
 							var name = result.name;
 							var formatted_address = result.formatted_address;
 							var rating = result.rating;
+							var place_id = result.place_id;
+							var photo_reference = result.photo_reference;
 							token = result.next_page_token;
- 							/* html += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
+ 							html += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
 							html += '<td>이름 '+name+'<br>';
 							html += '주소 '+formatted_address+'<br>';
-							html += '별점 '+rating+'</td></br>';
-							html += '</form>'; */
+							html += '별점 '+rating+'<br>';
+							html += '포토 '+photo_reference+'<br>';
+							html += '플레이스 '+place_id+'</td></br>';
+							html += '</form>';
 						
 						}
-						$("#aa").html(name);
-						$("#ab").html(formatted_address);
-						$("#ac").html(rating);
+						$("#spMiddle").append(html);
 					}
 });
 $("#nBtn").click(function() {
