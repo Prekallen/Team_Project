@@ -18,8 +18,13 @@ public class PhotoServiceImpl implements PhotoService {
 		
 		try{
 			for(int i=0; i<pht.size(); i++){
-			URL url = new URL("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&photoreference=" + pht.get(i)) ;
+			MapInfo mf = pht.get(i);
+			URL url = new URL("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&photoreference=" + mf.getPhoto_reference()) ;
+			
+			
 			}
+			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
