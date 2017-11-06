@@ -44,8 +44,8 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/menutab/write", method= RequestMethod.POST)
-	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo[] boardList, BoardInfo board){
-		bs.insertBoardInfoList(boardList);
+	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board){
+		bs.inserBoardInfo(board);
 		return bs.getBoardInfoList(board);
 	}
 	

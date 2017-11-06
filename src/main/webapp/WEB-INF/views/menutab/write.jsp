@@ -4,7 +4,7 @@
 <%@include file="/WEB-INF/views/common/kheader.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title>공지사항</title>
+<bTitle>공지사항</bTitle>
 </head>
 
 <body>
@@ -23,19 +23,19 @@
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
 								<td><textarea style="resize: none;" cols="150" rows="1"
-										name="writer" id="writer"></textarea></td>
+										name="bName" id="bName"></textarea></td>
 							</tr>
 						</thead>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">제목</th>
 							<td><textarea style="resize: none;" cols="150" rows="3"
-									name="title" id="title"></textarea></td>
+									name="bTitle" id="bTitle"></textarea></td>
 						</tr>
 
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">내용</th>
 							<td><textarea style="resize: none;" cols="150" rows="30"
-									name="contents" id="contents"></textarea></td>
+									name="bContents" id="bContents"></textarea></td>
 						</tr>
 
 					</table>
@@ -54,51 +54,44 @@
 	</div>
 	<script>
 		$("#send").click(function() {
-			var writer = $("#writer").val();
-			var title = $("#title").val();
-			var contents = $("#contents").val();
-			//var credat = $("credat").val();
+			var bName = $("#bName").val();
+			var bTitle = $("#bTitle").val();
+			var bContents = $("#bContents").val();
+			var credat = $("credat").val();
 
-			if (writer == "") {
+			if (bName == "") {
 				alert("이름을 입력하세요");
-				document.f1.writer.focus();
+				document.f1.bName.focus();
 				return;
 			}
 
-			if (title == "") {
+			if (bTitle == "") {
 				alert("제목을 입력하세요");
-				document.f1.title.focus();
+				document.f1.bTitle.focus();
 				return;
 			}
 
-			if (contents == "") {
+			if (bContents == "") {
 				alert("내용을 입력하세요");
-				document.f1.contents.focus();
+				document.f1.bContents.focus();
 				return;
 			}
-			var au = new AjaxUtil("menutab/write");
-			var param = {};
-
-			param["writer"] = writer;
-			param["title"] = title;
-			param["contents"] = contents;
-			//param["credat"] = credat;
-
-			au.param = JSON.stringify(param);
-			//au.setCallbackSuccess(callbackWrite);
+			var param = "bName,bTitle,bContents";
+			var au = new AjaxUtil("menutab/write",param);
+			au.setCallbackSuccess(callbackWrite);
 			au.send();
 			
-			location.href = "${rootPath}/menutab/knotice";
+			//location.href = "${rootPath}/menutab/knotice";
 
-// 			function callbackWrite(results) {
-// 				if (results == 0) {
-// 					alert(OMG);
-// 					return;
-// 				} else if (results == 1) {
-// 					location.href = "${rootPath}/menutab/knotice";
-// 					return;
-// 				}
-// 			}
+			function callbackWrite(results) {
+				if (results == 0) {
+					alert(OMG);
+					return;
+				} else if (results == 1) {
+					location.href = "${rootPath}/menutab/knotice";
+					return;
+				}
+			}
 
 		});
 	</script>

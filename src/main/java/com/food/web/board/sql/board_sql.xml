@@ -30,18 +30,18 @@
 	
 	<insert id="INSERT_BOARDINFO" parameterType="board">
 		insert into board(btitle, bname, credat, bcontents)
-	  	values(#{btitle},#{bname},#{now()},#{bcontents})
+	  	values(#{bTitle},#{bName},now(),#{bContents})
 	</insert>
 	
 	<update id="UPDATE_BOARDINFO" parameterType="board">
 		update board
-		set bname = #{bname}
+		set bname = #{bName}
 	  
-	  where bnum=#{bnum}
+	  where bnum=#{bNum}
 	</update>
 	<delete id="DELETE_BOARDINFO" parameterType="board">
 		delete from board
-	    where bnum=#{bnum}
+	    where bnum=#{bNum}
 	</delete>
 </mapper>
 

@@ -26,7 +26,7 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 
 	@Override
 	public int insertBoardInfo(BoardInfo board) {
-		return this.insertBoardInfo(board);
+		return getSqlSession().insert("board.INSERT_BOARDINFO",board);
 	}
 
 	@Override
