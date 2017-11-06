@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.food.web.api.service.MapService;
-import com.food.web.api.service.PhotoService;
 
 @Controller
 public class MapController {
 
 	@Autowired MapService ms ;
-	@Autowired PhotoService ph ;
 	//test
 		@RequestMapping(value= "/searchPage", method=RequestMethod.GET)
 		public String getApi(Model model) {
@@ -29,9 +27,6 @@ public class MapController {
 			ModelMap model = new ModelMap();
 			try{
 				model.put("mapInfoList", ms.getMapList(query));
-				model.put("photoList", ph.getPhotoList(ms.getMapList(query)));
-				
-				
 			}catch(Exception e){
 				e.printStackTrace();
 			}

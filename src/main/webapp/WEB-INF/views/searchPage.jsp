@@ -16,12 +16,14 @@ String result = (String)session.getAttribute("result");
 %>
 	<div class="wrap">
 		<div id= "spTop">
-
+		
 		</div>
 
 		<div id="spMiddle" style="padding-top: 80px;">
 			<h9 style="font-size:20px; font-weight:bold; padding-left:40%; margin:0 auto;">
 			"<%=result %>"(으)로 검색한 결과</h9><br>
+			
+			
 		</div>
 <!-- 		<div id="aa" style="padding-top:150px;"> -->
 		<div id="seceondMiddle" style="padding-top:100px;padding-left:100px;">
@@ -84,9 +86,13 @@ $(document).ready(function(){
 							html += '<td>이름 '+name+'<br>';
 							html += '주소 '+formatted_address+'<br>';
 							html += '별점 '+rating+'<br>';
-							html += '포토 '+photo_reference+'<br>';
 							html += '플레이스 '+place_id+'</td></br>';
 							html += '</form>';
+							if(photo_reference!=="없음"){
+							html += '사진 <input type="image" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&photoreference=' + photo_reference + '" style="height=100px; width=200px;">';
+							}else{
+								html += '사진없음';
+							}
 						
 						}
 						$("#spMiddle").append(html);
