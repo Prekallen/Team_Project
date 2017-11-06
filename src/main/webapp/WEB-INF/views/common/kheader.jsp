@@ -3,8 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<c:set var="topmenuUrl" value="/WEB-INF/views/common/top_menu.jsp" />
-<c:set var="ktopmenuUrl" value="/WEB-INF/views/common/ktop_menu.jsp" />
 <c:set var="sidemenuUrl" value="/WEB-INF/views/common/side_menu2.jsp" />
 <c:set var="footerUrl" value="/WEB-INF/views/test/footer.jsp" />
 <c:set var="kloginUrl" value="/WEB-INF/views/common/klogin.jsp" />
