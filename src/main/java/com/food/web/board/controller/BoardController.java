@@ -1,5 +1,7 @@
 package com.food.web.board.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,14 +44,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/menutab/write", method= RequestMethod.POST)
-	public @ResponseBody ModelMap write(@RequestBody BoardInfo[] board){
-		ModelMap model = new ModelMap();
-		try{
-			model.put("inserBoardInfoList", bs.insertBoardInfoList(board));
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		return model;
+	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo[] boardList, BoardInfo board){
+		bs.insertBoardInfoList(boardList);
+		return bs.getBoardInfoList(board);
 	}
 	
 }	

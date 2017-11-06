@@ -29,8 +29,8 @@
 	</select>	
 	
 	<insert id="INSERT_BOARDINFO" parameterType="board">
-		insert board(bnum, btitle, bname, credat)
-	  	values(#{bnum},#{btitle},#{bname},#{credat})
+		insert into board(btitle, bname, credat, bcontents)
+	  	values(#{btitle},#{bname},#{now()},#{bcontents})
 	</insert>
 	
 	<update id="UPDATE_BOARDINFO" parameterType="board">
@@ -44,7 +44,6 @@
 	    where bnum=#{bnum}
 	</delete>
 </mapper>
-
 
 
 

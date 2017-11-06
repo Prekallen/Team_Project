@@ -41,8 +41,8 @@
 					</table>
 
 					<a href="${rootPath}/menutab/knotice"
-						class="btn btn-primary pull-right">뒤로가기</a>
-					<input type="button" class="btn btn-primary" id="send" value="글쓰기">
+						class="btn btn-primary pull-right">뒤로가기</a> <input type="button"
+						class="btn btn-primary" id="send" value="글쓰기">
 				</div>
 			</div>
 		</form>
@@ -53,52 +53,53 @@
 		<c:import url="${footerUrl}" />
 	</div>
 	<script>
-		$(document).ready(function() {
-			$("#send").click(function() {
-				var writer = $("#writer").val();
-				var title = $("#title").val();
-				var contents = $("#contents").val();
-				
-				if (writer == "") {
-					alert("이름을 입력하세요");
-					document.f1.writer.focus();
-					return;
-				}
-				
-				if (title == "") {
-					alert("제목을 입력하세요");
-					document.f1.title.focus();
-					return;
-				}
-				
-				if (contents == "") {
-					alert("내용을 입력하세요");
-					document.f1.contents.focus();
-					return;
-				}
-				var au = new AjaxUtil("/menutab/knotice");
-				var param = {};
-				au.param = JSON.stringify(param);
-				au.setCallbackSuccess(callbackWrite);
-				au.send();
+		$("#send").click(function() {
+			var writer = $("#writer").val();
+			var title = $("#title").val();
+			var contents = $("#contents").val();
+			//var credat = $("credat").val();
 
-				function callbackWrite(results) {
-					if (!results) {
-						alert(OMG);
-						return;
-					}
-				}
-				var inserBoardInfoList = results["inserBoardInfoList"];
-				for ( var idx in inserBoardInfoList) {
-					var result = inserBoardInfoList[idx];
-					
-					var btitle = result.title;
-					var bname = result.writer;
-					var bcontents = result.contents;
-					var credat = result.credat;
-				}
+			if (writer == "") {
+				alert("이름을 입력하세요");
+				document.f1.writer.focus();
+				return;
+			}
+
+			if (title == "") {
+				alert("제목을 입력하세요");
+				document.f1.title.focus();
+				return;
+			}
+
+			if (contents == "") {
+				alert("내용을 입력하세요");
+				document.f1.contents.focus();
+				return;
+			}
+			var au = new AjaxUtil("menutab/write");
+			var param = {};
+
+			param["writer"] = writer;
+			param["title"] = title;
+			param["contents"] = contents;
+			//param["credat"] = credat;
+
+			au.param = JSON.stringify(param);
+			//au.setCallbackSuccess(callbackWrite);
+			au.send();
 			
-			});
+			location.href = "${rootPath}/menutab/knotice";
+
+// 			function callbackWrite(results) {
+// 				if (results == 0) {
+// 					alert(OMG);
+// 					return;
+// 				} else if (results == 1) {
+// 					location.href = "${rootPath}/menutab/knotice";
+// 					return;
+// 				}
+// 			}
+
 		});
 	</script>
 </body>
@@ -116,7 +117,8 @@ body {
 html {
 	height: 100%;
 }
-.btn btn-primary{
+
+.btn btn-primary {
 	position: absolute;
 }
 
