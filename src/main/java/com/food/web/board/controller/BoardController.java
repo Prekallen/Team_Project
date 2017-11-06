@@ -19,12 +19,6 @@ public class BoardController {
 	@Autowired
 	BoardService bs;
 
-	// 01. 게시글 목록
-//	@RequestMapping(value="/board/list",method=RequestMethod.POST)
-//	public @ResponseBody List<BoardInfo> getBoardResult2(@RequestBody BoardInfo board){
-//		return bs.getBoardInfoList(board);
-//
-//	}
 
 	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
 	public String knotice(Model model){
@@ -41,4 +35,25 @@ public class BoardController {
 		}
 		return model;
 	}
+	
+	@RequestMapping(value="/menutab/write", method= RequestMethod.GET)
+	public String write(Model model){
+		return "menutab/write";
+	}
+	
+	@RequestMapping(value="/menutab/write", method= RequestMethod.POST)
+	public @ResponseBody ModelMap write(@RequestBody BoardInfo[] board){
+		ModelMap model = new ModelMap();
+		try{
+			model.put("inserBoardInfoList", bs.insertBoardInfoList(board));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return model;
+	}
+	
 }	
+
+
+
+

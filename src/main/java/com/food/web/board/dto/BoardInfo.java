@@ -4,8 +4,15 @@ public class BoardInfo {
 	private int bNum;
 	private String bTitle;
 	private String bName;
-	private String cradat;
+	private String credat;
+	private String bContents;
 	
+	public String getbContents() {
+		return bContents;
+	}
+	public void setbContents(String bContents) {
+		this.bContents = bContents;
+	}
 	public int getbNum() {
 		return bNum;
 	}
@@ -24,16 +31,18 @@ public class BoardInfo {
 	public void setbName(String bName) {
 		this.bName = bName;
 	}
-	public String getCradat() {
-		return cradat;
+	public String getCredat() {
+		return credat;
 	}
-	public void setCradat(String cradat) {
-		this.cradat = cradat;
+	public void setCredat(String credat) {
+		this.credat = credat;
 	}
 	@Override
 	public String toString() {
-		return "BoardInfo [bNum=" + bNum + ", bTitle=" + bTitle + ", bName=" + bName + ", cradat=" + cradat + "]";
+		return "BoardInfo [bNum=" + bNum + ", bTitle=" + bTitle + ", bName=" + bName + ", credat=" + credat
+				+ ", bContents=" + bContents + "]";
 	}
+	
 	
 	
 }

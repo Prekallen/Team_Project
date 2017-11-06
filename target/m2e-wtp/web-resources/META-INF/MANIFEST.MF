@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: DJA
-Build-Jdk: 1.8.0_151
+Build-Jdk: 1.8.0_131
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Built-By: Kay
-Build-Jdk: 1.8.0_151
-Created-By: Maven Integration for Eclipse
-
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
