@@ -22,12 +22,12 @@ public class BoardController {
 	BoardService bs;
 
 
-	@RequestMapping(value="/notice/notice", method= RequestMethod.GET)
-	public String knotice(Model model){
-		return "notice/notice";
+	@RequestMapping(value="/notice/board_list", method= RequestMethod.GET)
+	public String board_list(Model model){
+		return "notice/board_list";
 	}
 	
-	@RequestMapping(value="/notice/notice", method= RequestMethod.POST)
+	@RequestMapping(value="/notice/board_list", method= RequestMethod.POST)
 	public @ResponseBody ModelMap getBoardResult(@RequestBody BoardInfo board){
 		ModelMap model = new ModelMap();
 		try{
@@ -45,12 +45,22 @@ public class BoardController {
 	
 	@RequestMapping(value="/notice/board_insert", method= RequestMethod.POST)
 	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board){
-		bs.inserBoardInfo(board);
+		bs.insertBoardInfo(board);
 		return bs.getBoardInfoList(board);
 	}
 	
 	@RequestMapping(value="/notice/board_view", method= RequestMethod.GET)
-	public String board_view(Model model){
+	public @ResponseBody String board_view(@RequestBody String sNum,  ModelMap model){
+		if(sNum!=null){
+			int bNum = Integer.parseInt(sNum);
+			BoardInfo board = new BoardInfo();
+			board.setbNum(bNum);
+			model.put("bName", bs.getBoardInfo(board).getbName());
+			model.put("bTitle", bs.getBoardInfo(board).getbTitle());
+			model.put("bContents", bs.getBoardInfo(board).getbContents());
+		}else{
+			return "notice/board_list";
+		}
 		return "notice/board_view";
 	}
 	

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>${bTitle }</title>
@@ -9,6 +10,7 @@
 <body>
 
 	<div class="kwrap">
+		<c:import url="${sidemenuUrl}" />
 
 
 		<form name="f1">
@@ -20,16 +22,16 @@
 						<thead>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
-								<th>${bNum }</th>
+								<th><input type="text">${bName }</th>
 							</tr>
 						</thead>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">제목</th>
-							<th>${bTitle }</th>
+							<th><input type="text">${bTitle }</th>
 						</tr>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">내용</th>
-							<th>${bContents }</th>
+							<th><input type="text">${bContents }</th>
 						</tr>
 
 					</table>
@@ -44,10 +46,15 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 
-
+		<c:import url="${footerUrl}" />
 	</div>
 	<script>
-		
+		function boardList(){
+			location.href = "${rootPath}/menutab/board_list";
+		}
+		function modifyBoard(){
+			location.href = "${rootPath}/menutab/board_list";
+		}
 	</script>
 </body>
 </html>

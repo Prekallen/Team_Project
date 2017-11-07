@@ -183,7 +183,7 @@
 					<li class="fir"><a href="${rootPath}/intro">Feedback</a>
 						<ul class="sub1">
 							<li><a href="${rootPath}/intro">소개</a></li>
-							<li><a href="${rootPath}/notice/notice">공지사항</a></li>
+							<li><a href="${rootPath}/notice/board_list">공지사항</a></li>
 
 						</ul></li>
 					<li><a href="${rootPath}/menutab/kgroup">종류별</a>

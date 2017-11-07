@@ -29,7 +29,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public int inserBoardInfo(BoardInfo board) {
+	public int insertBoardInfo(BoardInfo board) {
 		return bdao.insertBoardInfo(board);
 	}
 

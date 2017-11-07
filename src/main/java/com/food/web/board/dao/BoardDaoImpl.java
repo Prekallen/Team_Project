@@ -14,7 +14,7 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 
 	@Override
 	public BoardInfo selectBoardInfo(BoardInfo board) {
-		return getSqlSession().selectOne("board.SELECT_BOARDINFO", board);
+		return this.getSqlSession().selectOne("board.SELECT_BOARDINFO", board);
 	}
 
 	@Override

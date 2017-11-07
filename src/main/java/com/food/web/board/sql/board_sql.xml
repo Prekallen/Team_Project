@@ -6,14 +6,15 @@
 	<select id="SELECT_BOARDINFO" parameterType="board" resultType="board">
 	  select 
 	  
-	 		bnum,
-			btitle,
+	 		btitle,
 			bname,
+			bcontents,
 			credat
 	
 	  from board
 	  where 1=1
-	
+	  
+	and bnum=#{bNum}
 	  
 	</select>	
 	<select id="SELECT_BOARDINFO_LIST" parameterType="board" resultType="board">

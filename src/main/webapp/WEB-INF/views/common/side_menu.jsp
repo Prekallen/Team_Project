@@ -50,7 +50,7 @@ $(document).ready(function(){
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="${rootPath}/mainmemi">메인</a> <a
 					href="${rootPath}/intro">Feedback소개</a> <a
-					href="${rootPath}/notice/notice">공지사항</a> <a>맛집 찾기</a>
+					href="${rootPath}/notice/board_list">공지사항</a> <a>맛집 찾기</a>
 
 				<div class="dropdown" id="dropgroup1">
 					<button class="dropbtn">

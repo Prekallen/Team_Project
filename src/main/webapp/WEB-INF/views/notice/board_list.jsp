@@ -1,19 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>공지사항</title>
 </head>
 
 <body>
+
 	<div class="kwrap">
+		<c:import url="${sidemenuUrl}" />
 
 
 		<ul class="nav-navbar-nav navbar-right"></ul>
 		<div class="container" style="padding-top: 200px;">
 			<div class="row">
-				<table  class="table table-striped" style="text-align: center"
+				<table class="table table-striped" style="text-align: center"
 					border="1px solid #dddddd">
 
 					<thead>
@@ -26,11 +29,11 @@
 						</tr>
 					</thead>
 					<tbody id="boardList">
-					
+
 					</tbody>
-					
+
 				</table>
-				<a href="${rootPath}/notice/write"
+				<a href="${rootPath}/menutab/board_insert"
 					class="btn btn-primary pull-right">글쓰기</a>
 			</div>
 		</div>
@@ -38,10 +41,11 @@
 			onclick="window.scrollTo(0,0);">TOP</div>
 		<script>
 			$(document).ready(function(){
-				var a=0;
+				
 				var html = "";
-				var au = new AjaxUtil("/notice/notice");
 				var param = {};
+				var au = new AjaxUtil("/menutab/board_list");
+				
 				au.param = JSON.stringify(param);
 				au.setCallbackSuccess(callbackBoard);
 				au.send();
@@ -60,8 +64,8 @@
 						var btitle = result.bTitle;
 						var bname = result.bName;
 						var credat = result.credat;
-						
-						html += '<tr>';
+						// style = "cursor:pointer;" onClick = "location.href="${rootPath}/menutab/board_view?num=1";
+						html += '<tr onClick="boardPage('+bnum+')">';
 						html += '<td>'+bnum+'</td>';
 						html += '<td>'+btitle+'</td>';
 						html += '<td>'+bname+'</td>';
@@ -71,7 +75,13 @@
 					}
 					$("#boardList").append(html);
 				}
+			
 			});
+			
+			function boardPage(bnum){
+				location.href="${rootPath}/menutab/board_view?bnum="+bnum;
+			}
+			</script>
 		</script>
 
 		<c:import url="${footerUrl}" />
