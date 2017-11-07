@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/header.jsp"%>
+<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>공지사항</title>
@@ -10,7 +10,6 @@
 <body>
 
 	<div class="kwrap">
-		<c:import url="${sidemenuUrl}" />
 
 
 		<ul class="nav-navbar-nav navbar-right"></ul>
@@ -33,7 +32,7 @@
 					</tbody>
 
 				</table>
-				<a href="${rootPath}/menutab/board_insert"
+				<a href="${rootPath}/notice/board_insert"
 					class="btn btn-primary pull-right">글쓰기</a>
 			</div>
 		</div>
@@ -44,7 +43,7 @@
 				
 				var html = "";
 				var param = {};
-				var au = new AjaxUtil("/menutab/board_list");
+				var au = new AjaxUtil("/notice/board_list");
 				
 				au.param = JSON.stringify(param);
 				au.setCallbackSuccess(callbackBoard);
@@ -79,7 +78,7 @@
 			});
 			
 			function boardPage(bnum){
-				location.href="${rootPath}/menutab/board_view?bnum="+bnum;
+				location.href="${rootPath}/notice/board_view?bnum="+bnum;
 			}
 			</script>
 		</script>

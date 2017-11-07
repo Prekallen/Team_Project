@@ -43,7 +43,7 @@ public class UserController {
 	public @ResponseBody ModelMap insert(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
 		int ctn = us.insertUser(user);
 		if(ctn==1){
-			hm.put("msg", "회원가입성공");
+			hm.put("msg", "회원가입되었습니다. 로그인해주세요.");
 			hm.put("url", "test/test2");
 		}else{
 			hm.put("msg", "안됨");

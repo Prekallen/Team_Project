@@ -22,8 +22,9 @@ $(document).ready(function(){
 	if(userId!=""&&userId!=null){
 		$("#logOut").html("로그아웃");
 		$("#logOut").click(function(){
-			alert("꺼지라고");
-		})
+			alert("로그아웃됩니다.");
+			location.href="${rootPath}/user/logout";
+		});
 	}else{
 		$("#logOut").html("로그인");
 	}

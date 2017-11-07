@@ -56,10 +56,13 @@ public class HomeController {
 		return "menutab/klocal";
 	}
 	
-	
 	@RequestMapping(value="/test/test2", method= RequestMethod.GET)
 	public String test2(Model model){
 		return "test/test2";
+	}
+	@RequestMapping(value="/user/logout", method= RequestMethod.GET)
+	public String logout(Model model){
+		return "/user/logout";
 	}
 	
 }

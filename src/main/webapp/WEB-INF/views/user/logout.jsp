@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	session.invalidate();
+	String  req = request.getHeader("REFERER");
+	response.sendRedirect(req);
+	%>
 </body>
 </html>
