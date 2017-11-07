@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>로그인</title>
@@ -53,7 +51,7 @@
 									<button id="logBtn" type="button" style="width: 370px ;height:40px;">로그인</button></br>																	
 								</div>
 								<!-- 페이스북로그인-->
-								<!-- <fb:login-button   scope="public_profile,email"  onlogin="checkLoginState();"></fb:login-button> -->
+								<!-- <fb:login-button   scope="public_profile,email"  onlogin="checloginState();"></fb:login-button> -->
 								<div id="fb-root"></div>
 								<script>(function(d, s, id) {
 									var js, fjs = d.getElementsByTagName(s)[0];
@@ -105,7 +103,7 @@
 						
 						$("#logBtn").click(function(){
 							var paramIds = "userId,userPwd";
-							var au = new AjaxUtil("/menutab/klogin",paramIds); 
+							var au = new AjaxUtil("/user/login",paramIds); 
 							au.send();
 						});
 					</script>

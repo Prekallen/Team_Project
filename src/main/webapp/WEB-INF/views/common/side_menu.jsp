@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="footerUrl" value="/WEB-INF/views/common/footer.jsp" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,7 @@
 		<div id="header2">
 			<div id="search" style="padding-top: 20px;">
 			
-				<form action ="${rootPath}/searchPage" >
+				<form action ="${rootPath}/search/searchPage" >
 				<ul>
 			 		<li>
 			 			<input type="text" name="query" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;margin-top: 0px;"/><br/>
@@ -34,8 +36,8 @@
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="${rootPath}/mainmemi">메인</a> <a
-					href="${rootPath}/menutab/kintro">Feedback소개</a> <a
-					href="${rootPath}/menutab/knotice">공지사항</a> <a>맛집 찾기</a>
+					href="${rootPath}/intro">Feedback소개</a> <a
+					href="${rootPath}/notice/notice">공지사항</a> <a>맛집 찾기</a>
 
 				<div class="dropdown" id="dropgroup1">
 					<button class="dropbtn">
@@ -81,13 +83,13 @@
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
 						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
-					<c:import url="${kloginUrl}" />
+					<c:import url="${loginUrl}" />
 
 
 					<button
 						onclick="document.getElementById('id02').style.display='block'"
 						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
-					<c:import url="${ksignupUrl}" />
+					<c:import url="${signupUrl}" />
 				</dl>
 				<!-- id="util_menu" -->
 			</div>
@@ -98,13 +100,22 @@
 	<!-- id="wrap2" -->
 
 	<hr />
-<script>
+<!-- // 		String result = (String) request.getParameter("query"); -->
+<!-- // 		session.setAttribute("result",result ); -->
+<!-- // 		response.sendRedirect("searchPage"); -->
 	<%
-		String result = (String) request.getParameter("query");
-		session.setAttribute("result",result );
-		response.sendRedirect("searchPage");
-	%>
 
+	String result = request.getParameter("query");                // request에서 passwd 파라미터를 가져온다.
+	if(result!=("")){                                                        // 로그인 성공시
+		session.setAttribute("result", result);                 // 세션에 "id" 이름으로 id 등록
+// 		response.sendRedirect("searchPage");               // 로그인 성공 메인페이지 이동
+	}else{
+	%>                                                        // 로그인 실패
+	<script>
+		history.go(-1);                                    // 이전 페이지로 이동
+	</script>
+	<%}%>
+<script>
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
 	document.getElementById("main").style.marginLeft = "250px";

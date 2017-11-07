@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <title>Feedback 소개</title>
@@ -12,7 +11,6 @@
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
 <div class="kwrap">
-<c:import url="${sidemenuUrl}"/>
 	<%--소개글 --%>
 	<div class="dc-area" id="introArea1" style="padding-top:100px; padding-left:100px;">
 		<div class="dc-wrapper">

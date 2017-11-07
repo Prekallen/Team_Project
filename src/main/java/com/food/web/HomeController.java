@@ -37,65 +37,24 @@ public class HomeController {
 		
 		return "home";
 	}
-	
-	@RequestMapping(value="/main", method= RequestMethod.GET)
-	public String main(Model model){
-		return "main";
-	}
-	@RequestMapping(value="/menutab/intro", method= RequestMethod.GET)
-	public String intro(Model model){
-		return "menutab/intro";
-	}
-	
-	@RequestMapping(value="/menutab/notice", method= RequestMethod.GET)
+	@RequestMapping(value="/notice/notice", method= RequestMethod.GET)
 	public String notice(Model model){
-		return "menutab/notice";
+		return "notice/notice";
 	}
-	
-	@RequestMapping(value="/main2", method= RequestMethod.GET)
-	public String main2(Model model){
-		return "main2";
-	}
-	
-	@RequestMapping(value="/menutab/local", method= RequestMethod.GET)
-	public String local(Model model){
-		return "menutab/local";
-	}
-	
-	@RequestMapping(value="/menutab/group", method= RequestMethod.GET)
-	public String group(Model model){
-		return "menutab/group";
-	}
-	
-	@RequestMapping(value="/menutab/login", method= RequestMethod.GET)
+
+	@RequestMapping(value="/user/login", method= RequestMethod.GET)
 	public String login(Model model){
-		return "menutab/login";
+		return "user/login";
 	}
-	
-	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
-	public String main3(Model model){
-		return "mango_plate_main";
-	}
-	@RequestMapping(value="/test/test", method= RequestMethod.GET)
-	public String test(Model model){
-		return "test/test";
-	}
-	
-	@RequestMapping(value="/mememi", method= RequestMethod.GET)
-	public String mememi(Model model){
-		return "mememi";
-	}
+
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
 	public String mainmemi(Model model){
 		return "mainmemi";
 	}
 	
-	
-	
-	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
-	public String kintro(Model model){
-		return "menutab/kintro";
+	@RequestMapping(value="/intro", method= RequestMethod.GET)
+	public String intro(Model model){
+		return "intro";
 	}
 	@RequestMapping(value="/menutab/kgroup", method= RequestMethod.GET)
 	public String kgroup(Model model){
@@ -105,32 +64,11 @@ public class HomeController {
 	public String klocal(Model model){
 		return "menutab/klocal";
 	}
-	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
-	public String kjoin(Model model){
-		return "menutab/kjoin";
-	}
 	
 	
 	@RequestMapping(value="/test/test2", method= RequestMethod.GET)
 	public String test2(Model model){
 		return "test/test2";
 	}
-	
-	
-	
-	//test
-//	@RequestMapping(value= "/apitest", method=RequestMethod.POST)
-//	public @ResponseBody ModelMap getApiResults(@RequestBody String query){
-//		ModelMap model = new ModelMap();
-//		try{
-//			model.put("name", ad.getName());
-//			model.put("formatted_address", ad.getFormatted_address());
-//			model.put("rating", ad.getRating());
-//			
-//		}catch(Exception e){
-//			e.printStackTrace();
-//		}
-//	    return model;
-//	}
 	
 }

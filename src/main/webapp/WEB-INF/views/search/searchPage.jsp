@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="footerUrl" value="/WEB-INF/views/test/footer.jsp" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
@@ -10,10 +12,10 @@
 </head>
 
 <body>
-<c:import url="${sidemenuUrl}"/>
 <%
-String result = (String)session.getAttribute("result");
+String results = (String)session.getAttribute("result");
 %>
+
 	<div class="wrap3">
 		<div id= "spTop">	</div>
 
@@ -37,12 +39,12 @@ String result = (String)session.getAttribute("result");
 var token = "";
 var html = "";
 $(document).ready(function(){
-					var query = "<%=result%>";
+					var query = "<%=results%>";
 					query = query.replace(/(\s*)/g, "")
 					if (query == null || query == "") {
 						alert("입력 좀...");
 					} else {
-						var au = new AjaxUtil("/searchPage");
+						var au = new AjaxUtil("/search/searchPage");
 						var param = {};
 						param["query"] = query;
 
@@ -51,7 +53,7 @@ $(document).ready(function(){
 						au.param = JSON.stringify(param);
 						au.setCallbackSuccess(callbackApi);
 						au.send();
-					}
+					
 
 					function callbackApi(results) {
 						if (!results) {
@@ -98,10 +100,12 @@ htmlStr += '<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=
 						}
 						$("#ulList").html(htmlStr);
 					}
+					}
 });
+
 $("#nBtn").click(function() {
 
-			var au = new AjaxUtil("/searchPage");
+			var au = new AjaxUtil("/search/searchPage");
 			var param = {};
 			param["token"] = token;
 			au.param = JSON.stringify(param);
@@ -127,72 +131,5 @@ $("#nBtn").click(function() {
 				$("#spMiddle").append(html);
 			}
 		});
-
-
-//Ajax//
-var AjaxUtil = function(url, params, type, dataType) {
-	if (!url) {
-		alert("url정보가 없습니다.");
-		return null;
-	}
-	this.url = "${rootPath}/" + url;
-
-	var generateJSON = function(params) {
-		if (!params)
-			return "";
-		var paramArr = params.split(",");
-		var data = {};
-		for (var i = 0, max = paramArr.length; i < max; i++) {
-			var key = paramArr[i]
-			if ($("#" + key).length > 1) {
-				throw new JSException("동일 ID값이 존재함.");
-			} else if ($("#" + key).length == 0) {
-				throw new JSException(key + "에 해당하는 ID가 존재하지 않음.");
-			}
-			data[key] = $("#" + key).val();
-		}
-		return JSON.stringify(data);
-	}
-	this.type = type ? type : "POST";
-	this.dataType = dataType ? dataType : "json";
-	this.param = generateJSON(params);
-	this.callbackSuccess = function(json) {
-		var url = json.url;
-		var msg = json.msg;
-		if (msg) {
-			alert(msg);
-		}
-		if (url) {
-			pageMove(url);
-		}
-	}
-	this.setCallbackSuccess = function(callback) {
-		this.callbackSuccess = callback;
-	}
-
-	this.send = function() {
-		$.ajax({
-			type : this.type,
-			url : this.url,
-			dataType : this.dataType,
-			beforeSend : function(xhr) {
-				xhr.setRequestHeader("Accept", "application/json");
-				xhr.setRequestHeader("Content-Type",
-								"application/json");
-			},
-			data : this.param,
-			success : this.callbackSuccess,
-			error : function(xhr, status, e) {
-				alert("에러ㅇ : " + e);
-			},
-			complete : function(e) {
-			}
-		});
-	}
-}
-
-
-
-
 </script>
 </html>

@@ -22,12 +22,12 @@ public class BoardController {
 	BoardService bs;
 
 
-	@RequestMapping(value="/menutab/knotice", method= RequestMethod.GET)
+	@RequestMapping(value="/notice/notice", method= RequestMethod.GET)
 	public String knotice(Model model){
-		return "menutab/knotice";
+		return "notice/notice";
 	}
 	
-	@RequestMapping(value="/menutab/knotice", method= RequestMethod.POST)
+	@RequestMapping(value="/notice/notice", method= RequestMethod.POST)
 	public @ResponseBody ModelMap getBoardResult(@RequestBody BoardInfo board){
 		ModelMap model = new ModelMap();
 		try{
@@ -38,12 +38,12 @@ public class BoardController {
 		return model;
 	}
 	
-	@RequestMapping(value="/menutab/write", method= RequestMethod.GET)
+	@RequestMapping(value="/notice/write", method= RequestMethod.GET)
 	public String write(Model model){
-		return "menutab/write";
+		return "notice/write";
 	}
 	
-	@RequestMapping(value="/menutab/write", method= RequestMethod.POST)
+	@RequestMapping(value="/notice/write", method= RequestMethod.POST)
 	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board){
 		bs.inserBoardInfo(board);
 		return bs.getBoardInfoList(board);

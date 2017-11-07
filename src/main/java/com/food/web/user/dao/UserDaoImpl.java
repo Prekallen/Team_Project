@@ -24,7 +24,7 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 
 	@Override
 	public int insertUser(UserInfo user) {
-		return this.insertUser(user);
+		return this.getSqlSession().insert("user.INSERT_USER", user);
 	}
 
 	@Override

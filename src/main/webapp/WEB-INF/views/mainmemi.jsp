@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -166,7 +166,7 @@
 			</form>
 			<h2 class="hide">메인메뉴</h2>
 			<div id="search" style="padding-top: 27px;">
-				<form action ="${rootPath}/searchPage" method="get">
+				<form action ="${rootPath}/search/searchPage" method="get">
 				<input type="text" id="search_input" name="query" autocomplete="on"
 					value=""
 					style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"
@@ -180,10 +180,10 @@
 			<div id="gnb_wrap">
 				<ul id="gnb"
 					style="height: 47px; width: 450px; margin-right: 55px; margin-left: 66px;">
-					<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
+					<li class="fir"><a href="${rootPath}/intro">Feedback</a>
 						<ul class="sub1">
-							<li><a href="${rootPath}/menutab/kintro">소개</a></li>
-							<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
+							<li><a href="${rootPath}/intro">소개</a></li>
+							<li><a href="${rootPath}/notice/notice">공지사항</a></li>
 
 						</ul></li>
 					<li><a href="${rootPath}/menutab/kgroup">종류별</a>
@@ -371,7 +371,7 @@
 		});
 		$("#logBtn").click(function(){
 			var paramIds = "userId,userPwd";
-			var au = new AjaxUtil("/menutab/klogin",paramIds); 
+			var au = new AjaxUtil("/user/login",paramIds); 
 			au.send();
 		});
 	</script>
