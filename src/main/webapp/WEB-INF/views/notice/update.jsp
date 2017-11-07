@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <bTitle>글 수정하기</bTitle>
@@ -10,7 +9,6 @@
 <body>
 
 	<div class="kwrap">
-		<c:import url="${sidemenuUrl}" />
 
 
 		<form name="f1">
@@ -50,11 +48,10 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 
-		<c:import url="${footerUrl}" />
 	</div>
 	<script>
 	function boardList(){
-		location.href = "/menutab/knotice";
+		location.href = "/notice/notice";
 	}
 	
 	
@@ -82,18 +79,18 @@
 				return;
 			}
 			var param = "bName,bTitle,bContents";
-			var au = new AjaxUtil("menutab/write", param);
+			var au = new AjaxUtil("notice/write", param);
 			au.setCallbackSuccess(callbackWrite);
 			au.send();
 
-			//location.href = "${rootPath}/menutab/knotice";
+			//location.href = "${rootPath}/notice/notice";
 
 			function callbackWrite(results) {
 				if (results == 0) {
 					alert(OMG);
 					return;
 				} else if (results == 1) {
-					location.href = "${rootPath}/menutab/knotice";
+					location.href = "${rootPath}/notice/notice";
 					return;
 				}
 			}

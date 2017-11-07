@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="footerUrl" value="/WEB-INF/views/test/footer.jsp" />
+<c:set var="footerUrl" value="/WEB-INF/views/common/footer.jsp" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
@@ -43,6 +43,7 @@ $(document).ready(function(){
 					query = query.replace(/(\s*)/g, "")
 					if (query == null || query == "") {
 						alert("입력 좀...");
+						history.go(-1);
 					} else {
 						var au = new AjaxUtil("/search/searchPage");
 						var param = {};

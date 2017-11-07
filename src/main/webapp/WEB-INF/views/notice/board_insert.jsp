@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <Title>글 작성하기</Title>
@@ -10,7 +9,6 @@
 <body>
 
 	<div class="kwrap">
-		<c:import url="${sidemenuUrl}" />
 
 
 		<form name="f1">
@@ -40,7 +38,7 @@
 
 					</table>
 
-					<a href="${rootPath}/menutab/knotice"
+					<a href="${rootPath}/notice/notice"
 						class="btn btn-primary pull-right">뒤로가기</a> <input type="button"
 						class="btn btn-primary" id="send" value="글쓰기">
 				</div>
@@ -50,7 +48,7 @@
 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div>
 
-		<c:import url="${footerUrl}" />
+	
 	</div>
 	<script>
 		$("#send").click(function() {
@@ -77,18 +75,18 @@
 				return;
 			}
 			var param = "bName,bTitle,bContents";
-			var au = new AjaxUtil("menutab/board_insert",param);
+			var au = new AjaxUtil("notice/board_insert",param);
 			au.setCallbackSuccess(callbackWrite);
 			au.send();
 			
-			location.href = "${rootPath}/menutab/knotice";
+			location.href = "${rootPath}/notice/notice";
 
 			function callbackWrite(results) {
 				if (results == 0) {
 					alert(OMG);
 					return;
 				} else if (results == 1) {
-					location.href = "${rootPath}/menutab/knotice";
+					location.href = "${rootPath}/notice/notice";
 					return;
 				}
 			}

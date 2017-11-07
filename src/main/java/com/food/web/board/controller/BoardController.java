@@ -38,37 +38,25 @@ public class BoardController {
 		return model;
 	}
 	
-<<<<<<< HEAD
-	@RequestMapping(value="/notice/write", method= RequestMethod.GET)
-=======
-	@RequestMapping(value="/menutab/board_insert", method= RequestMethod.GET)
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
+	@RequestMapping(value="/notice/board_insert", method= RequestMethod.GET)
 	public String write(Model model){
-<<<<<<< HEAD
-		return "notice/write";
-=======
-		return "menutab/board_insert";
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
+		return "notice/board_insert";
 	}
 	
-<<<<<<< HEAD
-	@RequestMapping(value="/notice/write", method= RequestMethod.POST)
-=======
-	@RequestMapping(value="/menutab/board_insert", method= RequestMethod.POST)
->>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
+	@RequestMapping(value="/notice/board_insert", method= RequestMethod.POST)
 	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board){
 		bs.inserBoardInfo(board);
 		return bs.getBoardInfoList(board);
 	}
 	
-	@RequestMapping(value="/menutab/board_view", method= RequestMethod.GET)
+	@RequestMapping(value="/notice/board_view", method= RequestMethod.GET)
 	public String board_view(Model model){
-		return "menutab/board_view";
+		return "notice/board_view";
 	}
 	
-	@RequestMapping(value="/menutab/update", method= RequestMethod.GET)
+	@RequestMapping(value="/notice/update", method= RequestMethod.GET)
 	public String update(Model model){
-		return "menutab/update";
+		return "notice/update";
 	}
 	
 }	

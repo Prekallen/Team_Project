@@ -37,15 +37,6 @@ public class HomeController {
 		
 		return "home";
 	}
-	@RequestMapping(value="/notice/notice", method= RequestMethod.GET)
-	public String notice(Model model){
-		return "notice/notice";
-	}
-
-	@RequestMapping(value="/user/login", method= RequestMethod.GET)
-	public String login(Model model){
-		return "user/login";
-	}
 
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
 	public String mainmemi(Model model){
