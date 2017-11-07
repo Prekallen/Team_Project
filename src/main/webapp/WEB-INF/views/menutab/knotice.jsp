@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
 	<div class="kwrap">
 		<c:import url="${sidemenuUrl}" />
 
@@ -15,7 +16,7 @@
 		<ul class="nav-navbar-nav navbar-right"></ul>
 		<div class="container" style="padding-top: 200px;">
 			<div class="row">
-				<table  class="table table-striped" style="text-align: center"
+				<table class="table table-striped" style="text-align: center"
 					border="1px solid #dddddd">
 
 					<thead>
@@ -28,11 +29,11 @@
 						</tr>
 					</thead>
 					<tbody id="boardList">
-					
+
 					</tbody>
-					
+
 				</table>
-				<a href="${rootPath}/menutab/write"
+				<a href="${rootPath}/menutab/board_insert"
 					class="btn btn-primary pull-right">글쓰기</a>
 			</div>
 		</div>
@@ -65,13 +66,16 @@
 						
 						html += '<tr>';
 						html += '<td>'+bnum+'</td>';
-						html += '<td>'+btitle+'</td>';
+						html += '<td class="boardTitle"><a href= onclick="goView(" + ${bTitle}+")">'+btitle+'</a></td>';
 						html += '<td>'+bname+'</td>';
 						html += '<td>'+credat+'</td>';
 						html += '</tr>';
 						
 					}
 					$("#boardList").append(html);
+				}
+				function goView(){
+					location.href = "${rootPath}/menutab/board_view";
 				}
 			});
 		</script>
