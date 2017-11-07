@@ -21,10 +21,15 @@ $(document).ready(function(){
 		
 	if(userId!=""&&userId!=null){
 		$("#logOut").html("로그아웃");
+		$("#logOut").click(function(){
+			alert("꺼지라고");
+		})
 	}else{
-		$("#logOut").html("로그인");	
+		$("#logOut").html("로그인");
 	}
 }) ;
+
+
 
 
 </script>
