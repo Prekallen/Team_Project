@@ -18,18 +18,18 @@
 					      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top:20px;">×</span>
 					      </br>
 					      <label><b>아이디</b></label></br>
-					      <input type="text" placeholder="Enter ID" id="signUserId" name="signUserId" required style="width: 300px;">
+					      <input type="text" placeholder="Enter ID" id="signUserId" name="signUserId" required style="width: 300px;" data-id="userId">
 					      <button type="submit" onclick="registerCheckFunction();" style="width: 66px;height:40px;margin-top: 0px;padding-left: 6px;padding-right: 6px;"
 					      class="btn btn-facebook-white">중복체크</button>
 							</br>
 					      <label><b>비밀번호</b></label></br>
-					      <input type="password" placeholder="Enter Password" id="signUserPwd" name="signUserPwd" required style="width: 370px;">
+					      <input type="password" placeholder="Enter Password" id="signUserPwd" name="signUserPwd" required style="width: 370px;" data-id="userPwd">
 							</br>
 					      <label><b>비밀번호 확인</b></label></br>
 					      <input type="password" placeholder="Repeat Password" id="signUserPwdRepeat" name="signUserPwdRepeat" required style="width: 370px;">
 					      	</br>
 					      <label><b>Email</b></label></br>
-					      <input type="text" placeholder="Enter Email" id="signEmail" name="signEmail" style="width: 370px ;" required>				
+					      <input type="text" placeholder="Enter Email" id="signEmail" name="signEmail" style="width: 370px ;" required  data-id="email">				
 					 		</br>
 					      <div class="clearfix">
 					        <button type="button" id="signBtn" style="width: 370px ;height:40px;" class="btn btn-facebook-white">가입하기</button>
@@ -49,7 +49,7 @@
 							}
 						}
 						$("#signBtn").click(function(){
-							var signUserId = $(".fasf#signUserId").val();
+							var signUserId = $("#signUserId").val();
 							var signUserPwd = $("#signUserPwd").val();
 							var signUserPwdRepeat = $("#signUserPwdRepeat").val();
 							var signEmail = $("#signEmail").val();
@@ -58,8 +58,9 @@
 								alert("비밀번호 확인이 일치하지않습니다");
 								return;
 							}
-							var au = new AjaxUtil("/user/insert",param); 
+							var au = new AjaxUtil("/user/signup",param); 
 							au.send();
+
 						});
 					</script>
 					

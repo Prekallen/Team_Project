@@ -1,7 +1,5 @@
 package com.food.web.user.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +30,7 @@ public class UserController {
 			hm.put("url", "test/test2");
 		}else{
 			hm.put("msg", "아이디와 비밀번호를 확인해주세요.");
-			hm.put("url", "mainmemi");
+			hm.put("url", "test/test2");
 		}
 		return hm;
 	}
@@ -41,32 +39,19 @@ public class UserController {
 		return "user/login";
 	}
 	
-	@RequestMapping(value="/user/insert", method=RequestMethod.POST)
+	@RequestMapping(value="/user/signup", method=RequestMethod.POST)
 	public @ResponseBody ModelMap insert(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
-		if(us.insertUser(user)==1){
+		int ctn = us.insertUser(user);
+		if(ctn==1){
 			hm.put("msg", "회원가입성공");
-			hm.put("url", "mainmemi");
+			hm.put("url", "test/test2");
 		}else{
 			hm.put("msg", "안됨");
-			hm.put("url", "menutab/signup");
+			hm.put("url", "test/test2");
 		}
 		return hm;
 	}
 	
-	
-	
-	
-	
-
-	
-	@RequestMapping(value="/user/list", method=RequestMethod.POST)
-	public @ResponseBody List<UserInfo> getUserList(HttpSession hs, UserInfo user, ModelMap hm){
-		return us.selectUserList(user);
-	}
-	
-	
-
-
 	
 }
 	

@@ -21,23 +21,8 @@
 	<insert id="INSERT_USER" parameterType="user">
 		insert into feedback_user(userid, userpwd,email)
 	  	values(#{userId},#{userPwd},#{email})
-	  	
 	</insert>
-	
-	
-	
-	<update id="UPDATE_USER" parameterType="user">
-		update user_info
-		set username = #{username}
-	  <if test="age!=0">
-	  	, age =#{age}
-	  </if>
-	  where usernum=#{usernum}
-	</update>
-	<delete id="DELETE_USER" parameterType="user">
-		delete from user_info
-	    where usernum=#{usernum}
-	</delete>
+
 </mapper>
 
 

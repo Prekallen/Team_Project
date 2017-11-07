@@ -86,7 +86,7 @@ $(document).ready(function(){
 							htmlStr +='<div id="rt_form">';
 							htmlStr +='<div id="rt_info" style="width:200px;">';
 							if(photo_reference!=="없음"){
-htmlStr += '<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&photoreference=' + photo_reference + '" style="width: 200px;height: 100px;">';                       
+								htmlStr += '<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&photoreference=' + photo_reference + '" style="width: 200px;height: 100px;">';                       
 								}else{
 								htmlStr += '<p style="margin: auto; text-align:center; padding-top:40px;">none image</p>';
 								}

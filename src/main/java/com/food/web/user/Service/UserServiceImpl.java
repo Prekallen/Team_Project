@@ -22,44 +22,17 @@ public class UserServiceImpl implements UserService{
 		}
 		return null;
 	}
-	
-	@Override
-	public UserInfo selectUser(UserInfo user) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<UserInfo> selectUserList(UserInfo user) {
-		// TODO Auto-generated method stub
-		return ud.selectUserList(user);
-	}
 
 	@Override
 	public int insertUser(UserInfo user) {
 		return ud.insertUser(user);
 	}
 
+	
 	@Override
-	public int updatetUser(UserInfo user) {
+	public UserInfo selectUser(UserInfo user) {
 		// TODO Auto-generated method stub
-		return ud.updateUser(user);
+		return null;
 	}
-
-	@Override
-	public int deleteUser(UserInfo user) {
-		// TODO Auto-generated method stub
-		return ud.deletetUser(user);
-	}
-
-	@Override
-	public int insertUserList(UserInfo[] userList) {
-		int rCnt = 0;
-		for(UserInfo user : userList){
-			rCnt += ud.insertUser(user);
-		}
-		return rCnt;
-	}
-
 	
 }

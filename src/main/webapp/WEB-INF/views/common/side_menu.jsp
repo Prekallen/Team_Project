@@ -12,8 +12,21 @@
 <style>
 </style>
 </head>
-<body>
 
+<body>
+<script>
+var user = "${user}";
+var userId = "${user.userId}";
+$(document).ready(function(){
+		
+	if(userId!=""&&userId!=null){
+		$("#logOut").html("로그아웃");
+	}else{
+		$("#logOut").html("로그인");	
+	}
+}) ;
+
+</script>
 	<div id="wra	p2">
 
 		<div id="header2">
@@ -82,7 +95,7 @@
 				<dl id="util_menu">
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
+						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
 					<c:import url="${loginUrl}" />
 
 

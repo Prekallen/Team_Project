@@ -61,7 +61,11 @@ var AjaxUtil = function (url, params, type, dataType){
 			}else if($("#" + key).length==0){
 				throw new JSException(key+"에 해당하는 ID가 존재하지 않음.");
 			}
-			data[key] = $("#" + key).val();
+			var obj = $("#" + key);
+			if(obj.attr("data-id")){
+				key = obj.attr("data-id");
+			}
+			data[key] =obj.val();
 		}
 		return  JSON.stringify(data);
 	}
@@ -94,7 +98,7 @@ var AjaxUtil = function (url, params, type, dataType){
 	    ,   data     : this.param
 	    ,   success : this.callbackSuccess
 	    ,   error : function(xhr, status, e) {
-		    	alert("검색어를 입력해주세요 "+e);
+		    	alert("에러 : "+e);
 		},
 		complete : function(e) {
 		}
