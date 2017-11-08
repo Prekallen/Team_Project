@@ -92,7 +92,7 @@ $(document).ready(function(){
 								}
 							htmlStr +='</div>';
 							htmlStr +='<div id="rt_info" style="width:250px;">';
-							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer;"> <a onclick="document.getElementById(\'id03\').style.display=\'block\'">';
+							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer;"> <a onclick="googleMap()">';
 							htmlStr +=name +'</a></div></div>';
 							htmlStr +='<div id="rt_info">';
 							htmlStr +='주소 : ' + formatted_address+ '</br>';
@@ -101,7 +101,8 @@ $(document).ready(function(){
 						}
 						$("#ulList").html(htmlStr);
 					}
-					}
+					//document.getElementById(\'id03\').style.display=\'block\' == a tag
+				}
 });
 
 $("#nBtn").click(function() {
@@ -132,5 +133,12 @@ $("#nBtn").click(function() {
 				$("#spMiddle").append(html);
 			}
 		});
+// function googleMap()={
+// 	var au = new AjaxUtil("search/onMap");
+// 	var param={};
+// 	param["name"]=name;
+// 	au.param=JSON.stringify(param);
+// 	au.setCallbackSuccess(callback)
+// }
 </script>
 </html>
