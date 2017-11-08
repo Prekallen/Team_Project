@@ -86,6 +86,12 @@ public class BoardController {
 	public String update(Model model){
 		return "notice/update";
 	}
+	
+	@RequestMapping(value="/notice/board_delete", method= RequestMethod.GET)
+	public @ResponseBody int delete(@RequestBody int bNum, BoardInfo board){
+		bs.getBoardInfo(bNum);
+		return bs.deleteBoardInfo(board);
+	}
 
 	
 }	
