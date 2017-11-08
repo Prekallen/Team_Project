@@ -99,7 +99,6 @@ $(document).ready(function(){
 <!-- 					<img src="resources/img/login_click.png" /> -->
 				</dd>
 				<dl id="util_menu">
-					<p>${user.userId} 님 환영합니다.</p>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
 						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
