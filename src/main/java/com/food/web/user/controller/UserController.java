@@ -52,6 +52,19 @@ public class UserController {
 		return hm;
 	}
 	
+	@RequestMapping(value="/user/signout", method=RequestMethod.POST)
+	public @ResponseBody ModelMap delete(HttpSession hs, @RequestBody UserInfo user, ModelMap hm){
+		int dUser = us.deleteUser(user);
+		if(dUser==1){
+			hm.put("msg", "회원탈퇴되었습니다.");
+			hm.put("url", "user/signout");
+		}else{
+			hm.put("msg", "못나가");
+			hm.put("url", "test/test2");
+		}
+		return hm;
+	}
+	
 	
 }
 	

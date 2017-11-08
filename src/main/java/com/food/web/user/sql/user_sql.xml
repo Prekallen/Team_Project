@@ -5,6 +5,7 @@
 
 	<select id="SELECT_USER" parameterType="user" resultType="user">
 	  select
+	  	usernum,
 	    userid,
 	  	userpwd,
 	  	email
@@ -16,12 +17,20 @@
 	  <if test="userPwd!=null and userPwd!=''">
 	  	and	userpwd = #{userPwd}
 	  </if>
+	  <if test="userNum!=0">
+	  	and	usernum = #{userNum}
+	  </if>
 	</select>	
 	
 	<insert id="INSERT_USER" parameterType="user">
 		insert into feedback_user(userid, userpwd,email)
 	  	values(#{userId},#{userPwd},#{email})
 	</insert>
+	
+	<delete id="DELETE_USER" parameterType="user">
+		delete from feedback_user
+	    where userid=#{userId}
+	</delete>
 
 </mapper>
 
