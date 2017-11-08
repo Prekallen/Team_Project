@@ -86,6 +86,7 @@ $(document).ready(function(){
 			</a>
 		</div>
 	</div>
+	
 	<div id="wrap">
 		<div id="header">
 			<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> -->
@@ -289,12 +290,16 @@ $(document).ready(function(){
 		</div>
 		<!-- id="visual" -->
 		<div id="fix_bn">
-			<div class="fix_img"></div>
+			<div class="fix_img" style="background-color:#00000;">
+			<ul>
+				<c:forEach items="${keyWordList}" var="kw">
+			              <li><c:out value="${kw.keyword}" /></li>
+			    </c:forEach>
+			</ul>
+			
+			</div>
 		</div>
-		<hr />
-
-
-
+		<hr/>
 		<div id="divide_line">
 			<div class="dv_img"></div>
 			<div class="bk_line"></div>

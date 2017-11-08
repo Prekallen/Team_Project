@@ -1,38 +1,65 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="footerUrl" value="/WEB-INF/views/common/footer.jsp" />
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet"
-	href="<c:url value="/resources/css/common.css?version=${pVar}"/>" />
+<link rel="stylesheet"	href="<c:url value="/resources/css/common.css?version=${pVar}"/>" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name = "google-signin-client_id"content = "715472077883-i4716i3kbp6mvnfbehju5gkfaubamng4.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 <style>
 </style>
 </head>
+
 <body>
+<script>
+var user = "${user}";
+var userId = "${user.userId}";
+$(document).ready(function(){
+		
+	if(userId!=""&&userId!=null){
+		$("#logOut").html("로그아웃");
+		$("#logOut").click(function(){
+			alert("로그아웃됩니다.");
+			location.href="${rootPath}/user/logout";
+		});
+	}else{
+		$("#logOut").html("로그인");
+	}
+}) ;
 
 
-	<div id="wrap2">
+
+
+</script>
+	<div id="wrap2" style="z-index:20;">
 
 		<div id="header2">
 			<div id="search" style="padding-top: 20px;">
+			
+				<form action ="${rootPath}/search/searchPage" >
 				<ul>
-
-					<li><input type="text" id="searchBox" name="query"
-						autocomplete="on" value=""
-						style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold; margin-top: 0px;" /></li>
-					<li><input type="image"
-						src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png"
-						id="btn" style="width: 28px; height: 28px;"></li>
+			 		<li>
+			 			<input type="text" name="query" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;margin-top: 0px;"/><br/>
+			 		</li>
+ 					<li>
+ 						<input type="image" src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="btn" name="submit" value="submit" style="width: 28px; height: 28px;"/>
+					</li>
 				</ul>
+ 				</form>
+ 			
+
 			</div>
 
 			<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="${rootPath}/mainmemi">메인</a> <a
-					href="${rootPath}/menutab/kintro">Feedback소개</a> <a
-					href="${rootPath}/menutab/knotice">공지사항</a> <a>맛집 찾기</a>
+					href="${rootPath}/intro">Feedback소개</a> <a
+					href="${rootPath}/notice/board_list">공지사항</a> <a>맛집 찾기</a>
 
 				<div class="dropdown" id="dropgroup1">
 					<button class="dropbtn">
@@ -71,20 +98,22 @@
 				<li class="logo"><span style="font-size: 30px; cursor: pointer"
 					onclick="openNav()">&#9776; </span></li>
 
-				<dd class="clickme fl DB_etc10_1" style="width: 128px;">
-					<img src="resources/img/login_click.png" />
+<!-- 				<dd class="clickme fl DB_etc10_1" style="width: 128px;"> -->
+<!-- 					<img src="resources/img/login_click.png" /> -->
 				</dd>
+				
 				<dl id="util_menu">
+				<a onclick="signOut22();">Sign out</a>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
-					<c:import url="${kloginUrl}" />
+						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
+					<c:import url="${loginUrl}" />
 
 
 					<button
 						onclick="document.getElementById('id02').style.display='block'"
 						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
-					<c:import url="${ksignupUrl}" />
+					<c:import url="${signupUrl}" />
 				</dl>
 				<!-- id="util_menu" -->
 			</div>
@@ -95,164 +124,47 @@
 	<!-- id="wrap2" -->
 
 	<hr />
+<!-- // 		String result = (String) request.getParameter("query"); -->
+<!-- // 		session.setAttribute("result",result ); -->
+<!-- // 		response.sendRedirect("searchPage"); -->
+	<%
 
-
+	String result = request.getParameter("query");                // request에서 passwd 파라미터를 가져온다.
+	if(result!=("")){                                                        // 로그인 성공시
+		session.setAttribute("result", result);                 // 세션에 "id" 이름으로 id 등록
+// 		response.sendRedirect("searchPage");               // 로그인 성공 메인페이지 이동
+	}else{
+	%>                                                        // 로그인 실패
 	<script>
-		var token = "";
-		var html = "";
-		$("#btn")
-				.click(
-						function() {
-							var query = $("#searchBox").val();
-							query = query.replace(/(\s*)/g, "")
-							if (query == null || query == "") {
-								alert("입력 좀...");
-							} else {
-								var au = new AjaxUtil("/searchPage");
-								var param = {};
-								param["query"] = query;
-
-								param["token"] = null;
-
-								au.param = JSON.stringify(param);
-								au.setCallbackSuccess(callbackApi);
-								au.send();
-							}
-
-							function callbackApi(results) {
-								if (!results) {
-									alert(OMG);
-									return;
-								}
-								var mapInfoList = results["mapInfoList"];
-								for ( var idx in mapInfoList) {
-									var result = mapInfoList[idx];
-									var name = result.name;
-									var formatted_address = result.formatted_address;
-									var rating = result.rating;
-									token = result.next_page_token;
-									html += '<form class="form-signin" action="" id="ajax">';
-									html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
-									html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
-									html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-									html += '</form>';
-								}
-								$("#spMiddle").append(html);
-							}
-						});
-
-		$("#nBtn")
-				.click(
-						function() {
-
-							var au = new AjaxUtil("/searchPage");
-							var param = {};
-							param["token"] = token;
-							au.param = JSON.stringify(param);
-							au.setCallbackSuccess(callbackApi);
-							au.send();
-
-							function callbackApi(results) {
-
-								var html = '';
-								var mapInfoList = results["mapInfoList"];
-								for ( var idx in mapInfoList) {
-									var result = mapInfoList[idx];
-									var name = result.name;
-									var formatted_address = result.formatted_address;
-									var rating = result.rating;
-									token = result.next_page_token;
-									html += '<form class="form-signin" action="" id="ajax">';
-									html += '이름<input type="text" class="form-control"  name="name" value="'+name+'">';
-									html += '주소<input type="text" class="form-control" name="formatted_address" value="'+formatted_address+'">';
-									html += '레이팅<input type="text" class="form-control"  name="rating" value="'+rating+'">';
-									html += '</form>';
-								}
-								$("#spMiddle").append(html);
-							}
-						});
-
-		//Ajax//
-		var AjaxUtil = function(url, params, type, dataType) {
-			if (!url) {
-				alert("url정보가 없습니다.");
-				return null;
-			}
-			this.url = "${rootPath}/" + url;
-
-			var generateJSON = function(params) {
-				if (!params)
-					return "";
-				var paramArr = params.split(",");
-				var data = {};
-				for (var i = 0, max = paramArr.length; i < max; i++) {
-					var key = paramArr[i]
-					if ($("#" + key).length > 1) {
-						throw new JSException("동일 ID값이 존재함.");
-					} else if ($("#" + key).length == 0) {
-						throw new JSException(key + "에 해당하는 ID가 존재하지 않음.");
-					}
-					data[key] = $("#" + key).val();
-				}
-				return JSON.stringify(data);
-			}
-			this.type = type ? type : "POST";
-			this.dataType = dataType ? dataType : "json";
-			this.param = generateJSON(params);
-			this.callbackSuccess = function(json) {
-				var url = json.url;
-				var msg = json.msg;
-				if (msg) {
-					alert(msg);
-				}
-				if (url) {
-					pageMove(url);
-				}
-			}
-			this.setCallbackSuccess = function(callback) {
-				this.callbackSuccess = callback;
-			}
-
-			this.send = function() {
-				$.ajax({
-					type : this.type,
-					url : this.url,
-					dataType : this.dataType,
-					beforeSend : function(xhr) {
-						xhr.setRequestHeader("Accept", "application/json");
-						xhr
-								.setRequestHeader("Content-Type",
-										"application/json");
-					},
-					data : this.param,
-					success : this.callbackSuccess,
-					error : function(xhr, status, e) {
-						alert("에러 : " + e);
-					},
-					complete : function(e) {
-					}
-				});
-			}
-		}
-		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
-			document.getElementById("main").style.marginLeft = "250px";
-		}
-
-		function closeNav() {
-			document.getElementById("mySidenav").style.width = "0";
-			document.getElementById("main").style.marginLeft = "0";
-		}
-
-		var modal = document.getElementById('mySidenav');
-
-		//When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == sidenav) {
-				sidenav.style.display = "none";
-			}
-		}
+		history.go(-1);                                    // 이전 페이지로 이동
 	</script>
+	<%}%>
+<script>
 
+  function signOut22() {
+	  var GoogleAuth = gapi.auth2.getAuthInstance();
+	  GoogleAuth.signOut();
+  }
+
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.marginLeft = "0";
+}
+
+var modal = document.getElementById('mySidenav');
+
+// //When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+// 	if (event.target == sidenav) {
+// 		sidenav.style.display = "none";
+// 	}
+// }
+
+</script>
 </body>
 </html>

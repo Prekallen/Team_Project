@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/WEB-INF/views/common/kheader.jsp"%>
+<%@include file="/WEB-INF/views/common/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,6 +62,23 @@
 %>
 
 <body>
+<script>
+var user = "${user}";
+var userId = "${user.userId}";
+$(document).ready(function(){
+		
+	if(userId!=""&&userId!=null){
+		$("#logOut").html("로그아웃");
+		$("#logOut").click(function(){
+			alert("로그아웃됩니다.");
+			location.href="${rootPath}/user/logout";
+		});
+	}else{
+		$("#logOut").html("로그인");
+	}
+}) ;
+
+</script>
 	<div class="header_content">
 		<div class="hd_logo">
 			<a href="#"> <img src="resources/image/fdLogo.png" alt=""
@@ -69,6 +86,7 @@
 			</a>
 		</div>
 	</div>
+	
 	<div id="wrap">
 		<div id="header">
 			<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> -->
@@ -80,7 +98,7 @@
 				<dd class="util_first">
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">로그인</button>
+						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;" id="logOut"></button>
 					<div id="id01" class="modal">
 						<form class="modal-content animate"
 							action="${roodPath}/test/test2">
@@ -128,23 +146,32 @@
 
 						<form class="modal-content animate" action="/action_page2.php">
 							<div class="container" style="padding-left: 10px;">
-								<span
-									onclick="document.getElementById('id02').style.display='none'"
-									class="close" title="Close Modal" style="padding-top: 20px;">×</span>
-								</br> <label><b>아이디</b></label></br> <input type="text"
-									placeholder="Enter ID" name="id" required style="width: 300px;">
-								<button type="submit" onclick="registerCheckFunction();"
-									style="width: 66px; height: 40px; margin-top: 8px; padding-left: 6px; padding-right: 6px;">중복체크</button>
-								</br> <label><b>비밀번호</b></label></br> <input type="password"
-									placeholder="Enter Password" name="psw" required
-									style="width: 370px;"> </br> <label><b>비밀번호 확인</b></label></br> <input
-									type="password" placeholder="Repeat Password" name="psw-repeat"
-									required style="width: 370px;"> </br> <label><b>Email</b></label></br>
-								<input type="text" placeholder="Enter Email" name="email"
-									style="width: 370px;" required> </br>
+								<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top: 20px;">×</span>
+								
+								</br><label>
+									<b>아이디</b>
+								</label></br>
+								<input type="text" id="signUserId" data-id="userId" placeholder="Enter ID" name="id" required style="width: 300px;">
+								
+								<button type="submit" onclick="registerCheckFunction();" style="width: 66px; height: 40px; margin-top: 8px; padding-left: 6px; padding-right: 6px;">중복체크</button>
+								
+								</br> <label>
+									<b>비밀번호</b>
+								</label></br>
+								<input type="password" id="signUserPwd" data-id="userPwd" placeholder="Enter Password" name="psw" required style="width: 370px;">
+								 
+								</br> <label>
+									<b>비밀번호 확인</b>
+								</label></br> 
+								<input type="password" id="signUserPwdRepeat" placeholder="Repeat Password" name="psw-repeat" required style="width: 370px;">
+								 
+								</br> <label>
+									<b>Email</b>
+								</label></br>
+								<input type="text" id="signEmail" data-id="email" placeholder="Enter Email" name="email" style="width: 370px;" required> </br>
+								
 								<div class="clearfix">
-									<button type="submit" class="signupbtn"
-										style="width: 370px; height: 40px;">가입하기</button>
+									<button type="button" class="signupbtn" id="signBtn" style="width: 370px; height: 40px;">가입하기</button>
 								</div>
 							</div>
 						</form>
@@ -166,7 +193,7 @@
 			</form>
 			<h2 class="hide">메인메뉴</h2>
 			<div id="search" style="padding-top: 27px;">
-				<form action ="${rootPath}/searchPage" method="get">
+				<form action ="${rootPath}/search/searchPage" method="get">
 				<input type="text" id="search_input" name="query" autocomplete="on"
 					value=""
 					style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"
@@ -180,10 +207,10 @@
 			<div id="gnb_wrap">
 				<ul id="gnb"
 					style="height: 47px; width: 450px; margin-right: 55px; margin-left: 66px;">
-					<li class="fir"><a href="${rootPath}/menutab/kintro">Feedback</a>
+					<li class="fir"><a href="${rootPath}/intro">Feedback</a>
 						<ul class="sub1">
-							<li><a href="${rootPath}/menutab/kintro">소개</a></li>
-							<li><a href="${rootPath}/menutab/knotice">공지사항</a></li>
+							<li><a href="${rootPath}/intro">소개</a></li>
+							<li><a href="${rootPath}/notice/board_list">공지사항</a></li>
 
 						</ul></li>
 					<li><a href="${rootPath}/menutab/kgroup">종류별</a>
@@ -263,12 +290,16 @@
 		</div>
 		<!-- id="visual" -->
 		<div id="fix_bn">
-			<div class="fix_img"></div>
+			<div class="fix_img" style="background-color:#00000;">
+			<ul>
+				<c:forEach items="${keyWordList}" var="kw">
+			              <li><c:out value="${kw.keyword}" /></li>
+			    </c:forEach>
+			</ul>
+			
+			</div>
 		</div>
-		<hr />
-
-
-
+		<hr/>
 		<div id="divide_line">
 			<div class="dv_img"></div>
 			<div class="bk_line"></div>
@@ -371,8 +402,22 @@
 		});
 		$("#logBtn").click(function(){
 			var paramIds = "userId,userPwd";
-			var au = new AjaxUtil("/menutab/klogin",paramIds); 
+			var au = new AjaxUtil("/user/login",paramIds); 
 			au.send();
+		});
+		$("#signBtn").click(function(){
+			var signUserId = $("#signUserId").val();
+			var signUserPwd = $("#signUserPwd").val();
+			var signUserPwdRepeat = $("#signUserPwdRepeat").val();
+			var signEmail = $("#signEmail").val();
+			var param = "signUserId,signUserPwd,signEmail";
+			if(signUserPwd!==signUserPwdRepeat){
+				alert("비밀번호 확인이 일치하지않습니다");
+				return;
+			}
+			var au = new AjaxUtil("/user/signup",param); 
+			au.send();
+
 		});
 	</script>
 
