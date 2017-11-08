@@ -6,8 +6,6 @@
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="google-translate-customization"
-	content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta>
 <!-- 세계 언어 선택 메타 태그 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="Generator" content="Notepad++" />
@@ -20,23 +18,18 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
 	href="apple-icon-114x114.png">
 <title>맛집 검색 웹 Feedback</title>
-<link rel="stylesheet" type="text/css" href="resources/css/base.css"
-	media="all" />
-<link rel="stylesheet" type="text/css" href="resources/css/main.css"
-	media="all" />
-<link rel="stylesheet" type="text/css" href="resources/css/common.css"
-	media="all" />
+<link rel="stylesheet" type="text/css" href="resources/css/base.css"	media="all" />
+<link rel="stylesheet" type="text/css" href="resources/css/main.css"	media="all" />
+<link rel="stylesheet" type="text/css" href="resources/css/common.css"	media="all" />
 <script type="text/javascript" src="resources/js/jquery-1.10.2.min.js"></script>
 <!-- 제이쿼리 라이브러리 연동 -->
 
-<script type="text/javascript"
-	src="resources/js/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript"	src="resources/js/jquery.easing.1.3.min.js"></script>
 <script type="text/javascript" src="resources/js/swipe.js"></script>
 <!-- 터치 슬라이드 플러그인 연동 -->
 <script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
 <!-- bxSlider 플러그인 연동 -->
-<script type="text/javascript"
-	src="resources/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript"	src="resources/js/jquery-ui-1.10.4.custom.min.js"></script>
 <!-- UI 플러그인 연동 -->
 <script type="text/javascript" src="resources/js/jquery.cookie.js"></script>
 <!-- 쿠키 플러그인 연동 -->
@@ -89,7 +82,6 @@ $(document).ready(function(){
 	
 	<div id="wrap">
 		<div id="header">
-			<!-- <h1><a href="#"><img src="resources/img/neon_logo.png" alt="미미미" /></a></h1> -->
 			<dl id="util_menu" style="padding-left: 15px;">
 				<dt class="hide">유틸메뉴</dt>
 				<dd class="clickme fl DB_etc10_1" style="width: 120px;">
@@ -110,16 +102,16 @@ $(document).ready(function(){
 									style="padding-top: 30px;">
 									<label><b>아이디&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label> <input
 										type="text" id="userId" style="width: 299px;" placeholder="ID"
-										name="id" required value="${userId}"> </br>
-									<input type="checkbox" checked="checked"> 아이디 기억하기 </br> <label><b>비밀번호&nbsp;</b></label>
+										name="id" required value="${userId}"> <br>
+									<input type="checkbox" checked="checked"> 아이디 기억하기 <br> <label><b>비밀번호&nbsp;</b></label>
 									<input type="password" placeholder="Password" name="pwd"
-										id="userPwd" style="width: 300px;" required> </br>
-									</br>
+										id="userPwd" style="width: 300px;" required> <br>
+									<br>
 									<button  id="logBtn" type="button" style="width: 370px; height: 40px;"
 										>로그인</button>
-									</br>
+									<br>
 								</div>
-								</br>
+								<br>
 							</div>
 						</form>
 					</div>
@@ -138,9 +130,8 @@ $(document).ready(function(){
 					</script>
 
 
-					<button
-						onclick="document.getElementById('id02').style.display='block'"
-						style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
+<button onclick="document.getElementById('id02').style.display='block'"	style="width: auto; background-color: #ffffff; color: #000000; 
+																			font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
 
 					<div id="id02" class="modal">
 
@@ -148,27 +139,27 @@ $(document).ready(function(){
 							<div class="container" style="padding-left: 10px;">
 								<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top: 20px;">×</span>
 								
-								</br><label>
+								<br><label>
 									<b>아이디</b>
-								</label></br>
+								</label><br>
 								<input type="text" id="signUserId" data-id="userId" placeholder="Enter ID" name="id" required style="width: 300px;">
 								
 								<button type="submit" onclick="registerCheckFunction();" style="width: 66px; height: 40px; margin-top: 8px; padding-left: 6px; padding-right: 6px;">중복체크</button>
 								
-								</br> <label>
+								<br> <label>
 									<b>비밀번호</b>
-								</label></br>
+								</label><br>
 								<input type="password" id="signUserPwd" data-id="userPwd" placeholder="Enter Password" name="psw" required style="width: 370px;">
 								 
-								</br> <label>
+								<br> <label>
 									<b>비밀번호 확인</b>
-								</label></br> 
+								</label><br> 
 								<input type="password" id="signUserPwdRepeat" placeholder="Repeat Password" name="psw-repeat" required style="width: 370px;">
 								 
-								</br> <label>
+								<br> <label>
 									<b>Email</b>
-								</label></br>
-								<input type="text" id="signEmail" data-id="email" placeholder="Enter Email" name="email" style="width: 370px;" required> </br>
+								</label><br>
+								<input type="text" id="signEmail" data-id="email" placeholder="Enter Email" name="email" style="width: 370px;" required> <br>
 								
 								<div class="clearfix">
 									<button type="button" class="signupbtn" id="signBtn" style="width: 370px; height: 40px;">가입하기</button>
@@ -190,17 +181,14 @@ $(document).ready(function(){
 				</dd>
 			</dl>
 			<!-- id="util_menu" -->
-			</form>
 			<h2 class="hide">메인메뉴</h2>
 			<div id="search" style="padding-top: 27px;">
 				<form action ="${rootPath}/search/searchPage" method="get">
 				<input type="text" id="search_input" name="query" autocomplete="on"
-					value=""
-					style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"
+					value="" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"
 					placeholder="ex)강남, 맛집, 이태원" value="<%=query%>"/>
 				<input type="image"
-					src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png"
-					id="searchBtn"
+					src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="searchBtn"
 					style="width: 30px; height: 30px; background-color: #26d4d4;">
 				</form>
 			</div>
@@ -215,52 +203,35 @@ $(document).ready(function(){
 						</ul></li>
 					<li><a href="${rootPath}/menutab/kgroup">종류별</a>
 						<ul class="sub2">
-							<li><a href="#">한식</a></li>
-							<li><a href="#">양식</a></li>
-							<li><a href="#">중식</a></li>
-							<li><a href="#">일식</a></li>
-							<li><a href="#">분식</a></li>
-							<li><a href="#">기타</a></li>
+							<li><a href="#">한식</a></li><li><a href="#">양식</a></li>
+							<li><a href="#">중식</a></li><li><a href="#">일식</a></li>
+							<li><a href="#">분식</a></li><li><a href="#">기타</a></li>
 						</ul></li>
 					<li><a href="${rootPath}/menutab/klocal" class="active">지역별</a>
 						<ul class="sub3">
-							<li><a href="#">도봉구</a></li>
-							<li><a href="#">강북구</a></li>
-							<li><a href="#">노원구</a></li>
-							<li><a href="#">은평구</a></li>
-							<li><a href="#">성북구</a></li>
-							<li><a href="#">중랑구</a></li>
-							<li><a href="#">서대문구</a></li>
-							<li><a href="#">종로구</a></li>
-							<li><a href="#">동대문구</a></li>
-							<li><a href="#">강서구</a></li>
-							<li><a href="#">마포구</a></li>
-							<li><a href="#">중구</a></li>
-							<li><a href="#">성동구</a></li>
-							<li><a href="#">용산구</a></li>
-							<li><a href="#">광진구</a></li>
-							<li><a href="#">강동구</a></li>
-							<li><a href="#">양천구</a></li>
-							<li><a href="#">영등포구</a></li>
-							<li><a href="#">동작구</a></li>
-							<li><a href="#">서초구</a></li>
-							<li><a href="#">강남구</a></li>
-							<li><a href="#">송파구</a></li>
-							<li><a href="#">구로구</a></li>
-							<li><a href="#">금천구</a></li>
+							<li><a href="#">도봉구</a></li>	<li><a href="#">강북구</a></li>
+							<li><a href="#">노원구</a></li>	<li><a href="#">은평구</a></li>
+							<li><a href="#">성북구</a></li>	<li><a href="#">중랑구</a></li>
+							<li><a href="#">서대문구</a></li><li><a href="#">종로구</a></li>
+							<li><a href="#">동대문구</a></li><li><a href="#">강서구</a></li>
+							<li><a href="#">마포구</a></li>	<li><a href="#">중구</a></li>
+							<li><a href="#">성동구</a></li>	<li><a href="#">용산구</a></li>
+							<li><a href="#">광진구</a></li>	<li><a href="#">강동구</a></li>
+							<li><a href="#">양천구</a></li>	<li><a href="#">영등포구</a></li>
+							<li><a href="#">동작구</a></li>	<li><a href="#">서초구</a></li>
+							<li><a href="#">강남구</a></li>	<li><a href="#">송파구</a></li>
+							<li><a href="#">구로구</a></li>	<li><a href="#">금천구</a></li>
 							<li><a href="#">관악구</a></li>
 						</ul></li>
-
-				</ul>
+					</ul>
 				<!-- id="gnb" -->
-
 			</div>
 			<!-- id="gnb_wrap"> -->
 		</div>
 		<!-- id="header" -->
-		<hr />
+		<hr/>
 
-
+<div id="divine_middle" style="height:500px;">
 		<div id="visual">
 			<div id="mySwipe" class="swipe">
 				<ul class="touch_banner swipe-wrap">
@@ -269,43 +240,43 @@ $(document).ready(function(){
 					<li class="mi03"><a href="#"></a></li>
 				</ul>
 			</div>
-			<ul class="touch_bullet">
-				<li><img src="resources/img/visual_bullet_on.png"
-					class="active" alt="" /></li>
-				<li><img src="resources/img/visual_bullet_off.png" alt="" /></li>
-				<li><img src="resources/img/visual_bullet_off.png" alt="" /></li>
-				<!-- 			<li><img src="resources/img/visual_bullet_off.png" alt="" /></li>
-			<li><img src="resources/img/visual_bullet_off.png" alt="" /></li>
-			<li><img src="resources/img/visual_bullet_off.png" alt="" /></li>
-			<li><img src="resources/img/visual_bullet_off.png" alt="" /></li> -->
-			</ul>
-			<p class="touch_left_btn">
-				<a href="#"><img src="resources/img/slide-left-button.png"
-					alt="이전 배너" /></a>
-			</p>
-			<p class="touch_right_btn">
-				<a href="#"><img src="resources/img/slide-right-button.png"
-					alt="다음 배너" /></a>
-			</p>
+				<p class="touch_left_btn">
+					<a href="#"><img src="resources/img/slide-left-button.png" alt="이전 배너" /></a>
+				</p>
+				<p class="touch_right_btn">
+					<a href="#"><img src="resources/img/slide-right-button.png"	alt="다음 배너" /></a>			
+				</p>
 		</div>
 		<!-- id="visual" -->
-		<div id="fix_bn">
-			<div class="fix_img" style="background-color:#00000;">
-			<ul>
-				<c:forEach items="${keyWordList}" var="kw">
-			              <li><c:out value="${kw.keyword}" /></li>
-			    </c:forEach>
-			</ul>
-			
-			</div>
-		</div>
+
+</script>
+		<div id="fix_bn" style="height:500px;">
+		<marquee behavior="scroll" direction="up" scrollamount="10" scrolldelay="1">
+				<ul id="scrollDiv" style="padding-top:100px; padding-bottom:200px;padding-left:300px;padding-right:300px;height:500px; overflow:hidden">										
+					<c:forEach items="${keyWordList}" var="kw"> 
+			              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+			              <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="10">	
+			              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
+				              	&nbsp;<c:out value="${kw.ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
+				             </a>
+				             </marquee>
+				           </li>
+		       
+				    </c:forEach>				    		    
+				</ul>
+					</marquee>	
+	
+
+
+
+
 		<hr/>
 		<div id="divide_line">
 			<div class="dv_img"></div>
 			<div class="bk_line"></div>
 			<div class="dv_text">
 				<p>
-					서울지역 맛집 검색은?<br />맛zip !! from Feedback
+					서울지역 맛집 검색은?<br>맛zip !! from Feedback
 				</p>
 				<!-- <div class="uline_w"></div> -->
 				<span> 맛zip은 서울 지역 맛집을 검색 할 수 있는 웹입니다.<br /> 당신의 원하는 음식을
@@ -315,16 +286,8 @@ $(document).ready(function(){
 		</div>
 
 	</div>
-	<!-- id="contents" -->
-	<hr />
-
-	<div class="btn btn-primary" style="cursor: pointer;"
-		onclick="window.scrollTo(0,0);">TOP</div>
-
-
-
-
-	<div id="footer_wrap">
+	<hr/>
+	<div id="footer_wrap" style="margin-top:50px;">
 		<div class="footer_cover"></div>
 		<div id="inner_footer">
 			<h3 class="footer_logo">
@@ -342,8 +305,7 @@ $(document).ready(function(){
 							<option value="http://www.diningcode.com/">다이닝코드</option>
 							<option value="https://www.mangoplate.com/">망고플레이트</option>
 							<option value="http://www.cafemememi.com/">카페 mememi</option>
-						</select> <input type="image" src="resources/img/rel_site_btn.gif"
-							alt="관련 사이트 이동" />
+						</select> <input type="image" src="resources/img/rel_site_btn.gif" alt="관련 사이트 이동" />
 					</fieldset>
 				</form>
 			</div>
@@ -420,13 +382,8 @@ $(document).ready(function(){
 
 		});
 	</script>
-
-
-
-
 </body>
 </html>
-
 
 <style>
 #btn btn-primary {
@@ -434,9 +391,3 @@ $(document).ready(function(){
 	top: 100px
 }
 </style>
-
-
-
-
-
-

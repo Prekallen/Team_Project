@@ -39,7 +39,7 @@
 #mySwipe .mi03{background: url(../images/templefood.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%;}
 
 #fix_bn{width: 50%; margin-left: 50%; }
-#fix_bn .fix_img{background: url(../images/hungry.jpg) no-repeat center; background-size: cover; height: 500px; width: 100%; }
+#fix_bn .fix_img{background-color: #f5f5ef; background-size: cover; height: 500px; width: 100%; }
 
 
 /* 인기상품 */

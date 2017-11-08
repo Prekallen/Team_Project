@@ -12,7 +12,7 @@ body{overflow-x:hidden;}
 #wrap3{width: 100%; margin: 0; margin-top: 600px; background-color: #f5f5ef; position: relative;}/*서치페이지*/
 #header{height: 80px; position: relative; z-index: 10; width: 100%; background-color: #ffffff; margin: 0 auto;}
 #header2{height: 70px; position: relative; z-index: 10; width: 100%; background-color: #26d4d4; margin: 0 auto;}
-#footer_wrap{width:100%; margin:0 auto; background: url(../images/picnic.jpg) no-repeat center; background-size: cover; position: relative; height: 280px;}
+#footer_wrap{width:100%; margin-top: 50px; background: url(../images/picnic.jpg) no-repeat center; background-size: cover; position: relative; height: 280px;}
 #inner_footer{width: 653px; height: 145px; margin: 0 auto; position: relative; top: 80px; padding: 15px 0 0 350px;}
 
 /* 기본 글꼴 및 링크 텍스트 꾸미기 */
@@ -280,4 +280,13 @@ span.psw {    float: right;    padding-top: 16px;}
 					align:left; margin:0px;}
 .bcontents{width:350px; height:100px; margin:0px; float:left; font-family: 'NanumSquareRound'; font-weight:bold;}
 
-
+.AutoScroll {
+        background-color: #191919;
+        color: #fff;
+        position: relative;
+        top: 100px;
+        max-height: 400px;
+        overflow-y: scroll;
+        padding: 20px;
+        border: 1px solid #121212;
+      }
