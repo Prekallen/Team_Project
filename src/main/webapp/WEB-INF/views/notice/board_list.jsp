@@ -9,35 +9,22 @@
 
 <body>
 
-	<div class="kwrap">
+	<div class="notice-wrap" style="background-color:#f5f5ef; padding-top: 70px;">
+		<div class="notice-container" style="padding-top: 50px; padding-bottom:50px;
+		width:1100px; min-height:1000px; margin:0 auto;">
+			<div class="notice-row">
+			<h6 style="font-size:30px; background-color: #f5f5ef; font-weight:bold; padding-bottom:30px;">피드백 소식</h6>
 
+				
+					<ul id="boardList" style="min-height:800	px; width:1000px;">
+					</ul>
 
-		<ul class="nav-navbar-nav navbar-right"></ul>
-		<div class="container" style="padding-top: 200px;">
-			<div class="row">
-				<table class="table table-striped" style="text-align: center"
-					border="1px solid #dddddd">
-
-					<thead>
-
-						<tr>
-							<th style="background-color: #eeeeee; text-align: center;">번호</th>
-							<th style="background-color: #eeeeee; text-align: center;">제목</th>
-							<th style="background-color: #eeeeee; text-align: center;">작성자</th>
-							<th style="background-color: #eeeeee; text-align: center;">작성일</th>
-						</tr>
-					</thead>
-					<tbody id="boardList">
-
-					</tbody>
-
-				</table>
-				<a href="${rootPath}/notice/board_insert"
-					class="btn btn-primary pull-right">글쓰기</a>
+<%-- 				<a href="${rootPath}/notice/board_insert"
+					class="btn btn-primary pull-right">글쓰기</a> --%>
 			</div>
 		</div>
-		<div class="btn btn-primary" style="cursor: pointer;"
-			onclick="window.scrollTo(0,0);">TOP</div>
+<!-- 		<div class="btn btn-primary" style="cursor: pointer;"
+			onclick="window.scrollTo(0,0);">TOP</div> -->
 		<script>
 			$(document).ready(function(){
 				
@@ -57,22 +44,25 @@
 					
 					
 					var getBoardInfoList = results["getBoardInfoList"];
+					var htmlStr = "";
 					for ( var idx in getBoardInfoList) {
 						var result = getBoardInfoList[idx];
 						var bnum = result.bNum;
 						var btitle = result.bTitle;
 						var bname = result.bName;
+						var bcontents = result.bcontents;
 						var credat = result.credat;
 						// style = "cursor:pointer;" onClick = "location.href="${rootPath}/menutab/board_view?num=1";
-						html += '<tr onClick="boardPage('+bnum+')">';
-						html += '<td>'+bnum+'</td>';
-						html += '<td>'+btitle+'</td>';
-						html += '<td>'+bname+'</td>';
-						html += '<td>'+credat+'</td>';
-						html += '</tr>';
+ 						htmlStr += '<notice style="font-family:\'NanumSquareRound\'">';
+						htmlStr += '<div id="btitle" onclick="" ';
+						htmlStr += 'style="text-align:left; font-size:20px;background-color: #f5f5ef; font-weight:bold;">';
+						htmlStr +=	'<a href="${rootPath}/menutab/board_view?num=1" style="color: #26d4d4;"> '+btitle+'</a></div>';
+						htmlStr += '<div class="bcontents" style="margin-bottom:10px; height:100px;">'+bcontents+'</div>';
+						htmlStr += '<div class="credat" style="border-bottom:solid #ffffff; margin-bottom:20px;">'+credat+'</div>';
+						htmlStr += '</notice>';
 						
 					}
-					$("#boardList").append(html);
+					$("#boardList").html(htmlStr);
 				}
 			
 			});
@@ -87,25 +77,3 @@
 	</div>
 </body>
 </html>
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-
-body {
-	font-family: 'NanumSquareRound', serif;
-	font-weight: bold;
-	margin: 0;
-	height: 100%;
-}
-
-html {
-	height: 100%;
-}
-
-.kwrap {
-	min-height: 100%;
-	position: relative;
-	padding-bottom: 30px; /* footer height */
-}
-</style>
-
-
