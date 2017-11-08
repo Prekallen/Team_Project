@@ -49,19 +49,34 @@ public class BoardController {
 		return bs.getBoardInfoList(board);
 	}
 	
+//	@RequestMapping(value="/notice/board_view", method= RequestMethod.GET)
+//	public @ResponseBody String board_view(@RequestBody String sNum,  ModelMap model){
+//		if(sNum!=null){
+//			int bNum = Integer.parseInt(sNum);
+//			BoardInfo board = new BoardInfo();
+//			board.setbNum(bNum);
+//			model.put("bName", bs.getBoardInfo(bNum).getbName());
+//			model.put("bTitle", bs.getBoardInfo(board).getbTitle());
+//			model.put("bContents", bs.getBoardInfo(board).getbContents());
+//		}else{
+//			return "notice/board_list";
+//		}
+//		return "notice/board_view";
+//	}
 	@RequestMapping(value="/notice/board_view", method= RequestMethod.GET)
-	public @ResponseBody String board_view(@RequestBody String sNum,  ModelMap model){
-		if(sNum!=null){
-			int bNum = Integer.parseInt(sNum);
-			BoardInfo board = new BoardInfo();
-			board.setbNum(bNum);
-			model.put("bName", bs.getBoardInfo(board).getbName());
-			model.put("bTitle", bs.getBoardInfo(board).getbTitle());
-			model.put("bContents", bs.getBoardInfo(board).getbContents());
-		}else{
-			return "notice/board_list";
-		}
+	public String view(Model model){
 		return "notice/board_view";
+	}
+	
+	@RequestMapping(value="/notice/board_view", method= RequestMethod.POST)
+	public @ResponseBody ModelMap getBoardResult(@RequestBody int bNum){
+		ModelMap model = new ModelMap();
+		try{
+			model.put("getBoardInfo", bs.getBoardInfo(bNum));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return model;
 	}
 	
 	@RequestMapping(value="/notice/update", method= RequestMethod.GET)

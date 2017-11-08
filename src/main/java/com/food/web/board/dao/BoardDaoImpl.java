@@ -13,8 +13,8 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 	
 
 	@Override
-	public BoardInfo selectBoardInfo(BoardInfo board) {
-		return this.getSqlSession().selectOne("board.SELECT_BOARDINFO", board);
+	public BoardInfo selectBoardInfo(int bNum) {
+		return getSqlSession().selectOne("board.SELECT_BOARDINFO", bNum);
 	}
 
 	@Override

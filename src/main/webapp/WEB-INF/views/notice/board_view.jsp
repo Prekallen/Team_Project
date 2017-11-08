@@ -20,16 +20,16 @@
 						<thead>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
-								<th><input type="text">${bName }</th>
+								<th><input type="text" value="${param.bName}"></th>
 							</tr>
 						</thead>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">제목</th>
-							<th><input type="text">${bTitle }</th>
+							<th><input type="text" value="${bTitle }"></th>
 						</tr>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">내용</th>
-							<th><input type="text">${bContents }</th>
+							<th><input type="text" value="${bContents }"></th>
 						</tr>
 
 					</table>
