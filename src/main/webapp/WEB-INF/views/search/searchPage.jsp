@@ -16,7 +16,7 @@
 String results = (String)session.getAttribute("result");
 %>
 
-	<div class="wrap3">
+	<div class="wrap3" style="background-color: #f5f5ef ;">
 		<div id= "spTop">	</div>
 
 		<div id="spMiddle" style="padding-top: 80px;">
@@ -92,8 +92,8 @@ $(document).ready(function(){
 								}
 							htmlStr +='</div>';
 							htmlStr +='<div id="rt_info" style="width:250px;">';
-							htmlStr +='<button	id="infomation_btn" onclick="document.getElementById(\'id03\').style.display=\'block\'">';
-							htmlStr +=name +'</button></div>';
+							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer;"> <a onclick="document.getElementById(\'id03\').style.display=\'block\'">';
+							htmlStr +=name +'</a></div></div>';
 							htmlStr +='<div id="rt_info">';
 							htmlStr +='주소 : ' + formatted_address+ '</br>';
 							htmlStr +='별점 : ' +rating + '<br><p hidden>placeid : '+place_id+'</hidden></div></div>';

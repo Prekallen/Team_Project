@@ -7,8 +7,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet"
-	href="<c:url value="/resources/css/common.css?version=${pVar}"/>" />
+<link rel="stylesheet"	href="<c:url value="/resources/css/common.css?version=${pVar}"/>" />
 <style>
 </style>
 </head>
@@ -34,7 +33,7 @@ $(document).ready(function(){
 
 
 </script>
-	<div id="wra	p2">
+	<div id="wrap2" style="z-index:20;">
 
 		<div id="header2">
 			<div id="search" style="padding-top: 20px;">

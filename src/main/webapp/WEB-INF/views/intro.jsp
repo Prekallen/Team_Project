@@ -10,9 +10,9 @@
 
 	<%-- <div id="googleMap" style="width:100%;height:400px;"></div> --%>
 
-<div class="kwrap">
+<div class="kwrap" style="background-color: #f5f5ef;">
 	<%--소개글 --%>
-	<div class="dc-area" id="introArea1" style="padding-top:100px; padding-left:100px;">
+	<div class="dc-area" id="introArea1" style="padding-top:100px; padding-left:100px;  ">
 		<div class="dc-wrapper">
 			<div class="row1">
 				<div class="intro-col1">
