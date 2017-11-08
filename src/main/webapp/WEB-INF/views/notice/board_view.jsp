@@ -60,7 +60,7 @@
 			location.href = "${rootPath}/notice/board_list";
 		}
 		function deleteBoard() {
-			location.href = "${rootPath}/notice/board_list";
+			location.href = "board_delete?bNum=${bi.bNum}";
 		}
 	</script>
 </body>
