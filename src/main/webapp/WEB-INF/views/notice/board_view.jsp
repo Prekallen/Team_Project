@@ -39,10 +39,10 @@
 					<div style="width: 650px; text-align: center;"></div>
 					
 					<button type="button" id="btnDelete">삭제</button>
-
-					<input type="button" value="수정" onclick="modifyBoard()" /> <input
-						type="button" value="삭제" onclick="deleteBoard()" /> <input
-						type="button" value="목록" onclick="boardList()" />
+					<button type="button" id="btnUpdate">수정</button>
+					<button type="button" id="btnList">목록</button>
+					
+					
 				</div>
 			</div>
 	</form>
@@ -53,31 +53,51 @@
 	<c:import url="${footerUrl}" />
 	</div>
 	<script>
-		function boardList() {
+	
+		$("#btnList").click(function(){
 			location.href = "${rootPath}/notice/board_list";
-		}
-		function modifyBoard() {
-			location.href = "${rootPath}/notice/board_list";
-		}
+		});
 		
 		var bNum = "${bi.bNum}";
 		$(document).ready(function(){
 				$("#btnDelete").click(function(){
 						if (confirm("삭제하시겠습니까?") == true){    //확인
 							var param = bNum;
-							var ad = new AjaxDel("/notice/board_delete",param); 
+							var ad = new AjaxDel("notice/board_delete",param); 
 							ad.send();
 						}else{   //취소
 						    return;
 						}
 				});
 		});
+		
+// 		var bName = "${bi.bName}";
+// 		var bTitle = "${bi.bTitle}";
+// 		var bContents = "${bi.bContents}";
+		
+// 		$(document).ready(function(){
+// 				$("#btnUpdate").click(function(){
+// 						if (confirm("등록하시겠습니까?") == true){    //확인
+// 							var params = bNum,bName,bTitle,bContents;
+// 							var ad = new AjaxDel("notice/board_update",params); 
+// 							ad.send();
+// 						}else{   //취소
+// 						    return;
+// 						}
+// 				});
+// 		});
+		
+		////AJAX//////
 		var AjaxDel = function(url, params, type, dataType){
 			this.url = "/web/" + url;
 			var generateJSON2 = function(params){
 				if(!params) return "";
 				var data = {};
 				data["bNum"] = params;
+				data["bName"] = params;
+				data["bTitle"] = params;
+				data["bContents"] = params;
+				
 				return  JSON.stringify(data);
 			}
 			

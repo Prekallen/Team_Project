@@ -70,9 +70,17 @@ public class BoardController {
 //		return model;
 //	}
 
-	@RequestMapping(value = "/notice/update", method = RequestMethod.GET)
-	public String update(Model model) {
-		return "notice/update";
+	@RequestMapping(value="/notice/board_update", method=RequestMethod.POST)
+	public @ResponseBody ModelMap update(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
+		int uBoard = bs.updateBoardInfo(board);
+		if(uBoard==1){
+			hm.put("msg", "등록되었습니다.");
+			hm.put("url", "notice/board_list");
+		}else{
+			hm.put("msg", "안됨");
+			hm.put("url", "test/test2");
+		}
+		return hm;
 	}
 
 //	@RequestMapping(value = "/notice/board_delete", method = RequestMethod.POST)
