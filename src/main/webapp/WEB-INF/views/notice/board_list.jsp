@@ -58,7 +58,7 @@
 						// style = "cursor:pointer;" onClick = "location.href="${rootPath}/menutab/board_view?num=1";
  						htmlStr += '<notice style="font-family:\'NanumSquareRound\'">';
 						htmlStr += '<div id="btitle" style="text-align:left; font-size:20px; background-color: #f5f5ef; font-weight:bold;">';
-						htmlStr += '<a href="${rootPath}/notice/board_view?bNum="'+bnum+'> '+btitle+'</a></div>';
+						htmlStr += '<a href="${rootPath}/notice/board_view?bNum='+bnum+'"> '+btitle+'</a></div>';
 						htmlStr += '<div class="bname" style=" #ffffff; margin-bottom:20px;">'+bname+'</div>';
 						htmlStr += '<div class="bcontents" style="margin-bottom:10px; height:100px;">'+bcontents+'</div>';
 						htmlStr += '<div class="credat" style="border-bottom:solid #ffffff; margin-bottom:20px;">'+credat+'</div>';

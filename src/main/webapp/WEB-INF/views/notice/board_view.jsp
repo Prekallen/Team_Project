@@ -4,14 +4,15 @@
 <%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title>${bTitle }</title>
+<title>${bi.bTitle }</title>
 </head>
 
 <body>
 
+
 	<div class="kwrap">
 
-		<form name="f1">
+		<form name="f1" action="${rootPath }/notice/board_list">
 			<ul class="nav-navbar-nav navbar-right"></ul>
 			<div class="container" style="padding-top: 200px;">
 				<div class="row">
@@ -19,24 +20,28 @@
 						border="1px solid #dddddd">
 						<thead>
 							<tr>
+								<th style="background-color: #eeeeee; text-align: center;">번호</th>
+								<th><input type="text" value="${bi.bNum }"></th>
+							</tr>
+							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
-								<th><input type="text" value="${param.bName}"></th>
+								<th><input type="text" value="${bi.bName}"></th>
+							</tr>
+
+							<tr>
+								<th style="background-color: #eeeeee; text-align: center;">제목</th>
+								<th><input type="text" value="${bi.bTitle }"></th>
+							</tr>
+							<tr>
+								<th style="background-color: #eeeeee; text-align: center;">내용</th>
+								<th><input type="text" value="${bi.bContents }"></th>
 							</tr>
 						</thead>
-						<tr>
-							<th style="background-color: #eeeeee; text-align: center;">제목</th>
-							<th><input type="text" value="${bTitle }"></th>
-						</tr>
-						<tr>
-							<th style="background-color: #eeeeee; text-align: center;">내용</th>
-							<th><input type="text" value="${bContents }"></th>
-						</tr>
-
 					</table>
 
-					<input type="button" value="수정" onclick="modifyBoard()" />
-					 <input type="button" value="삭제" onclick="deleteBoard()" /> 
-					 <input type="button" value="목록" onclick="boardList()" />
+					<input type="button" value="수정" onclick="modifyBoard()" /> 
+					<input type="button" value="삭제" onclick="deleteBoard()" /> 
+					<input type="button" value="목록" onclick="boardList()" />
 				</div>
 			</div>
 		</form>
@@ -47,10 +52,14 @@
 		<c:import url="${footerUrl}" />
 	</div>
 	<script>
-		function boardList(){
+		function boardList() {
 			location.href = "${rootPath}/notice/board_list";
 		}
-		function modifyBoard(){
+		function modifyBoard() {
+
+			location.href = "${rootPath}/notice/board_list";
+		}
+		function deleteBoard() {
 			location.href = "${rootPath}/notice/board_list";
 		}
 	</script>

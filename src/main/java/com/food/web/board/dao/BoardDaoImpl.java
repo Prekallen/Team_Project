@@ -36,7 +36,7 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 
 	@Override
 	public int deleteBoardInfo(BoardInfo board) {
-		return this.deleteBoardInfo(board);
+		return getSqlSession().delete("board.DELETE_BOARDINFO",board);
 	}
 
 	@Override

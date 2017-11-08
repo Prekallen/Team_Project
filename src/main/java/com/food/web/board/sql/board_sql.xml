@@ -12,7 +12,7 @@
 			credat
 	
 	  from board
-	  where 1=1
+	  where bnum=#{bNum}
 	  
 	
 	  

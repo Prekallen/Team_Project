@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.food.web.board.dto.BoardInfo;
@@ -64,15 +65,17 @@ public class BoardController {
 //		return "notice/board_view";
 //	}
 	@RequestMapping(value="/notice/board_view", method= RequestMethod.GET)
-	public String view(Model model){
+	public String view(@RequestParam(value="bNum") int bNum,ModelMap model){
+		model.put("bi",bs.getBoardInfo(bNum));
 		return "notice/board_view";
 	}
 	
 	@RequestMapping(value="/notice/board_view", method= RequestMethod.POST)
-	public @ResponseBody ModelMap getBoardResult(@RequestBody int bNum){
+	public @ResponseBody ModelMap getBoardResult(@RequestBody int bNum,BoardInfo board){
 		ModelMap model = new ModelMap();
 		try{
-			model.put("getBoardInfo", bs.getBoardInfo(bNum));
+			model.put("bi",bs.getBoardInfo(bNum));
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -83,6 +86,7 @@ public class BoardController {
 	public String update(Model model){
 		return "notice/update";
 	}
+
 	
 }	
 
