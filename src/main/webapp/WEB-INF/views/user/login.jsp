@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="<c:url value="/resources/css/common.css?version=${pVar}"/>"/>
     <meta name="google-signin-scope" content="profile email">
-    <meta name = "google-signin-client_id"content = " AIzaSyCp6jSFORxMzEl7ItK0lcIjhwCH72HMtwU.apps.googleusercontent.com ">
+    <meta name = "google-signin-client_id"content = "715472077883-i4716i3kbp6mvnfbehju5gkfaubamng4.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </head>
@@ -68,12 +68,7 @@
 							<!-- 구글로그인-->
 							    <div id="my-signin2" style="padding-left:130px;" ></div>
 									  <script>
-									    function onSuccess(googleUser) {
-									      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-									    }
-									    function onFailure(error) {
-									      console.log(error);
-									    }
+									   
 									    function renderButton() {
 									      gapi.signin2.render('my-signin2', {
 									        'scope': 'profile email',
@@ -85,12 +80,16 @@
 									        'onfailure': onFailure									        
 									      });
 									    }
+									    function onSuccess(googleUser) {
+									    }
+									    function onFailure(error) {
+									    }
 									  </script>						
 									  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 				
 						</form>											
 </div><!-- modal id01 -->
-<script>
+						<script>
 						// Get the modal
 						var modal = document.getElementById('id01');
 

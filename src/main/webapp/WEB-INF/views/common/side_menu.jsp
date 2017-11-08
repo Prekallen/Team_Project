@@ -8,6 +8,9 @@
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet"	href="<c:url value="/resources/css/common.css?version=${pVar}"/>" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name = "google-signin-client_id"content = "715472077883-i4716i3kbp6mvnfbehju5gkfaubamng4.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 <style>
 </style>
 </head>
@@ -98,7 +101,9 @@ $(document).ready(function(){
 <!-- 				<dd class="clickme fl DB_etc10_1" style="width: 128px;"> -->
 <!-- 					<img src="resources/img/login_click.png" /> -->
 				</dd>
+				
 				<dl id="util_menu">
+				<a onclick="signOut22();">Sign out</a>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
 						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
@@ -135,6 +140,12 @@ $(document).ready(function(){
 	</script>
 	<%}%>
 <script>
+
+  function signOut22() {
+	  var GoogleAuth = gapi.auth2.getAuthInstance();
+	  GoogleAuth.signOut();
+  }
+
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
 	document.getElementById("main").style.marginLeft = "250px";
