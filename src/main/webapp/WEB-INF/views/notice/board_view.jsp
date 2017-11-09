@@ -38,9 +38,9 @@
 					</table>
 					<div style="width: 650px; text-align: center;"></div>
 					
-					<button type="button" id="btnDelete">삭제</button>
-					<button type="button" id="btnUpdate">수정</button>
-					<button type="button" id="btnList">목록</button>
+					<button type="button" class="btn btn-primary"id="btnDelete">삭제</button>
+					<button type="button" class="btn btn-primary"id="btnUpdate">수정</button>
+					<button type="button" class="btn btn-primary"id="btnList">목록</button>
 					
 					
 				</div>
@@ -53,10 +53,9 @@
 	<c:import url="${footerUrl}" />
 	</div>
 	<script>
-	
-		$("#btnList").click(function(){
-			location.href = "${rootPath}/notice/board_list";
-		});
+	$("#btnList").click(function(){
+		location.href = "${rootPath}/notice/board_list";
+	});
 		
 		$(document).ready(function(){
 		var bNum = "${bi.bNum}";	
