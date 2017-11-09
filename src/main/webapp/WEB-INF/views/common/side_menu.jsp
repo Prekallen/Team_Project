@@ -81,35 +81,8 @@ $(document).ready(function(){
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="${rootPath}/mainmemi">메인</a> <a
 					href="${rootPath}/intro">Feedback소개</a> <a
-					href="${rootPath}/notice/board_list">공지사항</a> <a>맛집 찾기</a>
+					href="${rootPath}/notice/board_list">공지사항</a>
 
-				<div class="dropdown" id="dropgroup1">
-					<button class="dropbtn">
-						<a href="${rootPath}/menutab/kgroup">- 종류별</a>
-					</button>
-					<div class="dropdown-content" id="dropgroup1"
-						style="text-align: right">
-						<a href="#">한식</a> <a href="#">양식</a> <a href="#">중식</a> <a
-							href="#">일식</a> <a href="#">분식</a> <a href="#">기타</a>
-					</div>
-				</div>
-				<br>
-				<div class="dropdown" id="dropgroup2">
-					<button class="dropbtn">
-						<a href="${rootPath}/menutab/klocal">- 지역별</a>
-					</button>
-					<div class="dropdown-content" style="text-align: right">
-						<a href="#">도봉구</a> <a href="#">강북구</a> <a href="#">노원구</a> <a
-							href="#">은평구</a> <a href="#">성북구</a> <a href="#">중랑구</a> <a
-							href="#">서대문구</a> <a href="#">종로구</a> <a href="#">동대문구</a> <a
-							href="#">강서구</a> <a href="#">마포구</a> <a href="#">중구</a> <a
-							href="#">성동구</a> <a href="#">용산구</a> <a href="#">광진구</a> <a
-							href="#">강동구</a> <a href="#">양천구</a> <a href="#">영등포구</a> <a
-							href="#">동작구</a> <a href="#">서초구</a> <a href="#">강남구</a> <a
-							href="#">송파구</a> <a href="#">구로구</a> <a href="#">금천구</a> <a
-							href="#">관악구</a>
-					</div>
-				</div>
 			</div>
 
 
