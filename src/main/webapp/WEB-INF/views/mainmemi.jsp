@@ -225,28 +225,6 @@ $(document).ready(function(){
 							<li><a href="${rootPath}/notice/board_list">공지사항</a></li>
 
 						</ul></li>
-					<li><a href="${rootPath}/menutab/kgroup">종류별</a>
-						<ul class="sub2">
-							<li><a href="#">한식</a></li><li><a href="#">양식</a></li>
-							<li><a href="#">중식</a></li><li><a href="#">일식</a></li>
-							<li><a href="#">분식</a></li><li><a href="#">기타</a></li>
-						</ul></li>
-					<li><a href="${rootPath}/menutab/klocal" class="activelocal">지역별</a>
-						<ul class="sub3">
-							<li><a href="#">도봉구</a></li>	<li><a href="#">강북구</a></li>
-							<li><a href="#">노원구</a></li>	<li><a href="#">은평구</a></li>
-							<li><a href="#">성북구</a></li>	<li><a href="#">중랑구</a></li>
-							<li><a href="#">서대문구</a></li><li><a href="#">종로구</a></li>
-							<li><a href="#">동대문구</a></li><li><a href="#">강서구</a></li>
-							<li><a href="#">마포구</a></li>	<li><a href="#">중구</a></li>
-							<li><a href="#">성동구</a></li>	<li><a href="#">용산구</a></li>
-							<li><a href="#">광진구</a></li>	<li><a href="#">강동구</a></li>
-							<li><a href="#">양천구</a></li>	<li><a href="#">영등포구</a></li>
-							<li><a href="#">동작구</a></li>	<li><a href="#">서초구</a></li>
-							<li><a href="#">강남구</a></li>	<li><a href="#">송파구</a></li>
-							<li><a href="#">구로구</a></li>	<li><a href="#">금천구</a></li>
-							<li><a href="#">관악구</a></li>
-						</ul></li>
 					</ul>
 				<!-- id="gnb" -->
 			</div>
@@ -342,11 +320,10 @@ function showSlides() {
 			<div class="bk_line"></div>
 			<div class="dv_text">
 				<p>
-					서울지역 맛집 검색은?<br>맛zip !! from Feedback
+					맛집 검색은?<br>맛zip !! from Feedback
 				</p>
 				<!-- <div class="uline_w"></div> -->
-				<span> 맛zip은 서울 지역 맛집을 검색 할 수 있는 웹입니다.<br /> 당신의 원하는 음식을
-					지역별, 종류별로 검색해 보세요.
+				<span> 맛zip은 음심점 어디든 검색 할 수 있는 웹입니다.<br />
 				</span>
 			</div>
 		</div>
@@ -377,13 +354,12 @@ function showSlides() {
 			</div>
 			<!-- id="relSite_wrap" -->
 			<address>
-				<div class="ellipsis">(주)Feedback 바지사장 : 김홍근&nbsp;&nbsp; /
-					&nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-119</div>
+				<div class="ellipsis">(주)Feedback &nbsp;&nbsp; /
+					&nbsp;&nbsp;Add 서울&nbsp; / &nbsp;Tel : 02-1234-5678</div>
 				<!-- <br /> -->
-				<div class="ellipsis">E-mail : 동의? ㅇ보감~&nbsp; / &nbsp;사업자등록번호
-					: 112&nbsp;</div>
+				<div class="ellipsis">E-mail : Feedback@feedback.kr &nbsp; / &nbsp;사업자등록번호 &nbsp;</div>
 				<!-- <br /> -->
-				<div class="ellipsis">바지사장 외 무급으로 일한 팀원들: 신영하, 송우재 [탈주자 : 김상철]</div>
+				<div class="ellipsis">팀원 : 김상철, 김홍근, 신영하, 송우재</div>
 				<!-- <br /> -->
 			</address>
 		</div>
