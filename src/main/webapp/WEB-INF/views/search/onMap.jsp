@@ -13,11 +13,15 @@
 	}
 </style>
 <body>
+<% 
+Double lat = Double.parseDouble(request.getParameter("lat"));
+Double lng = Double.parseDouble(request.getParameter("lng"));
+%>
 	<div id="map"></div>
 </body>
 <script>
 	function initMap() {
-	  var spot = {lat: 37.497262 , lng: 127.027401};
+	  var spot = {lat: <%=lat%> , lng: <%=lng%>};
 	  var map = new google.maps.Map(document.getElementById('map'), {
 	    zoom: 17,
 	    center: spot

@@ -70,6 +70,8 @@ $(document).ready(function(){
 							var rating = result.rating;
 							var place_id = result.place_id;
 							var photo_reference = result.photo_reference;
+							var lat = result.lat;
+							var lng = result.lng;
 							token = result.next_page_token;
  							/* htmlStr += '<form class="form-signin" action="" id="ajax" style="padding-top:40px; padding-bottom:40px;">';
 							htmlStr += '<td>이름 '+name+'<br>';
@@ -92,7 +94,7 @@ $(document).ready(function(){
 								}
 							htmlStr +='</div>';
 							htmlStr +='<div id="rt_info" style="width:250px;">';
-							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer;"> <a onclick="googleMap()">';
+							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer;"> <a onclick="googleMap('+lat+','+lng+')">';
 							htmlStr +=name +'</a></div></div>';
 							htmlStr +='<div id="rt_info">';
 							htmlStr +='주소 : ' + formatted_address+ '</br>';
@@ -133,12 +135,11 @@ $("#nBtn").click(function() {
 				$("#spMiddle").append(html);
 			}
 		});
-// function googleMap()={
-// 	var au = new AjaxUtil("search/onMap");
-// 	var param={};
-// 	param["name"]=name;
-// 	au.param=JSON.stringify(param);
-// 	au.setCallbackSuccess(callback)
-// }
+function googleMap(lat,lng){
+	location.href="${rootPath}/search/onMap?lat="+lat+"&lng="+lng;
+<%
+	
+%>
+}
 </script>
 </html>

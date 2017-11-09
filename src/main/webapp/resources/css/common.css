@@ -1,4 +1,4 @@
-﻿]@charset 'utf-8';
+]@charset 'utf-8';
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/studio392/NanumGothic/master/NanumGothic.css);
@@ -84,7 +84,7 @@ dd{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .clickme{width: 28px; position: absolute; top: 0; left: -75px; font-size: 0px;}
 
 /* GNB 영역 */
-#gnb_wrap{width: 500px; height: 47px; background: #ffffff; position: absolute; top: 25px; /* left: 0; */ margin: 0 auto; font-family: 'NanumSquareRound'; font-weight: bold; }
+#gnb_wrap{width: 200px; height: 47px; background: #ffffff; position: absolute; top: 25px; /* left: 0; */ margin: 0 auto; font-family: 'NanumSquareRound'; font-weight: bold; }
 #gnb{width: 751px; height: 47px; margin: 0 auto; padding-right: 100px; padding:10px; font-family: 'NanumSquareRound';}
 #gnb>li{float: left; text-align: center; width:92px; padding: -10px; /* border-right: 1px solid #aaaaaa; */}
 /* #gnb li.fir{border-left: 1px solid #eeeeee;} */

@@ -255,7 +255,7 @@ $(document).ready(function(){
 		<div id="fix_bn" style="height:500px;">
 		<h5 style="font-size:24px; margin-left:300px;padding-top:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
 		<div class="slideshow-container" style="padding-top: 50px;">
-				<div class="mySlides fade">							
+				<div class="mySlides fade"><img src="">							
 						<c:forEach items="${keyWordList}" var="kw" begin="0" end="9">
 				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
 			              		<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
@@ -264,7 +264,7 @@ $(document).ready(function(){
 					           </li>	       
 						</c:forEach>
 					</div>
-					<div class="mySlides fade">
+					<div class="mySlides fade"><img src="">
 						<c:forEach items="${keyWordList}" var="kw" begin="10" end="19">
 				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
 				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
@@ -273,7 +273,7 @@ $(document).ready(function(){
 					           </li>	       
 						</c:forEach>
 					</div>
-					<div class="mySlides fade">
+					<div class="mySlides fade"><img src="">
 						<c:forEach items="${keyWordList}" var="kw" begin="20" end="29">
 				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
 				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
@@ -305,7 +305,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
 
@@ -482,14 +482,14 @@ function showSlides() {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 5s;
 }
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
-  to {opacity: 1}
+  to {opacity: 0}
 }
 
 @keyframes fade {

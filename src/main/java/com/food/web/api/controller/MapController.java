@@ -32,5 +32,8 @@ public class MapController {
 			}
 		    return model;
 		}
-		
+		@RequestMapping(value= "/search/onMap", method=RequestMethod.GET)
+		public String getMap(Model model) {
+			return "/search/onMap";
+		}
 }

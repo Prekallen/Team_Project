@@ -45,6 +45,11 @@ public class MapServiceImpl implements MapService{
 				mi.setFormatted_address(storeObject.get("formatted_address"));
 				mi.setName(storeObject.get("name"));
 				mi.setRating(storeObject.get("rating"));
+				HashMap geometry = (HashMap) storeObject.get("geometry");
+				HashMap location = (HashMap)geometry.get("location");
+				mi.setLat(location.get("lat"));
+				mi.setLng(location.get("lng"));
+				System.out.println(storeObject.get("name"));
 				if(storeObject.get("photos")!=null){
 					mi.setPhotos(storeObject.get("photos"));
 					
@@ -59,6 +64,7 @@ public class MapServiceImpl implements MapService{
 				mi.setPlace_id(storeObject.get("place_id"));
 				mi.setNext_page_token(page);
 				mapInfoList.add(mi);
+				
 				//JSON name으로 추출
 
 				//	                System.out.println("위치 : "+storeObject.get("formatted_address"));
