@@ -23,7 +23,7 @@ public class BoardController {
 
 	@Autowired
 	BoardService bs;
-
+	//게시판 목록//
 	@RequestMapping(value = "/notice/board_list", method = RequestMethod.GET)
 	public String board_list(Model model) {
 		return "notice/board_list";
@@ -39,7 +39,7 @@ public class BoardController {
 		}
 		return model;
 	}
-
+	///글쓰기///
 	@RequestMapping(value = "/notice/board_insert", method = RequestMethod.GET)
 	public String write(Model model) {
 		return "notice/board_insert";
@@ -51,7 +51,7 @@ public class BoardController {
 		return bs.getBoardInfoList(board);
 	}
 
-	
+	///게시판 상세보기///
 	@RequestMapping(value = "/notice/board_view", method = RequestMethod.GET)
 	public String view(@RequestParam(value = "bNum") int bNum, ModelMap model) {
 		model.put("bi", bs.getBoardInfo(bNum));
@@ -69,6 +69,13 @@ public class BoardController {
 //		}
 //		return model;
 //	}
+
+	///글 수정하기///
+	@RequestMapping(value = "/notice/board_update", method = RequestMethod.GET)
+	public String update(@RequestParam(value = "bNum") int bNum, ModelMap model) {
+		model.put("bi", bs.getBoardInfo(bNum));
+		return "notice/board_update";
+	}
 
 	@RequestMapping(value="/notice/board_update", method=RequestMethod.POST)
 	public @ResponseBody ModelMap update(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
@@ -88,7 +95,7 @@ public class BoardController {
 //		bs.deleteBoardInfo(board);
 //		return bs.getBoardInfo(bNum);
 //	}
-	
+	///글 삭제하기////
 	@RequestMapping(value="/notice/board_delete", method=RequestMethod.POST)
 	public @ResponseBody ModelMap delete(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
 		int dBoard = bs.deleteBoardInfo(board);

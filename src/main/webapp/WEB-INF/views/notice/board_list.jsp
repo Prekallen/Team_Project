@@ -20,8 +20,6 @@
 						
 					<ul id="boardList" style="min-height:800px; width:1000px;">
 					</ul>
-
-		
 			</div>
 		</div>
 < 		<div class="btn btn-primary" style="cursor: pointer;"
