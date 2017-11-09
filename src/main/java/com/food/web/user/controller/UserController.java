@@ -65,6 +65,22 @@ public class UserController {
 		return hm;
 	}
 	
+	@RequestMapping(value="/user/googleLogin", method=RequestMethod.POST)
+	public @ResponseBody ModelMap googleLogin(@RequestBody UserInfo user, ModelMap hm,HttpSession hs){
+		boolean logincheck = user.isLoginCheck();
+		if(logincheck){
+			hs.setAttribute("user", user);
+			hm.put("msg", "구글 로그인 성공");
+			hm.put("url", "test/test2");
+			
+		}else{
+			hm.put("msg", "다시해");
+			hm.put("url", "test/test2");
+		}
+		logincheck =false;
+		return hm;
+	}
+	
 	
 }
 	

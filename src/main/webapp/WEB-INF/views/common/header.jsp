@@ -6,6 +6,7 @@
 <c:set var="loginUrl" value="/WEB-INF/views/user/login.jsp" />
 <c:set var="signupUrl" value="/WEB-INF/views/user/signup.jsp" />
 <c:set var="infomationUrl" value="/WEB-INF/views/search/infomation.jsp"/>
+<c:set var="user" value="${sessionScope.user }"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

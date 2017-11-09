@@ -8,10 +8,6 @@
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="<c:url value="/resources/css/common.css?version=${pVar}"/>"/>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name = "google-signin-client_id"content = " AIzaSyCp6jSFORxMzEl7ItK0lcIjhwCH72HMtwU.apps.googleusercontent.com ">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
 </head>
 <style>
 	#map {

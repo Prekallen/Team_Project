@@ -140,11 +140,10 @@ $(document).ready(function(){
 	</script>
 	<%}%>
 <script>
-
-  function signOut22() {
-	  var GoogleAuth = gapi.auth2.getAuthInstance();
-	  GoogleAuth.signOut();
-  }
+function signOut22() {
+	alert("메인으로 이동합니다")
+    document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/mainmemi";
+ }
 
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";

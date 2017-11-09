@@ -14,26 +14,7 @@
 </head>
 
 <body>
-<!-- 로그인 -->
-<script>
-//   window.fbAsyncInit = function() {
-//     FB.init({
-//       appId            : '1908237802828633',
-//       autoLogAppEvents : true,
-//       xfbml            : true,
-//       version          : 'v2.10'
-//     });
-//     FB.AppEvents.logPageView();
-//   };
-//    FB.getLoginStatus(function(response) {
-// 	  if (response.status === 'connected') {
-// 	    console.log('Logged in.');
-// 	  }
-// 	  else {
-// 	    FB.login();
-// 	  }
-// 	}); 
-</script>
+
 
 <div id="id01" class="modal">
 						<form class="modal-content animate" >
@@ -50,25 +31,11 @@
 										<input type="checkbox" checked="checked" id="saveId"> 아이디기억하기
 									<button id="logBtn" type="button" style="width: 370px ;height:40px;">로그인</button></br>																	
 								</div>
-								<!-- 페이스북로그인-->
-								<!-- <fb:login-button   scope="public_profile,email"  onlogin="checloginState();"></fb:login-button> -->
-								<div id="fb-root"></div>
-								<script>(function(d, s, id) {
-									var js, fjs = d.getElementsByTagName(s)[0];
-									if (d.getElementById(id)) return;
-									js = d.createElement(s); js.id = id;
-									js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.10&appId=1908237802828633';
-									fjs.parentNode.insertBefore(js, fjs);
-									}(document, 'script', 'facebook-jssdk'));								
-								</script>
-								<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" 
-								data-auto-logout-link="false" data-use-continue-as="false" id="fblogin"></div>
-								</br>	
+							
   
 							<!-- 구글로그인-->
 							    <div id="my-signin2" style="padding-left:130px;" ></div>
 									  <script>
-									   
 									    function renderButton() {
 									      gapi.signin2.render('my-signin2', {
 									        'scope': 'profile email',
@@ -81,9 +48,49 @@
 									      });
 									    }
 									    function onSuccess(googleUser) {
+									    	var userId = "${user.userId}";
+									    	if(!userId){
+										    	var profile = googleUser.getBasicProfile(); // 유저의 정보를 가진 변수를 선언
+										    	var param = {};
+									    	    param["userId"] = profile.getId();
+									    	    param["loginCheck"] = true; 
+									    	    GoogleLoginAjax(param,"user/googleLogin", loginCallback);
+									    	}
 									    }
+									    
 									    function onFailure(error) {
 									    }
+									    
+									    function loginCallback(result) {
+									    	var url = result.url;
+									    	var msg = result.msg;
+									    	if(msg){
+									    		alert(msg);
+									    	}
+									    	if(url){
+									    		pageMove(url);
+									    	}
+									    }
+									    function GoogleLoginAjax(pParams, pUrl, pCallBackFunc, pMethod){
+									    	this.pUrl = "/web/" + pUrl;
+											var params = JSON.stringify(pParams);
+											$.ajax({ 
+										    		type     : pMethod ? pMethod:"POST"
+											    ,   url      : this.pUrl
+											    ,   dataType : "JSON" 
+											    ,   beforeSend: function(xhr) {
+											        xhr.setRequestHeader("Accept", "application/json");
+											        xhr.setRequestHeader("Content-Type", "application/json");
+											    }
+											    ,   data     : params
+											    ,   success : pCallBackFunc
+											    ,   error : function(xhr, status, e) {
+												    	alert("에러야 : "+e);
+												},
+												complete  : function() {
+												}
+											});
+										}
 									  </script>						
 									  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 				
@@ -106,5 +113,7 @@
 							au.send();
 							
 						});
+						
+						
 					</script>
 </body>

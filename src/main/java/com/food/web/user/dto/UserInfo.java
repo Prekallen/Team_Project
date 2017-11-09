@@ -5,11 +5,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserInfo {
 	
+	private boolean loginCheck;
 	private String userId;
 	private String userPwd;
 	private int userNum;
 	private String email;
 	private boolean saveId;
+	public boolean isLoginCheck() {
+		return loginCheck;
+	}
+	public void setLoginCheck(boolean loginCheck) {
+		this.loginCheck = loginCheck;
+	}
 	public String getUserId() {
 		return userId;
 	}
