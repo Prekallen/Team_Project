@@ -59,16 +59,40 @@
 <script>
 var user = "${user}";
 var userId = "${user.userId}";
+var gUser = "${user.gUser}";
 $(document).ready(function(){
-		
 	if(userId!=""&&userId!=null){
+
+		document.getElementById("googleSignOut").style.display = 'none';
 		$("#logOut").html("로그아웃");
 		$("#logOut").click(function(){
 			alert("로그아웃됩니다.");
 			location.href="${rootPath}/user/logout";
 		});
+		
 	}else{
+
+		document.getElementById("googleSignOut").style.display = 'block';
 		$("#logOut").html("로그인");
+	}
+}) ;
+
+$(document).ready(function(){
+	if(gUser!=""&&gUser!=null){
+
+		document.getElementById("googleSignOut").style.display = 'block';
+
+		document.getElementById("logOut").style.display = 'none';
+		document.getElementById("logOut2").style.display = 'none';
+		$("#googleSignOut").click(function(){
+			alert("구글로그아웃 페이지로 이동합니다")
+			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/user/googleLogout";
+		});
+	}else{
+		document.getElementById("logOut").style.display = 'block';
+		document.getElementById("logOut2").style.display = 'block';
+
+		document.getElementById("googleSignOut").style.display = 'none';
 	}
 }) ;
 
@@ -83,15 +107,14 @@ $(document).ready(function(){
 	
 	<div id="wrap">
 		<div id="header">
-			<dl id="util_menu" style="padding-left: 15px;">
+			<dl id="util_menu" style="padding-left: 15px; padding-top:30px;">
 				<dt class="hide">유틸메뉴</dt>
-				<dd class="clickme fl DB_etc10_1" style="width: 120px;">
-					<img src="../resources/img/login_click.png" />
-				</dd>
+			
 				<dd class="util_first">
+				<button id="googleSignOut"style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:20px;">Sign out</button>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;" id="logOut"></button>
+						style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:15px;" id="logOut"></button>
 					<div id="id01" class="modal">
 						<form class="modal-content animate"
 							action="${roodPath}/test/test2">
@@ -132,11 +155,11 @@ $(document).ready(function(){
 
 
 <button onclick="document.getElementById('id02').style.display='block'"	style="width: auto; background-color: #ffffff; color: #000000; 
-																			font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
+																			font-family: 'NanumSquareRound'; font-weight: bold; font-size: 15px;" id="logOut2"">회원가입</button>
 
 					<div id="id02" class="modal">
 
-						<form class="modal-content animate" action="/action_page2.php">
+						<form class="modal-content animate">
 							<div class="container" style="padding-left: 10px;">
 								<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal" style="padding-top: 20px;">×</span>
 								

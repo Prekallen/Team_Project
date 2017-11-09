@@ -128,13 +128,13 @@ $(document).ready(function(){
 				<button id="googleSignOut"style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:20px;">Sign out</button>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
+						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; "id="logOut" ></button>
 					<c:import url="${loginUrl}" />
 
 
 					<button
 						onclick="document.getElementById('id02').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut2">회원가입</button>
+						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; "id="logOut2">회원가입</button>
 					<c:import url="${signupUrl}" />
 				</dl>
 				<!-- id="util_menu" -->
