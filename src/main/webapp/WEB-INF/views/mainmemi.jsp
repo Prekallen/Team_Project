@@ -56,6 +56,7 @@
 
 <body>
 <script>
+
 var user = "${user}";
 var userId = "${user.userId}";
 $(document).ready(function(){
@@ -88,6 +89,7 @@ $(document).ready(function(){
 					<img src="../resources/img/login_click.png" />
 				</dd>
 				<dd class="util_first">
+				
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
 						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;" id="logOut"></button>
