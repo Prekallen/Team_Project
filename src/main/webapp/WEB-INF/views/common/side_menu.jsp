@@ -25,6 +25,7 @@ $(document).ready(function(){
 		$("#logOut").html("로그아웃");
 		$("#logOut").click(function(){
 			alert("로그아웃됩니다.");
+			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/mainmemi";
 			location.href="${rootPath}/user/logout";
 		});
 	}else{
