@@ -11,28 +11,28 @@
 	<form name="f1" action="${rootPath }/notice/board_list">
 		<div class="kwrap">
 			<ul class="nav-navbar-nav navbar-right"></ul>
-			<div class="container" style="padding-top: 200px;">
+			<div class="container" style="padding-top: 200px; width=:100%;">
 				<div class="row">
 					<table class="table table-striped" style="text-align: center"
 						border="1px solid #dddddd">
 						<thead>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">번호</th>
-								<th><input type="text" value="${bi.bNum }"></th>
+								<th><input type="text" id="bNum" value="${bi.bNum }"></th>
 							</tr>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
-								<th><input type="text" value="${bi.bName}"></th>
+								<th><input type="text" id="bName" value="${bi.bName}"></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">제목</th>
-								<th><input type="text" value="${bi.bTitle }"></th>
+								<th><input type="text" id="bTitle" value="${bi.bTitle }"></th>
 							</tr>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">내용</th>
-								<th><input type="text" value="${bi.bContents }"></th>
+								<th><input type="text" id="bContents" value="${bi.bContents }"></th>
 							</tr>
 						</tbody>
 					</table>
@@ -58,84 +58,38 @@
 			location.href = "${rootPath}/notice/board_list";
 		});
 		
-		var bNum = "${bi.bNum}";
 		$(document).ready(function(){
+		var bNum = "${bi.bNum}";	
 				$("#btnDelete").click(function(){
+					
 						if (confirm("삭제하시겠습니까?") == true){    //확인
-							var param = bNum;
-							var ad = new AjaxDel("notice/board_delete",param); 
-							ad.send();
+							var params = "bNum";
+							var au = new AjaxUtil("notice/board_delete",params); 
+							au.send();
+						}else{   //취소
+						    return;
+							}
+				});
+
+				$("#btnUpdate").click(function(){
+					bNum = $("#bNum").val();
+					var bName = $("#bName").val();
+					var bTitle = $("#bTitle").val();
+					var bContents = $("#bContents").val();
+					
+						if (confirm("수정하시겠습니까?") == true){    //확인
+							var params = "bNum,bName,bTitle,bContents";
+							var au = new AjaxUtil("notice/board_update",params); 
+							au.send();
 						}else{   //취소
 						    return;
 						}
+				
+						
 				});
 		});
 		
-// 		var bName = "${bi.bName}";
-// 		var bTitle = "${bi.bTitle}";
-// 		var bContents = "${bi.bContents}";
-		
-// 		$(document).ready(function(){
-// 				$("#btnUpdate").click(function(){
-// 						if (confirm("등록하시겠습니까?") == true){    //확인
-// 							var params = bNum,bName,bTitle,bContents;
-// 							var ad = new AjaxDel("notice/board_update",params); 
-// 							ad.send();
-// 						}else{   //취소
-// 						    return;
-// 						}
-// 				});
-// 		});
-		
-		////AJAX//////
-		var AjaxDel = function(url, params, type, dataType){
-			this.url = "/web/" + url;
-			var generateJSON2 = function(params){
-				if(!params) return "";
-				var data = {};
-				data["bNum"] = params;
-				data["bName"] = params;
-				data["bTitle"] = params;
-				data["bContents"] = params;
-				
-				return  JSON.stringify(data);
-			}
-			
-			this.param = generateJSON2(params);
-			this.callbackSuccess = function(json){
-		    	var url = json.url;
-		    	var msg = json.msg;
-		    	if(msg){
-		    		alert(msg);
-		    	}
-		    	if(url){
-		        	pageMove(url);
-		    	}
-			}
-			
-			this.setCallbackSuccess = function(callback){
-				this.callbackSuccess = callback;
-			}
-			
-			this.send = function(){
-				$.ajax({ 
-			        type     : "POST"
-			    ,   url      : this.url
-			    ,   dataType : "JSON" 
-			    ,   beforeSend: function(xhr) {
-			        xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
-			        xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-			    }
-			    ,   data     : this.param
-			    ,   success : this.callbackSuccess
-			    ,   error : function(xhr, status, e) {
-				    	alert("에러 : "+e);
-				},
-				complete : function(e) {
-				}
-				});
-			}
-		}
+
 	</script>
 </body>
 </html>

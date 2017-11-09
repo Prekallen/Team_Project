@@ -37,7 +37,8 @@
 	
 	<update id="UPDATE_BOARDINFO" parameterType="board">
 		update board
-		set bname = #{bName},
+		set 
+			bname = #{bName},
 			btitle = #{bTitle},
 			bcontents = #{bContents}
 	  
