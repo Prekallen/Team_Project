@@ -6,7 +6,9 @@
 
 <title>공지사항</title>
 </head>
-
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+</style>
 <body>
 
 	<div class="notice-wrap" style="background-color:#f5f5ef; padding-top: 70px;">
@@ -14,10 +16,9 @@
 		width:1100px; min-height:1000px; margin:0 auto;">
 			<div class="notice-row">
 			<h6 style="font-size:30px; background-color: #f5f5ef; font-weight:bold; padding-bottom:30px;">피드백 소식</h6>
-						<a href="${rootPath}/notice/board_insert" class="btn btn-primary pull-right">글쓰기</a>
-
-				
-					<ul id="boardList" style="min-height:800	px; width:1000px;">
+						<a href="${rootPath}/notice/board_insert" class="btn btn-primary pull-right" style="font-family: 'NanumSquareRound', serif;">글쓰기</a>
+						
+					<ul id="boardList" style="min-height:800px; width:1000px;">
 					</ul>
 
 		
@@ -57,7 +58,7 @@
 						var credat = result.credat;
 						// style = "cursor:pointer;" onClick = "location.href="${rootPath}/menutab/board_view?num=1";
  						htmlStr += '<notice style="font-family:\'NanumSquareRound\'">';
-						htmlStr += '<div id="btitle" style="text-align:left; color:#26d4d4; font-size:20px; background-color: #f5f5ef; font-weight:bold;">';
+						htmlStr += '<div id="btitle" style="text-align:left; font-size:20px; background-color: #f5f5ef; font-weight:bold;">';
 						htmlStr += '<a href="${rootPath}/notice/board_view?bNum='+bnum+'"> '+btitle+'</a></div>';
 						htmlStr += '<div class="bname" style=" #ffffff; margin-bottom:20px;">'+bname+'</div>';
 						htmlStr += '<div class="bcontents" style="margin-bottom:10px; height:100px;">'+bcontents+'</div>';

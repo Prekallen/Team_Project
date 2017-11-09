@@ -1,4 +1,4 @@
-﻿@charset 'utf-8';
+﻿]@charset 'utf-8';
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/studio392/NanumGothic/master/NanumGothic.css);
@@ -18,7 +18,7 @@ body{overflow-x:hidden;}
 /* 기본 글꼴 및 링크 텍스트 꾸미기 */
 body{font-size: 16px; font-family: 'NanumSquareRound', serif; color: #333333; background-color: #ffffff; font-weight: 100%;}
 select, input, textarea, button{font: 12px gulim, "NanumSquareRound", serif; color: #333333;}
-a{color: #333333; text-decoration: none;}
+a{color: #2b2b2b; text-decoration: none;}
 .fl{float:left;}
 .fr{float:right;}
 .cf:after{content: ''; display: block; clear:both;}
@@ -280,13 +280,3 @@ span.psw {    float: right;    padding-top: 16px;}
 					align:left; margin:0px;}
 .bcontents{width:350px; height:100px; margin:0px; float:left; font-family: 'NanumSquareRound'; font-weight:bold;}
 
-.AutoScroll {
-        background-color: #191919;
-        color: #fff;
-        position: relative;
-        top: 100px;
-        max-height: 400px;
-        overflow-y: scroll;
-        padding: 20px;
-        border: 1px solid #121212;
-      }

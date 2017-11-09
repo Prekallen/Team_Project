@@ -9,14 +9,12 @@
 
 <body>
 
-	<div class="kwrap">
-
-
+	<div class="kwrapInsert">
 		<form name="f1">
 			<ul class="nav-navbar-nav navbar-right"></ul>
-			<div class="container" style="padding-top: 200px;">
+			<div class="container" style="padding-top: 200px; margin-left: auto; margin-right: auto;">
 				<div class="row">
-					<table class="table table-striped" style="text-align: center"
+					<table class="table table-striped" style="text-align: center; width:100%;"
 						border="1px solid #dddddd">
 						<thead>
 							<tr>
@@ -39,11 +37,12 @@
 
 					</table>
 
-					<a href="${rootPath}/notice/board_list"
-						class="btn btn-primary pull-right">뒤로가기</a> <input type="button"
-						class="btn btn-primary" id="send" value="글쓰기">
+					
+						<input type="button" class="btn btn-primary" id="send" value="글쓰기" style="float:right">
+						<input type="button" class="btn btn-primary" id="list" value="목록">
 				</div>
 			</div>
+			
 		</form>
 
 		<div class="btn btn-primary" style="cursor: pointer;"
@@ -52,6 +51,10 @@
 		<c:import url="${footerUrl}" />
 	</div>
 	<script>
+	$("#list").click(function() {
+		location.href="${rootPath}/notice/board_list";
+	});
+	
 		$("#send").click(function() {
 			var bName = $("#bName").val();
 			var bTitle = $("#bTitle").val();
@@ -114,7 +117,7 @@ html {
 	position: absolute;
 }
 
-.kwrap {
+.kwrapInsert {
 	min-height: 100%;
 	position: relative;
 	padding-bottom: 30px; /* footer height */

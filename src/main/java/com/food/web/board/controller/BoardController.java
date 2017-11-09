@@ -78,7 +78,7 @@ public class BoardController {
 			hm.put("url", "notice/board_list");
 		}else{
 			hm.put("msg", "안됨");
-			hm.put("url", "test/test2");
+			hm.put("url", "notice/board_list?bNum={bNum}");
 		}
 		return hm;
 	}
@@ -98,7 +98,7 @@ public class BoardController {
 		}else{
 			hm.put("msg", "안됨");
 			hm.put("url", "test/test2");
-		}
+		}	
 		return hm;
 	}
 
