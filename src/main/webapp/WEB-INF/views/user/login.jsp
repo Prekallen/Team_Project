@@ -48,11 +48,11 @@
 									      });
 									    }
 									    function onSuccess(googleUser) {
-									    	var userId = "${user.userId}";
-									    	if(!userId){
+									    	var gUser = "${user.gUser}";
+									    	if(!gUser){
 										    	var profile = googleUser.getBasicProfile(); // 유저의 정보를 가진 변수를 선언
 										    	var param = {};
-									    	    param["userId"] = profile.getId();
+									    	    param["gUser"] = profile.getId();
 									    	    param["loginCheck"] = true; 
 									    	    GoogleLoginAjax(param,"user/googleLogin", loginCallback);
 									    	}

@@ -11,6 +11,14 @@ public class UserInfo {
 	private int userNum;
 	private String email;
 	private boolean saveId;
+	private String gUser;
+
+	public String getgUser() {
+		return gUser;
+	}
+	public void setgUser(String gUser) {
+		this.gUser = gUser;
+	}
 	public boolean isLoginCheck() {
 		return loginCheck;
 	}

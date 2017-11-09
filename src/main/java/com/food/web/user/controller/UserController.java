@@ -77,7 +77,6 @@ public class UserController {
 			hm.put("msg", "다시해");
 			hm.put("url", "test/test2");
 		}
-		logincheck =false;
 		return hm;
 	}
 	

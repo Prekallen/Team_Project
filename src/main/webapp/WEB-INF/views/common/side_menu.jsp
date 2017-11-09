@@ -19,21 +19,42 @@
 <script>
 var user = "${user}";
 var userId = "${user.userId}";
+var gUser = "${user.gUser}";
 $(document).ready(function(){
-		
 	if(userId!=""&&userId!=null){
+
+		document.getElementById("googleSignOut").style.display = 'none';
 		$("#logOut").html("로그아웃");
 		$("#logOut").click(function(){
 			alert("로그아웃됩니다.");
-			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/mainmemi";
 			location.href="${rootPath}/user/logout";
 		});
+		
 	}else{
+
+		document.getElementById("googleSignOut").style.display = 'block';
 		$("#logOut").html("로그인");
 	}
 }) ;
 
+$(document).ready(function(){
+	if(gUser!=""&&gUser!=null){
 
+		document.getElementById("googleSignOut").style.display = 'block';
+
+		document.getElementById("logOut").style.display = 'none';
+		document.getElementById("logOut2").style.display = 'none';
+		$("#googleSignOut").click(function(){
+			alert("구글로그아웃 페이지로 이동합니다")
+			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/user/googleLogout";
+		});
+	}else{
+		document.getElementById("logOut").style.display = 'block';
+		document.getElementById("logOut2").style.display = 'block';
+
+		document.getElementById("googleSignOut").style.display = 'none';
+	}
+}) ;
 
 
 </script>
@@ -104,16 +125,16 @@ $(document).ready(function(){
 				</dd>
 				
 				<dl id="util_menu">
-				<a onclick="signOut22();">Sign out</a>
+				<button id="googleSignOut"style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:20px;">Sign out</button>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
+						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut" ></button>
 					<c:import url="${loginUrl}" />
 
 
 					<button
 						onclick="document.getElementById('id02').style.display='block'"
-						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;">회원가입</button>
+						style="width: auto; background-color: #26d4d4; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;"id="logOut2">회원가입</button>
 					<c:import url="${signupUrl}" />
 				</dl>
 				<!-- id="util_menu" -->
@@ -141,10 +162,7 @@ $(document).ready(function(){
 	</script>
 	<%}%>
 <script>
-function signOut22() {
-	alert("메인으로 이동합니다")
-    document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/web/mainmemi";
- }
+
 
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";

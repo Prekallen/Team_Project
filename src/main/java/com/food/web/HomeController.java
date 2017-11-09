@@ -78,5 +78,14 @@ public class HomeController {
 	public String signout(Model model){
 		return "/user/signout";
 	}
+	@RequestMapping(value="/gOut", method= RequestMethod.GET)
+	public String gOut(Model model){
+		return "/gOut";
+	}
+	@RequestMapping(value="/user/googleLogout", method= RequestMethod.GET)
+	public String googleLogout(Model model){
+		return "/user/googleLogout";
+	}
+
 	
 }
