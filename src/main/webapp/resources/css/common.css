@@ -280,13 +280,3 @@ span.psw {    float: right;    padding-top: 16px;}
 					align:left; margin:0px;}
 .bcontents{width:350px; height:100px; margin:0px; float:left; font-family: 'NanumSquareRound'; font-weight:bold;}
 
-.AutoScroll {
-        background-color: #191919;
-        color: #fff;
-        position: relative;
-        top: 100px;
-        max-height: 400px;
-        overflow-y: scroll;
-        padding: 20px;
-        border: 1px solid #121212;
-      }

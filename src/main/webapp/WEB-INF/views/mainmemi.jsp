@@ -6,12 +6,13 @@
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<!-- 세계 언어 선택 메타 태그 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="Generator" content="Notepad++" />
 <meta name="Author" content="(TEAM)Feedback" />
 <meta name="keywords" content="Feedback" />
 <meta name="Description" content="Feedback 메인 페이지에 오신 것을 환영합니다" />
+<link rel="stylesheet" href="<c:url value="/resources/css/common.css?version=${pVar}"/>"/>
+<link rel="stylesheet" href="<c:url value="/resources/css/main.css?version=${pVar}"/>"/>
 <link rel="shortcut icon" href="resources/favicon/mememi_favi.png">
 <!-- 파비콘 -->
 <link rel="apple-touch-icon-precomposed" href="apple-icon.png">
@@ -36,7 +37,7 @@
 <script type="text/javascript" src="resources/js/common.js"></script>
 <script type="text/javascript" src="resources/js/main.js"></script>
 <script src="resources/js/DB_springMove_fn.js"></script>
-
+<!-- 구글맵 연동 -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="resources/js/map.js"></script>
 <script src="resources/js/map2.js"></script>
@@ -56,7 +57,6 @@
 
 <body>
 <script>
-
 var user = "${user}";
 var userId = "${user.userId}";
 $(document).ready(function(){
@@ -89,7 +89,6 @@ $(document).ready(function(){
 					<img src="../resources/img/login_click.png" />
 				</dd>
 				<dd class="util_first">
-				
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
 						style="width: auto; background-color: #ffffff; color: #ff3baf; font-family: 'NanumSquareRound'; font-weight: bold; text-decoration: underline;" id="logOut"></button>
@@ -209,7 +208,7 @@ $(document).ready(function(){
 							<li><a href="#">중식</a></li><li><a href="#">일식</a></li>
 							<li><a href="#">분식</a></li><li><a href="#">기타</a></li>
 						</ul></li>
-					<li><a href="${rootPath}/menutab/klocal" class="active">지역별</a>
+					<li><a href="${rootPath}/menutab/klocal" class="activelocal">지역별</a>
 						<ul class="sub3">
 							<li><a href="#">도봉구</a></li>	<li><a href="#">강북구</a></li>
 							<li><a href="#">노원구</a></li>	<li><a href="#">은평구</a></li>
@@ -251,25 +250,67 @@ $(document).ready(function(){
 		</div>
 		<!-- id="visual" -->
 
-</script>
+
 		<div id="fix_bn" style="height:500px;">
-		<marquee behavior="scroll" direction="up" scrollamount="10" scrolldelay="1">
-				<ul id="scrollDiv" style="padding-top:100px; padding-bottom:200px;padding-left:300px;padding-right:300px;height:500px; overflow:hidden">										
-					<c:forEach items="${keyWordList}" var="kw"> 
-			              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
-			              <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="10">	
-			              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
-				              	&nbsp;<c:out value="${kw.ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
-				             </a>
-				             </marquee>
-				           </li>
-		       
-				    </c:forEach>				    		    
-				</ul>
-					</marquee>	
-	
+		<h5 style="font-size:24px; margin-left:300px;padding-top:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
+		<div class="slideshow-container" style="padding-top: 50px;">
+				<div class="mySlides fade">							
+						<c:forEach items="${keyWordList}" var="kw" begin="0" end="9">
+				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+			              		<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
+					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
+					             </a> 
+					           </li>	       
+						</c:forEach>
+					</div>
+					<div class="mySlides fade">
+						<c:forEach items="${keyWordList}" var="kw" begin="10" end="19">
+				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
+					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
+					             </a>
+					           </li>	       
+						</c:forEach>
+					</div>
+					<div class="mySlides fade">
+						<c:forEach items="${keyWordList}" var="kw" begin="20" end="29">
+				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
+					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
+					             </a>
+					           </li>	       
+						</c:forEach>
+					</div>
+					<div style="text-align:center">
+						  <span class="dot"></span><span class="dot"></span><span class="dot"></span>   
+
+					</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 
 
+</div>
+</div>
 
 
 		<hr/>
@@ -287,7 +328,7 @@ $(document).ready(function(){
 			</div>
 		</div>
 
-	</div>
+
 	<hr/>
 	<div id="footer_wrap" style="margin-top:50px;">
 		<div class="footer_cover"></div>
@@ -388,8 +429,79 @@ $(document).ready(function(){
 </html>
 
 <style>
+
 #btn btn-primary {
 	position: relative;
 	top: 100px
 }
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+	font-family: 'NanumSquareRound'; 
+	font-weight:bold;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
 </style>
