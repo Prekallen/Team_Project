@@ -18,7 +18,7 @@
 			<h6 style="font-size:30px; background-color: #f5f5ef; font-weight:bold; padding-bottom:30px;">피드백 소식</h6>
 						<a href="${rootPath}/notice/board_insert" class="btn btn-primary pull-right" style="font-family: 'NanumSquareRound', serif;">글쓰기</a>
 						
-					<ul id="boardList" style="min-height:800	px; width:1000px;">
+					<ul id="boardList" style="min-height:800px; width:1000px;">
 					</ul>
 
 		
