@@ -26,7 +26,7 @@ public class MapServiceImpl implements MapService{
 
 			String hUrl = "";
 			if(query.get("token")==null){
-				hUrl = "query="+ query.get("query");
+				hUrl = "query=restaurant+"+ query.get("query");
 			}else {
 				hUrl = "pagetoken=" + query.get("token");
 			}
