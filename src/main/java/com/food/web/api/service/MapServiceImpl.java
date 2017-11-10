@@ -29,7 +29,7 @@ public class MapServiceImpl implements MapService{
 				hUrl = "query=restaurant+"+ query.get("query");
 			}else {
 				hUrl = "pagetoken=" + query.get("token");
-			}
+			}    
 
 			URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&" + hUrl) ;
 			InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
