@@ -58,7 +58,7 @@
 
 /*실시간 검색*/
 
-.slideshow-container{}
+.slideshow-container{padding-top:50px;}
 
 /* #btn btn-primary {
 	position: relative;

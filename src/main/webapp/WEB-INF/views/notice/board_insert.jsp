@@ -12,18 +12,17 @@
 	<div class="kwrapInsert">
 		<form name="f1">
 			<ul class="nav-navbar-nav navbar-right"></ul>
-			<div class="container" style="padding-top: 7%;  margin:0 auto; width:65%;">
+			<div class="container" style="padding-top: 200px; margin-left: auto; margin-right: auto;">
 				<div class="row">
-					<table class="table table-striped" style="text-align: center; width:100%; font-family:NanumSquareRound;"
+					<table class="table table-striped" style="text-align: center; width:100%;"
 						border="1px solid #dddddd">
 						<thead>
 							<tr>
-								<th style="background-color: #eeeeee; text-align:center; ">글쓴이</th>
+								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
 								<td><textarea style="resize: none;" cols="150" rows="1"
 										name="bName" id="bName"></textarea></td>
 							</tr>
-							</thead>
-						
+						</thead>
 						<tr>
 							<th style="background-color: #eeeeee; text-align: center;">제목</th>
 							<td><textarea style="resize: none;" cols="150" rows="3"
@@ -37,18 +36,17 @@
 						</tr>
 
 					</table>
-				<div class="bbbtn"  style="width:25%; float:right; text-align:center;" >
-						<button type="button" id="send" class="btn btn-info pull-right" style="width:28%; ">글쓰기</button>
-						<button type="button" id="list" class="btn btn-info pull-right" style="width:28%;">목록</button>
-			</div>
 
-			
-				
-			
+					
+						<input type="button" class="btn btn-primary" id="send" value="글쓰기" style="float:right">
+						<input type="button" class="btn btn-primary" id="list" value="목록">
 				</div>
 			</div>
 			
 		</form>
+
+		<div class="btn btn-primary" style="cursor: pointer;"
+			onclick="window.scrollTo(0,0);">TOP</div>
 
 		<c:import url="${footerUrl}" />
 	</div>
@@ -61,7 +59,8 @@
 			var bName = $("#bName").val();
 			var bTitle = $("#bTitle").val();
 			var bContents = $("#bContents").val();
-			
+			var credat = $("credat").val();
+
 			if (bName == "") {
 				alert("이름을 입력하세요");
 				document.f1.bName.focus();
@@ -84,7 +83,7 @@
 			au.setCallbackSuccess(callbackWrite);
 			au.send();
 			
-			//location.href = "${rootPath}/notice/board_list";
+			location.href = "${rootPath}/notice/board_list";
 
 			function callbackWrite(results) {
 				if (results == 0) {
@@ -114,8 +113,8 @@ html {
 	height: 100%;
 }
 
-.table table-striped tr th{
-	width : 20%;
+.btn btn-primary {
+	position: absolute;
 }
 
 .kwrapInsert {

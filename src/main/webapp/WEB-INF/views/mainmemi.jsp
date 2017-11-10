@@ -254,7 +254,7 @@ $(document).ready(function(){
 
 
 		<div id="fix_bn" style="height:500px;">
-		<h5 style="font-size:24px; margin-left:310px;padding-top:30px; padding-bottom:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
+		<h5 style="font-size:24px; margin-left:300px;padding-top:30px; padding-bottom:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
 		<div class="slideshow-container">
 				<div class="mySlides fade"><img src="">							
 						<c:forEach items="${keyWordList}" var="kw" begin="0" end="9">

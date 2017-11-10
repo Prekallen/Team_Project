@@ -46,8 +46,7 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/notice/board_insert", method = RequestMethod.POST)
-	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody HttpSession hs,BoardInfo board) {
-	
+	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board) {
 		bs.insertBoardInfo(board);
 		return bs.getBoardInfoList(board);
 	}
@@ -86,17 +85,16 @@ public class BoardController {
 			hm.put("url", "notice/board_list");
 		}else{
 			hm.put("msg", "안됨");
-			hm.put("url", "notice/board_list?");
+			hm.put("url", "notice/board_list?bNum={bNum}");
 		}
 		return hm;
 	}
 
-	@RequestMapping(value = "/notice/board_delete", method = RequestMethod.GET)
-	public String delete(@RequestParam(value = "bNum") int bNum, ModelMap model) {
-		model.put("bi", bs.getBoardInfo(bNum));
-		return "notice/board_delete";
-	}
-
+//	@RequestMapping(value = "/notice/board_delete", method = RequestMethod.POST)
+//	public @ResponseBody BoardInfo delete(@RequestBody int bNum, BoardInfo board) {
+//		bs.deleteBoardInfo(board);
+//		return bs.getBoardInfo(bNum);
+//	}
 	///글 삭제하기////
 	@RequestMapping(value="/notice/board_delete", method=RequestMethod.POST)
 	public @ResponseBody ModelMap delete(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){

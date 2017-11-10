@@ -8,13 +8,11 @@
 </head>
 <style>
 	#map {
-		height: 400px;
+		height: 90%;
 		width: 90%;
-		overflow: visible;
 	}
 </style>
 <body>
-<h3>지도떠라</h3>
 <% 
 Double lat = Double.parseDouble(request.getParameter("lat"));
 Double lng = Double.parseDouble(request.getParameter("lng"));
@@ -34,6 +32,6 @@ Double lng = Double.parseDouble(request.getParameter("lng"));
 	  });
 	}
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPsbPLnLDqAHiypEfoS2xtRJ1Oz1hzhYo&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdsvy9GEYpWuorLEVeObhzzx7h3VUJ57k&callback=initMap"
 async defer></script>
 </html>

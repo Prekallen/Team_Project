@@ -11,19 +11,18 @@
 </head>
 <style>
 	#map {
-		height: 200px;
-		width: 100px;
-		
+		height: 90%;
+		width: 90%;
 	}
 </style>
 <body>
 <!-- 로그인 -->
 	<div id="id03" class="modal" >
-		<form class="modal-content animate" style="padding-top: 20px; padding-left: 20px; width:50%; heght:50%;">
+		<form class="modal-content animate" action="/action_page.php" style="padding-top: 20px; padding-left: 20px; width:50%; heght:50%;">
 		<h7 style="font-family: 'NanumSquareRound'; font-weight: bold; padding-top:30px;">맛집 정보</h7>		
 		<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal" style="padding-top: 20px;">&times;</span> 							
 		<p>
-		<div id="map" style="overflow:auto; position:absolute;"></div>		
+		<div id="map"></div>		
 	</form>	
 
 		<script>
@@ -33,7 +32,6 @@
 	          center: {lat: -34.397, lng: 150.644},
 	          zoom: 16
 	        });
-	      
 	      }
 	
 	    </script>
