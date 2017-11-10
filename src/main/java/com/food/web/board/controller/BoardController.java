@@ -45,11 +45,20 @@ public class BoardController {
       return "notice/board_insert";
    }
 
+<<<<<<< HEAD
    @RequestMapping(value = "/notice/board_insert", method = RequestMethod.POST)
    public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody BoardInfo board) {
       bs.insertBoardInfo(board);
       return bs.getBoardInfoList(board);
    }
+=======
+	@RequestMapping(value = "/notice/board_insert", method = RequestMethod.POST)
+	public @ResponseBody List<BoardInfo> insertBoardInfoList(@RequestBody HttpSession hs,BoardInfo board) {
+	
+		bs.insertBoardInfo(board);
+		return bs.getBoardInfoList(board);
+	}
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 
    ///게시판 상세보기///
    @RequestMapping(value = "/notice/board_view", method = RequestMethod.GET)
@@ -77,6 +86,7 @@ public class BoardController {
       return "notice/board_update";
    }
 
+<<<<<<< HEAD
    @RequestMapping(value="/notice/board_update", method=RequestMethod.POST)
    public @ResponseBody ModelMap update(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
       int uBoard = bs.updateBoardInfo(board);
@@ -89,7 +99,22 @@ public class BoardController {
       }
       return hm;
    }
+=======
+	@RequestMapping(value="/notice/board_update", method=RequestMethod.POST)
+	public @ResponseBody ModelMap update(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
+		int uBoard = bs.updateBoardInfo(board);
+		if(uBoard==1){
+			hm.put("msg", "등록되었습니다.");
+			hm.put("url", "notice/board_list");
+		}else{
+			hm.put("msg", "안됨");
+			hm.put("url", "notice/board_list?");
+		}
+		return hm;
+	}
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 
+<<<<<<< HEAD
 //   @RequestMapping(value = "/notice/board_delete", method = RequestMethod.POST)
 //   public @ResponseBody BoardInfo delete(@RequestBody int bNum, BoardInfo board) {
 //      bs.deleteBoardInfo(board);
@@ -108,5 +133,26 @@ public class BoardController {
       }   
       return hm;
    }
+=======
+	@RequestMapping(value = "/notice/board_delete", method = RequestMethod.GET)
+	public String delete(@RequestParam(value = "bNum") int bNum, ModelMap model) {
+		model.put("bi", bs.getBoardInfo(bNum));
+		return "notice/board_delete";
+	}
+
+	///글 삭제하기////
+	@RequestMapping(value="/notice/board_delete", method=RequestMethod.POST)
+	public @ResponseBody ModelMap delete(HttpSession hs, @RequestBody BoardInfo board, ModelMap hm){
+		int dBoard = bs.deleteBoardInfo(board);
+		if(dBoard==1){
+			hm.put("msg", "삭제되었습니다.");
+			hm.put("url", "notice/board_list");
+		}else{
+			hm.put("msg", "안됨");
+			hm.put("url", "test/test2");
+		}	
+		return hm;
+	}
+>>>>>>> branch 'master' of https://github.com/Prekallen/Team_Project.git
 
 }

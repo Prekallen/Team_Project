@@ -146,7 +146,7 @@ $("#nBtn").click(function() {
 
 
 function googleMap(lat,lng){
-	location.href="${rootPath}/search/onMap?lat="+lat+"&lng="+lng;
+	window.location.href="${rootPath}/search/onMap?lat="+lat+"&lng="+lng;
 <%
 	
 %>

@@ -140,10 +140,10 @@ $(document).ready(function(){
 							</div>
 						</form>
 					</div>
-
+					<!-- modal id01 -->
 
 					<script>
-
+						// Get the modal
 						var modal = document.getElementById('id01');
 
 						window.onclick = function(event) {

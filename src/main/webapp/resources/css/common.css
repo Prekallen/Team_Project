@@ -4,7 +4,7 @@
 @import url(https://cdn.rawgit.com/studio392/NanumGothic/master/NanumGothic.css);
 @import url(https://cdn.rawgit.com/studio392/NanumSquareRound/master/NanumSquareRound.css);
 
-body{overflow-x:hidden;}
+
 
 /* 기본 레이아웃 */
 #wrap{width: 100%; margin: 0; margin-top: 600px; background-color: #ffffff; position: relative;}
@@ -22,7 +22,7 @@ a{color: #2b2b2b; text-decoration: none;}
 .fl{float:left;}
 .fr{float:right;}
 .cf:after{content: ''; display: block; clear:both;}
-.hide, legend, caption, hr{position: absolute; left: -9999px; width: 0; height: 0; overflow: hidden; text-indent: -9999px;}
+.hide, legend, caption, hr{position: absolute; left: -9999px; width: 0; height: 0; overflow: visible; text-indent: -9999px;}
 
 .ellipsis {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 h2{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
