@@ -96,7 +96,6 @@ $(document).ready(function(){
 						}
 						if(token==null){
 							document.getElementById("nBtn").style.display = 'none';
-							alert("더보기가 없습니다");
 						}else{
 							document.getElementById("nBtn").style.display = 'block';
 						}
