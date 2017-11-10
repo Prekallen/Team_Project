@@ -4,14 +4,22 @@
 <%@include file="/WEB-INF/views/common/side_menu.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<title></title>
+<title>${bi.bTitle }</title>
 </head>
 
 <body>
-				<div class="container" style="margin-left:22%;">
-					 <table class="table table-striped" style="text-align: center; margin-top:70px;" border="1px solid #dddddd">
-						<thead>
-							
+	
+		<div class="kwrap">
+			<ul class="nav-navbar-nav navbar-right"></ul>
+			<div class="container" style="padding-top: 7%;  margin:0 auto; width:50%;">
+				<div class="row" style="">
+				<h6 style="font-size:30px; font-weight:bold; padding-bottom:30px;">글 수정하기</h6>
+					<table class="table table-striped" style="text-align: center; font-family:NanumSquareRound;" border="1px solid #dddddd"  >
+						<thead>						
+							<tr>
+								<th style="background-color: #eeeeee; text-align: center;">번호</th>
+								<th><input type="text" id="bNum" value="${bi.bNum}"></th>
+							</tr>
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">글쓴이</th>
 								<th><input type="text" id="bName" value="${bi.bName}"></th>
@@ -25,28 +33,25 @@
 							<tr>
 								<th style="background-color: #eeeeee; text-align: center;">내용</th>
 								<th><textarea style="resize: none;" cols="150" rows="30"
-									id="bContents" id="bContents">${bi.bContents }</textarea>
-<%-- 								<th><input type="text" id="bContents" value="${bi.bContents }"></th> --%>
+									name="bContents" id="bContents">${bi.bContents }</textarea></th>
 							</tr>
 						</tbody>
-					</table> 							
-					<div id="btn_wh"style="width:200px;margin-bottom:30px; margin-left:50%; font-family:'NanumSquareRound' ">
-						<button type="button" class="btn btn-primary"id="btnDelete" style="width:50px;">삭제</button>
-						<button type="button" class="btn btn-primary"id="btnUpdate" style="width:50px;">수정</button>
-						<button type="button" class="btn btn-primary"id="btnList" style="width:50px;">목록</button>
-					</div>
-				</div>				
-			
-		
-
-						<!-- 	<div class="btn btn-primary" style="cursor: pointer;"
-								onclick="window.scrollTo(0,0);">TOP</div> -->
+					</table>
+					<div class="bbtn" align="" style="width:23%; float:right; " >
+						<button type="button" id="btnDelete" class="btn btn-info pull-right" style="width:25%; ">삭제</button>
+						<button type="button" id="btnUpdate" class="btn btn-info pull-right" style="width:25%;">수정</button>
+						<button type="button" id="btnList" class="btn btn-info pull-right" style="width:25%;">목록</button>
+			</div>
+			</div>
+			</div>
+			</div>
 	<c:import url="${footerUrl}" />
-</div>
+	
 	<script>
-	$("#btnList").click(function(){
-		location.href = "${rootPath}/notice/board_list";
-	});
+	
+		$("#btnList").click(function(){
+			location.href = "${rootPath}/notice/board_list";
+		});
 		
 		$(document).ready(function(){
 		var bNum = "${bi.bNum}";	
