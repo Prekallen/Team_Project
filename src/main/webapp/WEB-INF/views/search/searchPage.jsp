@@ -23,12 +23,13 @@ String results = (String)session.getAttribute("result");
 			"<%=result %>"(으)로 검색한 결과
 			</h9><br>			
 		</div>
-<!-- 		<div id="aa" style="padding-top:150px;"> -->
 		<div id="seceondMiddle">
 			<ul id="ulList" style="    width: 100% auto; margin: auto;"></ul>	
 			<c:import url="${infomationUrl}" />
 		</div>
-		<div id="spBottom">		</div>
+		<div id="spBottom" style="padding-bottom:30px;">
+		<button type="button" id="nBtn">더 보기</button>
+		</div>
 	</div>
 
 		
@@ -110,6 +111,7 @@ $("#nBtn").click(function() {
 
 				var html = '';
 				var mapInfoList = results["mapInfoList"];
+				var htmlStr ="";
 				for ( var idx in mapInfoList) {
 					var result = mapInfoList[idx];
 					var name = result.name;
