@@ -26,10 +26,10 @@
 				</div>				
 			</div>
 		
-					<div id="btn_wh"style="width:200px;margin-left:850px; font-family:'NanumSquareRound' ">
-						<button type="button" class="btn btn-primary"id="btnDelete" style="width:50px;">삭제</button>
-						<button type="button" class="btn btn-primary"id="btnUpdate" style="width:50px;">수정</button>
-						<button type="button" class="btn btn-primary"id="btnList" style="width:50px;">목록</button>
+					<div id="btn_wh">
+						<button type="button" class="btn btn-primary"id="btnDelete" >삭제</button>
+						<button type="button" class="btn btn-primary"id="btnUpdate" >수정</button>
+						<button type="button" class="btn btn-primary"id="btnList">목록</button>
 					</div>
 
 					
@@ -58,33 +58,6 @@
 
 			
 		});
-		
-
 	</script>
 </body>
 </html>
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-
-body {
-	font-family: 'NanumSquareRound', serif;
-	font-weight: bold;
-	margin: 0;
-	height: 100%;
-}
-
-html {
-	height: 100%;
-}
-
-.btn btn-primary {
-	position: absolute;
-}
-
-.kwrap {
-	width: 100%; min-height : 100%;
-	position: relative;
-	padding-bottom: 30px;
-	min-height: 100%; /* footer height */
-}
-</style>
