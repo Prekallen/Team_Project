@@ -29,7 +29,7 @@ String results = (String)session.getAttribute("result");
 			<c:import url="${infomationUrl}" />
 		</div>
 		<div id="spBottom" style="padding:30px">
-			<button type="button" id="nBtn">더 보기</button>
+			<button type="button" id="nBtn" name="nBtn">더 보기</button>
 		</div>
 		
 	</div>
@@ -94,6 +94,12 @@ $(document).ready(function(){
 							htmlStr +='별점 : ' +rating + '<br><p hidden>placeid : '+place_id+'</hidden></div></div>';
 							htmlStr +='</dc-restaurant>';
 						}
+						if(token==null){
+							document.getElementById("nBtn").style.display = 'none';
+							alert("더보기가 없습니다");
+						}else{
+							document.getElementById("nBtn").style.display = 'block';
+						}
 						$("#ulList").html(htmlStr);
 					}
 					//document.getElementById(\'id03\').style.display=\'block\' == a tag
@@ -140,6 +146,11 @@ $("#nBtn").click(function() {
 					htmlStr +='주소 : ' + formatted_address+ '</br>';
 					htmlStr +='별점 : ' +rating + '<br><p hidden>placeid : '+place_id+'</hidden></div></div>';
 					htmlStr +='</dc-restaurant>';
+				}
+				if(token==null){
+					document.getElementById("nBtn").style.display = 'none';
+				}else{
+					document.getElementById("nBtn").style.display = 'block';
 				}
 				$("#ulList").append(htmlStr);
 				}
