@@ -8,8 +8,8 @@
 </head>
 <style>
 	#map {
-		height: 90%;
-		width: 90%;
+		height: 800px;
+		width: 1800px;
 	}
 </style>
 <body>
@@ -17,7 +17,14 @@
 Double lat = Double.parseDouble(request.getParameter("lat"));
 Double lng = Double.parseDouble(request.getParameter("lng"));
 %>
-	<div id="map"></div>
+
+	<h2 style="text-align:center;"> 선택한 곳의 위치</h2>
+
+	<div id="map" style="overflow:block;"></div>
+
+	<div id="btnCenter" style="text-align:center; padding:20px;"> 
+		<input type="button"  id="backBtn" value="뒤로가기" onclick="backtopage()"/>
+	</div>
 </body>
 <script>
 	function initMap() {
@@ -31,7 +38,10 @@ Double lng = Double.parseDouble(request.getParameter("lng"));
 	    map: map
 	  });
 	}
+	function backtopage(){
+		history.go(-1);  
+	}
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdsvy9GEYpWuorLEVeObhzzx7h3VUJ57k&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPsbPLnLDqAHiypEfoS2xtRJ1Oz1hzhYo&callback=initMap"
 async defer></script>
 </html>

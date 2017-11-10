@@ -49,7 +49,6 @@ public class MapServiceImpl implements MapService{
 				HashMap location = (HashMap)geometry.get("location");
 				mi.setLat(location.get("lat"));
 				mi.setLng(location.get("lng"));
-				System.out.println(storeObject.get("name"));
 				if(storeObject.get("photos")!=null){
 					mi.setPhotos(storeObject.get("photos"));
 					

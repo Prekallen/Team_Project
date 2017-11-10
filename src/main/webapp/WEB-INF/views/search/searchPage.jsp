@@ -28,7 +28,10 @@ String results = (String)session.getAttribute("result");
 			<ul id="ulList" style="    width: 100% auto; margin: auto;"></ul>	
 			<c:import url="${infomationUrl}" />
 		</div>
-		<div id="spBottom">		</div>
+		<div id="spBottom" style="padding:30px">
+			<button type="button" id="nBtn">더 보기</button>
+		</div>
+		
 	</div>
 
 		
@@ -84,7 +87,7 @@ $(document).ready(function(){
 								}
 							htmlStr +='</div>';
 							htmlStr +='<div id="rt_info" style="width:250px;">';
-							htmlStr +='<div id="infomation_btn"> <a onclick="document.getElementById(\'id03\').style.display=\'block\'">';
+							htmlStr +='<div id="infomation_btn"> <a onclick="googleMap('+lat+','+lng+')">';
 							htmlStr +=name +'</a></div></div>';
 							htmlStr +='<div id="rt_info">';
 							htmlStr +='주소 : ' + formatted_address+ '</br>';
@@ -110,6 +113,7 @@ $("#nBtn").click(function() {
 
 				var html = '';
 				var mapInfoList = results["mapInfoList"];
+				var htmlStr = "";
 				for ( var idx in mapInfoList) {
 					var result = mapInfoList[idx];
 					var name = result.name;
@@ -137,7 +141,7 @@ $("#nBtn").click(function() {
 					htmlStr +='별점 : ' +rating + '<br><p hidden>placeid : '+place_id+'</hidden></div></div>';
 					htmlStr +='</dc-restaurant>';
 				}
-				$("#ulList").html(htmlStr);
+				$("#ulList").append(htmlStr);
 				}
 			});
 			//document.getElementById(\'id03\').style.display=\'block\' == a tag
