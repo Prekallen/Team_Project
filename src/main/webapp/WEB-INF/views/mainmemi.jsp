@@ -140,7 +140,7 @@ $(document).ready(function(){
 							</div>
 						</form>
 					</div>
-					<!-- modal id01 -->
+
 
 					<script>
 
