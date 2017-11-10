@@ -16,15 +16,15 @@
 						<h6 style="font-size:30px; background-color: #f5f5ef; font-color: #26d4d4; font-weight:bold; padding-bottom:30px;">피드백 소식</h6>
 			<div class="notice-row">
 			<notice  style="font-family:NanumSquareRound;">
+						
 						<div class="btitle" style="text-align:left; font-size:20px; background-color: #f5f5ef; font-weight:bold;">${bi.bTitle }</div>
 						<div class="bname" style=" #ffffff; margin-bottom:20px;">${bi.bName }</div>
 						<div class="bcontents" style="margin-top:10%; margin-bottom:10px; height:100px; border-bottom:solid #ffffff;">${bi.bContents }</div>
-						
-						</notice>
-						<div class="bbtn" align="" style="width:23%; float:right; " >
-						<button type="button" id="btnDelete" class="btn btn-primary pull-right" style="width:25%; ">삭제</button>
-						<button type="button" id="btnUpdate" class="btn btn-primary pull-right" style="width:25%;">수정</button>
-						<button type="button" id="btnList" class="btn btn-primary pull-right" style="width:25%;">목록</button>
+			</notice>
+						<div class="bbtn" align="" style="width:23%; float:right;">
+						<button type="button" id="btnDelete" class="btn btn-info pull-right" style="width:25%; ">삭제</button>
+						<button type="button" id="btnUpdate" class="btn btn-info pull-right" style="width:25%;">수정</button>
+						<button type="button" id="btnList" class="btn btn-info pull-right" style="width:25%;">목록</button>
 						</div>
 						</div>
 						</div>
@@ -38,7 +38,8 @@
 		});
 		
 			
-			var bNum = "${bi.bNum}";	
+			//var bNum = $("#bNum").val();
+			var bNum = "${bi.bNum}";
 					$("#btnDelete").click(function(){
 						
 							if (confirm("삭제하시겠습니까?") == true){    //확인

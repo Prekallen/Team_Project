@@ -16,8 +16,11 @@
 		width:1100px; min-height:1000px; margin:0 auto;">
 			<div class="notice-row">
 			<h6 style="font-size:30px; background-color: #f5f5ef; font-weight:bold; padding-bottom:30px;">피드백 소식</h6>
-						<a href="${rootPath}/notice/board_insert" class="btn btn-primary pull-right" style="font-family: 'NanumSquareRound', serif;">글쓰기</a>
-						
+			
+				
+				<button class="btn btn-primary pull-right" style="width:10%; font-family:NanumSquareRound;"
+				onClick="location.href='${rootPath}/notice/board_insert'" id="writer">글쓰기</button>
+			
 					<ul id="boardList" style="min-height:800px; width:1000px;">
 					</ul>
 			</div>
@@ -25,6 +28,7 @@
 < 		<div class="btn btn-primary" style="cursor: pointer;"
 			onclick="window.scrollTo(0,0);">TOP</div> 
 		<script>
+	
 			$(document).ready(function(){
 				
 				var html = "";

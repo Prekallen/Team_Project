@@ -37,10 +37,11 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="bbtn" align="" style="width:23%; float:right; " >
-						<button type="button" id="btnDelete" class="btn btn-info pull-right" style="width:25%; ">삭제</button>
-						<button type="button" id="btnUpdate" class="btn btn-info pull-right" style="width:25%;">수정</button>
-						<button type="button" id="btnList" class="btn btn-info pull-right" style="width:25%;">목록</button>
+					<div class="bbtn" style="width:23%; float:right; text-align:center" >
+						<button type="button" id="btnDelete" class="btn btn-info pull-right" style="width:28%; ">삭제</button>
+						<button type="button" id="btnUpdate" class="btn btn-info pull-right" style="width:28%;">수정</button>
+						<button type="button" id="btnList" class="btn btn-info pull-right" style="width:28%;">목록</button>
+						<button type="button" id="btnCancle" class="btn btn-info pull-right" style="width:28%;">취소</button>
 			</div>
 			</div>
 			</div>
@@ -51,6 +52,10 @@
 	
 		$("#btnList").click(function(){
 			location.href = "${rootPath}/notice/board_list";
+		});
+		
+		$("#btnCancle").click(function(){
+			location.href = "${rootPath}/notice/board_list?bNum=${bi.bNum}";
 		});
 		
 		$(document).ready(function(){
