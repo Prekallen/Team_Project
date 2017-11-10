@@ -92,6 +92,7 @@
 					alert(OMG);
 					return;
 				} else if (results.length >= 1) {
+					alert("글이 등록되었습니다.")
 					location.href = "${rootPath}/notice/board_list";
 					return;
 				}

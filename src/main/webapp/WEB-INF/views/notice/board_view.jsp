@@ -21,8 +21,8 @@
 						<div class="bcontents" style="margin-top:10%; margin-bottom:10px; height:100px; border-bottom:solid #ffffff;">${bi.bContents }</div>
 						
 						</notice>
-						<div class="bbtn" align="" style="width:23%; float:right; " >
-						<button type="button" id="btnDelete" class="btn btn-primary pull-right" style="width:25%; ">삭제</button>
+						<div class="bbtn" style="width:23%; float:right; text-align:center " >
+<!-- 						<button type="button" id="btnDelete" class="btn btn-primary pull-right" style="width:25%; ">삭제</button> -->
 						<button type="button" id="btnUpdate" class="btn btn-primary pull-right" style="width:25%;">수정</button>
 						<button type="button" id="btnList" class="btn btn-primary pull-right" style="width:25%;">목록</button>
 						</div>
@@ -38,17 +38,17 @@
 		});
 		
 			
-			var bNum = "${bi.bNum}";	
-					$("#btnDelete").click(function(){
+// 			var bNum = "${bi.bNum}";	
+// 					$("#btnDelete").click(function(){
 						
-							if (confirm("삭제하시겠습니까?") == true){    //확인
-								var params = "bNum";
-								var au = new AjaxUtil("notice/board_delete",params); 
-								au.send();
-							}else{   //취소
-							    return;
-								}
-					});
+// 							if (confirm("삭제하시겠습니까?") == true){    //확인
+// 								var params = "bNum";
+// 								var au = new AjaxUtil("notice/board_delete",params); 
+// 								au.send();
+// 							}else{   //취소
+// 							    return;
+// 								}
+// 					});
 		
 		
 		
