@@ -11,8 +11,6 @@
 <meta name="Author" content="(TEAM)Feedback" />
 <meta name="keywords" content="Feedback" />
 <meta name="Description" content="Feedback 메인 페이지에 오신 것을 환영합니다" />
-<link rel="stylesheet" href="<c:url value="/resources/css/common.css?version=${pVar}"/>"/>
-<link rel="stylesheet" href="<c:url value="/resources/css/main.css?version=${pVar}"/>"/>
 <link rel="shortcut icon" href="resources/favicon/mememi_favi.png">
 <!-- 파비콘 -->
 <link rel="apple-touch-icon-precomposed" href="apple-icon.png">
@@ -43,6 +41,9 @@
 <script src="resources/js/map2.js"></script>
 <script src="resources/js/map3.js"></script>
 <style>
+body{
+font-family: 'NanumSquareRound';
+}
 #map-canvas, #map-canvas2, #map-canvas3 {
 	width: 353px;
 	height: 222.45px;
@@ -111,10 +112,10 @@ $(document).ready(function(){
 				<dt class="hide">유틸메뉴</dt>
 			
 				<dd class="util_first">
-				<button id="googleSignOut"style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:20px;">Sign out</button>
+				<button id="googleSignOut"style="width: auto; background-color: #ffffff; color: #000000; font-weight: bold; font-size:20px;">Sign out</button>
 					<button
 						onclick="document.getElementById('id01').style.display='block'"
-						style="width: auto; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; font-size:15px;" id="logOut"></button>
+						style="width: auto; background-color: #ffffff; color: #000000; font-weight: bold; font-size:15px;" id="logOut"></button>
 					<div id="id01" class="modal">
 						<form class="modal-content animate"
 							action="${roodPath}/test/test2">
@@ -155,7 +156,7 @@ $(document).ready(function(){
 
 
 <button onclick="document.getElementById('id02').style.display='block'"	style="width: auto; background-color: #ffffff; color: #000000; 
-																			font-family: 'NanumSquareRound'; font-weight: bold; font-size: 15px;" id="logOut2"">회원가입</button>
+																			font-weight: bold; font-size: 15px;" id="logOut2"">회원가입</button>
 
 					<div id="id02" class="modal">
 
@@ -209,7 +210,7 @@ $(document).ready(function(){
 			<div id="search" style="padding-top: 27px;">
 				<form action ="${rootPath}/search/searchPage" method="get">
 				<input type="text" id="search_input" name="query" autocomplete="on"
-					value="" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-family: 'NanumSquareRound'; font-weight: bold;"
+					value="" style="width: 250px; height: 30px; padding-left: 0px; font-size: 1em; font-weight: bold;"
 					placeholder="ex)강남, 맛집, 이태원" value="<%=query%>"/>
 				<input type="image"
 					src="https://dcicons.s3.amazonaws.com/dicons/img/main/ms_button.png" id="searchBtn"
@@ -253,11 +254,11 @@ $(document).ready(function(){
 
 
 		<div id="fix_bn" style="height:500px;">
-		<h5 style="font-size:24px; margin-left:300px;padding-top:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
-		<div class="slideshow-container" style="padding-top: 50px;">
+		<h5 style="font-size:24px; margin-left:300px;padding-top:30px; padding-bottom:30px;color:#26d4d4;font-weight:bold;">실시간 검색 순위</h5>
+		<div class="slideshow-container">
 				<div class="mySlides fade"><img src="">							
 						<c:forEach items="${keyWordList}" var="kw" begin="0" end="9">
-				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+				              <li style="padding-bottom:5px;">
 			              		<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
 					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
 					             </a> 
@@ -266,7 +267,7 @@ $(document).ready(function(){
 					</div>
 					<div class="mySlides fade"><img src="">
 						<c:forEach items="${keyWordList}" var="kw" begin="10" end="19">
-				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+				              <li style="padding-bottom:5px;">
 				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
 					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
 					             </a>
@@ -275,7 +276,7 @@ $(document).ready(function(){
 					</div>
 					<div class="mySlides fade"><img src="">
 						<c:forEach items="${keyWordList}" var="kw" begin="20" end="29">
-				              <li style="font-family:NanumSquareRound; padding-bottom:5px;">
+				              <li style="padding-bottom:5px;">
 				              	<a href="${rootPath}/search/searchPage?query=${kw.keyword}">
 					              	<c:out value="${kw. ranking}"/>.&nbsp;<c:out value="${kw.keyword}"/>
 					             </a>
@@ -322,7 +323,7 @@ function showSlides() {
 				<p>
 					맛집 검색은?<br>맛zip !! from Feedback
 				</p>
-				<!-- <div class="uline_w"></div> -->
+
 				<span> 맛zip은 음심점 어디든 검색 할 수 있는 웹입니다.<br />
 				</span>
 			</div>
@@ -385,13 +386,6 @@ function showSlides() {
 	<!-- id="wrap" -->
 
 	<script>
-		/*
-		 if(${userId}==""||${userId}==null){
-		 $("#status").val("LOGIN");
-		 }else{
-		 $("#status").val(${userId});
-		 }
-		 */
 		$('.DB_etc10_1').DB_springMove({
 			key : 'e24102', //라이센스키
 			dir : 'x', //방향축('x','y')
