@@ -28,8 +28,8 @@ String results = (String)session.getAttribute("result");
 			<ul id="ulList" style="    width: 100% auto; margin: auto;"></ul>	
 			<c:import url="${infomationUrl}" />
 		</div>
-		<div id="spBottom" style="padding:30px">
-			<button type="button" id="nBtn" name="nBtn">더 보기</button>
+		<div id="spBottom" style="padding:30px; text-align:center;">
+			<button type="button" id="nBtn" name="nBtn" style="width:200px;">더 보기</button>
 		</div>
 		
 	</div>
