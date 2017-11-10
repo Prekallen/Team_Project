@@ -84,7 +84,7 @@ $(document).ready(function(){
 								}
 							htmlStr +='</div>';
 							htmlStr +='<div id="rt_info" style="width:250px;">';
-							htmlStr +='<div id="infomation_btn" style="text-align:center; cursor:pointer; "> <a onclick="googleMap('+lat+','+lng+')">';
+							htmlStr +='<div id="infomation_btn"> <a onclick="googleMap('+lat+','+lng+')">';
 							htmlStr +=name +'</a></div></div>';
 							htmlStr +='<div id="rt_info">';
 							htmlStr +='주소 : ' + formatted_address+ '</br>';
