@@ -7,12 +7,7 @@ public class BoardInfo {
 	private String credat;
 	private String bContents;
 	
-	public String getbContents() {
-		return bContents;
-	}
-	public void setbContents(String bContents) {
-		this.bContents = bContents;
-	}
+	
 	public int getbNum() {
 		return bNum;
 	}
@@ -37,11 +32,19 @@ public class BoardInfo {
 	public void setCredat(String credat) {
 		this.credat = credat;
 	}
+	public String getbContents() {
+		return bContents;
+	}
+	public void setbContents(String bContents) {
+		this.bContents = bContents;
+	}
 	@Override
 	public String toString() {
 		return "BoardInfo [bNum=" + bNum + ", bTitle=" + bTitle + ", bName=" + bName + ", credat=" + credat
 				+ ", bContents=" + bContents + "]";
 	}
+	
+	
 	
 	
 	

@@ -45,8 +45,34 @@ $(document).ready(function() {
 
 
 
-<body> 
-<div id="target"></div>
+ 
+<style>
+       #map {
+        height: 400px;
+        width: 700px;
+       }
+    </style>
+  </head>
+  <body>
+    
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var spot = {lat: 37.497262 , lng: 127.027401};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: spot
+        });
+        var marker = new google.maps.Marker({
+          position: spot,
+          map: map
+        });
+      }
+    </script>
+    
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdsvy9GEYpWuorLEVeObhzzx7h3VUJ57k&callback=initMap" >
+    </script>
 </body>
 
 

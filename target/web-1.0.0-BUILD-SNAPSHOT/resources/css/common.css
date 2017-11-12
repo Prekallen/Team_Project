@@ -9,6 +9,7 @@ body{overflow-x:hidden;}
 /* 기본 레이아웃 */
 #wrap{width: 100%; margin: 0; margin-top: 600px; background-color: #ffffff; position: relative;}
 #wrap2{width: 100%; margin: 0 auto; margin-top: 0 auto; background-color: #26d4d4 ; position: fixed; } /*탑메뉴*/
+#wrap3{width: 100%; margin: 0; margin-top: 600px; background-color: #f5f5ef; position: relative;}/*서치페이지*/
 #header{height: 80px; position: relative; z-index: 10; width: 100%; background-color: #ffffff; margin: 0 auto;}
 #header2{height: 70px; position: relative; z-index: 10; width: 100%; background-color: #26d4d4; margin: 0 auto;}
 #footer_wrap{width:100%; margin:0 auto; background: url(../images/picnic.jpg) no-repeat center; background-size: cover; position: relative; height: 280px;}
@@ -189,7 +190,7 @@ font-family: 'NanumSquareRound'; font-weight: bold; color:#000000 }
 input[type=text], input[type=password] {    width: 100%;    padding: 12px 20px;    margin: 8px 0;    display: inline-block;    border: 1px solid #ccc;    box-sizing: border-box; }
 
 /* Set a style for all buttons */
-button {    background-color: #26d4d4;    color: white;    padding-right:10px;    margin: 8px 0;    border: none;    cursor: pointer;    width: 100%; }/**/
+button {color: white;    padding-right:10px;    margin: 8px 0;    border: none;    cursor: pointer;    width: 100%; }/**/
 button:hover {    opacity: 0.8;}
 
 /* Extra styles for the cancel button */
@@ -264,6 +265,19 @@ span.psw {    float: right;    padding-top: 16px;}
 }
 
 /* 검색결과창 */
-#infomation_btn{text-decoration: none; }
+#btn_style{text-decoration:none;}
+#infomation_btn{text-decoration: none; background-color:#f5f5ef; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; width:250px; height:100px; font-size:30px;
+					align:left; margin:0px;}
+#rt_info{width:350px; height:100px; margin:0px; float:left; font-family: 'NanumSquareRound';}
+#rt_info.img{width:200px auto; height:100px auto;}
+#rt_form{width:800px; height:150px;padding-bottom:50px;padding-top:50px; position: relative;}
+#menu_img{width:100px; height:100px;}
+#ulList{padding: 0 0 0 0; padding-left:25%; padding-right:25%;"}
+
+/* 공지사항 */
+
+.noticeTitle{text-decoration: none; background-color: #ffffff; color: #000000; font-family: 'NanumSquareRound'; font-weight: bold; width:250px; height:100px; font-size:30px;
+					align:left; margin:0px;}
+.bcontents{width:350px; height:100px; margin:0px; float:left; font-family: 'NanumSquareRound'; font-weight:bold;}
 
 

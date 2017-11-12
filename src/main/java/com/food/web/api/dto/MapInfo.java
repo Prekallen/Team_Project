@@ -9,6 +9,8 @@ public class MapInfo {
 	private Object photos;
 	private Object photo_reference;
 	private Object place_id;
+	private Object lat;
+	private Object lng;
 	public Object getPlace_id() {
 		return place_id;
 	}
@@ -52,12 +54,25 @@ public class MapInfo {
 	public void setRating(Object rating) {
 		this.rating = rating;
 	}
+	public Object getLat() {
+		return lat;
+	}
+	public void setLat(Object lat) {
+		this.lat = lat;
+	}
+	public Object getLng() {
+		return lng;
+	}
+	public void setLng(Object lng) {
+		this.lng = lng;
+	}
 	@Override
 	public String toString() {
 		return "MapInfo [name=" + name + ", formatted_address=" + formatted_address + ", rating=" + rating
 				+ ", next_page_token=" + next_page_token + ", photos=" + photos + ", photo_reference=" + photo_reference
-				+ ", place_id=" + place_id + "]";
+				+ ", place_id=" + place_id + ", lat=" + lat + ", lng=" + lng + "]";
 	}
+	
 	
 
 }

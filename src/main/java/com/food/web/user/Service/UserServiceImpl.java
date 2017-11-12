@@ -1,7 +1,5 @@
 package com.food.web.user.Service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,18 +20,6 @@ public class UserServiceImpl implements UserService{
 		}
 		return null;
 	}
-	
-	@Override
-	public UserInfo selectUser(UserInfo user) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<UserInfo> selectUserList(UserInfo user) {
-		// TODO Auto-generated method stub
-		return ud.selectUserList(user);
-	}
 
 	@Override
 	public int insertUser(UserInfo user) {
@@ -41,25 +27,16 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public int updatetUser(UserInfo user) {
-		// TODO Auto-generated method stub
-		return ud.updateUser(user);
-	}
-
-	@Override
 	public int deleteUser(UserInfo user) {
-		// TODO Auto-generated method stub
 		return ud.deletetUser(user);
 	}
-
+	
 	@Override
-	public int insertUserList(UserInfo[] userList) {
-		int rCnt = 0;
-		for(UserInfo user : userList){
-			rCnt += ud.insertUser(user);
-		}
-		return rCnt;
+	public UserInfo selectUser(UserInfo user) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	
 	
 }

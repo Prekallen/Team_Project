@@ -14,8 +14,8 @@ public class BoardServiceImpl implements BoardService{
 	BoardDao bdao;
 
 	@Override
-	public BoardInfo getBoardInfo(BoardInfo board) {
-		return bdao.selectBoardInfo(board);
+	public BoardInfo getBoardInfo(int bNum) {
+		return bdao.selectBoardInfo(bNum);
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public int inserBoardInfo(BoardInfo board) {
+	public int insertBoardInfo(BoardInfo board) {
 		return bdao.insertBoardInfo(board);
 	}
 

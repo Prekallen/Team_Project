@@ -26,10 +26,10 @@ public class MapServiceImpl implements MapService{
 
 			String hUrl = "";
 			if(query.get("token")==null){
-				hUrl = "query="+ query.get("query");
+				hUrl = "query=restaurant+"+ query.get("query");
 			}else {
 				hUrl = "pagetoken=" + query.get("token");
-			}
+			}    
 
 			URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyDhaT80ZtktlPWKNSklWxzIVcCx6OfgtJA&" + hUrl) ;
 			InputStreamReader isr = new InputStreamReader(url.openConnection().getInputStream(), "UTF-8");
@@ -45,6 +45,10 @@ public class MapServiceImpl implements MapService{
 				mi.setFormatted_address(storeObject.get("formatted_address"));
 				mi.setName(storeObject.get("name"));
 				mi.setRating(storeObject.get("rating"));
+				HashMap geometry = (HashMap) storeObject.get("geometry");
+				HashMap location = (HashMap)geometry.get("location");
+				mi.setLat(location.get("lat"));
+				mi.setLng(location.get("lng"));
 				if(storeObject.get("photos")!=null){
 					mi.setPhotos(storeObject.get("photos"));
 					
@@ -59,6 +63,7 @@ public class MapServiceImpl implements MapService{
 				mi.setPlace_id(storeObject.get("place_id"));
 				mi.setNext_page_token(page);
 				mapInfoList.add(mi);
+				
 				//JSON name으로 추출
 
 				//	                System.out.println("위치 : "+storeObject.get("formatted_address"));

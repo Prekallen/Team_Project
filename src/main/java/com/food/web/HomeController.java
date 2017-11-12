@@ -2,14 +2,20 @@ package com.food.web;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.food.web.rank.service.rankService;
 
 
 
@@ -20,7 +26,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+	@Autowired
+	private rankService rs;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -37,65 +44,18 @@ public class HomeController {
 		
 		return "home";
 	}
-	
-	@RequestMapping(value="/main", method= RequestMethod.GET)
-	public String main(Model model){
-		return "main";
-	}
-	@RequestMapping(value="/menutab/intro", method= RequestMethod.GET)
-	public String intro(Model model){
-		return "menutab/intro";
-	}
-	
-	@RequestMapping(value="/menutab/notice", method= RequestMethod.GET)
-	public String notice(Model model){
-		return "menutab/notice";
-	}
-	
-	@RequestMapping(value="/main2", method= RequestMethod.GET)
-	public String main2(Model model){
-		return "main2";
-	}
-	
-	@RequestMapping(value="/menutab/local", method= RequestMethod.GET)
-	public String local(Model model){
-		return "menutab/local";
-	}
-	
-	@RequestMapping(value="/menutab/group", method= RequestMethod.GET)
-	public String group(Model model){
-		return "menutab/group";
-	}
-	
-	@RequestMapping(value="/menutab/login", method= RequestMethod.GET)
-	public String login(Model model){
-		return "menutab/login";
-	}
-	
-	@RequestMapping(value="/mango_plate_main", method= RequestMethod.GET)
-	public String main3(Model model){
-		return "mango_plate_main";
-	}
-	@RequestMapping(value="/test/test", method= RequestMethod.GET)
-	public String test(Model model){
-		return "test/test";
-	}
-	
-	@RequestMapping(value="/mememi", method= RequestMethod.GET)
-	public String mememi(Model model){
-		return "mememi";
-	}
+
 	@RequestMapping(value="/mainmemi", method= RequestMethod.GET)
-	public String mainmemi(Model model){
+	public String mainmemi(ModelMap model){
+		List<Map<String,String>> keyWordList = rs.getKeywordList().getKeyWordList();
+		logger.info("keyWorkdList => {}", keyWordList);
+		model.put("keyWordList", keyWordList);
 		return "mainmemi";
 	}
 	
-	
-	
-	//main 테스트용 k버전
-	@RequestMapping(value="/menutab/kintro", method= RequestMethod.GET)
-	public String kintro(Model model){
-		return "menutab/kintro";
+	@RequestMapping(value="/intro", method= RequestMethod.GET)
+	public String intro(Model model){
+		return "intro";
 	}
 	@RequestMapping(value="/menutab/kgroup", method= RequestMethod.GET)
 	public String kgroup(Model model){
@@ -105,32 +65,27 @@ public class HomeController {
 	public String klocal(Model model){
 		return "menutab/klocal";
 	}
-	@RequestMapping(value="/menutab/kjoin", method= RequestMethod.GET)
-	public String kjoin(Model model){
-		return "menutab/kjoin";
-	}
-	
 	
 	@RequestMapping(value="/test/test2", method= RequestMethod.GET)
 	public String test2(Model model){
 		return "test/test2";
 	}
-	
-	
-	
-	//test
-//	@RequestMapping(value= "/apitest", method=RequestMethod.POST)
-//	public @ResponseBody ModelMap getApiResults(@RequestBody String query){
-//		ModelMap model = new ModelMap();
-//		try{
-//			model.put("name", ad.getName());
-//			model.put("formatted_address", ad.getFormatted_address());
-//			model.put("rating", ad.getRating());
-//			
-//		}catch(Exception e){
-//			e.printStackTrace();
-//		}
-//	    return model;
-//	}
+	@RequestMapping(value="/user/logout", method= RequestMethod.GET)
+	public String logout(Model model){
+		return "/user/logout";
+	}
+	@RequestMapping(value="/user/signout", method= RequestMethod.GET)
+	public String signout(Model model){
+		return "/user/signout";
+	}
+	@RequestMapping(value="/gOut", method= RequestMethod.GET)
+	public String gOut(Model model){
+		return "/gOut";
+	}
+	@RequestMapping(value="/user/googleLogout", method= RequestMethod.GET)
+	public String googleLogout(Model model){
+		return "/user/googleLogout";
+	}
+
 	
 }

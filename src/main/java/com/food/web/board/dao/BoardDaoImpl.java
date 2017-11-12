@@ -13,8 +13,8 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 	
 
 	@Override
-	public BoardInfo selectBoardInfo(BoardInfo board) {
-		return getSqlSession().selectOne("board.SELECT_BOARDINFO", board);
+	public BoardInfo selectBoardInfo(int bNum) {
+		return getSqlSession().selectOne("board.SELECT_BOARDINFO", bNum);
 	}
 
 	@Override
@@ -31,12 +31,12 @@ public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao{
 
 	@Override
 	public int updateBoardInfo(BoardInfo board) {
-		return this.updateBoardInfo(board);
+		return getSqlSession().update("board.UPDATE_BOARDINFO",board);
 	}
 
 	@Override
 	public int deleteBoardInfo(BoardInfo board) {
-		return this.deleteBoardInfo(board);
+		return getSqlSession().delete("board.DELETE_BOARDINFO",board);
 	}
 
 	@Override

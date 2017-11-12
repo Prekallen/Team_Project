@@ -5,11 +5,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserInfo {
 	
+	private boolean loginCheck;
 	private String userId;
 	private String userPwd;
 	private int userNum;
-	private String eMail;
+	private String email;
 	private boolean saveId;
+	private String gUser;
+
+	public String getgUser() {
+		return gUser;
+	}
+	public void setgUser(String gUser) {
+		this.gUser = gUser;
+	}
+	public boolean isLoginCheck() {
+		return loginCheck;
+	}
+	public void setLoginCheck(boolean loginCheck) {
+		this.loginCheck = loginCheck;
+	}
 	public String getUserId() {
 		return userId;
 	}
@@ -28,11 +43,11 @@ public class UserInfo {
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;
 	}
-	public String geteMail() {
-		return eMail;
+	public String getEmail() {
+		return email;
 	}
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public boolean isSaveId() {
 		return saveId;
@@ -40,6 +55,7 @@ public class UserInfo {
 	public void setSaveId(boolean saveId) {
 		this.saveId = saveId;
 	}
+	
 	
 	
 }

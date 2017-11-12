@@ -5,22 +5,24 @@
 
 	<select id="SELECT_BOARDINFO" parameterType="board" resultType="board">
 	  select 
-	  
-	 		bnum,
-			btitle,
+	  		bNum,
+	 		btitle,
 			bname,
+			bcontents,
 			credat
 	
 	  from board
-	  where 1=1
+	  where bnum=#{bNum}
+	  
 	
 	  
 	</select>	
 	<select id="SELECT_BOARDINFO_LIST" parameterType="board" resultType="board">
 	  select 
-	 		 bnum,
+	 		bNum,
 			btitle,
 			bname,
+			bcontents,
 			credat
 	
 	  from board
@@ -35,7 +37,10 @@
 	
 	<update id="UPDATE_BOARDINFO" parameterType="board">
 		update board
-		set bname = #{bName}
+		set 
+			bname = #{bName},
+			btitle = #{bTitle},
+			bcontents = #{bContents}
 	  
 	  where bnum=#{bNum}
 	</update>
